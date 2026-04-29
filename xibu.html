@@ -35,13 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西部大区 — 高频缺电 TOP 9</h1>
+  <h1>📍 西部大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>43</b>累计丢单</div>
-    <div class="s"><b>3</b>城市数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>47</b>累计丢单</div>
+    <div class="s"><b>6</b>城市数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>侯凯晨</b>负责人</div>
   </div>
 </div>
@@ -70,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "银川市", "vid": "5320036283", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区"},{"rank": 2, "status": "🔴4轮", "city": "银川市", "vid": "7010525420", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南6区"},{"rank": 3, "status": "🆕新", "city": "鄂尔多斯市", "vid": "7010424177", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "伊旗1区"},{"rank": 4, "status": "🔴4轮", "city": "拉萨市", "vid": "5320246999", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力-柳梧火车站网格"},{"rank": 5, "status": "🔴4轮", "city": "银川市", "vid": "5320279389", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-南6区"},{"rank": 6, "status": "🆕新", "city": "银川市", "vid": "5320040903", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区"},{"rank": 7, "status": "🆕新", "city": "银川市", "vid": "5320023749", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南3区"},{"rank": 8, "status": "🆕新", "city": "鄂尔多斯市", "vid": "7010483514", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 9, "status": "🆕新", "city": "银川市", "vid": "5320290552", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区"}];
-var CITIES=["拉萨市", "鄂尔多斯市", "银川市"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "city": "银川市", "vid": "5320036283", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南6区"},{"rank": 2, "status": "🔴7轮", "city": "银川市", "vid": "5320279389", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南6区"},{"rank": 3, "status": "🆕新", "city": "兰州市", "vid": "5320415389", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西北民大榆中校区电力网格"},{"rank": 4, "status": "🆕新", "city": "银川市", "vid": "5320032911", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-6区"},{"rank": 5, "status": "🆕新", "city": "银川市", "vid": "5320030434", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆17区"},{"rank": 6, "status": "🆕新", "city": "呼和浩特市", "vid": "5320155636", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "东征区-赛罕区-东万达17区"},{"rank": 7, "status": "🆕新", "city": "兰州市", "vid": "5320354738", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-植物园"},{"rank": 8, "status": "🆕新", "city": "鄂尔多斯市", "vid": "7010395692", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "康巴什区1网格"},{"rank": 9, "status": "🆕新", "city": "新市区", "vid": "3720179869", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 10, "status": "🆕新", "city": "包头市", "vid": "5320176149", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-神华大酒店"}];
+var CITIES=["兰州市", "包头市", "呼和浩特市", "新市区", "鄂尔多斯市", "银川市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
@@ -121,5 +122,15 @@ function reset(){
 }
 initTags();
 render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
