@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 北方大区 — 高频缺电 TOP 8</h1>
+  <h1>📍 北方大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>34</b>累计丢单</div>
-    <div class="s"><b>7</b>城市数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>51</b>累计丢单</div>
+    <div class="s"><b>3</b>城市数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>乔春阳</b>负责人</div>
   </div>
 </div>
@@ -70,8 +70,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "牡丹江市", "vid": "5310607919", "lost": 8, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "融合-牡丹江1区"},{"rank": 2, "status": "🆕新", "city": "牡丹江市", "vid": "5310519979", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "融合-核心-牡丹江百货大楼"},{"rank": 3, "status": "🆕新", "city": "瓦房店市", "vid": "7110176857", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 4, "status": "🆕新", "city": "佳木斯市", "vid": "5310531249", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "佳木斯6区"},{"rank": 5, "status": "🆕新", "city": "沈阳市", "vid": "5310511357", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-铁百"},{"rank": 6, "status": "🔴2轮", "city": "金水区", "vid": "7960274316", "lost": 3, "h1": 2, "delta": "<span class='dn'>↓2</span>", "grid": "金水-龙子湖3区"},{"rank": 7, "status": "🆕新", "city": "新县", "vid": "5910882166", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新县三区"},{"rank": 8, "status": "🆕新", "city": "潢川县", "vid": "5910852475", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潢川四区"}];
-var CITIES=["佳木斯市", "新县", "沈阳市", "潢川县", "牡丹江市", "瓦房店市", "金水区"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "瓦房店市", "vid": "7110169911", "lost": 12, "h1": 12, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 2, "status": "🔴5轮", "city": "瓦房店市", "vid": "7110176857", "lost": 8, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 3, "status": "🆕新", "city": "瓦房店市", "vid": "7110166610", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 4, "status": "🆕新", "city": "瓦房店市", "vid": "7110107436", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 5, "status": "🆕新", "city": "瓦房店市", "vid": "7110181918", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 6, "status": "🔴6轮", "city": "金水区", "vid": "7960274316", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金水-龙子湖3区"},{"rank": 7, "status": "🆕新", "city": "瓦房店市", "vid": "5310025978", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 8, "status": "🆕新", "city": "瓦房店市", "vid": "7110170161", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 9, "status": "🆕新", "city": "瓦房店市", "vid": "7110188005", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 10, "status": "🆕新", "city": "佳木斯市", "vid": "5310546437", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "佳木斯6区"}];
+var CITIES=["佳木斯市", "瓦房店市", "金水区"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
