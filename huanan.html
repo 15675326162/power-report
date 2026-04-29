@@ -35,13 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
-    <div class="s"><b>3</b>城市数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>18</b>累计丢单</div>
+    <div class="s"><b>4</b>城市数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>何建鑫</b>负责人</div>
   </div>
 </div>
@@ -70,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "江门市", "vid": "7110151140", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新会步行街区"},{"rank": 2, "status": "🔴4轮", "city": "金利镇", "vid": "5930070397", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "换电策略地图"},{"rank": 3, "status": "🆕新", "city": "南康区", "vid": "5310108798", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "龙岭区域"}];
-var CITIES=["南康区", "江门市", "金利镇"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "湛江市", "vid": "5320183850", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "湛江市-调顺岛-B区"},{"rank": 2, "status": "🆕新", "city": "江门市", "vid": "1602200309", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新会东区"},{"rank": 3, "status": "🆕新", "city": "南昌市", "vid": "5320207824", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "住宅-青山湖区-塘山"},{"rank": 4, "status": "🆕新", "city": "南昌市", "vid": "5320175821", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "住宅-青山湖区-新城吾悦"},{"rank": 5, "status": "🆕新", "city": "汕头市", "vid": "5320081314", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "6A-夏桂埔区"}];
+var CITIES=["南昌市", "汕头市", "江门市", "湛江市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
@@ -121,5 +122,15 @@ function reset(){
 }
 initTags();
 render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
