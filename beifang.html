@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 北方大区 — 高频缺电 TOP 20</h1>
+  <h1>📍 北方大区 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>161</b>累计丢单</div>
-    <div class="s"><b>11</b>城市数</div>
-    <div class="s"><b>12</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>20点</b>时段</div>
+    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>2</b>城市数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>乔春阳、张小灵</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴15轮", "city": "松原市", "vid": "5320021356", "lost": 20, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力网格、江北"},{"rank": 2, "status": "🔴7轮", "city": "西青区", "vid": "5310315646", "lost": 16, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "五战-西青区-高新区A"},{"rank": 3, "status": "🔴5轮", "city": "滨海新区", "vid": "5310441328", "lost": 12, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "三战-滨海-网格C"},{"rank": 4, "status": "🔴5轮", "city": "沈阳市", "vid": "5320392855", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "二战A-和平区-盛京医院"},{"rank": 5, "status": "🔴11轮", "city": "漯河市", "vid": "3930061111", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "源汇区-高铁站"},{"rank": 6, "status": "🔴5轮", "city": "津南区", "vid": "7110376999", "lost": 9, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "津南换电网格辛庄"},{"rank": 7, "status": "🔴5轮", "city": "邓州市", "vid": "7960119053", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东1"},{"rank": 8, "status": "🔴11轮", "city": "商丘市", "vid": "5320454325", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "6区吾悦广场"},{"rank": 9, "status": "🔴5轮", "city": "西青区", "vid": "5310476712", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "五战-西青区-高新区B"},{"rank": 10, "status": "🆕新", "city": "松原市", "vid": "5320021884", "lost": 8, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力网格江南"},{"rank": 11, "status": "🔴5轮", "city": "瓦房店市", "vid": "7110229684", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 12, "status": "🆕新", "city": "沈阳市", "vid": "3930072227", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院"},{"rank": 13, "status": "🆕新", "city": "西青区", "vid": "5310340299", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-高新区A"},{"rank": 14, "status": "🔴5轮", "city": "沈阳市", "vid": "5310618946", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战B-大东区-第一人民医院北"},{"rank": 15, "status": "🔴5轮", "city": "沈阳市", "vid": "5310481636", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战A-铁西区-沈阳站西广场"},{"rank": 16, "status": "🆕新", "city": "沈阳市", "vid": "5310087176", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战C-超区-浑南区-沈阳南站（苏家屯）"},{"rank": 17, "status": "🆕新", "city": "沈阳市", "vid": "5320367821", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战B-浑南区-彩霞街"},{"rank": 18, "status": "🆕新", "city": "瓦房店市", "vid": "7110119544", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 19, "status": "🆕新", "city": "新安县", "vid": "7960119823", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "涧西区-三级超区-新安-HC"},{"rank": 20, "status": "🆕新", "city": "淮滨县", "vid": "5910763883", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "淮滨2区"}];
-var CITIES=["商丘市", "新安县", "松原市", "沈阳市", "津南区", "淮滨县", "滨海新区", "漯河市", "瓦房店市", "西青区", "邓州市"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "佳木斯市", "vid": "5310722090", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "佳木斯10区"},{"rank": 2, "status": "🆕新", "city": "驻马店市", "vid": "5310186472", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "驻马店一区"}];
+var CITIES=["佳木斯市", "驻马店市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
