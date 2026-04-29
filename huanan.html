@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 7</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>22</b>累计丢单</div>
-    <div class="s"><b>6</b>城市数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>45</b>累计丢单</div>
+    <div class="s"><b>10</b>城市数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>何建鑫</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "city": "新余市", "vid": "6680077227", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新余高新区电力网格B"},{"rank": 2, "status": "🆕新", "city": "宁都县", "vid": "7900088129", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "网格2"},{"rank": 3, "status": "🆕新", "city": "汕头市", "vid": "5320069778", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "4C-小公园区"},{"rank": 4, "status": "🆕新", "city": "佛山市", "vid": "5320039794", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张槎3区"},{"rank": 5, "status": "🆕新", "city": "佛山市", "vid": "7720164104", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南庄1区"},{"rank": 6, "status": "🆕新", "city": "赣州市", "vid": "5310465147", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.沙石"},{"rank": 7, "status": "🆕新", "city": "江城区", "vid": "3720146696", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "江城区-城北-共青湖公园"}];
-var CITIES=["佛山市", "宁都县", "新余市", "汕头市", "江城区", "赣州市"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "city": "赣州市", "vid": "5310465147", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "R.沙石"},{"rank": 2, "status": "🆕新", "city": "湛江市", "vid": "5320295964", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "湛江市-霞山区-D"},{"rank": 3, "status": "🔴3轮", "city": "江城区", "vid": "3720146696", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "江城区-城北-共青湖公园"},{"rank": 4, "status": "🔴3轮", "city": "汕头市", "vid": "5320069778", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "4C-小公园区"},{"rank": 5, "status": "🆕新", "city": "澄迈县", "vid": "5930072007", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 6, "status": "🆕新", "city": "佛山市", "vid": "5320139826", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张槎2区"},{"rank": 7, "status": "🆕新", "city": "东凤镇", "vid": "7960179774", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东凤换电一区"},{"rank": 8, "status": "🆕新", "city": "江门市", "vid": "7110038580", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新会步行街区"},{"rank": 9, "status": "🆕新", "city": "三亚市", "vid": "7110048104", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "凤凰水城"},{"rank": 10, "status": "🆕新", "city": "东凤镇", "vid": "7960089643", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东凤换电二区"},{"rank": 11, "status": "🆕新", "city": "佛山市", "vid": "2000017398", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 12, "status": "🆕新", "city": "萍乡市", "vid": "5320091374", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "雨花区-超远超区-萍乡-资产2区"}];
+var CITIES=["三亚市", "东凤镇", "佛山市", "汕头市", "江城区", "江门市", "湛江市", "澄迈县", "萍乡市", "赣州市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
