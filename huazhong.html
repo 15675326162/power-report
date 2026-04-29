@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>37</b>累计丢单</div>
-    <div class="s"><b>4</b>城市数</div>
+    <div class="s"><b>77</b>累计丢单</div>
+    <div class="s"><b>5</b>城市数</div>
     <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴10轮", "city": "滁州市", "vid": "5320339192", "lost": 9, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "电力网格-万达/滁州学院"},{"rank": 2, "status": "🔴4轮", "city": "五河县", "vid": "5320076613", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "五河-高级中学"},{"rank": 3, "status": "🔴4轮", "city": "滁州市", "vid": "5320357592", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力网格-长江商贸城"},{"rank": 4, "status": "🆕新", "city": "长沙市", "vid": "5310411836", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "Y沙湾公园"},{"rank": 5, "status": "🆕新", "city": "合肥市", "vid": "5310767290", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 6, "status": "🆕新", "city": "合肥市", "vid": "7010396528", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店安徽中医药大学"}];
-var CITIES=["五河县", "合肥市", "滁州市", "长沙市"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "长沙市", "vid": "5320365862", "lost": 24, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "Y环保学院16"},{"rank": 2, "status": "🔴13轮", "city": "滁州市", "vid": "5320339192", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力网格-万达/滁州学院"},{"rank": 3, "status": "🔴4轮", "city": "长沙市", "vid": "5310411836", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "Y沙湾公园"},{"rank": 4, "status": "🔴4轮", "city": "合肥市", "vid": "5310767290", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 5, "status": "🆕新", "city": "滁州市", "vid": "5320361227", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力网格-万达/滁州学院"},{"rank": 6, "status": "🆕新", "city": "合肥市", "vid": "5320372793", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-火车站元一"},{"rank": 7, "status": "🆕新", "city": "合肥市", "vid": "7010398514", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-地矿家园"},{"rank": 8, "status": "🆕新", "city": "合肥市", "vid": "5320333397", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力超区-瑶海区-瑶海超区"},{"rank": 9, "status": "🆕新", "city": "合肥市", "vid": "5320489325", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店京东商贸城"},{"rank": 10, "status": "🆕新", "city": "合肥市", "vid": "5320486699", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-四里河"},{"rank": 11, "status": "🆕新", "city": "五河县", "vid": "5320066085", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五河-城东南区"},{"rank": 12, "status": "🆕新", "city": "咸宁市", "vid": "5320044238", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "佳和颐景-缓冲"}];
+var CITIES=["五河县", "合肥市", "咸宁市", "滁州市", "长沙市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
