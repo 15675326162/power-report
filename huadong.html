@@ -35,14 +35,15 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 8</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>47</b>累计丢单</div>
-    <div class="s"><b>5</b>城市数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
-    <div class="s"><b>胡丹萍、项紫艳、张茹榕</b>负责人</div>
+    <div class="s"><b>18</b>累计丢单</div>
+    <div class="s"><b>4</b>城市数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
+    <div class="s"><b>胡丹萍</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -70,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴10轮", "city": "徐州市", "vid": "7960207510", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "云龙四区换电"},{"rank": 2, "status": "🆕新", "city": "南京市", "vid": "5320107033", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东大九龙湖"},{"rank": 3, "status": "🔴4轮", "city": "南京市", "vid": "5320125635", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东大九龙湖"},{"rank": 4, "status": "🆕新", "city": "徐州市", "vid": "5310083278", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "泉山四区-1换电"},{"rank": 5, "status": "🆕新", "city": "泰州市", "vid": "7900228082", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力2区-寺巷"},{"rank": 6, "status": "🆕新", "city": "宁德市", "vid": "5310283217", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.新能源1区"},{"rank": 7, "status": "🆕新", "city": "江宁区", "vid": "7010459143", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力网格-开发区"},{"rank": 8, "status": "🔴4轮", "city": "南京市", "vid": "5320073767", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东大九龙湖"}];
-var CITIES=["南京市", "宁德市", "徐州市", "江宁区", "泰州市"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "city": "江宁区", "vid": "7010459143", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力网格-开发区"},{"rank": 2, "status": "🆕新", "city": "苏州市", "vid": "5310685459", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吴中区-小石湖城"},{"rank": 3, "status": "🆕新", "city": "南通市", "vid": "5320090062", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 4, "status": "🆕新", "city": "江宁区", "vid": "5320298597", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力网格-江宁区-东山街道"},{"rank": 5, "status": "🆕新", "city": "徐州市", "vid": "7960286612", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"}];
+var CITIES=["南通市", "徐州市", "江宁区", "苏州市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
@@ -121,5 +122,15 @@ function reset(){
 }
 initTags();
 render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
