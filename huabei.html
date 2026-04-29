@@ -35,13 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 16</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 18</h1>
   <div class="stats">
-    <div class="s"><b>60</b>累计丢单</div>
-    <div class="s"><b>12</b>城市数</div>
-    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>77</b>累计丢单</div>
+    <div class="s"><b>10</b>城市数</div>
+    <div class="s"><b>7</b>🔴未处理</div>
     <div class="s"><b>11</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>刘景丰</b>负责人</div>
   </div>
 </div>
@@ -70,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "city": "石家庄市", "vid": "7010416089", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "鹿泉-上庄"},{"rank": 2, "status": "🔴4轮", "city": "临淄区", "vid": "7010415980", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "临淄东南"},{"rank": 3, "status": "🔴4轮", "city": "威海市", "vid": "7960242210", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "哈工大电力网格"},{"rank": 4, "status": "🔴6轮", "city": "济南市", "vid": "5320151249", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "济南市-历城区-王舍街道-龙湖天街"},{"rank": 5, "status": "🆕新", "city": "青岛市", "vid": "7990016843", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "城阳-天安数码"},{"rank": 6, "status": "🆕新", "city": "秦皇岛市", "vid": "7960242078", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "开发4-p区"},{"rank": 7, "status": "🔴4轮", "city": "嘉祥县", "vid": "7960069629", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-2"},{"rank": 8, "status": "🆕新", "city": "济南市", "vid": "5320149065", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-彩石街道-职业学院"},{"rank": 9, "status": "🆕新", "city": "济南市", "vid": "5320126920", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-港沟街道-融创乐园西"},{"rank": 10, "status": "🆕新", "city": "东营市", "vid": "5310124161", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东2区-翠湖小区"},{"rank": 11, "status": "🆕新", "city": "济南市", "vid": "5320138932", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-祝甸街道-桑园路"},{"rank": 12, "status": "🆕新", "city": "东营市", "vid": "5310524775", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西城-核-化工学院"},{"rank": 13, "status": "🆕新", "city": "沧州市", "vid": "7780111008", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "运北-明珠商贸城-1-2"},{"rank": 14, "status": "🆕新", "city": "黄岛区", "vid": "5310078912", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "灵山卫街道-海信灵山湾"},{"rank": 15, "status": "🆕新", "city": "潍坊市", "vid": "5930021767", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-奎文区南电力网格"},{"rank": 16, "status": "🆕新", "city": "济宁市", "vid": "5310271791", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高新区（六区）"}];
-var CITIES=["东营市", "临淄区", "嘉祥县", "威海市", "沧州市", "济南市", "济宁市", "潍坊市", "石家庄市", "秦皇岛市", "青岛市", "黄岛区"];
+var DATA=[{"rank": 1, "status": "🔴7轮", "city": "石家庄市", "vid": "7010416089", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "鹿泉-上庄"},{"rank": 2, "status": "🔴7轮", "city": "临淄区", "vid": "7010415980", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "临淄东南"},{"rank": 3, "status": "🔴4轮", "city": "东营市", "vid": "5310524775", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西城-核-化工学院"},{"rank": 4, "status": "🔴4轮", "city": "秦皇岛市", "vid": "7960242078", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "开发4-p区"},{"rank": 5, "status": "🆕新", "city": "泰安市", "vid": "5310277792", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "岱岳区-爱琴海2"},{"rank": 6, "status": "🔴4轮", "city": "黄岛区", "vid": "5310078912", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "灵山卫街道-海信灵山湾"},{"rank": 7, "status": "🆕新", "city": "沧州市", "vid": "7780070097", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "运北-明珠商贸城-1-2"},{"rank": 8, "status": "🆕新", "city": "东营市", "vid": "5310115747", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西城-核-化工学院"},{"rank": 9, "status": "🆕新", "city": "石家庄市", "vid": "5310686579", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战-高开区-化工学院"},{"rank": 10, "status": "🔴4轮", "city": "济宁市", "vid": "5310271791", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "高新区（六区）"},{"rank": 11, "status": "🔴4轮", "city": "潍坊市", "vid": "5930021767", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "潍坊市-奎文区南电力网格"},{"rank": 12, "status": "🆕新", "city": "石家庄市", "vid": "5310580577", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战-桥西区-西美花街"},{"rank": 13, "status": "🆕新", "city": "潍坊市", "vid": "5910863181", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格"},{"rank": 14, "status": "🆕新", "city": "高密市", "vid": "5310027626", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东南区域R"},{"rank": 15, "status": "🆕新", "city": "沧州市", "vid": "7780042952", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新华-开发区-主城区"},{"rank": 16, "status": "🆕新", "city": "沧州市", "vid": "7780312108", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "运南-水利学校-4-2"},{"rank": 17, "status": "🆕新", "city": "石家庄市", "vid": "5310220107", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "二战A-超区-新华区"},{"rank": 18, "status": "🆕新", "city": "东营市", "vid": "5310011747", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东8区-核-金融港"}];
+var CITIES=["东营市", "临淄区", "沧州市", "泰安市", "济宁市", "潍坊市", "石家庄市", "秦皇岛市", "高密市", "黄岛区"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
@@ -121,5 +122,15 @@ function reset(){
 }
 initTags();
 render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
