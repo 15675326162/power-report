@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 14</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 21</h1>
   <div class="stats">
-    <div class="s"><b>81</b>累计丢单</div>
-    <div class="s"><b>7</b>城市数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>10</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>103</b>累计丢单</div>
+    <div class="s"><b>6</b>城市数</div>
+    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>16</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "滁州市", "vid": "5320339192", "lost": 12, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力网格-万达/滁州学院"},{"rank": 2, "status": "🆕新", "city": "芜湖市", "vid": "3720200187", "lost": 11, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "安工程电力网格"},{"rank": 3, "status": "🔴6轮", "city": "长沙市", "vid": "5310411836", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "Y沙湾公园"},{"rank": 4, "status": "🆕新", "city": "滁州市", "vid": "5320357592", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-长江商贸城"},{"rank": 5, "status": "🔴2轮", "city": "滁州市", "vid": "5320304368", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力网格-港汇中心网格"},{"rank": 6, "status": "🔴3轮", "city": "合肥市", "vid": "5320372793", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力一区-瑶海区-火车站元一"},{"rank": 7, "status": "🆕新", "city": "襄阳市", "vid": "5310313552", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "襄城三区-市政府"},{"rank": 8, "status": "🔴2轮", "city": "合肥市", "vid": "5310480644", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力一区-庐阳区-阜阳路大润发"},{"rank": 9, "status": "🆕新", "city": "合肥市", "vid": "7010396528", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店安徽中医药大学"},{"rank": 10, "status": "🆕新", "city": "合肥市", "vid": "5320486699", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-四里河"},{"rank": 11, "status": "🆕新", "city": "合肥市", "vid": "5320400586", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-大东门"},{"rank": 12, "status": "🆕新", "city": "界首市", "vid": "7960067761", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "界8"},{"rank": 13, "status": "🆕新", "city": "肥西县", "vid": "5310067758", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "肥西-绿地中心"},{"rank": 14, "status": "🆕新", "city": "合肥市", "vid": "5310403488", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-定远路万达"}];
-var CITIES=["合肥市", "滁州市", "界首市", "肥西县", "芜湖市", "襄阳市", "长沙市"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "city": "滁州市", "vid": "5320357592", "lost": 10, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "电力网格-长江商贸城"},{"rank": 2, "status": "🆕新", "city": "咸宁市", "vid": "5320408827", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "三级超区D-江南10区-江夏区-安山街道-外围-江南-资产4区-民主路片区"},{"rank": 3, "status": "🔴5轮", "city": "合肥市", "vid": "5320372793", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力一区-瑶海区-火车站元一"},{"rank": 4, "status": "🔴4轮", "city": "滁州市", "vid": "5320304368", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力网格-港汇中心网格"},{"rank": 5, "status": "🆕新", "city": "合肥市", "vid": "5310713286", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战区-包河区-绿地缤纷城"},{"rank": 6, "status": "🆕新", "city": "咸宁市", "vid": "5320026816", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "三级超区D-江南10区-江夏区-安山街道-外围-江南-资产4区-民主路片区"},{"rank": 7, "status": "🔴3轮", "city": "襄阳市", "vid": "5310313552", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "襄城三区-市政府"},{"rank": 8, "status": "🆕新", "city": "合肥市", "vid": "7010377779", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-长宁社区"},{"rank": 9, "status": "🆕新", "city": "合肥市", "vid": "5310535658", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "二战区-庐阳区-庐阳经开区"},{"rank": 10, "status": "🆕新", "city": "合肥市", "vid": "5320484632", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力二区-经开区-海恒社区"},{"rank": 11, "status": "🔴4轮", "city": "合肥市", "vid": "5310480644", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力一区-庐阳区-阜阳路大润发"},{"rank": 12, "status": "🆕新", "city": "合肥市", "vid": "5310762977", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 13, "status": "🆕新", "city": "长沙市", "vid": "5320362286", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "T新开铺"},{"rank": 14, "status": "🆕新", "city": "合肥市", "vid": "5310765461", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 15, "status": "🆕新", "city": "合肥市", "vid": "5320335522", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店安徽中医药大学"},{"rank": 16, "status": "🆕新", "city": "长沙市", "vid": "5320420840", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "F芙蓉广场"},{"rank": 17, "status": "🆕新", "city": "长沙市", "vid": "5320370452", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "T铁道学院12"},{"rank": 18, "status": "🆕新", "city": "蚌埠市", "vid": "5320034056", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "A区-火车站"},{"rank": 19, "status": "🆕新", "city": "合肥市", "vid": "5310378391", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-市二院"},{"rank": 20, "status": "🆕新", "city": "合肥市", "vid": "5310770367", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山-十里庙"},{"rank": 21, "status": "🆕新", "city": "合肥市", "vid": "5310712052", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区"}];
+var CITIES=["合肥市", "咸宁市", "滁州市", "蚌埠市", "襄阳市", "长沙市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
