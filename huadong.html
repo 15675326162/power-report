@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 8</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 15</h1>
   <div class="stats">
-    <div class="s"><b>59</b>累计丢单</div>
-    <div class="s"><b>5</b>城市数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>74</b>累计丢单</div>
+    <div class="s"><b>9</b>城市数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>12</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>胡丹萍</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "江宁区", "vid": "5320435556", "lost": 29, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-江宁区-高新园区三中队"},{"rank": 2, "status": "🆕新", "city": "徐州市", "vid": "5310083278", "lost": 9, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "泉山四区-1换电"},{"rank": 3, "status": "🆕新", "city": "苏州市", "vid": "5310632227", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吴江区-庞金路"},{"rank": 4, "status": "🆕新", "city": "苏州市", "vid": "7010379562", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "吴中区-吴中大学城"},{"rank": 5, "status": "🆕新", "city": "徐州市", "vid": "5310197507", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山二区换电"},{"rank": 6, "status": "🆕新", "city": "徐州市", "vid": "5310433595", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "泉山四区换电"},{"rank": 7, "status": "🆕新", "city": "平潭县", "vid": "5310646333", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "平潭县-君山镇-主城-北部湾&仙人井区网格"},{"rank": 8, "status": "🆕新", "city": "六合区", "vid": "7960104117", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力战区-六合区-电力B区"}];
-var CITIES=["六合区", "平潭县", "徐州市", "江宁区", "苏州市"];
+var DATA=[{"rank": 1, "status": "🔴5轮", "city": "徐州市", "vid": "5310083278", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "泉山四区-1换电"},{"rank": 2, "status": "🆕新", "city": "丹阳市", "vid": "7010379310", "lost": 9, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "丹阳市开发区电力网格"},{"rank": 3, "status": "🆕新", "city": "海州区", "vid": "5310546156", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "海州区换电网络"},{"rank": 4, "status": "🔴5轮", "city": "苏州市", "vid": "5310632227", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "吴江区-庞金路"},{"rank": 5, "status": "🆕新", "city": "苏州市", "vid": "5310649777", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吴中区-吴中大学城"},{"rank": 6, "status": "🆕新", "city": "苏州市", "vid": "5310557792", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吴中区-石湖东"},{"rank": 7, "status": "🆕新", "city": "徐州市", "vid": "7960233116", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "鼓楼五区换电"},{"rank": 8, "status": "🔴5轮", "city": "徐州市", "vid": "5310197507", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "铜山二区换电"},{"rank": 9, "status": "🆕新", "city": "南通市", "vid": "5310287509", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "开发区网格"},{"rank": 10, "status": "🆕新", "city": "六合区", "vid": "7960048956", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力战区-六合区-电力D区"},{"rank": 11, "status": "🆕新", "city": "徐州市", "vid": "7960207611", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山二区换电"},{"rank": 12, "status": "🆕新", "city": "玄武区", "vid": "5320305712", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "中山陵"},{"rank": 13, "status": "🆕新", "city": "余姚市", "vid": "5320184463", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "余姚人民医院"},{"rank": 14, "status": "🆕新", "city": "启东市", "vid": "7900215973", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "启东市电力网格2"},{"rank": 15, "status": "🆕新", "city": "徐州市", "vid": "5310434190", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "泉山三区-1换电"}];
+var CITIES=["丹阳市", "余姚市", "六合区", "南通市", "启东市", "徐州市", "海州区", "玄武区", "苏州市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
