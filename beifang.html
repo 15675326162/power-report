@@ -35,15 +35,15 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 北方大区 — 高频缺电 TOP 10</h1>
+  <h1>📍 北方大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>45</b>累计丢单</div>
-    <div class="s"><b>6</b>城市数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>46</b>累计丢单</div>
+    <div class="s"><b>8</b>城市数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>11</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
-    <div class="s"><b>乔春阳、张小灵</b>负责人</div>
+    <div class="s"><b>乔春阳</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "city": "沈阳市", "vid": "5320322337", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "二战B-和平区-长白西"},{"rank": 2, "status": "🆕新", "city": "沈阳市", "vid": "5310625814", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战B-浑南区-沈营大街"},{"rank": 3, "status": "🆕新", "city": "松原市", "vid": "5320021356", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力网格、江北"},{"rank": 4, "status": "🔴4轮", "city": "潢川县", "vid": "5910852475", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "潢川四区"},{"rank": 5, "status": "🔴4轮", "city": "佳木斯市", "vid": "5310731196", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "佳木斯5区"},{"rank": 6, "status": "🔴4轮", "city": "佳木斯市", "vid": "5310642968", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "佳木斯19区"},{"rank": 7, "status": "🆕新", "city": "沈阳市", "vid": "5320321149", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-南八马路"},{"rank": 8, "status": "🆕新", "city": "津南区", "vid": "7100038454", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格东沽路"},{"rank": 9, "status": "🆕新", "city": "松原市", "vid": "5320014702", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格江南"},{"rank": 10, "status": "🆕新", "city": "郑州市", "vid": "3720180683", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄河科技学院"}];
-var CITIES=["佳木斯市", "松原市", "沈阳市", "津南区", "潢川县", "郑州市"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "city": "沈阳市", "vid": "5320321149", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "二战A-和平区-南八马路"},{"rank": 2, "status": "🆕新", "city": "宝丰县", "vid": "7110016721", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "宝丰-西"},{"rank": 3, "status": "🆕新", "city": "瓦房店市", "vid": "7110170161", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 4, "status": "🆕新", "city": "沈阳市", "vid": "5310024747", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-超区-铁西区-西峡谷"},{"rank": 5, "status": "🆕新", "city": "津南区", "vid": "7010335738", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港"},{"rank": 6, "status": "🆕新", "city": "沈阳市", "vid": "5320335414", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "一战A-沈河区-青年公园"},{"rank": 7, "status": "🆕新", "city": "松原市", "vid": "5320021884", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格江南"},{"rank": 8, "status": "🆕新", "city": "滨海新区", "vid": "7010394491", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战-汉沽-网格B"},{"rank": 9, "status": "🆕新", "city": "登封市", "vid": "5320172401", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "登封市融合网格"},{"rank": 10, "status": "🆕新", "city": "沈阳市", "vid": "5320356424", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战B-和平区-长白西"},{"rank": 11, "status": "🆕新", "city": "沈阳市", "vid": "3930075498", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院"},{"rank": 12, "status": "🆕新", "city": "牡丹江市", "vid": "5310595996", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "融合-牡丹江15区"}];
+var CITIES=["宝丰县", "松原市", "沈阳市", "津南区", "滨海新区", "牡丹江市", "瓦房店市", "登封市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
