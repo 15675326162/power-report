@@ -39,8 +39,8 @@ tr.rep{background:#fff8f8}
   <div class="stats">
     <div class="s"><b>54</b>累计丢单</div>
     <div class="s"><b>5</b>城市数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>10</b>🆕新增</div>
+    <div class="s"><b>11</b>🔴未处理</div>
+    <div class="s"><b>0</b>🆕新增</div>
     <div class="s"><b>08点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>侯凯晨</b>负责人</div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴28轮", "city": "晋中市", "vid": "5320214198", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "晋中电力3区万科朗润园"},{"rank": 2, "status": "🆕新", "city": "银川市", "vid": "5320025485", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜2区"},{"rank": 3, "status": "🆕新", "city": "呼和浩特市", "vid": "5320420721", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "电力西区-新城区-工大-05区"},{"rank": 4, "status": "🆕新", "city": "兰州市", "vid": "5320316255", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天"},{"rank": 5, "status": "🆕新", "city": "兰州市", "vid": "5320354948", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关-万象城"},{"rank": 6, "status": "🆕新", "city": "兰州市", "vid": "5320286797", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-省博物馆"},{"rank": 7, "status": "🆕新", "city": "兰州市", "vid": "5320353020", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-东岗"},{"rank": 8, "status": "🆕新", "city": "巴林左旗", "vid": "6680050311", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "巴林左旗老区2"},{"rank": 9, "status": "🆕新", "city": "银川市", "vid": "5320043833", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南3区"},{"rank": 10, "status": "🆕新", "city": "银川市", "vid": "7010525406", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区"},{"rank": 11, "status": "🆕新", "city": "呼和浩特市", "vid": "5320397227", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西战区-回民区-维多利广场19区"}];
+var DATA=[{"rank": 1, "status": "🔴29轮", "city": "晋中市", "vid": "5320214198", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力3区万科朗润园"},{"rank": 2, "status": "🔴2轮", "city": "呼和浩特市", "vid": "5320420721", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "电力西区-新城区-工大-05区"},{"rank": 3, "status": "🔴2轮", "city": "银川市", "vid": "5320025485", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜2区"},{"rank": 4, "status": "🔴2轮", "city": "兰州市", "vid": "5320316255", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天"},{"rank": 5, "status": "🔴2轮", "city": "兰州市", "vid": "5320354948", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关-万象城"},{"rank": 6, "status": "🔴2轮", "city": "兰州市", "vid": "5320353020", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-东岗"},{"rank": 7, "status": "🔴2轮", "city": "兰州市", "vid": "5320286797", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-省博物馆"},{"rank": 8, "status": "🔴2轮", "city": "巴林左旗", "vid": "6680050311", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "巴林左旗老区2"},{"rank": 9, "status": "🔴2轮", "city": "银川市", "vid": "7010525406", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区"},{"rank": 10, "status": "🔴2轮", "city": "银川市", "vid": "5320043833", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南3区"},{"rank": 11, "status": "🔴2轮", "city": "呼和浩特市", "vid": "5320397227", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西战区-回民区-维多利广场19区"}];
 var CITIES=["兰州市", "呼和浩特市", "巴林左旗", "晋中市", "银川市"];
 var selectedCities=new Set();
 function initTags(){
