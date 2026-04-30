@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 19</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 15</h1>
   <div class="stats">
-    <div class="s"><b>95</b>累计丢单</div>
-    <div class="s"><b>12</b>城市数</div>
-    <div class="s"><b>7</b>🔴未处理</div>
-    <div class="s"><b>12</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>96</b>累计丢单</div>
+    <div class="s"><b>7</b>城市数</div>
+    <div class="s"><b>6</b>🔴未处理</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴19轮", "city": "长沙市", "vid": "5320415114", "lost": 15, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "D龙华"},{"rank": 2, "status": "🔴13轮", "city": "合肥市", "vid": "7010450879", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力超区-高新-桃花"},{"rank": 3, "status": "🆕新", "city": "益阳市", "vid": "7960165855", "lost": 7, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "益阳五区（城市学院）"},{"rank": 4, "status": "🔴7轮", "city": "石峰区", "vid": "7960086346", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "石峰区电力网格"},{"rank": 5, "status": "🆕新", "city": "常德市", "vid": "7780072049", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "缓冲一区-大学城"},{"rank": 6, "status": "🆕新", "city": "合肥市", "vid": "5320322553", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-长宁社区"},{"rank": 7, "status": "🆕新", "city": "长沙市", "vid": "5310415052", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "D星沙下"},{"rank": 8, "status": "🆕新", "city": "滁州市", "vid": "5320302089", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-万达/滁州学院"},{"rank": 9, "status": "🔴7轮", "city": "永州市", "vid": "5310760746", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "零陵四区-四医院（电力）"},{"rank": 10, "status": "🆕新", "city": "石峰区", "vid": "7960073335", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "石峰区电力网格"},{"rank": 11, "status": "🆕新", "city": "颍上县", "vid": "7960034450", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "颍上县5区"},{"rank": 12, "status": "🔴7轮", "city": "六安市", "vid": "5320079254", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电-城北网格"},{"rank": 13, "status": "🔴7轮", "city": "石峰区", "vid": "7960165267", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "石峰区电力网格"},{"rank": 14, "status": "🔴7轮", "city": "长沙市", "vid": "5310398699", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "K国防科技2"},{"rank": 15, "status": "🆕新", "city": "新滩镇", "vid": "7960063225", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新滩镇"},{"rank": 16, "status": "🆕新", "city": "合肥市", "vid": "5310696057", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战区-包河区-绿地缤纷城"},{"rank": 17, "status": "🆕新", "city": "萧县", "vid": "7960047390", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "萧县电力网格"},{"rank": 18, "status": "🆕新", "city": "耒阳市", "vid": "7110297470", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "耒阳五区-新"},{"rank": 19, "status": "🆕新", "city": "合肥市", "vid": "5310431570", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-定远路万达"}];
-var CITIES=["六安市", "合肥市", "常德市", "新滩镇", "永州市", "滁州市", "益阳市", "石峰区", "耒阳市", "萧县", "长沙市", "颍上县"];
+var DATA=[{"rank": 1, "status": "🔴12轮", "city": "石峰区", "vid": "7960086346", "lost": 12, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "石峰区电力网格"},{"rank": 2, "status": "🆕新", "city": "合肥市", "vid": "5320334306", "lost": 11, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店安徽中医药大学"},{"rank": 3, "status": "🆕新", "city": "合肥市", "vid": "5310759653", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 4, "status": "🔴6轮", "city": "益阳市", "vid": "7960165855", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "益阳五区（城市学院）"},{"rank": 5, "status": "🔴6轮", "city": "长沙市", "vid": "5310415052", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "D星沙下"},{"rank": 6, "status": "🆕新", "city": "石峰区", "vid": "7960075326", "lost": 7, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "石峰区电力网格"},{"rank": 7, "status": "🔴6轮", "city": "颍上县", "vid": "7960034450", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "颍上县5区"},{"rank": 8, "status": "🔴6轮", "city": "石峰区", "vid": "7960073335", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "石峰区电力网格"},{"rank": 9, "status": "🔴12轮", "city": "石峰区", "vid": "7960165267", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "石峰区电力网格"},{"rank": 10, "status": "🆕新", "city": "咸宁市", "vid": "5320039601", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三级超区D-江南10区-江夏区-安山街道-外围-江南-资产4区-民主路片区"},{"rank": 11, "status": "🆕新", "city": "合肥市", "vid": "5320486117", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-天乐"},{"rank": 12, "status": "🆕新", "city": "合肥市", "vid": "5310404393", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-天乐"},{"rank": 13, "status": "🆕新", "city": "合肥市", "vid": "5310696035", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园"},{"rank": 14, "status": "🆕新", "city": "寿县", "vid": "5320079879", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "寿县职业技术学院网格"},{"rank": 15, "status": "🆕新", "city": "合肥市", "vid": "5320486060", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战区-瑶海区-新站家天下"}];
+var CITIES=["合肥市", "咸宁市", "寿县", "益阳市", "石峰区", "长沙市", "颍上县"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
