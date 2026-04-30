@@ -35,15 +35,15 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 14</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 20</h1>
   <div class="stats">
-    <div class="s"><b>55</b>累计丢单</div>
-    <div class="s"><b>9</b>城市数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>12</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>121</b>累计丢单</div>
+    <div class="s"><b>11</b>城市数</div>
+    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>15</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
-    <div class="s"><b>张茹榕、胡丹萍、鲁宏伟</b>负责人</div>
+    <div class="s"><b>胡丹萍、张茹榕、鲁宏伟</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴6轮", "city": "杭州市", "vid": "7900055427", "lost": 13, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "临安-农林大学电力网格-1"},{"rank": 2, "status": "🔴6轮", "city": "厦门市", "vid": "5320125981", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力-集美-软件园三期"},{"rank": 3, "status": "🆕新", "city": "江宁区", "vid": "7010483503", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-开发区"},{"rank": 4, "status": "🆕新", "city": "徐州市", "vid": "7960282392", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"},{"rank": 5, "status": "🆕新", "city": "徐州市", "vid": "5310083504", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"},{"rank": 6, "status": "🆕新", "city": "嘉兴市", "vid": "5310037490", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东栅街道-电力网格-城南网格组"},{"rank": 7, "status": "🆕新", "city": "宁波市", "vid": "5310088076", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "北战—江北万达"},{"rank": 8, "status": "🆕新", "city": "徐州市", "vid": "5310585867", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "云龙三区-1换电"},{"rank": 9, "status": "🆕新", "city": "徐州市", "vid": "5310434792", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开五区换电"},{"rank": 10, "status": "🆕新", "city": "徐州市", "vid": "5310188339", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"},{"rank": 11, "status": "🆕新", "city": "南通市", "vid": "5320143091", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "张芝山"},{"rank": 12, "status": "🆕新", "city": "溧阳市", "vid": "6680064592", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "溧阳市电力网格溧阳西"},{"rank": 13, "status": "🆕新", "city": "苏州市", "vid": "7010409169", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吴中区-吴中大学城"},{"rank": 14, "status": "🆕新", "city": "宁波市", "vid": "7900215017", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南战-奉化电力网格"}];
-var CITIES=["南通市", "厦门市", "嘉兴市", "宁波市", "徐州市", "杭州市", "江宁区", "溧阳市", "苏州市"];
+var DATA=[{"rank": 1, "status": "🔴7轮", "city": "徐州市", "vid": "5310438850", "lost": 23, "h1": 8, "delta": "<span class='up'>↑8</span>", "grid": "泉山四区-1换电"},{"rank": 2, "status": "🔴7轮", "city": "徐州市", "vid": "7960281330", "lost": 15, "h1": 8, "delta": "<span class='up'>↑8</span>", "grid": "铜山一区换电"},{"rank": 3, "status": "🔴7轮", "city": "徐州市", "vid": "5310072619", "lost": 12, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "泉山二区-北换电"},{"rank": 4, "status": "🆕新", "city": "沙县区", "vid": "5930034190", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "R.海西"},{"rank": 5, "status": "🔴7轮", "city": "龙岩市", "vid": "7900003641", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "龙岩学院电力网格"},{"rank": 6, "status": "🆕新", "city": "徐州市", "vid": "5310197836", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "云龙二区-西换电"},{"rank": 7, "status": "🆕新", "city": "徐州市", "vid": "7960282392", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"},{"rank": 8, "status": "🆕新", "city": "徐州市", "vid": "5310434792", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开五区换电"},{"rank": 9, "status": "🆕新", "city": "徐州市", "vid": "5310355663", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"},{"rank": 10, "status": "🆕新", "city": "徐州市", "vid": "5310188339", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"},{"rank": 11, "status": "🆕新", "city": "徐州市", "vid": "7960220495", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "铜山一区换电"},{"rank": 12, "status": "🔴7轮", "city": "徐州市", "vid": "7960279803", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "铜山四区换电"},{"rank": 13, "status": "🆕新", "city": "嘉兴市", "vid": "5310037490", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东栅街道-电力网格-城南网格组"},{"rank": 14, "status": "🆕新", "city": "海州区", "vid": "5310546156", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "海州区换电网络"},{"rank": 15, "status": "🆕新", "city": "南通市", "vid": "5320005257", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "紫琅花谷"},{"rank": 16, "status": "🆕新", "city": "启东市", "vid": "7900216016", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "启东电力网格1"},{"rank": 17, "status": "🆕新", "city": "厦门市", "vid": "5310303615", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-集美-软件园三期"},{"rank": 18, "status": "🆕新", "city": "溧水区", "vid": "5910860184", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力战区-溧水区-石湫网格"},{"rank": 19, "status": "🆕新", "city": "泉州台商投资区", "vid": "5910886014", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "百崎乡"},{"rank": 20, "status": "🆕新", "city": "江宁区", "vid": "5310564581", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-江宁区-高新园区一二中队"}];
+var CITIES=["南通市", "厦门市", "启东市", "嘉兴市", "徐州市", "江宁区", "沙县区", "泉州台商投资区", "海州区", "溧水区", "龙岩市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
