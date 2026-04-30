@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
+    <div class="s"><b>28</b>累计丢单</div>
     <div class="s"><b>6</b>城市数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>何建鑫</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴14轮", "city": "唐江镇", "vid": "7960174333", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "唐江镇两轮网格"},{"rank": 2, "status": "🔴14轮", "city": "宁都县", "vid": "7960280624", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "网格1"},{"rank": 3, "status": "🆕新", "city": "金利镇", "vid": "3720189545", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图"},{"rank": 4, "status": "🆕新", "city": "萍乡市", "vid": "5320115635", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "雨花区-超远超区-萍乡-资产2区"},{"rank": 5, "status": "🆕新", "city": "会昌县", "vid": "5930030359", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "会昌四区"},{"rank": 6, "status": "🆕新", "city": "九江市", "vid": "5320110120", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "濂溪四区"}];
-var CITIES=["九江市", "会昌县", "唐江镇", "宁都县", "萍乡市", "金利镇"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "汕头市", "vid": "5320102160", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "6D-广兴村区"},{"rank": 2, "status": "🔴6轮", "city": "九江市", "vid": "5320110120", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "濂溪四区"},{"rank": 3, "status": "🆕新", "city": "南康区", "vid": "5310108798", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "龙岭区域"},{"rank": 4, "status": "🔴6轮", "city": "金利镇", "vid": "3720189545", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "换电策略地图"},{"rank": 5, "status": "🆕新", "city": "江门市", "vid": "7110394982", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新会金沙广场"},{"rank": 6, "status": "🆕新", "city": "汕头市", "vid": "5320120314", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "4A-汕头电视塔区"},{"rank": 7, "status": "🆕新", "city": "三亚市", "vid": "7110211318", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三亚海洋学院"}];
+var CITIES=["三亚市", "九江市", "南康区", "汕头市", "江门市", "金利镇"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
