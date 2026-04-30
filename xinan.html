@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 13</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 16</h1>
   <div class="stats">
-    <div class="s"><b>69</b>累计丢单</div>
-    <div class="s"><b>5</b>城市数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>10</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>111</b>累计丢单</div>
+    <div class="s"><b>6</b>城市数</div>
+    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>11</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "昆明市", "vid": "5320023940", "lost": 15, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-周山公园"},{"rank": 2, "status": "🔴12轮", "city": "兴业县", "vid": "7960266245", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "玉州区-三级超区-福绵区"},{"rank": 3, "status": "🔴12轮", "city": "昆明市", "vid": "5320365037", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡1-巫家坝"},{"rank": 4, "status": "🆕新", "city": "昆明市", "vid": "5320217519", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-金马"},{"rank": 5, "status": "🔴7轮", "city": "昆明市", "vid": "5320302116", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2--螺蛳湾"},{"rank": 6, "status": "🆕新", "city": "昆明市", "vid": "5320157155", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2--螺蛳湾"},{"rank": 7, "status": "🆕新", "city": "昆明市", "vid": "5320195392", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 8, "status": "🆕新", "city": "会泽县", "vid": "7960275818", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "土城村"},{"rank": 9, "status": "🆕新", "city": "丽江市", "vid": "5310442317", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "丽江市-大研街道"},{"rank": 10, "status": "🆕新", "city": "昆明市", "vid": "5320016270", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 11, "status": "🆕新", "city": "北海市", "vid": "7960011168", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 12, "status": "🆕新", "city": "昆明市", "vid": "5320301494", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新4区"},{"rank": 13, "status": "🆕新", "city": "昆明市", "vid": "5320206890", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰"}];
-var CITIES=["丽江市", "会泽县", "兴业县", "北海市", "昆明市"];
+var DATA=[{"rank": 1, "status": "🔴7轮", "city": "昆明市", "vid": "5320023940", "lost": 16, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明-呈贡-周山公园"},{"rank": 2, "status": "🔴18轮", "city": "兴业县", "vid": "7960266245", "lost": 15, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "玉州区-三级超区-福绵区"},{"rank": 3, "status": "🆕新", "city": "昆明市", "vid": "5320254463", "lost": 12, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "官渡-经开建工新城"},{"rank": 4, "status": "🔴18轮", "city": "昆明市", "vid": "5320365037", "lost": 10, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-官渡1-巫家坝"},{"rank": 5, "status": "🆕新", "city": "昆明市", "vid": "5320176080", "lost": 8, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-经开茶高山"},{"rank": 6, "status": "🔴13轮", "city": "昆明市", "vid": "5320302116", "lost": 8, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-官渡2--螺蛳湾"},{"rank": 7, "status": "🆕新", "city": "玉溪市", "vid": "7110102208", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "西山区-三级超区-易门县玉溪市"},{"rank": 8, "status": "🆕新", "city": "昆明市", "vid": "5320261884", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2--螺蛳湾"},{"rank": 9, "status": "🔴7轮", "city": "昆明市", "vid": "5320301494", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力2-五华-高新4区"},{"rank": 10, "status": "🆕新", "city": "昆明市", "vid": "5320168893", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新5区"},{"rank": 11, "status": "🆕新", "city": "南宁市", "vid": "5310549158", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "江南-江南公园"},{"rank": 12, "status": "🆕新", "city": "昆明市", "vid": "5320162385", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-丰宁区"},{"rank": 13, "status": "🆕新", "city": "彭州市", "vid": "3930082692", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "调-彭州市核心1区-2"},{"rank": 14, "status": "🆕新", "city": "昆明市", "vid": "5320166708", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新6区"},{"rank": 15, "status": "🆕新", "city": "龙里县", "vid": "7010041756", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "龙里4"},{"rank": 16, "status": "🆕新", "city": "昆明市", "vid": "5320158048", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-拓东区"}];
+var CITIES=["兴业县", "南宁市", "彭州市", "昆明市", "玉溪市", "龙里县"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
