@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 11</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 16</h1>
   <div class="stats">
-    <div class="s"><b>49</b>累计丢单</div>
-    <div class="s"><b>8</b>城市数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>9</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>80</b>累计丢单</div>
+    <div class="s"><b>11</b>城市数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>13</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>何建鑫</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "于都县", "vid": "7960135577", "lost": 10, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "R.城区"},{"rank": 2, "status": "🔴7轮", "city": "贵溪市", "vid": "7780340401", "lost": 8, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "贵溪2区"},{"rank": 3, "status": "🆕新", "city": "三亚市", "vid": "7110014624", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "海南技师学院"},{"rank": 4, "status": "🆕新", "city": "南昌市", "vid": "7780350607", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "南昌豫章师范学院"},{"rank": 5, "status": "🆕新", "city": "会昌县", "vid": "5930030359", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "会昌四区"},{"rank": 6, "status": "🔴7轮", "city": "东凤镇", "vid": "7960262779", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东凤换电三区"},{"rank": 7, "status": "🆕新", "city": "贵溪市", "vid": "5310070965", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪1区"},{"rank": 8, "status": "🆕新", "city": "高州市", "vid": "5310299776", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高州4区"},{"rank": 9, "status": "🆕新", "city": "湛江市", "vid": "5320284855", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "湛江市-霞山区-E"},{"rank": 10, "status": "🆕新", "city": "湛江市", "vid": "5320184053", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "湛江市-赤坎区-C"},{"rank": 11, "status": "🆕新", "city": "东凤镇", "vid": "5320066079", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东凤换电三区"}];
-var CITIES=["三亚市", "东凤镇", "于都县", "会昌县", "南昌市", "湛江市", "贵溪市", "高州市"];
+var DATA=[{"rank": 1, "status": "🔴13轮", "city": "贵溪市", "vid": "7780340401", "lost": 11, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "贵溪2区"},{"rank": 2, "status": "🆕新", "city": "宁都县", "vid": "7900088129", "lost": 9, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "网格2"},{"rank": 3, "status": "🆕新", "city": "茂名滨海新区", "vid": "6680049171", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "茂名滨海新区网格1"},{"rank": 4, "status": "🔴7轮", "city": "三亚市", "vid": "7110014624", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "海南技师学院"},{"rank": 5, "status": "🆕新", "city": "贵溪市", "vid": "7780216869", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区"},{"rank": 6, "status": "🆕新", "city": "肇庆市", "vid": "5930044514", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-永安镇电力"},{"rank": 7, "status": "🆕新", "city": "宁都县", "vid": "7960280624", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "网格1"},{"rank": 8, "status": "🔴7轮", "city": "贵溪市", "vid": "5310070965", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "贵溪1区"},{"rank": 9, "status": "🆕新", "city": "贵溪市", "vid": "5310252399", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区"},{"rank": 10, "status": "🆕新", "city": "潮州市", "vid": "7900192776", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 11, "status": "🆕新", "city": "三水区", "vid": "2000034719", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "万达广场电力网格"},{"rank": 12, "status": "🆕新", "city": "湛江市", "vid": "5320290448", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "坡头区-坡头西"},{"rank": 13, "status": "🆕新", "city": "顺德区", "vid": "2000035265", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "顺德学院区-E6"},{"rank": 14, "status": "🆕新", "city": "顺德区", "vid": "7900253853", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "中上区-东康路上"},{"rank": 15, "status": "🆕新", "city": "九江市", "vid": "5320066401", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "浔阳二区"},{"rank": 16, "status": "🆕新", "city": "新余市", "vid": "2000054250", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新余高新区电力网格B"}];
+var CITIES=["三亚市", "三水区", "九江市", "宁都县", "新余市", "湛江市", "潮州市", "肇庆市", "茂名滨海新区", "贵溪市", "顺德区"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
