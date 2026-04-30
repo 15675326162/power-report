@@ -31,7 +31,9 @@ tr.rep{background:#fff8f8}
     <div class="s"><b>3</b>累计丢单</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>胡世友</b>负责人</div>
+    <div class="s"><b>10点</b>时段</div>
+        <div class="s"><b id="pv">-</b>查看</div>
+<div class="s"><b>胡世友</b>负责人</div>
   </div>
 </div>
 <div class="cnt" id="cnt"></div>
@@ -65,5 +67,15 @@ function render(){
   document.getElementById('cnt').textContent='共 '+DATA.length+' 条';
 }
 render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
