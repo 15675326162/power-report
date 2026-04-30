@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 北方大区 — 高频缺电 TOP 10</h1>
+  <h1>📍 北方大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>37</b>累计丢单</div>
+    <div class="s"><b>27</b>累计丢单</div>
     <div class="s"><b>6</b>城市数</div>
-    <div class="s"><b>10</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>乔春阳、张小灵</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "city": "禹州市", "vid": "5930041091", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "禹州4区"},{"rank": 2, "status": "🔴13轮", "city": "瓦房店市", "vid": "7110188005", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 3, "status": "🔴2轮", "city": "沈阳市", "vid": "5320370627", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "四战B-皇姑区-北塔"},{"rank": 4, "status": "🔴2轮", "city": "滨海新区", "vid": "7010391498", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战-滨海-网格D"},{"rank": 5, "status": "🔴2轮", "city": "沈阳市", "vid": "5320332610", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战A-沈河区-青年大街"},{"rank": 6, "status": "🔴2轮", "city": "西青区", "vid": "5310348308", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-学府工业区"},{"rank": 7, "status": "🔴2轮", "city": "沈阳市", "vid": "5320346337", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "一战C-大东区-德增街"},{"rank": 8, "status": "🔴2轮", "city": "瓦房店市", "vid": "7110176857", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 9, "status": "🔴2轮", "city": "沈阳市", "vid": "3930069372", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院"},{"rank": 10, "status": "🔴2轮", "city": "郑州市", "vid": "5310667472", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "管城助力车电力网格"}];
-var CITIES=["沈阳市", "滨海新区", "瓦房店市", "禹州市", "西青区", "郑州市"];
+var DATA=[{"rank": 1, "status": "🔴14轮", "city": "沈阳市", "vid": "5320370627", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "四战B-皇姑区-北塔"},{"rank": 2, "status": "🆕新", "city": "沈阳市", "vid": "5310625814", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战B-浑南区-沈营大街"},{"rank": 3, "status": "🆕新", "city": "滨海新区", "vid": "7010391302", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战=滨海-网格G"},{"rank": 4, "status": "🆕新", "city": "西青区", "vid": "5310408528", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-中北镇A"},{"rank": 5, "status": "🆕新", "city": "沈阳市", "vid": "5320389752", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-红星美凯龙"},{"rank": 6, "status": "🆕新", "city": "郑州市", "vid": "5310543994", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "管城助力车电力网格"},{"rank": 7, "status": "🆕新", "city": "镇平县", "vid": "7110263874", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "大正-翡翠城"},{"rank": 8, "status": "🆕新", "city": "南阳市", "vid": "5320361112", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南阳西5区电"}];
+var CITIES=["南阳市", "沈阳市", "滨海新区", "西青区", "郑州市", "镇平县"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
