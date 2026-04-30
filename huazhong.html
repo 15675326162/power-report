@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>23</b>累计丢单</div>
+    <div class="s"><b>31</b>累计丢单</div>
     <div class="s"><b>4</b>城市数</div>
-    <div class="s"><b>5</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "city": "武汉市", "vid": "5310160331", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "江夏-纸坊大街"},{"rank": 2, "status": "🔴2轮", "city": "蚌埠市", "vid": "5320075435", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "A区-火车站"},{"rank": 3, "status": "🔴2轮", "city": "合肥市", "vid": "5320361241", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店京东商贸城"},{"rank": 4, "status": "🔴2轮", "city": "歙县", "vid": "5320073624", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "歙县-开发区-电力网格1"},{"rank": 5, "status": "🔴2轮", "city": "合肥市", "vid": "5320485937", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园"}];
-var CITIES=["合肥市", "歙县", "武汉市", "蚌埠市"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "合肥市", "vid": "7010375932", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园"},{"rank": 2, "status": "🆕新", "city": "合肥市", "vid": "7010419042", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园"},{"rank": 3, "status": "🆕新", "city": "长丰县", "vid": "3720158361", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "北城-阿奎利亚"},{"rank": 4, "status": "🆕新", "city": "合肥市", "vid": "5320474472", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-管委会"},{"rank": 5, "status": "🆕新", "city": "合肥市", "vid": "5310787746", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园"},{"rank": 6, "status": "🆕新", "city": "长沙市", "vid": "5310415052", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "D星沙下"},{"rank": 7, "status": "🆕新", "city": "合肥市", "vid": "7010450879", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力超区-高新-桃花"},{"rank": 8, "status": "🆕新", "city": "株洲市", "vid": "5320096855", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "河西美的广场网格"},{"rank": 9, "status": "🆕新", "city": "合肥市", "vid": "7010379003", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战区-瑶海区-新站家天下"}];
+var CITIES=["合肥市", "株洲市", "长丰县", "长沙市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
