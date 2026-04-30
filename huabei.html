@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 30</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>154</b>累计丢单</div>
-    <div class="s"><b>16</b>城市数</div>
-    <div class="s"><b>5</b>🔴未处理</div>
-    <div class="s"><b>25</b>🆕新增</div>
-    <div class="s"><b>20点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>城市数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>刘景丰</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "济南市", "vid": "5320138444", "lost": 17, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-港沟街道-融创乐园西"},{"rank": 2, "status": "🆕新", "city": "济南市", "vid": "5320145380", "lost": 15, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-华山街道-艺术学院"},{"rank": 3, "status": "🔴5轮", "city": "青岛市", "vid": "5930076797", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "高新西区-康复大学"},{"rank": 4, "status": "🔴11轮", "city": "徐水区", "vid": "2000058689", "lost": 10, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "缓冲Z-保定市-二战区-徐水区-朝阳大街街道-长城园区-城东"},{"rank": 5, "status": "🔴5轮", "city": "固安县", "vid": "5310609612", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "固安新中街"},{"rank": 6, "status": "🔴5轮", "city": "东营市", "vid": "5310113872", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "超区·东北"},{"rank": 7, "status": "🆕新", "city": "张家口市", "vid": "5310799989", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "张家口市-西部区域"},{"rank": 8, "status": "🆕新", "city": "济南市", "vid": "5320149065", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-彩石街道-职业学院"},{"rank": 9, "status": "🆕新", "city": "古冶区", "vid": "7960116384", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "古冶-金山主城"},{"rank": 10, "status": "🆕新", "city": "邹平市", "vid": "5310085344", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "邹平山南1区R"},{"rank": 11, "status": "🔴5轮", "city": "古冶区", "vid": "7960211300", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "古冶-金山主城"},{"rank": 12, "status": "🆕新", "city": "东营市", "vid": "5310519780", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东5区-植物园"},{"rank": 13, "status": "🆕新", "city": "威海市", "vid": "5910772268", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "助力车高区西"},{"rank": 14, "status": "🆕新", "city": "石家庄市", "vid": "5310072878", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战-长安区-荣景园"},{"rank": 15, "status": "🆕新", "city": "石家庄市", "vid": "5310686824", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "二战-长安区-铁道大学"},{"rank": 16, "status": "🆕新", "city": "石家庄市", "vid": "7010401997", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战-长安区-荣景园"},{"rank": 17, "status": "🆕新", "city": "东营市", "vid": "5310117282", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东1区-核-鲁班公寓"},{"rank": 18, "status": "🆕新", "city": "石家庄市", "vid": "5310517183", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战-裕华区-万达广场"},{"rank": 19, "status": "🆕新", "city": "邹城市", "vid": "7960196330", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "邹城市西中网格"},{"rank": 20, "status": "🆕新", "city": "临淄区", "vid": "5310471466", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "临淄西北区域"},{"rank": 21, "status": "🆕新", "city": "长清区", "vid": "5930038088", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "大学城北区-长清"},{"rank": 22, "status": "🆕新", "city": "石家庄市", "vid": "5310549983", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战-长安区-谈固新村"},{"rank": 23, "status": "🆕新", "city": "沧州市", "vid": "7900274148", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新华-悦港城--5-2"},{"rank": 24, "status": "🆕新", "city": "石家庄市", "vid": "5310070480", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "一战-桥西区-时光公园"},{"rank": 25, "status": "🆕新", "city": "潍坊市", "vid": "6680061495", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区北电力网格"},{"rank": 26, "status": "🆕新", "city": "淄博市", "vid": "7010462502", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一级超区-1区-临淄四宝山"},{"rank": 27, "status": "🆕新", "city": "东营市", "vid": "5310032800", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东1区-锦华公园"},{"rank": 28, "status": "🆕新", "city": "徐水区", "vid": "2000059940", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东"},{"rank": 29, "status": "🆕新", "city": "东营市", "vid": "5310610873", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西8区-汽车站"},{"rank": 30, "status": "🆕新", "city": "济南市", "vid": "5320110115", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-唐冶街道-彭家庄"}];
-var CITIES=["东营市", "临淄区", "古冶区", "固安县", "威海市", "张家口市", "徐水区", "沧州市", "济南市", "淄博市", "潍坊市", "石家庄市", "邹城市", "邹平市", "长清区", "青岛市"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "石家庄市", "vid": "5310570440", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战-高开区-南乐乡村"}];
+var CITIES=["石家庄市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
