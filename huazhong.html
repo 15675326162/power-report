@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 10</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>40</b>累计丢单</div>
-    <div class="s"><b>5</b>城市数</div>
+    <div class="s"><b>61</b>累计丢单</div>
+    <div class="s"><b>6</b>城市数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>10</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴6轮", "city": "合肥市", "vid": "5310787746", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力一区-高新-天乐"},{"rank": 2, "status": "🆕新", "city": "合肥市", "vid": "7010450879", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力超区-高新-桃花"},{"rank": 3, "status": "🆕新", "city": "长沙市", "vid": "5310415052", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "D星沙下"},{"rank": 4, "status": "🔴6轮", "city": "肥东县", "vid": "5310775770", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "渠道战区-核心-肥东-肥东县区域B"},{"rank": 5, "status": "🆕新", "city": "咸宁市", "vid": "5320044336", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 6, "status": "🆕新", "city": "合肥市", "vid": "5310705715", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-政务-嘉和苑"},{"rank": 7, "status": "🆕新", "city": "池州市", "vid": "5930050404", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵池区-主城3-远东商会大厦"},{"rank": 8, "status": "🆕新", "city": "合肥市", "vid": "5310756517", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 9, "status": "🆕新", "city": "合肥市", "vid": "5310765461", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 10, "status": "🆕新", "city": "长沙市", "vid": "5320378565", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "F袁家岭9"}];
-var CITIES=["合肥市", "咸宁市", "池州市", "肥东县", "长沙市"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "咸宁市", "vid": "5320408827", "lost": 11, "h1": 11, "delta": "<span class='flat'>-</span>", "grid": "三级超区D-江南10区-江夏区-安山街道-外围-江南-资产4区-民主路片区"},{"rank": 2, "status": "🔴7轮", "city": "合肥市", "vid": "5310766013", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力一区-高新-长宁社区"},{"rank": 3, "status": "🆕新", "city": "合肥市", "vid": "7010450879", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力超区-高新-桃花"},{"rank": 4, "status": "🆕新", "city": "合肥市", "vid": "5310759653", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 5, "status": "🆕新", "city": "合肥市", "vid": "5320361241", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店京东商贸城"},{"rank": 6, "status": "🔴7轮", "city": "长沙市", "vid": "5320415114", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "D龙华"},{"rank": 7, "status": "🆕新", "city": "合肥市", "vid": "5310765461", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 8, "status": "🆕新", "city": "合肥市", "vid": "5320322553", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-长宁社区"},{"rank": 9, "status": "🆕新", "city": "咸宁市", "vid": "5320421462", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "市中区1（新）"},{"rank": 10, "status": "🆕新", "city": "株洲市", "vid": "5320085264", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "河西栗雨工业园网格"},{"rank": 11, "status": "🆕新", "city": "襄阳市", "vid": "7010403503", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "樊城九区-新五中（缓冲）"},{"rank": 12, "status": "🆕新", "city": "歙县", "vid": "5320092259", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "歙县-新城-电力网格8"}];
+var CITIES=["合肥市", "咸宁市", "株洲市", "歙县", "襄阳市", "长沙市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
