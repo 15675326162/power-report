@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 2</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 23</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>2</b>城市数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>6点</b>时段</div>
+    <div class="s"><b>123</b>累计丢单</div>
+    <div class="s"><b>17</b>城市数</div>
+    <div class="s"><b>6</b>🔴未处理</div>
+    <div class="s"><b>17</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "昆明市", "vid": "5320194229", "lost": 12, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-新迎区"},{"rank": 2, "status": "🆕新", "city": "平坝区", "vid": "7780027614", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "平坝"}];
-var CITIES=["平坝区", "昆明市"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "昆明市", "vid": "5320196166", "lost": 15, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-拓东区"},{"rank": 2, "status": "🔴18轮", "city": "昆明市", "vid": "5320204737", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2-经开茶高山"},{"rank": 3, "status": "🆕新", "city": "会泽县", "vid": "7960166626", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "洪都商贸城"},{"rank": 4, "status": "🔴6轮", "city": "兴业县", "vid": "7960089689", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "玉州区-三级超区-福绵区"},{"rank": 5, "status": "🆕新", "city": "沙坪坝区", "vid": "7010361479", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "重庆大学"},{"rank": 6, "status": "🔴18轮", "city": "景洪市", "vid": "5310355483", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "曼弄枫-贾明"},{"rank": 7, "status": "🆕新", "city": "盐边县", "vid": "7900001680", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "盐边县主城2区"},{"rank": 8, "status": "🆕新", "city": "贵阳市", "vid": "5320020823", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "贵阳市-花溪区-桥艺术村电力网格"},{"rank": 9, "status": "🆕新", "city": "玉林市", "vid": "5310429812", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "天湖御林湾"},{"rank": 10, "status": "🆕新", "city": "北海市", "vid": "7960011168", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 11, "status": "🔴12轮", "city": "普洱市", "vid": "5320388157", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "普洱市换电3区"},{"rank": 12, "status": "🔴12轮", "city": "博白县", "vid": "7110447146", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "博白1区"},{"rank": 13, "status": "🆕新", "city": "遂宁市", "vid": "5320304510", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "河东新区-4区"},{"rank": 14, "status": "🆕新", "city": "好花红镇", "vid": "5930046957", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "惠水2区"},{"rank": 15, "status": "🆕新", "city": "昆明市", "vid": "5320020569", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城"},{"rank": 16, "status": "🔴6轮", "city": "昆明市", "vid": "5320382568", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2-新亚洲"},{"rank": 17, "status": "🆕新", "city": "双凤桥街道", "vid": "6680071923", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "莲花"},{"rank": 18, "status": "🆕新", "city": "昆明市", "vid": "5320372633", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-云大西路"},{"rank": 19, "status": "🆕新", "city": "南宁市", "vid": "5320227121", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "青秀-仙葫"},{"rank": 20, "status": "🆕新", "city": "昆明市", "vid": "5320192315", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲"},{"rank": 21, "status": "🆕新", "city": "西双版纳磨憨经济开发区", "vid": "5910757082", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "磨憨两轮网格"},{"rank": 22, "status": "🆕新", "city": "宝圣湖街道", "vid": "5310218848", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "回兴街道二区"},{"rank": 23, "status": "🆕新", "city": "遂宁市", "vid": "5320240651", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "河东新区-超区3区"}];
+var CITIES=["会泽县", "兴业县", "北海市", "南宁市", "博白县", "双凤桥街道", "好花红镇", "宝圣湖街道", "昆明市", "普洱市", "景洪市", "沙坪坝区", "玉林市", "盐边县", "西双版纳磨憨经济开发区", "贵阳市", "遂宁市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
