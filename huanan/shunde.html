@@ -26,12 +26,12 @@ tr.rep{background:#fff8f8}
 .empty{text-align:center;padding:30px;color:#aaa}
 </style></head><body>
 <div class="hd">
-  <h1>📍 顺德区 — 高频缺电 TOP 3</h1>
+  <h1>📍 顺德区 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>22</b>累计丢单</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>何建鑫</b>负责人</div>
   </div>
@@ -48,7 +48,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "vid": "5930045455", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "大良上区E2S2"},{"rank": 2, "status": "🆕新", "vid": "2000025691", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "顺德学院区-E6"},{"rank": 3, "status": "🆕新", "vid": "2000034664", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "大良上区E2S2"}];
+var DATA=[{"rank": 1, "status": "🔴7轮", "vid": "2000025691", "lost": 9, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "顺德学院区-E6"},{"rank": 2, "status": "🔴7轮", "vid": "5930045455", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "大良上区E2S2"},{"rank": 3, "status": "🔴2轮", "vid": "2000034664", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "大良上区E2S2"},{"rank": 4, "status": "🆕新", "vid": "3720207740", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "红岗"}];
 function render(){
   var html='';
   DATA.forEach(function(r,i){
