@@ -26,12 +26,12 @@ tr.rep{background:#fff8f8}
 .empty{text-align:center;padding:30px;color:#aaa}
 </style></head><body>
 <div class="hd">
-  <h1>📍 南昌市 — 高频缺电 TOP 4</h1>
+  <h1>📍 南昌市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>21</b>累计丢单</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>36</b>累计丢单</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>杨成军</b>负责人</div>
   </div>
@@ -48,7 +48,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "vid": "5320180963", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高校-经开-西北片区"},{"rank": 2, "status": "🆕新", "vid": "5320177902", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "工厂-高新区-瑶湖西"},{"rank": 3, "status": "🆕新", "vid": "5320254443", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高校-高新区-工程学院"},{"rank": 4, "status": "🆕新", "vid": "5320092615", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "null"}];
+var DATA=[{"rank": 1, "status": "🆕新", "vid": "5320118154", "lost": 11, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南昌县-银三角"},{"rank": 2, "status": "🔴8轮", "vid": "5320177902", "lost": 9, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "工厂-高新区-瑶湖西"},{"rank": 3, "status": "🔴8轮", "vid": "5320180963", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "高校-经开-西北片区"},{"rank": 4, "status": "🆕新", "vid": "5320308211", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高校-经开-东南片区"},{"rank": 5, "status": "🆕新", "vid": "5320171487", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "工厂-高新区-瑶湖西"}];
 function render(){
   var html='';
   DATA.forEach(function(r,i){
