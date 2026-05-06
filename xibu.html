@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西部大区 — 高频缺电 TOP 11</h1>
+  <h1>📍 西部大区 — 高频缺电 TOP 20</h1>
   <div class="stats">
-    <div class="s"><b>42</b>累计丢单</div>
-    <div class="s"><b>7</b>城市数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>10</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>84</b>累计丢单</div>
+    <div class="s"><b>9</b>城市数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>18</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>侯凯晨</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "包头市", "vid": "5320170136", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-锦林公园"},{"rank": 2, "status": "🔴2轮", "city": "拉萨市", "vid": "5320217396", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力-北城新天地网格"},{"rank": 3, "status": "🆕新", "city": "怀仁市", "vid": "5910807663", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "怀仁八区R"},{"rank": 4, "status": "🆕新", "city": "嘉峪关市", "vid": "5320403476", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "嘉峪关四区-电力"},{"rank": 5, "status": "🆕新", "city": "新市区", "vid": "3720181528", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-东祥路"},{"rank": 6, "status": "🆕新", "city": "兰州市", "vid": "5320245022", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-南关"},{"rank": 7, "status": "🆕新", "city": "包头市", "vid": "5320160496", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-包头乐园"},{"rank": 8, "status": "🆕新", "city": "包头市", "vid": "5320176855", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-黄河小区"},{"rank": 9, "status": "🆕新", "city": "兰州市", "vid": "5320293405", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城"},{"rank": 10, "status": "🆕新", "city": "那拉提镇", "vid": "2000051574", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "那拉提镇主城网格"},{"rank": 11, "status": "🆕新", "city": "怀仁市", "vid": "7960249360", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "怀仁二区R"}];
-var CITIES=["兰州市", "包头市", "嘉峪关市", "怀仁市", "拉萨市", "新市区", "那拉提镇"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "city": "包头市", "vid": "5320170136", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-青山北-锦林公园"},{"rank": 2, "status": "🆕新", "city": "晋中市", "vid": "5320323328", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府"},{"rank": 3, "status": "🆕新", "city": "兰州市", "vid": "5320266574", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-一区"},{"rank": 4, "status": "🆕新", "city": "银川市", "vid": "7010504638", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北9区"},{"rank": 5, "status": "🆕新", "city": "包头市", "vid": "5320412470", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-神华大酒店"},{"rank": 6, "status": "🆕新", "city": "鄂尔多斯市", "vid": "7010439281", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B2"},{"rank": 7, "status": "🆕新", "city": "晋中市", "vid": "5320210480", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "晋中电力3区万科朗润园"},{"rank": 8, "status": "🔴4轮", "city": "包头市", "vid": "5320160496", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区南-包头乐园"},{"rank": 9, "status": "🆕新", "city": "新市区", "vid": "5310572680", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂"},{"rank": 10, "status": "🆕新", "city": "文水县", "vid": "3720150243", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "文水县-主城-东外环路R"},{"rank": 11, "status": "🆕新", "city": "晋中市", "vid": "5320205190", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "晋中电力3区万科朗润园"},{"rank": 12, "status": "🆕新", "city": "兰州市", "vid": "5320248440", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-兰雅星河湾"},{"rank": 13, "status": "🆕新", "city": "鄂尔多斯市", "vid": "7010418602", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "康巴什区1网格"},{"rank": 14, "status": "🆕新", "city": "拉萨市", "vid": "5320360815", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学纳金网格"},{"rank": 15, "status": "🆕新", "city": "新市区", "vid": "3720166471", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-高新万达"},{"rank": 16, "status": "🆕新", "city": "兰州市", "vid": "5320188911", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城"},{"rank": 17, "status": "🆕新", "city": "银川市", "vid": "5320349160", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-超区 2"},{"rank": 18, "status": "🆕新", "city": "新市区", "vid": "2000032082", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-高新万达"},{"rank": 19, "status": "🆕新", "city": "银川市", "vid": "7010504582", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆8区"},{"rank": 20, "status": "🆕新", "city": "乌兰浩特市", "vid": "5320347986", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "融合-乌兰浩特运营区E区"}];
+var CITIES=["乌兰浩特市", "兰州市", "包头市", "拉萨市", "文水县", "新市区", "晋中市", "鄂尔多斯市", "银川市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
