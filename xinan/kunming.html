@@ -26,12 +26,12 @@ tr.rep{background:#fff8f8}
 .empty{text-align:center;padding:30px;color:#aaa}
 </style></head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 16</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>151</b>累计丢单</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>12</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>37</b>累计丢单</div>
+    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>0</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
@@ -48,7 +48,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴20轮", "vid": "5320262641", "lost": 35, "h1": 9, "delta": "<span class='up'>↑9</span>", "grid": "昆明电力2-西山-度假区"},{"rank": 2, "status": "🔴14轮", "vid": "5320193179", "lost": 30, "h1": 17, "delta": "<span class='up'>↑17</span>", "grid": "昆明电力2-五华-莲花池"},{"rank": 3, "status": "🔴14轮", "vid": "5320206083", "lost": 12, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明-呈贡-周山公园"},{"rank": 4, "status": "🆕新", "vid": "5320331902", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区"},{"rank": 5, "status": "🆕新", "vid": "5320215026", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-莲花池"},{"rank": 6, "status": "🔴7轮", "vid": "5320195392", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "null"},{"rank": 7, "status": "🆕新", "vid": "5320157487", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-经开茶高山"},{"rank": 8, "status": "🆕新", "vid": "5320167494", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新2区"},{"rank": 9, "status": "🆕新", "vid": "5320207616", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-莲花池"},{"rank": 10, "status": "🆕新", "vid": "5320254786", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-五华-护国区"},{"rank": 11, "status": "🆕新", "vid": "5320185885", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-丰宁2区"},{"rank": 12, "status": "🆕新", "vid": "5320370500", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市2区"},{"rank": 13, "status": "🆕新", "vid": "5320218675", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市2区"},{"rank": 14, "status": "🆕新", "vid": "5320327745", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 15, "status": "🆕新", "vid": "5320176747", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-爱琴海"},{"rank": 16, "status": "🆕新", "vid": "5320018116", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"}];
+var DATA=[{"rank": 1, "status": "🔴1轮", "vid": "5320254862", "lost": 13, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-红云2区"},{"rank": 2, "status": "🔴1轮", "vid": "5320190635", "lost": 12, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城"},{"rank": 3, "status": "🔴1轮", "vid": "5320358237", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区"},{"rank": 4, "status": "🔴1轮", "vid": "5320154941", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 5, "status": "🔴1轮", "vid": "5320331902", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区"}];
 function render(){
   var html='';
   DATA.forEach(function(r,i){
