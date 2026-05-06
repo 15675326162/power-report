@@ -28,10 +28,10 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>37</b>累计丢单</div>
-    <div class="s"><b>5</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>36</b>累计丢单</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
@@ -48,7 +48,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴1轮", "vid": "5320254862", "lost": 13, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-红云2区"},{"rank": 2, "status": "🔴1轮", "vid": "5320190635", "lost": 12, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城"},{"rank": 3, "status": "🔴1轮", "vid": "5320358237", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区"},{"rank": 4, "status": "🔴1轮", "vid": "5320154941", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 5, "status": "🔴1轮", "vid": "5320331902", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区"}];
+var DATA=[{"rank": 1, "status": "🔴5轮", "vid": "5320190635", "lost": 16, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "昆明-呈贡-大学城"},{"rank": 2, "status": "🆕新", "vid": "5320253682", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区"},{"rank": 3, "status": "🔴5轮", "vid": "5320154941", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 4, "status": "🆕新", "vid": "5320165521", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-莲花池"},{"rank": 5, "status": "🔴5轮", "vid": "5320331902", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "null"}];
 function render(){
   var html='';
   DATA.forEach(function(r,i){
