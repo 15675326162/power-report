@@ -37,12 +37,13 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 华东大区 — 高频缺电 TOP 30</h1>
   <div class="stats">
-    <div class="s"><b>230</b>累计丢单</div>
-    <div class="s"><b>15</b>分组数</div>
+    <div class="s"><b>221</b>累计丢单</div>
+    <div class="s"><b>16</b>城市数</div>
     <div class="s"><b>8</b>🔴未处理</div>
     <div class="s"><b>22</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
-    <div class="s"><b>胡丹萍、张茹榕、鲁宏伟</b>负责人</div>
+    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
+    <div class="s"><b>胡丹萍、鲁宏伟、张茹榕</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -59,7 +60,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>分组</th>
+  <th>城市</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -70,13 +71,66 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "海州区", "vid": "5310600601", "lost": 31, "h1": 16, "delta": "<span class='flat'>-</span>", "grid": "海州区换电网络"},{"rank": 2, "status": "🔴6轮", "tag": "盐都区", "vid": "5910771496", "lost": 27, "h1": 5, "delta": "<span class='up'>↑7</span>", "grid": "盐都区助力车电力网格-东北区域"},{"rank": 3, "status": "🆕新", "tag": "德清县", "vid": "5310454153", "lost": 24, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-主城-下渚湖街道-高铁站-袁斌"},{"rank": 4, "status": "🔴2轮", "tag": "江宁区", "vid": "5320378771", "lost": 18, "h1": 2, "delta": "<span class='up'>↑4</span>", "grid": "电力网格-开发区"},{"rank": 5, "status": "🆕新", "tag": "南通市", "vid": "5310148507", "lost": 11, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "主城区-南区"},{"rank": 6, "status": "🔴2轮", "tag": "江宁区", "vid": "5320440538", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力网格-江宁区-高新园区一二中队"},{"rank": 7, "status": "🆕新", "tag": "徐州市", "vid": "7960219401", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电"},{"rank": 8, "status": "🔴5轮", "tag": "南通市", "vid": "5320093291", "lost": 7, "h1": 1, "delta": "<span class='up'>↑3</span>", "grid": "南通主城区北区"},{"rank": 9, "status": "🆕新", "tag": "海州区", "vid": "5310618092", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "海州区换电网络"},{"rank": 10, "status": "🔴2轮", "tag": "南通市", "vid": "5320007053", "lost": 6, "h1": 1, "delta": "<span class='up'>↑3</span>", "grid": "开发区网格"},{"rank": 11, "status": "🆕新", "tag": "徐州市", "vid": "7960222499", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山一区换电"},{"rank": 12, "status": "🆕新", "tag": "徐州市", "vid": "5310613466", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "云龙四区换电"},{"rank": 13, "status": "🆕新", "tag": "宁波市", "vid": "5310230130", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西战-财经学院"},{"rank": 14, "status": "🆕新", "tag": "启东市", "vid": "7900206854", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "启东电力网格1"},{"rank": 15, "status": "🔴2轮", "tag": "泗洪县", "vid": "5320276019", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "泗洪县换电网络"},{"rank": 16, "status": "🆕新", "tag": "平潭县", "vid": "5310509104", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "平潭县-君山镇-主城-北部湾网格"},{"rank": 17, "status": "🆕新", "tag": "常州市", "vid": "7900260831", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "天宁区-青果巷核心城区-电力网格"},{"rank": 18, "status": "🆕新", "tag": "宁波市", "vid": "5310155494", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东战-东部新城"},{"rank": 19, "status": "🆕新", "tag": "徐州市", "vid": "5310370646", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "云龙四区换电"},{"rank": 20, "status": "🆕新", "tag": "漳州市", "vid": "7960272969", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "漳州市-通北街道-核心-高校大学城网格组"},{"rank": 21, "status": "🆕新", "tag": "徐州市", "vid": "7960062290", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "矿大南湖校区换电"},{"rank": 22, "status": "🔴2轮", "tag": "常州市", "vid": "7900258348", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "天宁街道-富邦广场-电力网格"},{"rank": 23, "status": "🔴2轮", "tag": "泰兴市", "vid": "5310456586", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "泰兴市东南电力网格"},{"rank": 24, "status": "🆕新", "tag": "徐州市", "vid": "5310014047", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "泉山四区-1换电"},{"rank": 25, "status": "🆕新", "tag": "徐州市", "vid": "7960222148", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山三区换电"},{"rank": 26, "status": "🆕新", "tag": "泉州台商投资区", "vid": "6680061132", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "张坂镇"},{"rank": 27, "status": "🆕新", "tag": "常州市", "vid": "7900258888", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "翠竹地铁站"},{"rank": 28, "status": "🆕新", "tag": "苏州市", "vid": "7010419095", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高新区-马运园区"},{"rank": 29, "status": "🆕新", "tag": "宁波市", "vid": "5310547619", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "北战—日湖公园"},{"rank": 30, "status": "🆕新", "tag": "徐州市", "vid": "7960190510", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "泉山四区-1换电"}];
-var TAGS=["南通市", "启东市", "宁波市", "常州市", "平潭县", "徐州市", "德清县", "江宁区", "泉州台商投资区", "泗洪县", "泰兴市", "海州区", "漳州市", "盐都区", "苏州市"];
-var selected=new Set();
-function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
-function apply(){render();}
-function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
-function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
-initTags();render();
+var DATA=[{"rank": 1, "status": "🔴7轮", "city": "海州区", "vid": "5310600601", "lost": 38, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "海州区换电网络"},{"rank": 2, "status": "🆕新", "city": "德清县", "vid": "5310524429", "lost": 21, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-主城-下渚湖街道-高铁站-袁斌"},{"rank": 3, "status": "🆕新", "city": "上海市", "vid": "5320167424", "lost": 20, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 4, "status": "🔴1轮", "city": "海州区", "vid": "5310614257", "lost": 12, "h1": 9, "delta": "<span class='up'>↑9</span>", "grid": "海州区换电网络2区"},{"rank": 5, "status": "🔴7轮", "city": "海州区", "vid": "5310618092", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "海州区换电网络"},{"rank": 6, "status": "🔴13轮", "city": "南通市", "vid": "5320093291", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "南通主城区北区"},{"rank": 7, "status": "🆕新", "city": "泰州市", "vid": "5320194216", "lost": 9, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力1区-海陵大学城南"},{"rank": 8, "status": "🆕新", "city": "江宁区", "vid": "5320396816", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-开发区"},{"rank": 9, "status": "🔴11轮", "city": "徐州市", "vid": "5310613466", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "云龙四区换电"},{"rank": 10, "status": "🆕新", "city": "江宁区", "vid": "5320285734", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-江宁区-东山街道"},{"rank": 11, "status": "🆕新", "city": "徐州市", "vid": "5310033893", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "铜山二区换电"},{"rank": 12, "status": "🔴2轮", "city": "泰州市", "vid": "7900232561", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力2区-医药高新区大学城"},{"rank": 13, "status": "🆕新", "city": "徐州市", "vid": "5310239909", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "泉山四区-1换电"},{"rank": 14, "status": "🆕新", "city": "泉州台商投资区", "vid": "6680061132", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "张坂镇"},{"rank": 15, "status": "🔴7轮", "city": "宁波市", "vid": "5310155494", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东战-东部新城"},{"rank": 16, "status": "🔴4轮", "city": "常州市", "vid": "7900258888", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "翠竹地铁站"},{"rank": 17, "status": "🆕新", "city": "南通市", "vid": "5320096944", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 18, "status": "🆕新", "city": "苏州市", "vid": "5310682935", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吴中区-小石湖城"},{"rank": 19, "status": "🆕新", "city": "福州市", "vid": "7720176212", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 20, "status": "🆕新", "city": "溧水区", "vid": "5910808575", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力战区-溧水区-永阳网格"},{"rank": 21, "status": "🆕新", "city": "徐州市", "vid": "5310438122", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "云龙四区换电"},{"rank": 22, "status": "🆕新", "city": "徐州市", "vid": "7960216995", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "泉山一区-东换电"},{"rank": 23, "status": "🆕新", "city": "宁波市", "vid": "5310547619", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "北战—日湖公园"},{"rank": 24, "status": "🆕新", "city": "宁波市", "vid": "5310071760", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西战-财经学院"},{"rank": 25, "status": "🆕新", "city": "江宁区", "vid": "5310405642", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-江宁区-滨江开发区-工业区"},{"rank": 26, "status": "🆕新", "city": "桐乡市", "vid": "7780062941", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "汽车站-换电网格"},{"rank": 27, "status": "🆕新", "city": "漳州市", "vid": "5310678798", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "漳州市-东埔头街道-核心-古城高校网格"},{"rank": 28, "status": "🆕新", "city": "徐州市", "vid": "5310410194", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "铜山一区换电"},{"rank": 29, "status": "🆕新", "city": "泗洪县", "vid": "5320276039", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "泗洪县换电网络"},{"rank": 30, "status": "🆕新", "city": "南通市", "vid": "5320096695", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "职业技术学院网格"}];
+var CITIES=["上海市", "南通市", "宁波市", "常州市", "徐州市", "德清县", "桐乡市", "江宁区", "泉州台商投资区", "泗洪县", "泰州市", "海州区", "溧水区", "漳州市", "福州市", "苏州市"];
+var selectedCities=new Set();
+function initTags(){
+  var box=document.getElementById('cityTags');
+  CITIES.forEach(function(c){
+    var t=document.createElement('span');
+    t.className='city-tag';
+    t.textContent=c;
+    t.onclick=function(){
+      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
+      else{selectedCities.add(c);t.className='city-tag active';}
+      render();
+    };
+    box.appendChild(t);
+  });
+}
+function apply(){
+  render();
+}
+function render(){
+  var lost=parseInt(document.getElementById('fLost').value)||0;
+  var rows=DATA.filter(function(r){
+    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
+  });
+  var html='';
+  rows.forEach(function(r,i){
+    var isRep=r.status.indexOf('🔴')>=0;
+    html+='<tr class="'+(isRep?'rep':'')+'">';
+    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
+    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
+    html+='<td>'+r.city+'</td>';
+    html+='<td class="vid">'+r.vid+'</td>';
+    html+='<td class="num">'+r.lost+'</td>';
+    html+='<td class="h1n">'+r.h1+'</td>';
+    html+='<td>'+r.delta+'</td>';
+    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
+    html+='</tr>';
+  });
+  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
+  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
+}
+function reset(){
+  selectedCities.clear();
+  var tags=document.querySelectorAll('.city-tag');
+  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
+  document.getElementById('fLost').value='';
+  render();
+}
+initTags();
+render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
