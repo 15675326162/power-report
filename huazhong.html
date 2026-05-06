@@ -38,11 +38,10 @@ tr.rep{background:#fff8f8}
   <h1>📍 华中大区 — 高频缺电 TOP 26</h1>
   <div class="stats">
     <div class="s"><b>208</b>累计丢单</div>
-    <div class="s"><b>5</b>城市数</div>
+    <div class="s"><b>5</b>分组数</div>
     <div class="s"><b>13</b>🔴未处理</div>
     <div class="s"><b>13</b>🆕新增</div>
     <div class="s"><b>15点</b>时段</div>
-    <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
 </div>
@@ -60,7 +59,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>城市</th>
+  <th>分组</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -71,66 +70,13 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "长沙市", "vid": "5310320402", "lost": 19, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "T南门口"},{"rank": 2, "status": "🔴11轮", "city": "合肥市", "vid": "5310536323", "lost": 18, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力二区-包河区-徽州大道"},{"rank": 3, "status": "🔴16轮", "city": "合肥市", "vid": "5310798117", "lost": 15, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "电力二区-包河区-汽车南站"},{"rank": 4, "status": "🔴5轮", "city": "合肥市", "vid": "5310296952", "lost": 14, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 5, "status": "🆕新", "city": "合肥市", "vid": "5310713715", "lost": 13, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区"},{"rank": 6, "status": "🆕新", "city": "长沙市", "vid": "5320484745", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "Y环保学院16"},{"rank": 7, "status": "🆕新", "city": "合肥市", "vid": "5310770301", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 8, "status": "🔴11轮", "city": "合肥市", "vid": "5310756517", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "null"},{"rank": 9, "status": "🆕新", "city": "长沙市", "vid": "5320404875", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "F袁家岭9"},{"rank": 10, "status": "🔴5轮", "city": "合肥市", "vid": "5310255883", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力超区-包河-东侧超区"},{"rank": 11, "status": "🆕新", "city": "太和县", "vid": "7010384350", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "融合-太5"},{"rank": 12, "status": "🔴11轮", "city": "长沙市", "vid": "5320455768", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "C望岳街道2"},{"rank": 13, "status": "🔴5轮", "city": "合肥市", "vid": "5310633778", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力二区-包河区-望湖城"},{"rank": 14, "status": "🔴16轮", "city": "合肥市", "vid": "5310766065", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力二区-包河区-汽车南站"},{"rank": 15, "status": "🔴5轮", "city": "合肥市", "vid": "5320486504", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力二区-包河区-徽州大道"},{"rank": 16, "status": "🔴5轮", "city": "六安市", "vid": "5320085078", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电-西站网格"},{"rank": 17, "status": "🔴5轮", "city": "安庆市", "vid": "3930085884", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "换电-安庆职业技术学院"},{"rank": 18, "status": "🆕新", "city": "合肥市", "vid": "5320342242", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区"},{"rank": 19, "status": "🔴3轮", "city": "合肥市", "vid": "5310767605", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力一区-庐阳区-逍遥津公园"},{"rank": 20, "status": "🔴5轮", "city": "合肥市", "vid": "5310779610", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力二区-包河区-包河万达"},{"rank": 21, "status": "🆕新", "city": "合肥市", "vid": "5310767719", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-逍遥津公园"},{"rank": 22, "status": "🆕新", "city": "六安市", "vid": "5320075591", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电-云路街网格"},{"rank": 23, "status": "🆕新", "city": "合肥市", "vid": "5310770461", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-荣城花园"},{"rank": 24, "status": "🆕新", "city": "合肥市", "vid": "5320344258", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-三孝口"},{"rank": 25, "status": "🆕新", "city": "合肥市", "vid": "5310779141", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-市二院"},{"rank": 26, "status": "🆕新", "city": "合肥市", "vid": "5310786440", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-徽州大道"}];
-var CITIES=["六安市", "合肥市", "太和县", "安庆市", "长沙市"];
-var selectedCities=new Set();
-function initTags(){
-  var box=document.getElementById('cityTags');
-  CITIES.forEach(function(c){
-    var t=document.createElement('span');
-    t.className='city-tag';
-    t.textContent=c;
-    t.onclick=function(){
-      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
-      else{selectedCities.add(c);t.className='city-tag active';}
-      render();
-    };
-    box.appendChild(t);
-  });
-}
-function apply(){
-  render();
-}
-function render(){
-  var lost=parseInt(document.getElementById('fLost').value)||0;
-  var rows=DATA.filter(function(r){
-    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
-  });
-  var html='';
-  rows.forEach(function(r,i){
-    var isRep=r.status.indexOf('🔴')>=0;
-    html+='<tr class="'+(isRep?'rep':'')+'">';
-    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
-    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
-    html+='<td>'+r.city+'</td>';
-    html+='<td class="vid">'+r.vid+'</td>';
-    html+='<td class="num">'+r.lost+'</td>';
-    html+='<td class="h1n">'+r.h1+'</td>';
-    html+='<td>'+r.delta+'</td>';
-    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
-    html+='</tr>';
-  });
-  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
-  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
-}
-function reset(){
-  selectedCities.clear();
-  var tags=document.querySelectorAll('.city-tag');
-  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
-  document.getElementById('fLost').value='';
-  render();
-}
-initTags();
-render();
-</script>
-<script>
-(function(){
-  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
-  if(!p)return;
-  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
-    .then(function(r){return r.json()})
-    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
-    .catch(function(){});
-})();
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "长沙市", "vid": "5310320402", "lost": 19, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "T南门口"},{"rank": 2, "status": "🔴2轮", "tag": "合肥市", "vid": "5310536323", "lost": 18, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力二区-包河区-徽州大道"},{"rank": 3, "status": "🔴2轮", "tag": "合肥市", "vid": "5310798117", "lost": 15, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "电力二区-包河区-汽车南站"},{"rank": 4, "status": "🔴2轮", "tag": "合肥市", "vid": "5310296952", "lost": 14, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "电力一区-瑶海区-磨店幼儿师范"},{"rank": 5, "status": "🆕新", "tag": "合肥市", "vid": "5310713715", "lost": 13, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区"},{"rank": 6, "status": "🆕新", "tag": "长沙市", "vid": "5320484745", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "Y环保学院16"},{"rank": 7, "status": "🆕新", "tag": "合肥市", "vid": "5310770301", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 8, "status": "🔴2轮", "tag": "合肥市", "vid": "5310756517", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "null"},{"rank": 9, "status": "🆕新", "tag": "长沙市", "vid": "5320404875", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "F袁家岭9"},{"rank": 10, "status": "🔴2轮", "tag": "长沙市", "vid": "5320455768", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "C望岳街道2"},{"rank": 11, "status": "🔴2轮", "tag": "合肥市", "vid": "5310766065", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力二区-包河区-汽车南站"},{"rank": 12, "status": "🔴2轮", "tag": "合肥市", "vid": "5310255883", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力超区-包河-东侧超区"},{"rank": 13, "status": "🆕新", "tag": "太和县", "vid": "7010384350", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "融合-太5"},{"rank": 14, "status": "🔴2轮", "tag": "合肥市", "vid": "5310633778", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力二区-包河区-望湖城"},{"rank": 15, "status": "🔴2轮", "tag": "安庆市", "vid": "3930085884", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "换电-安庆职业技术学院"},{"rank": 16, "status": "🔴2轮", "tag": "合肥市", "vid": "5320486504", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力二区-包河区-徽州大道"},{"rank": 17, "status": "🔴2轮", "tag": "六安市", "vid": "5320085078", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电-西站网格"},{"rank": 18, "status": "🔴2轮", "tag": "合肥市", "vid": "5310779610", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力二区-包河区-包河万达"},{"rank": 19, "status": "🔴2轮", "tag": "合肥市", "vid": "5310767605", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力一区-庐阳区-逍遥津公园"},{"rank": 20, "status": "🆕新", "tag": "合肥市", "vid": "5320342242", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区"},{"rank": 21, "status": "🆕新", "tag": "合肥市", "vid": "5310767719", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-逍遥津公园"},{"rank": 22, "status": "🆕新", "tag": "合肥市", "vid": "5310770461", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-荣城花园"},{"rank": 23, "status": "🆕新", "tag": "合肥市", "vid": "5310779141", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-市二院"},{"rank": 24, "status": "🆕新", "tag": "合肥市", "vid": "5320344258", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-三孝口"},{"rank": 25, "status": "🆕新", "tag": "六安市", "vid": "5320075591", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电-云路街网格"},{"rank": 26, "status": "🆕新", "tag": "合肥市", "vid": "5310786440", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-徽州大道"}];
+var TAGS=["六安市", "合肥市", "太和县", "安庆市", "长沙市"];
+var selected=new Set();
+function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
+function apply(){render();}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
+initTags();render();
 </script>
 </body></html>
