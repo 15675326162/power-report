@@ -38,12 +38,11 @@ tr.rep{background:#fff8f8}
   <h1>📍 北方大区 — 高频缺电 TOP 19</h1>
   <div class="stats">
     <div class="s"><b>103</b>累计丢单</div>
-    <div class="s"><b>13</b>城市数</div>
-    <div class="s"><b>6</b>🔴未处理</div>
-    <div class="s"><b>13</b>🆕新增</div>
+    <div class="s"><b>13</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>17</b>🆕新增</div>
     <div class="s"><b>18点</b>时段</div>
-    <div class="s"><b id="pv">-</b>查看</div>
-    <div class="s"><b>乔春阳</b>负责人</div>
+    <div class="s"><b>乔春阳、何孟凡、张小灵</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -60,7 +59,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>城市</th>
+  <th>分组</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -71,66 +70,13 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "西青区", "vid": "5310466691", "lost": 15, "h1": 14, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-高新区B"},{"rank": 2, "status": "🔴6轮", "city": "伊春市", "vid": "3720188372", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "伊春市两轮融合网格B区"},{"rank": 3, "status": "🔴4轮", "city": "经开区", "vid": "5310564342", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "经开-超区东(换电)"},{"rank": 4, "status": "🆕新", "city": "津南区", "vid": "7110367918", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港"},{"rank": 5, "status": "🔴4轮", "city": "伊春市", "vid": "3720190562", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "伊春市两轮融合网格D区"},{"rank": 6, "status": "🔴4轮", "city": "嫩江市", "vid": "3720146726", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "电力网格1"},{"rank": 7, "status": "🔴6轮", "city": "伊春市", "vid": "3720198011", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "伊春市两轮融合网格B区"},{"rank": 8, "status": "🔴4轮", "city": "滨海新区", "vid": "7010410963", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战-滨海-网格C"},{"rank": 9, "status": "🆕新", "city": "瓦房店市", "vid": "7110133172", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 10, "status": "🆕新", "city": "平舆县", "vid": "5930028616", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "平舆县东区R"},{"rank": 11, "status": "🆕新", "city": "经开区", "vid": "5310728577", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开-超区东(换电)"},{"rank": 12, "status": "🆕新", "city": "登封市", "vid": "5320172998", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "登封市融合网格"},{"rank": 13, "status": "🆕新", "city": "沈阳市", "vid": "2000038529", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "四战-高校-沈北区-辽宁传媒学院（北校区）"},{"rank": 14, "status": "🆕新", "city": "汤阴县", "vid": "3720213359", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 15, "status": "🆕新", "city": "获嘉县", "vid": "7900251094", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "获嘉北-小区2R"},{"rank": 16, "status": "🆕新", "city": "经开区", "vid": "5310494253", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开-中原福塔-核心(换电)"},{"rank": 17, "status": "🆕新", "city": "伊春市", "vid": "3720187195", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格A"},{"rank": 18, "status": "🆕新", "city": "佳木斯市", "vid": "5310573299", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "佳木斯9区"},{"rank": 19, "status": "🆕新", "city": "伊春市", "vid": "3720193239", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格C区"}];
-var CITIES=["伊春市", "佳木斯市", "嫩江市", "平舆县", "汤阴县", "沈阳市", "津南区", "滨海新区", "瓦房店市", "登封市", "经开区", "获嘉县", "西青区"];
-var selectedCities=new Set();
-function initTags(){
-  var box=document.getElementById('cityTags');
-  CITIES.forEach(function(c){
-    var t=document.createElement('span');
-    t.className='city-tag';
-    t.textContent=c;
-    t.onclick=function(){
-      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
-      else{selectedCities.add(c);t.className='city-tag active';}
-      render();
-    };
-    box.appendChild(t);
-  });
-}
-function apply(){
-  render();
-}
-function render(){
-  var lost=parseInt(document.getElementById('fLost').value)||0;
-  var rows=DATA.filter(function(r){
-    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
-  });
-  var html='';
-  rows.forEach(function(r,i){
-    var isRep=r.status.indexOf('🔴')>=0;
-    html+='<tr class="'+(isRep?'rep':'')+'">';
-    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
-    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
-    html+='<td>'+r.city+'</td>';
-    html+='<td class="vid">'+r.vid+'</td>';
-    html+='<td class="num">'+r.lost+'</td>';
-    html+='<td class="h1n">'+r.h1+'</td>';
-    html+='<td>'+r.delta+'</td>';
-    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
-    html+='</tr>';
-  });
-  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
-  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
-}
-function reset(){
-  selectedCities.clear();
-  var tags=document.querySelectorAll('.city-tag');
-  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
-  document.getElementById('fLost').value='';
-  render();
-}
-initTags();
-render();
-</script>
-<script>
-(function(){
-  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
-  if(!p)return;
-  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
-    .then(function(r){return r.json()})
-    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
-    .catch(function(){});
-})();
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西青区", "vid": "5310466691", "lost": 15, "h1": 14, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-高新区B"},{"rank": 2, "status": "🔴2轮", "tag": "伊春市", "vid": "3720188372", "lost": 10, "h1": 4, "delta": "<span class='up'>↑6</span>", "grid": "伊春市两轮融合网格B区"},{"rank": 3, "status": "🆕新", "tag": "经开区", "vid": "5310564342", "lost": 8, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "经开-超区东(换电)"},{"rank": 4, "status": "🆕新", "tag": "津南区", "vid": "7110367918", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港"},{"rank": 5, "status": "🆕新", "tag": "伊春市", "vid": "3720190562", "lost": 7, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格D区"},{"rank": 6, "status": "🔴2轮", "tag": "伊春市", "vid": "3720198011", "lost": 6, "h1": 1, "delta": "<span class='up'>↑2</span>", "grid": "伊春市两轮融合网格B区"},{"rank": 7, "status": "🆕新", "tag": "嫩江市", "vid": "3720146726", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力网格1"},{"rank": 8, "status": "🆕新", "tag": "滨海新区", "vid": "7010410963", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战-滨海-网格C"},{"rank": 9, "status": "🆕新", "tag": "沈阳市", "vid": "2000038529", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "四战-高校-沈北区-辽宁传媒学院（北校区）"},{"rank": 10, "status": "🆕新", "tag": "经开区", "vid": "5310728577", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开-超区东(换电)"},{"rank": 11, "status": "🆕新", "tag": "平舆县", "vid": "5930028616", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "平舆县东区R"},{"rank": 12, "status": "🆕新", "tag": "瓦房店市", "vid": "7110133172", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 13, "status": "🆕新", "tag": "登封市", "vid": "5320172998", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "登封市融合网格"},{"rank": 14, "status": "🆕新", "tag": "伊春市", "vid": "3720193239", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格C区"},{"rank": 15, "status": "🆕新", "tag": "经开区", "vid": "5310494253", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开-中原福塔-核心(换电)"},{"rank": 16, "status": "🆕新", "tag": "获嘉县", "vid": "7900251094", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "获嘉北-小区2R"},{"rank": 17, "status": "🆕新", "tag": "佳木斯市", "vid": "5310573299", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "佳木斯9区"},{"rank": 18, "status": "🆕新", "tag": "伊春市", "vid": "3720187195", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格A"},{"rank": 19, "status": "🆕新", "tag": "汤阴县", "vid": "3720213359", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "null"}];
+var TAGS=["伊春市", "佳木斯市", "嫩江市", "平舆县", "汤阴县", "沈阳市", "津南区", "滨海新区", "瓦房店市", "登封市", "经开区", "获嘉县", "西青区"];
+var selected=new Set();
+function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
+function apply(){render();}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
+initTags();render();
 </script>
 </body></html>
