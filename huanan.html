@@ -35,13 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 26</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 30</h1>
   <div class="stats">
     <div class="s"><b>192</b>累计丢单</div>
-    <div class="s"><b>12</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>26</b>🆕新增</div>
+    <div class="s"><b>13</b>城市数</div>
+    <div class="s"><b>10</b>🔴未处理</div>
+    <div class="s"><b>20</b>🆕新增</div>
     <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>何建鑫</b>负责人</div>
   </div>
 </div>
@@ -59,7 +60,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>分组</th>
+  <th>城市</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -70,13 +71,66 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "赣州市", "vid": "5310555889", "lost": 41, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "主城-赣州站"},{"rank": 2, "status": "🆕新", "tag": "贵溪市", "vid": "5310103267", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区"},{"rank": 3, "status": "🆕新", "tag": "赣州市", "vid": "7010403216", "lost": 12, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "主城-赣州站"},{"rank": 4, "status": "🆕新", "tag": "贵溪市", "vid": "5310203841", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区"},{"rank": 5, "status": "🆕新", "tag": "贵溪市", "vid": "5310289119", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪3区"},{"rank": 6, "status": "🆕新", "tag": "南海区", "vid": "5320318274", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 7, "status": "🆕新", "tag": "赣州市", "vid": "5310148856", "lost": 8, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "主城-赣州站"},{"rank": 8, "status": "🆕新", "tag": "南海区", "vid": "5320318692", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区"},{"rank": 9, "status": "🆕新", "tag": "南海区", "vid": "5320317964", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区"},{"rank": 10, "status": "🆕新", "tag": "信丰县", "vid": "5310738215", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "信丰B区电力网格"},{"rank": 11, "status": "🆕新", "tag": "南海区", "vid": "5320523720", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲1区"},{"rank": 12, "status": "🆕新", "tag": "贵溪市", "vid": "7780157618", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "贵溪3区"},{"rank": 13, "status": "🆕新", "tag": "南海区", "vid": "5320318688", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区"},{"rank": 14, "status": "🆕新", "tag": "茂名滨海新区", "vid": "5910786115", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "茂名滨海新区网格1"},{"rank": 15, "status": "🆕新", "tag": "南海区", "vid": "5320318000", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南海区试运营网格"},{"rank": 16, "status": "🆕新", "tag": "汕头市", "vid": "5320064124", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 17, "status": "🆕新", "tag": "阳西县", "vid": "2000033167", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.1"},{"rank": 18, "status": "🆕新", "tag": "南海区", "vid": "5320318207", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区"},{"rank": 19, "status": "🆕新", "tag": "南海区", "vid": "5320318154", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 20, "status": "🆕新", "tag": "贵溪市", "vid": "5310094326", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区"},{"rank": 21, "status": "🆕新", "tag": "肇庆市", "vid": "2000027170", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-产业园区电力"},{"rank": 22, "status": "🆕新", "tag": "佛山市", "vid": "5310767578", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张槎4区"},{"rank": 23, "status": "🆕新", "tag": "佛山市", "vid": "7010407341", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南庄4区"},{"rank": 24, "status": "🆕新", "tag": "韶关市", "vid": "5320175852", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "浈江区岛1区"},{"rank": 25, "status": "🆕新", "tag": "三乡镇", "vid": "7960210132", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 26, "status": "🆕新", "tag": "九江市", "vid": "5320066909", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "濂溪四区"}];
-var TAGS=["三乡镇", "九江市", "佛山市", "信丰县", "南海区", "汕头市", "肇庆市", "茂名滨海新区", "贵溪市", "赣州市", "阳西县", "韶关市"];
-var selected=new Set();
-function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
-function apply(){render();}
-function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
-function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
-initTags();render();
+var DATA=[{"rank": 1, "status": "🔴11轮", "city": "赣州市", "vid": "5310555889", "lost": 44, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "主城-赣州站"},{"rank": 2, "status": "🔴16轮", "city": "贵溪市", "vid": "5310289119", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "贵溪3区"},{"rank": 3, "status": "🔴5轮", "city": "赣州市", "vid": "5310148856", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "主城-赣州站"},{"rank": 4, "status": "🔴5轮", "city": "南海区", "vid": "5320318274", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "R.桂城1区"},{"rank": 5, "status": "🔴11轮", "city": "贵溪市", "vid": "7780157618", "lost": 9, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "贵溪3区"},{"rank": 6, "status": "🔴11轮", "city": "信丰县", "vid": "5310738215", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "信丰B区电力网格"},{"rank": 7, "status": "🔴5轮", "city": "南海区", "vid": "5320318688", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "R.桂城4区"},{"rank": 8, "status": "🔴5轮", "city": "茂名滨海新区", "vid": "5910786115", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "茂名滨海新区网格1"},{"rank": 9, "status": "🆕新", "city": "南海区", "vid": "5320317988", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲1区"},{"rank": 10, "status": "🔴5轮", "city": "南海区", "vid": "5320317964", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "R.桂城4区"},{"rank": 11, "status": "🆕新", "city": "海丰县", "vid": "6680071110", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 12, "status": "🆕新", "city": "潮州市", "vid": "7780220701", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 13, "status": "🆕新", "city": "南海区", "vid": "5320318563", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲2区"},{"rank": 14, "status": "🆕新", "city": "湛江市", "vid": "5320258715", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "湛江市-调顺岛-B区"},{"rank": 15, "status": "🆕新", "city": "南海区", "vid": "5320318403", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲1区"},{"rank": 16, "status": "🔴5轮", "city": "佛山市", "vid": "5310767578", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "张槎4区"},{"rank": 17, "status": "🆕新", "city": "潮州市", "vid": "2000039790", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "主城-潮州B区-桥东片区"},{"rank": 18, "status": "🆕新", "city": "金利镇", "vid": "3720192613", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图"},{"rank": 19, "status": "🆕新", "city": "南海区", "vid": "5320318522", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城1区"},{"rank": 20, "status": "🆕新", "city": "南海区", "vid": "5320318654", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城2区"},{"rank": 21, "status": "🆕新", "city": "南海区", "vid": "5320317864", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲2区"},{"rank": 22, "status": "🆕新", "city": "顺德区", "vid": "5930048681", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "顺德学院区-E6"},{"rank": 23, "status": "🆕新", "city": "南海区", "vid": "5320318650", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 24, "status": "🆕新", "city": "赣州市", "vid": "5310402994", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "缓冲-时间公园"},{"rank": 25, "status": "🆕新", "city": "揭阳市", "vid": "5310269524", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "慈云"},{"rank": 26, "status": "🆕新", "city": "佛山市", "vid": "2000055503", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南庄5区"},{"rank": 27, "status": "🆕新", "city": "南海区", "vid": "5320484307", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲2区"},{"rank": 28, "status": "🆕新", "city": "茂名滨海新区", "vid": "5910785762", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "茂名滨海新区网格1"},{"rank": 29, "status": "🆕新", "city": "南海区", "vid": "5320318685", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲1区"},{"rank": 30, "status": "🆕新", "city": "宁都县", "vid": "5310081944", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "网格5"}];
+var CITIES=["佛山市", "信丰县", "南海区", "宁都县", "揭阳市", "海丰县", "湛江市", "潮州市", "茂名滨海新区", "贵溪市", "赣州市", "金利镇", "顺德区"];
+var selectedCities=new Set();
+function initTags(){
+  var box=document.getElementById('cityTags');
+  CITIES.forEach(function(c){
+    var t=document.createElement('span');
+    t.className='city-tag';
+    t.textContent=c;
+    t.onclick=function(){
+      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
+      else{selectedCities.add(c);t.className='city-tag active';}
+      render();
+    };
+    box.appendChild(t);
+  });
+}
+function apply(){
+  render();
+}
+function render(){
+  var lost=parseInt(document.getElementById('fLost').value)||0;
+  var rows=DATA.filter(function(r){
+    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
+  });
+  var html='';
+  rows.forEach(function(r,i){
+    var isRep=r.status.indexOf('🔴')>=0;
+    html+='<tr class="'+(isRep?'rep':'')+'">';
+    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
+    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
+    html+='<td>'+r.city+'</td>';
+    html+='<td class="vid">'+r.vid+'</td>';
+    html+='<td class="num">'+r.lost+'</td>';
+    html+='<td class="h1n">'+r.h1+'</td>';
+    html+='<td>'+r.delta+'</td>';
+    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
+    html+='</tr>';
+  });
+  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
+  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
+}
+function reset(){
+  selectedCities.clear();
+  var tags=document.querySelectorAll('.city-tag');
+  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
+  document.getElementById('fLost').value='';
+  render();
+}
+initTags();
+render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
