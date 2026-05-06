@@ -38,11 +38,10 @@ tr.rep{background:#fff8f8}
   <h1>📍 西部大区 — 高频缺电 TOP 13</h1>
   <div class="stats">
     <div class="s"><b>73</b>累计丢单</div>
-    <div class="s"><b>9</b>城市数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>9</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
-    <div class="s"><b id="pv">-</b>查看</div>
+    <div class="s"><b>9</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>13</b>🆕新增</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b>侯凯晨</b>负责人</div>
   </div>
 </div>
@@ -60,7 +59,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>城市</th>
+  <th>分组</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -71,66 +70,13 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "city": "呼和浩特市", "vid": "5320165997", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "赛罕区-金桥2路-40区"},{"rank": 2, "status": "🆕新", "city": "晋中市", "vid": "5320318827", "lost": 10, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "晋中电力5区万达广场"},{"rank": 3, "status": "🆕新", "city": "新市区", "vid": "3720142143", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂"},{"rank": 4, "status": "🆕新", "city": "拉萨市", "vid": "5320253344", "lost": 8, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学河坝林网格"},{"rank": 5, "status": "🔴6轮", "city": "包头市", "vid": "5320170136", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西区-青山北-锦林公园"},{"rank": 6, "status": "🆕新", "city": "晋中市", "vid": "5320323328", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府"},{"rank": 7, "status": "🔴6轮", "city": "兰州市", "vid": "5320266574", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-西固区-一区"},{"rank": 8, "status": "🔴6轮", "city": "哈密市", "vid": "5310577661", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "哈密市中心-核心区-1"},{"rank": 9, "status": "🔴6轮", "city": "武威市", "vid": "5320322397", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力-三区"},{"rank": 10, "status": "🆕新", "city": "包头市", "vid": "5320268150", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-保利花园"},{"rank": 11, "status": "🆕新", "city": "拉萨市", "vid": "5320217751", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学河坝林网格"},{"rank": 12, "status": "🆕新", "city": "呼和浩特市", "vid": "5320397420", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力西区-金川-上院-J3"},{"rank": 13, "status": "🆕新", "city": "鄂尔多斯市", "vid": "7010439281", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B2"}];
-var CITIES=["兰州市", "包头市", "呼和浩特市", "哈密市", "拉萨市", "新市区", "晋中市", "武威市", "鄂尔多斯市"];
-var selectedCities=new Set();
-function initTags(){
-  var box=document.getElementById('cityTags');
-  CITIES.forEach(function(c){
-    var t=document.createElement('span');
-    t.className='city-tag';
-    t.textContent=c;
-    t.onclick=function(){
-      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
-      else{selectedCities.add(c);t.className='city-tag active';}
-      render();
-    };
-    box.appendChild(t);
-  });
-}
-function apply(){
-  render();
-}
-function render(){
-  var lost=parseInt(document.getElementById('fLost').value)||0;
-  var rows=DATA.filter(function(r){
-    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
-  });
-  var html='';
-  rows.forEach(function(r,i){
-    var isRep=r.status.indexOf('🔴')>=0;
-    html+='<tr class="'+(isRep?'rep':'')+'">';
-    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
-    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
-    html+='<td>'+r.city+'</td>';
-    html+='<td class="vid">'+r.vid+'</td>';
-    html+='<td class="num">'+r.lost+'</td>';
-    html+='<td class="h1n">'+r.h1+'</td>';
-    html+='<td>'+r.delta+'</td>';
-    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
-    html+='</tr>';
-  });
-  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
-  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
-}
-function reset(){
-  selectedCities.clear();
-  var tags=document.querySelectorAll('.city-tag');
-  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
-  document.getElementById('fLost').value='';
-  render();
-}
-initTags();
-render();
-</script>
-<script>
-(function(){
-  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
-  if(!p)return;
-  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
-    .then(function(r){return r.json()})
-    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
-    .catch(function(){});
-})();
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "呼和浩特市", "vid": "5320165997", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "赛罕区-金桥2路-40区"},{"rank": 2, "status": "🆕新", "tag": "晋中市", "vid": "5320318827", "lost": 10, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "晋中电力5区万达广场"},{"rank": 3, "status": "🆕新", "tag": "拉萨市", "vid": "5320253344", "lost": 8, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学河坝林网格"},{"rank": 4, "status": "🆕新", "tag": "新市区", "vid": "3720142143", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂"},{"rank": 5, "status": "🆕新", "tag": "包头市", "vid": "5320170136", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-锦林公园"},{"rank": 6, "status": "🆕新", "tag": "晋中市", "vid": "5320323328", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府"},{"rank": 7, "status": "🆕新", "tag": "兰州市", "vid": "5320266574", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-一区"},{"rank": 8, "status": "🆕新", "tag": "武威市", "vid": "5320322397", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-三区"},{"rank": 9, "status": "🆕新", "tag": "哈密市", "vid": "5310577661", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "哈密市中心-核心区-1"},{"rank": 10, "status": "🆕新", "tag": "呼和浩特市", "vid": "5320397420", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力西区-金川-上院-J3"},{"rank": 11, "status": "🆕新", "tag": "包头市", "vid": "5320268150", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-保利花园"},{"rank": 12, "status": "🆕新", "tag": "鄂尔多斯市", "vid": "7010439281", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B2"},{"rank": 13, "status": "🆕新", "tag": "拉萨市", "vid": "5320217751", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学河坝林网格"}];
+var TAGS=["兰州市", "包头市", "呼和浩特市", "哈密市", "拉萨市", "新市区", "晋中市", "武威市", "鄂尔多斯市"];
+var selected=new Set();
+function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
+function apply(){render();}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
+initTags();render();
 </script>
 </body></html>
