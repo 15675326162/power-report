@@ -35,14 +35,15 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 20</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 19</h1>
   <div class="stats">
-    <div class="s"><b>123</b>累计丢单</div>
-    <div class="s"><b>6</b>分组数</div>
-    <div class="s"><b>7</b>🔴未处理</div>
+    <div class="s"><b>103</b>累计丢单</div>
+    <div class="s"><b>11</b>城市数</div>
+    <div class="s"><b>6</b>🔴未处理</div>
     <div class="s"><b>13</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
-    <div class="s"><b>谢浩</b>负责人</div>
+    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
+    <div class="s"><b>李凤翎</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -59,7 +60,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>分组</th>
+  <th>城市</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -70,13 +71,66 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "昆明市", "vid": "5320184929", "lost": 15, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "昆明电力1-官渡2-新亚洲"},{"rank": 2, "status": "🆕新", "tag": "昆明市", "vid": "5320254862", "lost": 15, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-红云1区"},{"rank": 3, "status": "🆕新", "tag": "昆明市", "vid": "5320154941", "lost": 11, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 4, "status": "🆕新", "tag": "昆明市", "vid": "5320163678", "lost": 9, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-世纪城"},{"rank": 5, "status": "🆕新", "tag": "昆明市", "vid": "5320219786", "lost": 8, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-红云3区"},{"rank": 6, "status": "🆕新", "tag": "乐山市", "vid": "5310769451", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "乐山二区"},{"rank": 7, "status": "🔴8轮", "tag": "昆明市", "vid": "5320331902", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡超区"},{"rank": 8, "status": "🆕新", "tag": "昆明市", "vid": "5320198314", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-世纪城"},{"rank": 9, "status": "🔴4轮", "tag": "昆明市", "vid": "5320143938", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "null"},{"rank": 10, "status": "🔴4轮", "tag": "昆明市", "vid": "5320193803", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-盘呈-红云1区"},{"rank": 11, "status": "🆕新", "tag": "渝北区", "vid": "7010505899", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "渝北区-火车北站一区"},{"rank": 12, "status": "🔴4轮", "tag": "昆明市", "vid": "5320240907", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-西山-度假区"},{"rank": 13, "status": "🔴4轮", "tag": "昆明市", "vid": "5320338996", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-五华-丰宁区"},{"rank": 14, "status": "🔴4轮", "tag": "昆明市", "vid": "5320198889", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2-新亚洲"},{"rank": 15, "status": "🆕新", "tag": "乐山市", "vid": "5310787580", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "乐山六区"},{"rank": 16, "status": "🆕新", "tag": "遂宁市", "vid": "5320304781", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开区-城北2区"},{"rank": 17, "status": "🆕新", "tag": "昆明市", "vid": "5320198067", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-翠湖区"},{"rank": 18, "status": "🆕新", "tag": "安顺市", "vid": "5310771817", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力4区-万绿城国际广场"},{"rank": 19, "status": "🆕新", "tag": "景洪市", "vid": "5310355483", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "曼弄枫-贾明"},{"rank": 20, "status": "🆕新", "tag": "昆明市", "vid": "5320166082", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-丰宁区"}];
-var TAGS=["乐山市", "安顺市", "昆明市", "景洪市", "渝北区", "遂宁市"];
-var selected=new Set();
-function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
-function apply(){render();}
-function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
-function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
-initTags();render();
+var DATA=[{"rank": 1, "status": "🔴2轮", "city": "昆明市", "vid": "5320154941", "lost": 13, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 2, "status": "🔴2轮", "city": "乐山市", "vid": "5310769451", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "乐山二区"},{"rank": 3, "status": "🔴2轮", "city": "昆明市", "vid": "5320331902", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡超区"},{"rank": 4, "status": "🆕新", "city": "南宁市", "vid": "5320233648", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "兴宁-火车站"},{"rank": 5, "status": "🔴2轮", "city": "昆明市", "vid": "5320193803", "lost": 8, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-盘呈-红云1区"},{"rank": 6, "status": "🆕新", "city": "昆明市", "vid": "5320020569", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城"},{"rank": 7, "status": "🆕新", "city": "昆明市", "vid": "5320217392", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-红云2区"},{"rank": 8, "status": "🆕新", "city": "成都市", "vid": "5320154452", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "天府-温江区-成都市-电力网格"},{"rank": 9, "status": "🔴2轮", "city": "遂宁市", "vid": "5320304781", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "经开区-城北2区"},{"rank": 10, "status": "🆕新", "city": "昆明市", "vid": "7010512181", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明-空港-换电2区大板桥"},{"rank": 11, "status": "🆕新", "city": "乐山市", "vid": "5310769244", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "乐山二区"},{"rank": 12, "status": "🔴2轮", "city": "景洪市", "vid": "5310355483", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "曼弄枫-贾明"},{"rank": 13, "status": "🆕新", "city": "玉溪市", "vid": "7110287063", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西山区-三级超区-易门县玉溪市"},{"rank": 14, "status": "🆕新", "city": "大渡口区", "vid": "5320251891", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "双山片区"},{"rank": 15, "status": "🆕新", "city": "昆明市", "vid": "5320301853", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-七彩云南"},{"rank": 16, "status": "🆕新", "city": "彭州市", "vid": "3930084276", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "调- 彭州市主城1区-1"},{"rank": 17, "status": "🆕新", "city": "南宁市", "vid": "5320228294", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-中医院"},{"rank": 18, "status": "🆕新", "city": "安顺市", "vid": "7960085296", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力4区-万绿城国际广场"},{"rank": 19, "status": "🆕新", "city": "玉林市", "vid": "5310428172", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "玉柴广场-玉柴工业园"}];
+var CITIES=["乐山市", "南宁市", "大渡口区", "安顺市", "彭州市", "成都市", "昆明市", "景洪市", "玉林市", "玉溪市", "遂宁市"];
+var selectedCities=new Set();
+function initTags(){
+  var box=document.getElementById('cityTags');
+  CITIES.forEach(function(c){
+    var t=document.createElement('span');
+    t.className='city-tag';
+    t.textContent=c;
+    t.onclick=function(){
+      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
+      else{selectedCities.add(c);t.className='city-tag active';}
+      render();
+    };
+    box.appendChild(t);
+  });
+}
+function apply(){
+  render();
+}
+function render(){
+  var lost=parseInt(document.getElementById('fLost').value)||0;
+  var rows=DATA.filter(function(r){
+    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
+  });
+  var html='';
+  rows.forEach(function(r,i){
+    var isRep=r.status.indexOf('🔴')>=0;
+    html+='<tr class="'+(isRep?'rep':'')+'">';
+    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
+    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
+    html+='<td>'+r.city+'</td>';
+    html+='<td class="vid">'+r.vid+'</td>';
+    html+='<td class="num">'+r.lost+'</td>';
+    html+='<td class="h1n">'+r.h1+'</td>';
+    html+='<td>'+r.delta+'</td>';
+    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
+    html+='</tr>';
+  });
+  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
+  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
+}
+function reset(){
+  selectedCities.clear();
+  var tags=document.querySelectorAll('.city-tag');
+  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
+  document.getElementById('fLost').value='';
+  render();
+}
+initTags();
+render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
