@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 10</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 13</h1>
   <div class="stats">
-    <div class="s"><b>58</b>累计丢单</div>
-    <div class="s"><b>5</b>城市数</div>
-    <div class="s"><b>10</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>75</b>累计丢单</div>
+    <div class="s"><b>8</b>城市数</div>
+    <div class="s"><b>4</b>🔴未处理</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴1轮", "city": "昆明市", "vid": "5320254862", "lost": 13, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-红云2区"},{"rank": 2, "status": "🔴1轮", "city": "昆明市", "vid": "5320190635", "lost": 12, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城"},{"rank": 3, "status": "🔴1轮", "city": "大渡口区", "vid": "5320241093", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "刘家坝片区"},{"rank": 4, "status": "🔴1轮", "city": "普洱市", "vid": "5320393555", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 5, "status": "🔴1轮", "city": "昆明市", "vid": "5320358237", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区"},{"rank": 6, "status": "🔴1轮", "city": "大渡口区", "vid": "5320179263", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "建桥片区"},{"rank": 7, "status": "🔴1轮", "city": "华坪县", "vid": "7780317685", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "荣将片区"},{"rank": 8, "status": "🔴1轮", "city": "昆明市", "vid": "5320154941", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 9, "status": "🔴1轮", "city": "钦州市", "vid": "5310277265", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦北1区"},{"rank": 10, "status": "🔴1轮", "city": "昆明市", "vid": "5320331902", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区"}];
-var CITIES=["华坪县", "大渡口区", "昆明市", "普洱市", "钦州市"];
+var DATA=[{"rank": 1, "status": "🔴5轮", "city": "昆明市", "vid": "5320190635", "lost": 16, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "昆明-呈贡-大学城"},{"rank": 2, "status": "🆕新", "city": "渝北区", "vid": "7010518820", "lost": 9, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "渝北区-人和街道四区"},{"rank": 3, "status": "🆕新", "city": "昆明市", "vid": "5320253682", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区"},{"rank": 4, "status": "🔴5轮", "city": "大渡口区", "vid": "5320241093", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "刘家坝片区"},{"rank": 5, "status": "🆕新", "city": "成都市", "vid": "5310349998", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "体院-东部新区-成都市-电力网格"},{"rank": 6, "status": "🆕新", "city": "华坪县", "vid": "7780330906", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "荣将片区"},{"rank": 7, "status": "🔴5轮", "city": "昆明市", "vid": "5320154941", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2-新广丰"},{"rank": 8, "status": "🔴5轮", "city": "昆明市", "vid": "5320331902", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "null"},{"rank": 9, "status": "🆕新", "city": "乐山市", "vid": "5310535177", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "乐山七区"},{"rank": 10, "status": "🆕新", "city": "昆明市", "vid": "5320165521", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-莲花池"},{"rank": 11, "status": "🆕新", "city": "隆林各族自治县", "vid": "5320290972", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "隆林县"},{"rank": 12, "status": "🆕新", "city": "成都市", "vid": "5310350106", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "体院-东部新区-成都市-电力网格"},{"rank": 13, "status": "🆕新", "city": "会泽县", "vid": "7960015985", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "以礼佳苑"}];
+var CITIES=["乐山市", "会泽县", "华坪县", "大渡口区", "成都市", "昆明市", "渝北区", "隆林各族自治县"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
