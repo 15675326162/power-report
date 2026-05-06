@@ -35,14 +35,15 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 北方大区 — 高频缺电 TOP 10</h1>
+  <h1>📍 北方大区 — 高频缺电 TOP 14</h1>
   <div class="stats">
-    <div class="s"><b>91</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>10</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
-    <div class="s"><b>乔春阳、何孟凡、张小灵</b>负责人</div>
+    <div class="s"><b>93</b>累计丢单</div>
+    <div class="s"><b>8</b>城市数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>11</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b id="pv">-</b>查看</div>
+    <div class="s"><b>乔春阳、张小灵</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -59,7 +60,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>分组</th>
+  <th>城市</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -70,13 +71,66 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "原阳县", "vid": "5930023908", "lost": 21, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "融合网格（超区北）"},{"rank": 2, "status": "🔴4轮", "tag": "瓦房店市", "vid": "5310186290", "lost": 14, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 3, "status": "🔴4轮", "tag": "瓦房店市", "vid": "7110137313", "lost": 14, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 4, "status": "🔴4轮", "tag": "瓦房店市", "vid": "7110188005", "lost": 11, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 5, "status": "🔴3轮", "tag": "津南区", "vid": "7110383835", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港"},{"rank": 6, "status": "🔴3轮", "tag": "津南区", "vid": "7110367918", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港"},{"rank": 7, "status": "🔴3轮", "tag": "经开区", "vid": "5310564342", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开-超区东(换电)"},{"rank": 8, "status": "🔴3轮", "tag": "瓦房店市", "vid": "7110138547", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 9, "status": "🔴4轮", "tag": "瓦房店市", "vid": "7110170185", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 10, "status": "🔴3轮", "tag": "经开区", "vid": "5310728577", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开-超区东(换电)"}];
-var TAGS=["原阳县", "津南区", "瓦房店市", "经开区"];
-var selected=new Set();
-function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
-function apply(){render();}
-function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
-function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
-initTags();render();
+var DATA=[{"rank": 1, "status": "🔴12轮", "city": "原阳县", "vid": "5930023908", "lost": 23, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "融合网格（超区北）"},{"rank": 2, "status": "🔴18轮", "city": "瓦房店市", "vid": "7110188005", "lost": 12, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "null"},{"rank": 3, "status": "🆕新", "city": "瓦房店市", "vid": "7110107436", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 4, "status": "🆕新", "city": "沈阳市", "vid": "5310564839", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-滑翔"},{"rank": 5, "status": "🆕新", "city": "南阳市", "vid": "5320345148", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "南阳西3区电"},{"rank": 6, "status": "🔴7轮", "city": "瓦房店市", "vid": "7110138547", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "瓦房店恒力重工产业园换电网格"},{"rank": 7, "status": "🆕新", "city": "伊春市", "vid": "3720198011", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格B区"},{"rank": 8, "status": "🆕新", "city": "伊春市", "vid": "3720188372", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格B区"},{"rank": 9, "status": "🆕新", "city": "郑州市", "vid": "7960098647", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "工大助力车网格"},{"rank": 10, "status": "🆕新", "city": "伊春市", "vid": "3720187061", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格B区"},{"rank": 11, "status": "🆕新", "city": "临江市", "vid": "7100047702", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "临江-临江商场"},{"rank": 12, "status": "🆕新", "city": "伊春市", "vid": "3720189958", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格A"},{"rank": 13, "status": "🆕新", "city": "南阳市", "vid": "5320336013", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南阳西5区电"},{"rank": 14, "status": "🆕新", "city": "松原市", "vid": "7010489452", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格、江北"}];
+var CITIES=["临江市", "伊春市", "南阳市", "原阳县", "松原市", "沈阳市", "瓦房店市", "郑州市"];
+var selectedCities=new Set();
+function initTags(){
+  var box=document.getElementById('cityTags');
+  CITIES.forEach(function(c){
+    var t=document.createElement('span');
+    t.className='city-tag';
+    t.textContent=c;
+    t.onclick=function(){
+      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
+      else{selectedCities.add(c);t.className='city-tag active';}
+      render();
+    };
+    box.appendChild(t);
+  });
+}
+function apply(){
+  render();
+}
+function render(){
+  var lost=parseInt(document.getElementById('fLost').value)||0;
+  var rows=DATA.filter(function(r){
+    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
+  });
+  var html='';
+  rows.forEach(function(r,i){
+    var isRep=r.status.indexOf('🔴')>=0;
+    html+='<tr class="'+(isRep?'rep':'')+'">';
+    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
+    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
+    html+='<td>'+r.city+'</td>';
+    html+='<td class="vid">'+r.vid+'</td>';
+    html+='<td class="num">'+r.lost+'</td>';
+    html+='<td class="h1n">'+r.h1+'</td>';
+    html+='<td>'+r.delta+'</td>';
+    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
+    html+='</tr>';
+  });
+  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
+  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
+}
+function reset(){
+  selectedCities.clear();
+  var tags=document.querySelectorAll('.city-tag');
+  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
+  document.getElementById('fLost').value='';
+  render();
+}
+initTags();
+render();
+</script>
+<script>
+(function(){
+  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
+  if(!p)return;
+  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
+    .then(function(r){return r.json()})
+    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
+    .catch(function(){});
+})();
 </script>
 </body></html>
