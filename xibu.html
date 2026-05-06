@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西部大区 — 高频缺电 TOP 7</h1>
+  <h1>📍 西部大区 — 高频缺电 TOP 13</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>6</b>城市数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>73</b>累计丢单</div>
+    <div class="s"><b>9</b>城市数</div>
+    <div class="s"><b>4</b>🔴未处理</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>侯凯晨</b>负责人</div>
   </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴5轮", "city": "怀仁市", "vid": "7960265507", "lost": 8, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "怀仁二区R"},{"rank": 2, "status": "🆕新", "city": "新市区", "vid": "3720158069", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区"},{"rank": 3, "status": "🆕新", "city": "包头市", "vid": "5320170136", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-锦林公园"},{"rank": 4, "status": "🆕新", "city": "兰州市", "vid": "5320189134", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天"},{"rank": 5, "status": "🆕新", "city": "武威市", "vid": "5320322397", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-三区"},{"rank": 6, "status": "🆕新", "city": "哈密市", "vid": "5310577661", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "哈密市中心-核心区-1"},{"rank": 7, "status": "🆕新", "city": "兰州市", "vid": "5320266574", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-一区"}];
-var CITIES=["兰州市", "包头市", "哈密市", "怀仁市", "新市区", "武威市"];
+var DATA=[{"rank": 1, "status": "🆕新", "city": "呼和浩特市", "vid": "5320165997", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "赛罕区-金桥2路-40区"},{"rank": 2, "status": "🆕新", "city": "晋中市", "vid": "5320318827", "lost": 10, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "晋中电力5区万达广场"},{"rank": 3, "status": "🆕新", "city": "新市区", "vid": "3720142143", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂"},{"rank": 4, "status": "🆕新", "city": "拉萨市", "vid": "5320253344", "lost": 8, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学河坝林网格"},{"rank": 5, "status": "🔴6轮", "city": "包头市", "vid": "5320170136", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西区-青山北-锦林公园"},{"rank": 6, "status": "🆕新", "city": "晋中市", "vid": "5320323328", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府"},{"rank": 7, "status": "🔴6轮", "city": "兰州市", "vid": "5320266574", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-西固区-一区"},{"rank": 8, "status": "🔴6轮", "city": "哈密市", "vid": "5310577661", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "哈密市中心-核心区-1"},{"rank": 9, "status": "🔴6轮", "city": "武威市", "vid": "5320322397", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力-三区"},{"rank": 10, "status": "🆕新", "city": "包头市", "vid": "5320268150", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-保利花园"},{"rank": 11, "status": "🆕新", "city": "拉萨市", "vid": "5320217751", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学河坝林网格"},{"rank": 12, "status": "🆕新", "city": "呼和浩特市", "vid": "5320397420", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力西区-金川-上院-J3"},{"rank": 13, "status": "🆕新", "city": "鄂尔多斯市", "vid": "7010439281", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B2"}];
+var CITIES=["兰州市", "包头市", "呼和浩特市", "哈密市", "拉萨市", "新市区", "晋中市", "武威市", "鄂尔多斯市"];
 var selectedCities=new Set();
 function initTags(){
   var box=document.getElementById('cityTags');
