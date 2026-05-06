@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>隆林各族自治县 缺电详情</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f5f6fa;color:#222;font-size:14px}
+.hd{background:linear-gradient(135deg,#1565c0,#1e88e5);color:#fff;padding:14px 16px}
+.hd h1{font-size:16px;font-weight:700;margin-bottom:10px}
+.stats{display:flex;flex-wrap:wrap;gap:8px}
+.s{background:rgba(255,255,255,.18);border-radius:8px;padding:5px 10px;font-size:12px;line-height:1.6}
+.s b{font-size:18px;display:block;font-weight:700}
+.filter{background:#fff;padding:10px 12px;border-bottom:1px solid #eee}
+.filter-row{display:flex;gap:8px;align-items:center}
+.filter input{border:1px solid #ddd;border-radius:6px;padding:6px 8px;font-size:13px;background:#fafafa;flex:1}
+.filter button{background:#1e88e5;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:13px;cursor:pointer;white-space:nowrap}
+.city-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.city-tag{display:inline-block;padding:4px 10px;border-radius:14px;font-size:12px;border:1px solid #ccc;background:#f5f5f5;color:#555;cursor:pointer;user-select:none;transition:all .2s}
+.city-tag.active{background:#1e88e5;color:#fff;border-color:#1e88e5}
+.cnt{font-size:12px;color:#888;padding:6px 12px;background:#f9f9f9;border-bottom:1px solid #eee}
+table{width:100%;border-collapse:collapse}
+th{background:#f0f2f8;color:#555;padding:8px 6px;font-size:12px;font-weight:600;text-align:left}
+td{padding:8px 6px;border-bottom:1px solid #f0f0f0;font-size:13px;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr.rep{background:#fff8f8}
+.vid{font-family:monospace;font-size:11px;color:#666}
+.num{font-weight:700;color:#d32f2f;text-align:right}
+.h1n{font-weight:700;color:#e65100;text-align:right}
+.up{color:#d32f2f;font-weight:600}.dn{color:#388e3c;font-weight:600}.flat{color:#aaa}
+.tag{font-size:11px;font-weight:600;white-space:nowrap}
+.tag.r{color:#d32f2f}.tag.n{color:#388e3c}
+.grid{color:#999;font-size:11px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empty{text-align:center;padding:30px;color:#aaa}
+</style>
+</head><body>
+<div class="hd">
+  <h1>📍 隆林各族自治县 — 高频缺电 TOP 1</h1>
+  <div class="stats">
+    <div class="s"><b>4</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>-</b>负责人</div>
+  </div>
+</div>
+<div class="filter">
+  <div class="city-tags" id="cityTags"></div>
+  <div class="filter-row">
+    <input id="fLost" type="number" placeholder="累计丢单≥" min="0">
+    <button onclick="apply()">应用</button>
+    <button onclick="reset()" style="background:#888">重置</button>
+  </div>
+</div>
+<div class="cnt" id="cnt"></div>
+<div style="overflow-x:auto">
+<table>
+<thead><tr>
+  <th style="width:24px">#</th>
+  <th>状态</th>
+  <th>分组</th>
+  <th>车编</th>
+  <th style="text-align:right">累计</th>
+  <th style="text-align:right">近1h</th>
+  <th style="text-align:right">变化</th>
+  <th>网格</th>
+</tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+<script>
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "隆林县", "vid": "5320290972", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "隆林县"}];
+var TAGS=["隆林县"];
+var selected=new Set();
+function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
+function apply(){render();}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
+initTags();render();
+</script>
+</body></html>
