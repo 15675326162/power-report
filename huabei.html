@@ -38,11 +38,10 @@ tr.rep{background:#fff8f8}
   <h1>📍 华北大区 — 高频缺电 TOP 30</h1>
   <div class="stats">
     <div class="s"><b>364</b>累计丢单</div>
-    <div class="s"><b>14</b>城市数</div>
-    <div class="s"><b>16</b>🔴未处理</div>
-    <div class="s"><b>14</b>🆕新增</div>
+    <div class="s"><b>15</b>分组数</div>
+    <div class="s"><b>14</b>🔴未处理</div>
+    <div class="s"><b>16</b>🆕新增</div>
     <div class="s"><b>18点</b>时段</div>
-    <div class="s"><b id="pv">-</b>查看</div>
     <div class="s"><b>刘景丰</b>负责人</div>
   </div>
 </div>
@@ -60,7 +59,7 @@ tr.rep{background:#fff8f8}
 <thead><tr>
   <th style="width:24px">#</th>
   <th>状态</th>
-  <th>城市</th>
+  <th>分组</th>
   <th>车编</th>
   <th style="text-align:right">累计</th>
   <th style="text-align:right">近1h</th>
@@ -71,66 +70,13 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴6轮", "city": "石家庄市", "vid": "5320261416", "lost": 60, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "一战-正定新区-会展中心"},{"rank": 2, "status": "🔴4轮", "city": "石家庄市", "vid": "5310168780", "lost": 33, "h1": 17, "delta": "<span class='up'>↑17</span>", "grid": "三战-高开-和合美家"},{"rank": 3, "status": "🔴6轮", "city": "潍坊市", "vid": "6680030208", "lost": 29, "h1": 10, "delta": "<span class='up'>↑10</span>", "grid": "潍坊市-高新区南电力网格"},{"rank": 4, "status": "🔴6轮", "city": "石家庄市", "vid": "5310074869", "lost": 26, "h1": 15, "delta": "<span class='up'>↑15</span>", "grid": "二战-新华区-省人民医院"},{"rank": 5, "status": "🔴6轮", "city": "潍坊市", "vid": "5910819660", "lost": 15, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "潍坊市-高新区南电力网格"},{"rank": 6, "status": "🆕新", "city": "张家口市", "vid": "5320372253", "lost": 13, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张家口市-东部区域"},{"rank": 7, "status": "🔴6轮", "city": "徐水区", "vid": "2000041160", "lost": 12, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "朝阳大街东"},{"rank": 8, "status": "🆕新", "city": "长清区", "vid": "5930025025", "lost": 12, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "大学城北区-长清"},{"rank": 9, "status": "🔴6轮", "city": "石家庄市", "vid": "5310335281", "lost": 11, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "三战-裕华区-风尚水郡"},{"rank": 10, "status": "🆕新", "city": "大厂回族自治县", "vid": "5910832529", "lost": 11, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "大厂作业网格"},{"rank": 11, "status": "🔴6轮", "city": "大厂回族自治县", "vid": "5910872680", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "大厂作业网格"},{"rank": 12, "status": "🔴6轮", "city": "石家庄市", "vid": "5310157409", "lost": 10, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "null"},{"rank": 13, "status": "🔴6轮", "city": "济南市", "vid": "5320068975", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "济南市-历城区-华山街道-艺术学院"},{"rank": 14, "status": "🆕新", "city": "诸城市", "vid": "5310509398", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "核心区"},{"rank": 15, "status": "🔴4轮", "city": "石家庄市", "vid": "5310347379", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战-正定古城-国际小商品市场"},{"rank": 16, "status": "🔴4轮", "city": "石家庄市", "vid": "5320260965", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战-正定新区-朱河村"},{"rank": 17, "status": "🔴4轮", "city": "张家口市", "vid": "5310596653", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "张家口市-南部区域"},{"rank": 18, "status": "🔴6轮", "city": "张家口市", "vid": "5310825439", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "张家口市-北部区域"},{"rank": 19, "status": "🆕新", "city": "长清区", "vid": "5910801878", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 20, "status": "🆕新", "city": "丰润区", "vid": "2000043965", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "超区3-唐山市-丰润区-丰润街道-丘庄水库"},{"rank": 21, "status": "🔴4轮", "city": "滨州市", "vid": "5310584525", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新东5（新）"},{"rank": 22, "status": "🔴6轮", "city": "芝麻墩街道", "vid": "7780176219", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "芝麻墩镇两轮网格"},{"rank": 23, "status": "🆕新", "city": "张家口市", "vid": "5310750149", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张家口市-北部区域"},{"rank": 24, "status": "🆕新", "city": "河间市", "vid": "3720148446", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "河间-第二中学-1"},{"rank": 25, "status": "🆕新", "city": "白沟镇", "vid": "5930067480", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "白沟镇两轮融合网格西部片区"},{"rank": 26, "status": "🆕新", "city": "潍坊市", "vid": "5910756979", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-奎文区南电力网格"},{"rank": 27, "status": "🆕新", "city": "烟台市", "vid": "5320009278", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "芝罘区奇山医院网格"},{"rank": 28, "status": "🆕新", "city": "石家庄市", "vid": "5320209398", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "鹿泉-上庄"},{"rank": 29, "status": "🆕新", "city": "张家口市", "vid": "5320401751", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张家口市-西部区域"},{"rank": 30, "status": "🆕新", "city": "潍坊市", "vid": "5910763712", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格"}];
-var CITIES=["丰润区", "大厂回族自治县", "张家口市", "徐水区", "河间市", "济南市", "滨州市", "潍坊市", "烟台市", "白沟镇", "石家庄市", "芝麻墩街道", "诸城市", "长清区"];
-var selectedCities=new Set();
-function initTags(){
-  var box=document.getElementById('cityTags');
-  CITIES.forEach(function(c){
-    var t=document.createElement('span');
-    t.className='city-tag';
-    t.textContent=c;
-    t.onclick=function(){
-      if(selectedCities.has(c)){selectedCities.delete(c);t.className='city-tag';}
-      else{selectedCities.add(c);t.className='city-tag active';}
-      render();
-    };
-    box.appendChild(t);
-  });
-}
-function apply(){
-  render();
-}
-function render(){
-  var lost=parseInt(document.getElementById('fLost').value)||0;
-  var rows=DATA.filter(function(r){
-    return (selectedCities.size===0||selectedCities.has(r.city))&&r.lost>=lost;
-  });
-  var html='';
-  rows.forEach(function(r,i){
-    var isRep=r.status.indexOf('🔴')>=0;
-    html+='<tr class="'+(isRep?'rep':'')+'">';
-    html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';
-    html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';
-    html+='<td>'+r.city+'</td>';
-    html+='<td class="vid">'+r.vid+'</td>';
-    html+='<td class="num">'+r.lost+'</td>';
-    html+='<td class="h1n">'+r.h1+'</td>';
-    html+='<td>'+r.delta+'</td>';
-    html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';
-    html+='</tr>';
-  });
-  document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据，请调整筛选条件</td></tr>';
-  document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';
-}
-function reset(){
-  selectedCities.clear();
-  var tags=document.querySelectorAll('.city-tag');
-  for(var i=0;i<tags.length;i++)tags[i].className='city-tag';
-  document.getElementById('fLost').value='';
-  render();
-}
-initTags();
-render();
-</script>
-<script>
-(function(){
-  var p=location.pathname.replace(/^\/|\/$|\.html$/g,'');
-  if(!p)return;
-  fetch('/api/count?page='+encodeURIComponent(p),{method:'POST'})
-    .then(function(r){return r.json()})
-    .then(function(d){var e=document.getElementById('pv');if(e&&d.views)e.textContent=d.views})
-    .catch(function(){});
-})();
+var DATA=[{"rank": 1, "status": "🔴6轮", "tag": "石家庄市", "vid": "5320261416", "lost": 60, "h1": 7, "delta": "<span class='up'>↑12</span>", "grid": "一战-正定新区-会展中心"},{"rank": 2, "status": "🆕新", "tag": "石家庄市", "vid": "5310168780", "lost": 33, "h1": 17, "delta": "<span class='flat'>-</span>", "grid": "三战-高开-和合美家"},{"rank": 3, "status": "🔴6轮", "tag": "潍坊市", "vid": "6680030208", "lost": 29, "h1": 10, "delta": "<span class='up'>↑13</span>", "grid": "潍坊市-高新区南电力网格"},{"rank": 4, "status": "🔴2轮", "tag": "石家庄市", "vid": "5310074869", "lost": 26, "h1": 15, "delta": "<span class='up'>↑21</span>", "grid": "二战-新华区-省人民医院"},{"rank": 5, "status": "🔴6轮", "tag": "潍坊市", "vid": "5910819660", "lost": 15, "h1": 4, "delta": "<span class='up'>↑5</span>", "grid": "潍坊市-高新区南电力网格"},{"rank": 6, "status": "🆕新", "tag": "张家口市", "vid": "5320372253", "lost": 13, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张家口市-东部区域"},{"rank": 7, "status": "🆕新", "tag": "长清区", "vid": "5930025025", "lost": 12, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "大学城北区-长清"},{"rank": 8, "status": "🔴2轮", "tag": "徐水区", "vid": "2000041160", "lost": 12, "h1": 2, "delta": "<span class='up'>↑8</span>", "grid": "朝阳大街东"},{"rank": 9, "status": "🔴2轮", "tag": "石家庄市", "vid": "5310335281", "lost": 11, "h1": 6, "delta": "<span class='up'>↑7</span>", "grid": "三战-裕华区-风尚水郡"},{"rank": 10, "status": "🆕新", "tag": "大厂回族自治县", "vid": "5910832529", "lost": 11, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "大厂作业网格"},{"rank": 11, "status": "🔴5轮", "tag": "大厂回族自治县", "vid": "5910872680", "lost": 10, "h1": 1, "delta": "<span class='up'>↑2</span>", "grid": "大厂作业网格"},{"rank": 12, "status": "🔴5轮", "tag": "济南市", "vid": "5320068975", "lost": 10, "h1": 2, "delta": "<span class='up'>↑4</span>", "grid": "济南市-历城区-华山街道-艺术学院"},{"rank": 13, "status": "🔴2轮", "tag": "石家庄市", "vid": "5310157409", "lost": 10, "h1": 3, "delta": "<span class='up'>↑5</span>", "grid": "null"},{"rank": 14, "status": "🆕新", "tag": "石家庄市", "vid": "5310347379", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战-正定古城-国际小商品市场"},{"rank": 15, "status": "🆕新", "tag": "石家庄市", "vid": "5320260965", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战-正定新区-朱河村"},{"rank": 16, "status": "🆕新", "tag": "诸城市", "vid": "5310509398", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "核心区"},{"rank": 17, "status": "🆕新", "tag": "张家口市", "vid": "5310596653", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张家口市-南部区域"},{"rank": 18, "status": "🔴6轮", "tag": "张家口市", "vid": "5310825439", "lost": 8, "h1": 1, "delta": "<span class='up'>↑2</span>", "grid": "张家口市-北部区域"},{"rank": 19, "status": "🆕新", "tag": "长清区", "vid": "5910801878", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 20, "status": "🔴2轮", "tag": "芝麻墩街道", "vid": "7780176219", "lost": 6, "h1": 1, "delta": "<span class='up'>↑2</span>", "grid": "芝麻墩镇两轮网格"},{"rank": 21, "status": "🆕新", "tag": "丰润区", "vid": "2000043965", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "超区3-唐山市-丰润区-丰润街道-丘庄水库"},{"rank": 22, "status": "🔴5轮", "tag": "张家口市", "vid": "5310750149", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "张家口市-北部区域"},{"rank": 23, "status": "🔴5轮", "tag": "河间市", "vid": "3720148446", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "河间-第二中学-1"},{"rank": 24, "status": "🆕新", "tag": "滨州市", "vid": "5310584525", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新东5（新）"},{"rank": 25, "status": "🆕新", "tag": "白沟镇", "vid": "5930067480", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "白沟镇两轮融合网格西部片区"},{"rank": 26, "status": "🆕新", "tag": "潍坊市", "vid": "5910756979", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-奎文区南电力网格"},{"rank": 27, "status": "🆕新", "tag": "张家口市", "vid": "5320401751", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张家口市-西部区域"},{"rank": 28, "status": "🆕新", "tag": "潍坊市", "vid": "5910763712", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格"},{"rank": 29, "status": "🔴2轮", "tag": "烟台市", "vid": "5320009278", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "芝罘区奇山医院网格"},{"rank": 30, "status": "🆕新", "tag": "高碑店市", "vid": "2000054615", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "高碑店-迎宾路西"}];
+var TAGS=["丰润区", "大厂回族自治县", "张家口市", "徐水区", "河间市", "济南市", "滨州市", "潍坊市", "烟台市", "白沟镇", "石家庄市", "芝麻墩街道", "诸城市", "长清区", "高碑店市"];
+var selected=new Set();
+function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
+function apply(){render();}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
+initTags();render();
 </script>
 </body></html>
