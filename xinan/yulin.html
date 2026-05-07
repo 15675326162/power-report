@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 玉林市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>4</b>累计丢单</div>
     <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
     <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>李文翼、宁泽莹</b>负责人</div>
   </div>
 </div>
@@ -65,17 +65,18 @@ tr.rep{background:#fff8f8}
   <th style="text-align:right">近1h</th>
   <th style="text-align:right">变化</th>
   <th>网格</th>
+  <th>站点</th>
 </tr></thead>
 <tbody id="tbody"></tbody>
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "南江-银丰中央首府", "vid": "5310428083", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南江-银丰中央首府"}];
-var TAGS=["南江-银丰中央首府"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "北区-教育东路-富林金桂丽湾", "vid": "5310345759", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "北区-教育东路-富林金桂丽湾", "site": "-"}];
+var TAGS=["北区-教育东路-富林金桂丽湾"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
-function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='<td class="grid" title="'+r.site+'">'+r.site+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="9" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
 function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
 initTags();render();
 </script>
