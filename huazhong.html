@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 9</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 11</h1>
   <div class="stats">
-    <div class="s"><b>45</b>累计丢单</div>
+    <div class="s"><b>54</b>累计丢单</div>
     <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>9</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
 </div>
@@ -65,17 +65,18 @@ tr.rep{background:#fff8f8}
   <th style="text-align:right">近1h</th>
   <th style="text-align:right">变化</th>
   <th>网格</th>
+  <th>站点</th>
 </tr></thead>
 <tbody id="tbody"></tbody>
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "长沙市", "vid": "5310289025", "lost": 11, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "T铁道学院12"},{"rank": 2, "status": "🔴7轮", "tag": "合肥市", "vid": "5320476852", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-徽州大道"},{"rank": 3, "status": "🔴2轮", "tag": "长沙市", "vid": "5310261763", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "K北辰三角洲"},{"rank": 4, "status": "🔴2轮", "tag": "安庆市", "vid": "3930088378", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "换电-安庆光彩大市场"},{"rank": 5, "status": "🔴2轮", "tag": "合肥市", "vid": "7010449621", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区"},{"rank": 6, "status": "🔴3轮", "tag": "武汉市", "vid": "7010377055", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "江夏-纸坊大街"},{"rank": 7, "status": "🔴2轮", "tag": "长沙市", "vid": "5310210031", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "K万达"},{"rank": 8, "status": "🔴2轮", "tag": "合肥市", "vid": "7010378897", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "null"},{"rank": 9, "status": "🔴2轮", "tag": "长丰县", "vid": "5930031837", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "北城-水岸人家"}];
-var TAGS=["合肥市", "安庆市", "武汉市", "长丰县", "长沙市"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "长沙市", "vid": "5310289025", "lost": 12, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "T铁道学院12", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5310769186", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区", "site": "-"},{"rank": 3, "status": "🔴3轮", "tag": "长沙市", "vid": "5310261763", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "K北辰三角洲", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "长丰县", "vid": "5930028572", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "北城-北城万达", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "合肥市", "vid": "5310454197", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "合肥市", "vid": "5310729638", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力超区-包河-东侧超区", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "合肥市", "vid": "5320332828", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-汽车南站", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "合肥市", "vid": "7010380952", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-定远路万达", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "蚌埠市", "vid": "5320072250", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "B区-欧尚山水华庭", "site": "-"},{"rank": 10, "status": "🆕新", "tag": "长沙市", "vid": "5310390768", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "Y科技学院", "site": "-"},{"rank": 11, "status": "🆕新", "tag": "谷城县", "vid": "5310110660", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "谷城县D区", "site": "-"}];
+var TAGS=["合肥市", "蚌埠市", "谷城县", "长丰县", "长沙市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
-function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="8" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='<td class="grid" title="'+r.site+'">'+r.site+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="9" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
 function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
 initTags();render();
 </script>
