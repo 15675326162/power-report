@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 6</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>50</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>16</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>胡超、谢浩</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "昆明电力2-五华-丰宁区", "vid": "5320165964", "lost": 16, "h1": 2, "delta": "<span class='up'>↑4</span>", "grid": "昆明电力2-五华-丰宁区", "site": "雅居招待所站点"},{"rank": 2, "status": "🔴3轮", "tag": "昆明电力2-五华-丰宁区", "vid": "5320191019", "lost": 14, "h1": 2, "delta": "<span class='up'>↑4</span>", "grid": "昆明电力2-五华-丰宁区", "site": "艺院巷昆明市第二十四中学站点A"},{"rank": 3, "status": "🔴2轮", "tag": "昆明电力2-西山-西山区政府", "vid": "5320162924", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-西山-西山区政府", "site": "益宁路辅路昆明市西山区人民医院(益宁路)站点D"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-官渡超区", "vid": "5320331902", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320165280", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "彩云北路辅路子君村停车场站点C"},{"rank": 6, "status": "🆕新", "tag": "昆明电力2-西山-西山区政府", "vid": "7010467475", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-西山区政府", "site": "昆州路738号昆明市西山区人民法院站点"}];
-var TAGS=["昆明电力1-官渡2-新亚洲", "昆明电力1-官渡超区", "昆明电力2-五华-丰宁区", "昆明电力2-西山-西山区政府"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-五华-丰宁区", "vid": "5320164175", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-丰宁区", "site": "虹山北路比亚迪汽车王朝网(昆明中和愿景虹山4S店)站点"},{"rank": 2, "status": "🆕新", "tag": "昆明-呈贡-七彩云南", "vid": "5320196604", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-七彩云南", "site": "彩云南路辅路七彩云南·第壹城站点C"},{"rank": 3, "status": "🆕新", "tag": "-", "vid": "5320195392", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320206507", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "珥季路辅路小板桥家家综合商场站点A"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-西山-万达", "vid": "5320387264", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-万达", "site": "西山区前兴路159-3号佳馨园停车点"}];
+var TAGS=["-", "昆明-呈贡-七彩云南", "昆明电力1-官渡2-新亚洲", "昆明电力2-五华-丰宁区", "昆明电力2-西山-万达"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
