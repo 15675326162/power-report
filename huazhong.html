@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>31</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>42</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "长沙市", "vid": "5320343405", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "W湖南一师范", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5310394844", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-西侧超区", "site": "复兴路梦园小学教育集团复兴路学校站点C"},{"rank": 3, "status": "🔴3轮", "tag": "长沙市", "vid": "5310210031", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "K万达", "site": "湘江中路275号潮宗街区站点"},{"rank": 4, "status": "🆕新", "tag": "长沙市", "vid": "5320458214", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "W湖南一师范", "site": "五洲路卓越·浅水湾站点"},{"rank": 5, "status": "🆕新", "tag": "长沙市", "vid": "5320363588", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "Y环保学院16", "site": "长沙汽车南站（时代阳光大道）入口"},{"rank": 6, "status": "🆕新", "tag": "定远县", "vid": "5320302962", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "定远中学1区", "site": "D1街东北角"}];
-var TAGS=["合肥市", "定远县", "长沙市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "长沙市", "vid": "5320340259", "lost": 15, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "W麓谷", "site": "枫林三路452号三真康复站点"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5320474463", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-四里河", "site": "八公山路绿地派克公馆站点"},{"rank": 3, "status": "🆕新", "tag": "合肥市", "vid": "5320421606", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-经开-繁华新园", "site": "繁华大道站点Q"},{"rank": 4, "status": "🆕新", "tag": "合肥市", "vid": "5320489759", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-定远路万达", "site": "文忠路辅路勤居苑西区站点"},{"rank": 5, "status": "🆕新", "tag": "黄冈市", "vid": "5310367098", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "黄冈艺术学院", "site": "湖心路遗爱湖公园站点G"},{"rank": 6, "status": "🆕新", "tag": "和县", "vid": "5320204386", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "2号", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "颍上县", "vid": "7960033805", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "颍上县2区", "site": "交通路四里湾站点A"},{"rank": 8, "status": "🆕新", "tag": "合肥市", "vid": "7960040050", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-经开区-临湖社区", "site": "-"}];
+var TAGS=["合肥市", "和县", "长沙市", "颍上县", "黄冈市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
