@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 丽江市 — 高频缺电 TOP 3</h1>
+  <h1>📍 丽江市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
+    <div class="s"><b>21</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>2</b>🔴未处理</div>
     <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>李洲杰、李秋霞</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "丽江市-束河街道", "vid": "5320437011", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "丽江市-束河街道", "site": "束白路太古易居·生活美学设计师度假美宿客栈(束白路分店)站点A"},{"rank": 2, "status": "🔴2轮", "tag": "丽江市-祥和街道", "vid": "5310404257", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "丽江市-祥和街道", "site": "民主路OYO云之蓝精品客栈站点"},{"rank": 3, "status": "🆕新", "tag": "丽江市-西安街道", "vid": "5320489540", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "丽江市-西安街道", "site": "香格里大道观光酒店站点B"}];
-var TAGS=["丽江市-束河街道", "丽江市-祥和街道", "丽江市-西安街道"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "丽江市-束河街道", "vid": "5320437011", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "丽江市-束河街道", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "丽江市-西安街道", "vid": "5320489540", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "丽江市-西安街道", "site": "香格里大道928丽房商厦站点"},{"rank": 3, "status": "🆕新", "tag": "丽江市-大研街道", "vid": "5310427260", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "丽江市-大研街道", "site": "民主路224号锦天商贸城站点"},{"rank": 4, "status": "🆕新", "tag": "丽江市-大研街道", "vid": "5310473491", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "丽江市-大研街道", "site": "西安路正泰怡园站点"}];
+var TAGS=["丽江市-大研街道", "丽江市-束河街道", "丽江市-西安街道"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
