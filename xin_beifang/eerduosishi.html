@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 鄂尔多斯市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>6</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>郭强、宋雅菲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜A3", "vid": "7010455185", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "东胜A3", "site": "天骄北路辅路中国石化天骄加油站站点B"},{"rank": 2, "status": "🆕新", "tag": "东胜B2", "vid": "7010451620", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B2", "site": "吉劳庆南路全季酒店(鄂尔多斯东胜区吉劳庆南路店)站点A"}];
-var TAGS=["东胜A3", "东胜B2"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜B1", "vid": "7010462631", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B1", "site": "祥春排骨蒸饺家常菜鑫通·壹号府站点A"},{"rank": 2, "status": "🆕新", "tag": "东胜A1", "vid": "5320088998", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东胜A1", "site": "【高假】【午晚】大兴雅润嘉园北门东侧"}];
+var TAGS=["东胜A1", "东胜B1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
