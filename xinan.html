@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 8</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>29</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>17</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "丽江市", "vid": "5310450684", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "丽江市-西安街道", "site": "祥和路丽江古城站点G"},{"rank": 2, "status": "🆕新", "tag": "昆明市", "vid": "5320360828", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-会展中心", "site": "德克士(万科小篆店)万科·公园城市站点C"},{"rank": 3, "status": "🆕新", "tag": "昆明市", "vid": "5320184258", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-翠湖区", "site": "【G】北门街52号翠明园停车点"},{"rank": 4, "status": "🆕新", "tag": "昆明市", "vid": "5320155403", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-西亮塘", "site": "【G】云秀路官渡古镇云瑞医院"},{"rank": 5, "status": "🆕新", "tag": "西双版纳磨憨经济开发区", "vid": "7780149481", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "磨憨两轮网格", "site": "东盟大道云南石化国营加油站站点"},{"rank": 6, "status": "🆕新", "tag": "昆明市", "vid": "5320160243", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "彩云北路5077号护国寺站点"},{"rank": 7, "status": "🆕新", "tag": "昆明市", "vid": "5320154611", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-莲花池", "site": "苍洱味源站点B"},{"rank": 8, "status": "🆕新", "tag": "昆明市", "vid": "5320177223", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新6区", "site": "环城东路董家湾小学停车点"}];
-var TAGS=["丽江市", "昆明市", "西双版纳磨憨经济开发区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西双版纳磨憨经济开发区", "vid": "7780149481", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "磨憨两轮网格", "site": "东盟大道云南石化国营加油站站点"},{"rank": 2, "status": "🔴2轮", "tag": "昆明市", "vid": "5320154611", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-五华-莲花池", "site": "周居北泰花园【H】"},{"rank": 3, "status": "🆕新", "tag": "昆明市", "vid": "5320331902", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "昆明市", "vid": "5320169099", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-爱琴海", "site": "福硕街泰园站点"},{"rank": 5, "status": "🆕新", "tag": "昆明市", "vid": "5320197349", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"}];
+var TAGS=["昆明市", "西双版纳磨憨经济开发区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
