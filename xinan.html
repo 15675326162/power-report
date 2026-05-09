@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 11</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>47</b>累计丢单</div>
+    <div class="s"><b>9</b>分组数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明市", "vid": "5320365473", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-五华-护国区", "site": "西园南路恒信花园站点B"},{"rank": 2, "status": "🔴2轮", "tag": "乐山市", "vid": "5310791766", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "乐山七区", "site": "花园街金融大厦站点C"},{"rank": 3, "status": "🆕新", "tag": "丽江市", "vid": "5320437036", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "丽江市-祥和街道", "site": "庆云路幸福里站点B"},{"rank": 4, "status": "🆕新", "tag": "昆明市", "vid": "5320165773", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-度假区", "site": "度假区湖滨西路52号停车点"},{"rank": 5, "status": "🆕新", "tag": "安顺市", "vid": "7960186898", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力3区-黔中商贸城", "site": "碧水路金星天下城站点E"}];
-var TAGS=["丽江市", "乐山市", "安顺市", "昆明市"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "昆明市", "vid": "5320365473", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-五华-护国区", "site": "西园南路恒信花园站点B"},{"rank": 2, "status": "🔴3轮", "tag": "乐山市", "vid": "5310791766", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "乐山七区", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "新蒲街道", "vid": "5310279612", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "20", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "乐山市", "vid": "5310683200", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "乐山-苏鳍古镇", "site": "苏稽大道563号枫蓝国际站点A"},{"rank": 5, "status": "🆕新", "tag": "昆明市", "vid": "5320176009", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-翠湖区", "site": "铁局路一丘田小区站点B"},{"rank": 6, "status": "🆕新", "tag": "遂宁市", "vid": "5320202747", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "经开区-城南5区", "site": "明星大道4号南苑石油小区D区站点"},{"rank": 7, "status": "🆕新", "tag": "南岸区", "vid": "5310739868", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南岸区-经开区-同景", "site": "桂雨路恒大同景国际城·香阁华颂站点"},{"rank": 8, "status": "🆕新", "tag": "南宁市", "vid": "5320230058", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴宁-三塘镇-三塘超区", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "文山壮族苗族自治州", "vid": "5310412451", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "调-卧龙街道二区-3", "site": "腾龙北路中保家园站点A"},{"rank": 10, "status": "🆕新", "tag": "梧州市", "vid": "7960212838", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "龙圩-南站区", "site": "-"},{"rank": 11, "status": "🆕新", "tag": "玉林市", "vid": "5310428083", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南江-银丰中央首府", "site": "二环东路恒大悦龙台站点"}];
+var TAGS=["乐山市", "南宁市", "南岸区", "文山壮族苗族自治州", "新蒲街道", "昆明市", "梧州市", "玉林市", "遂宁市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
