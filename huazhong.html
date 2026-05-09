@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>16</b>累计丢单</div>
+    <div class="s"><b>32</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "株洲市", "vid": "5320130909", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "河西动力谷网格", "site": "仙月环路中国动力谷展示中心站点"},{"rank": 2, "status": "🔴2轮", "tag": "宿州市", "vid": "7110064516", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "电-国购网格", "site": "高势能-助-测绘站点080"},{"rank": 3, "status": "🆕新", "tag": "合肥市", "vid": "5320474463", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-四里河", "site": "八公山路绿地派克公馆站点"}];
-var TAGS=["合肥市", "宿州市", "株洲市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "合肥市", "vid": "5320436723", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园", "site": "中海原山-北门(网约车上车点)站点"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5310378432", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "二战区-瑶海区-新站家天下", "site": "天水路长虹世纪荣廷站点B"},{"rank": 3, "status": "🆕新", "tag": "和县", "vid": "5320199003", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "2号", "site": "马鞍山市和县历阳镇鸡笼山路明天城市广场"},{"rank": 4, "status": "🆕新", "tag": "合肥市", "vid": "5320332605", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园", "site": "振兴路华邦蜀山里站点C"},{"rank": 5, "status": "🆕新", "tag": "云溪区", "vid": "6680031849", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "松杨湖", "site": "长江大道站点U"},{"rank": 6, "status": "🔴2轮", "tag": "合肥市", "vid": "5320474463", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力一区-庐阳区-四里河", "site": "八公山路绿地派克公馆站点"},{"rank": 7, "status": "🆕新", "tag": "合肥市", "vid": "5310770418", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-定远路万达", "site": "明皇路禹洲郎溪上里站点D"},{"rank": 8, "status": "🆕新", "tag": "合肥市", "vid": "5310281223", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-长宁社区", "site": "塘梢小郢站点"}];
+var TAGS=["云溪区", "合肥市", "和县"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
