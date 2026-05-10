@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 9</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>74</b>累计丢单</div>
-    <div class="s"><b>8</b>分组数</div>
-    <div class="s"><b>5</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>22</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>0</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "昆明电力1-官渡2-西亮塘", "vid": "5320161398", "lost": 16, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-官渡2-西亮塘", "site": "彩云北路5077号护国寺站点"},{"rank": 2, "status": "🆕新", "tag": "昆明电力2-西山-棕树营", "vid": "5320194084", "lost": 12, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-棕树营", "site": "红菱路壹号广场站点K"},{"rank": 3, "status": "🔴3轮", "tag": "昆明电力1-五华-护国区", "vid": "5320327892", "lost": 11, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-五华-护国区", "site": "西昌路344号站点A"},{"rank": 4, "status": "🔴3轮", "tag": "昆明电力1-官渡1-金马", "vid": "7010467509", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡1-金马", "site": "-"},{"rank": 5, "status": "🔴2轮", "tag": "呈贡云南师范大学", "vid": "7010516693", "lost": 9, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "呈贡云南师范大学", "site": "云南师范大学呈贡校区启园1号学生公寓云南师范大学呈贡校区站点"},{"rank": 6, "status": "🆕新", "tag": "昆明电力1-盘呈-同德区", "vid": "5320307085", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-同德区", "site": "云南省肝硬治疗中心昆明南亚科大医院站点"},{"rank": 7, "status": "🔴2轮", "tag": "昆明电力1-官渡1-金马", "vid": "5320162150", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡1-金马", "site": "昆明市官渡区金马街道乐骑摩托车驾校(金马寺校区)"},{"rank": 8, "status": "🆕新", "tag": "昆明电力1-官渡2--螺蛳湾", "vid": "5320013268", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2--螺蛳湾", "site": "俊发·观云海·云漫岭5栋站点"},{"rank": 9, "status": "🆕新", "tag": "昆明电力1-盘龙-北市1区", "vid": "5320376252", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区", "site": "金星派出所罗丈村社区停车点"}];
-var TAGS=["呈贡云南师范大学", "昆明电力1-五华-护国区", "昆明电力1-官渡1-金马", "昆明电力1-官渡2--螺蛳湾", "昆明电力1-官渡2-西亮塘", "昆明电力1-盘呈-同德区", "昆明电力1-盘龙-北市1区", "昆明电力2-西山-棕树营"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "昆明电力1-官渡2-西亮塘", "vid": "5320161398", "lost": 17, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2-西亮塘", "site": "彩云北路5077号护国寺站点"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力1-官渡2--螺蛳湾", "vid": "5320013268", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡2--螺蛳湾", "site": "俊发·观云海·云漫岭5栋站点"}];
+var TAGS=["昆明电力1-官渡2--螺蛳湾", "昆明电力1-官渡2-西亮塘"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
