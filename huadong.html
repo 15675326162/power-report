@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 2</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>-</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "江宁区", "vid": "5320297629", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-开发区", "site": "庄排路21世纪太阳城购物中心站点"},{"rank": 2, "status": "🆕新", "tag": "靖江市", "vid": "3720188479", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "主城-华东生态业务部-一组-靖江市-靖城街道-城区-商业住宅-周菜平", "site": "恬月路晨阳里商业街站点"}];
-var TAGS=["江宁区", "靖江市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "溧水区", "vid": "5910887789", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "溧水区-空港新城电力网格", "site": "新淮大道蜂巢能源科技(南京)有限公司站点A"}];
+var TAGS=["溧水区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
