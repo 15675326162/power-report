@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 南宁市 — 高频缺电 TOP 4</h1>
+  <h1>📍 南宁市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>10</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>李天劲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "青秀-津头街道-五合", "vid": "5320231551", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "青秀-津头街道-五合", "site": "应天路御江学府站点B"},{"rank": 2, "status": "🆕新", "tag": "江南-江南街道-翠湖新城", "vid": "5320237653", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "江南-江南街道-翠湖新城", "site": "壮锦大道辅路南宁海吉星市场站点D"},{"rank": 3, "status": "🆕新", "tag": "西乡塘-衡阳街道-衡阳", "vid": "5320222730", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-衡阳街道-衡阳", "site": "解元巷35号天华公寓站点"},{"rank": 4, "status": "🆕新", "tag": "良庆区-玉洞街道-祖龙购物中心", "vid": "5320235038", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "良庆区-玉洞街道-祖龙购物中心", "site": "艾青艺术中南·紫云集北区站点"}];
-var TAGS=["江南-江南街道-翠湖新城", "良庆区-玉洞街道-祖龙购物中心", "西乡塘-衡阳街道-衡阳", "青秀-津头街道-五合"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "良庆区-玉洞街道-祖龙购物中心", "vid": "5320235038", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "良庆区-玉洞街道-祖龙购物中心", "site": "商城二街6号G5966"},{"rank": 2, "status": "🆕新", "tag": "青秀-津头街道-埌东客运站", "vid": "5320229638", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "青秀-津头街道-埌东客运站", "site": "仙葫大道辅路中国燃气南宁交投三屋CNG加气站站点B"},{"rank": 3, "status": "🆕新", "tag": "西乡塘-安吉街道-安吉客运站", "vid": "5320236924", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-安吉街道-安吉客运站", "site": "白沙大道辅路川泸国际站点C"}];
+var TAGS=["良庆区-玉洞街道-祖龙购物中心", "西乡塘-安吉街道-安吉客运站", "青秀-津头街道-埌东客运站"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
