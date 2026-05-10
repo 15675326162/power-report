@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 7</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>36</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>47</b>累计丢单</div>
+    <div class="s"><b>8</b>分组数</div>
+    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "吉安市", "vid": "7010420351", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吉安市自营电力网格", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "肇庆市", "vid": "2000039851", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-永安镇电力", "site": "永安镇派出所站点"},{"rank": 3, "status": "🆕新", "tag": "惠东县", "vid": "7110304705", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄埠人民路", "site": "人民二路101号站点A"},{"rank": 4, "status": "🆕新", "tag": "金利镇", "vid": "5930070069", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "金贸东路金利文体活动中心站点A"},{"rank": 5, "status": "🆕新", "tag": "汕尾市", "vid": "7900096005", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "汕尾城区-B区", "site": "兴业路季美拾光轻居(汕尾城区店)站点"},{"rank": 6, "status": "🆕新", "tag": "南昌市", "vid": "5320245624", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南昌县-东新", "site": "洪城大市场3号口站点"},{"rank": 7, "status": "🆕新", "tag": "于都县", "vid": "7960092975", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "上欧思源社区", "site": "振兴大道九里理想2站点"}];
-var TAGS=["于都县", "南昌市", "吉安市", "惠东县", "汕尾市", "肇庆市", "金利镇"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "吉安市", "vid": "7010420351", "lost": 13, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "吉安市自营电力网格", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "肇庆市", "vid": "2000039851", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "鼎湖-永安镇电力", "site": "永泰路大地酱油食品有限公司站点C"},{"rank": 3, "status": "🔴2轮", "tag": "汕尾市", "vid": "7900096005", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "汕尾城区-B区", "site": "兴业路季美拾光轻居(汕尾城区店)站点"},{"rank": 4, "status": "🔴2轮", "tag": "金利镇", "vid": "5930070069", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "换电策略地图", "site": "金贸东路站点A"},{"rank": 5, "status": "🔴2轮", "tag": "南昌市", "vid": "5320245624", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "南昌县-东新", "site": "洪城大市场3号口站点"},{"rank": 6, "status": "🆕新", "tag": "江门市", "vid": "7110359932", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "荔枝沟路744号站点"},{"rank": 7, "status": "🆕新", "tag": "南昌市", "vid": "5320258418", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高校-经开-南片区", "site": "黄家湖东路南昌交通学院(黄家湖校区)站点Z21"},{"rank": 8, "status": "🆕新", "tag": "佛山市", "vid": "3720150762", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "惠东县", "vid": "7110186759", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄埠人民路", "site": "人民一路大汇城购物广场站点B"}];
+var TAGS=["佛山市", "南昌市", "吉安市", "惠东县", "汕尾市", "江门市", "肇庆市", "金利镇"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
