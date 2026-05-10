@@ -41,7 +41,7 @@ tr.rep{background:#fff8f8}
     <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>-</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "土城村", "vid": "7960124135", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "土城村", "site": "通宝路明秀园小区站点E"}];
-var TAGS=["土城村"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "会泽公园", "vid": "7960071462", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "会泽公园", "site": "通宝路会烟小区站点B"}];
+var TAGS=["会泽公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
