@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 银川市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>32</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>34</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320478352", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "宝湖中路宝湖湾湖景公寓站点C"},{"rank": 2, "status": "🔴2轮", "tag": "金凤区-南6区", "vid": "5320350579", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道尚文巷保伏桥新村B区2"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320036807", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "恒安南街明珠花园站点A"},{"rank": 4, "status": "🆕新", "tag": "金凤区-南5区", "vid": "7010526301", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南5区", "site": "金凤区长城中路街道烟墩巷枫林湾"},{"rank": 5, "status": "🆕新", "tag": "金凤区-超区 1", "vid": "5320476078", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-超区 1", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320478401", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道尚文巷宝湖福邸9"}];
-var TAGS=["兴庆区-超区1", "金凤区-南5区", "金凤区-南6区", "金凤区-超区 1"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "金凤区-南6区", "vid": "5320478352", "lost": 11, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-南6区", "site": "宝湖中路宝湖湾湖景公寓站点D"},{"rank": 2, "status": "🔴2轮", "tag": "兴庆区-超区1", "vid": "5320036807", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区1", "site": "恒安南街明珠花园站点A"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320474979", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "兴燕路宁夏医科大学(新校区)站点A"},{"rank": 4, "status": "🆕新", "tag": "金凤区-南5区", "vid": "5320475551", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南5区", "site": "金凤区长城中路街道庆丰街五里湖畔2"},{"rank": 5, "status": "🆕新", "tag": "西夏区-超区 1", "vid": "5320257200", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-超区 1", "site": "贺兰山西路站点D"},{"rank": 6, "status": "🆕新", "tag": "金凤区-南5区", "vid": "5320035539", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南5区", "site": "金凤区长城中路街道大有巷亲水人家6"}];
+var TAGS=["兴庆区-兴庆20区", "兴庆区-超区1", "西夏区-超区 1", "金凤区-南5区", "金凤区-南6区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
