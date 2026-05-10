@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>27</b>累计丢单</div>
+    <div class="s"><b>36</b>累计丢单</div>
     <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>刘景丰</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "威海市", "vid": "7960271021", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "哈工大电力网格", "site": "哈尔滨工业大学(威海)六公寓哈尔滨工业大学(威海校区)站点B"},{"rank": 2, "status": "🔴2轮", "tag": "诸城市", "vid": "5310730970", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "核心区", "site": "东关大街诸城市中医医院站点A"},{"rank": 3, "status": "🆕新", "tag": "济南市", "vid": "5320121854", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-洪楼街道-七里堡", "site": "东兴寓城站点"},{"rank": 4, "status": "🆕新", "tag": "济南市", "vid": "5320118893", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-华山街道-华山西", "site": "将军路黄台大酒店站点"},{"rank": 5, "status": "🆕新", "tag": "石家庄市", "vid": "5310588560", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "鹿泉-获鹿镇人民政府", "site": "向阳南大街帝华·西部峰景站点A"},{"rank": 6, "status": "🆕新", "tag": "济南市", "vid": "5320150292", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-祝甸街道-桑园路", "site": "桑园路64号砺诚文化创意产业园站点"}];
-var TAGS=["威海市", "济南市", "石家庄市", "诸城市"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "诸城市", "vid": "5310730970", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "核心区", "site": "东关大街诸城市中医医院站点A"},{"rank": 2, "status": "🆕新", "tag": "济南市", "vid": "5320118548", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-全福街道-北全福", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "济南市", "vid": "5320116793", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-华山街道-华山西", "site": "金舆大道中海·华山珑城站点C"},{"rank": 4, "status": "🆕新", "tag": "潍坊市", "vid": "5930023866", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-奎文区南电力网格", "site": "潍坊市奎文区北海路街道东风东街潍坊奎文曙光医院1"},{"rank": 5, "status": "🆕新", "tag": "济南市", "vid": "5320120425", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-唐冶街道-银座新辰北", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "济南市", "vid": "5320139862", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-华山街道-艺术学院", "site": "新黄路济南国际五金机电城站点"},{"rank": 7, "status": "🆕新", "tag": "济南市", "vid": "5320148555", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-华山街道-华山西", "site": "北陈路中海·华山珑城站点B"},{"rank": 8, "status": "🆕新", "tag": "大厂回族自治县", "vid": "5910759880", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "大厂作业网格", "site": "好友纪麻椒鸡(翠景园店)潮白河孔雀城翠景园南区站点"}];
+var TAGS=["大厂回族自治县", "济南市", "潍坊市", "诸城市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
