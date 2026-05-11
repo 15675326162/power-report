@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 9</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>65</b>累计丢单</div>
+    <div class="s"><b>21</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "昆明市", "vid": "7010516693", "lost": 16, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "呈贡云南师范大学", "site": "云南师范大学呈贡校区东区(5号门)云南师范大学呈贡校区(站点"},{"rank": 2, "status": "🔴4轮", "tag": "昆明市", "vid": "5320148166", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "昆明电力2-五华-莲花池", "site": "政教路蓝花楹主题公园站点A"},{"rank": 3, "status": "🔴4轮", "tag": "南宁市", "vid": "5320223191", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西乡塘-安宁街道-邕武路", "site": "望州路北二里32号G12956"},{"rank": 4, "status": "🆕新", "tag": "昆明市", "vid": "5320301601", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-云大西路", "site": "环城东路董家湾小学停车点"},{"rank": 5, "status": "🔴3轮", "tag": "昆明市", "vid": "5320009170", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-五华-高新2区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "南宁市", "vid": "5310529805", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "良庆-大沙田街道-五象丽景", "site": "春华路14号G9873"},{"rank": 7, "status": "🆕新", "tag": "成都市", "vid": "5320156866", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "体院-东部新区-成都市-电力网格", "site": "出门口站点"},{"rank": 8, "status": "🆕新", "tag": "昆明市", "vid": "5320262838", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新4区", "site": "科普路中铁·云时代广场站点C"},{"rank": 9, "status": "🆕新", "tag": "昆明市", "vid": "5320386953", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-莲花池", "site": "龙泉路万彩城市花园停车点a"}];
-var TAGS=["南宁市", "成都市", "昆明市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "南宁市", "vid": "5320229511", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-安吉街道-安吉客运站", "site": "秀安路桃花源·祈福城站点A"},{"rank": 2, "status": "🔴3轮", "tag": "昆明市", "vid": "5320386953", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-五华-莲花池", "site": "龙泉路万彩城市花园停车点a"},{"rank": 3, "status": "🔴2轮", "tag": "昆明市", "vid": "5320301576", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "贵昆路辅路昆铁利民小区站点A"},{"rank": 4, "status": "🆕新", "tag": "乐山市", "vid": "5310789923", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "乐山二区", "site": "岷河北街299号乐山华盛酒店站点"}];
+var TAGS=["乐山市", "南宁市", "昆明市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
