@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>24</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
-    <div class="s"><b>-</b>负责人</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>胡丹萍、鲁宏伟</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "江宁区", "vid": "7010451632", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-江宁区-高新园区一二中队", "site": "-"},{"rank": 2, "status": "🔴4轮", "tag": "溧水区", "vid": "5910887789", "lost": 3, "h1": 2, "delta": "<span class='dn'>↓5</span>", "grid": "溧水区-空港新城电力网格", "site": "新淮大道蜂巢能源科技(南京)有限公司站点B"},{"rank": 3, "status": "🆕新", "tag": "漳州市", "vid": "5310736590", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "漳州市-碧湖街道-核心-万达商圈", "site": "-"}];
-var TAGS=["江宁区", "溧水区", "漳州市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "常熟市", "vid": "5320100241", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "家具市场", "site": "524国道可美国际品牌大厦站点A"},{"rank": 2, "status": "🆕新", "tag": "苏州市", "vid": "7010384475", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "吴江区-世恒学校", "site": "山湖西路庞南新村南区站点B"},{"rank": 3, "status": "🔴2轮", "tag": "江宁区", "vid": "7010451632", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力网格-江宁区-高新园区一二中队", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "溧水区", "vid": "5910848797", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力战区-溧水区-开发区网格", "site": "湖影路银城天荟·依湖苑站点A"},{"rank": 5, "status": "🆕新", "tag": "宁波市", "vid": "5310155443", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南战-罗蒙环球城", "site": "鄞州区天童南路345号"},{"rank": 6, "status": "🆕新", "tag": "南通市", "vid": "5320140219", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "张芝山", "site": "-"}];
+var TAGS=["南通市", "宁波市", "常熟市", "江宁区", "溧水区", "苏州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
