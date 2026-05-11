@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 7</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>41</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>14</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "呈贡云南师范大学", "vid": "7010516693", "lost": 18, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "呈贡云南师范大学", "site": "聚贤街云南师范大学呈贡校区文聚公寓站点G"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320301576", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "贵昆路辅路昆铁利民小区站点A"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320162965", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "红河特色烧烤得胜集团站点"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-五华-护国区", "vid": "5320162452", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-五华-护国区", "site": "祥云街港荣新时代潮流广场(同仁街步行街店)站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-西山-大商汇", "vid": "5320192648", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-大商汇", "site": "南呗路大悦城01号"},{"rank": 6, "status": "🆕新", "tag": "昆明电力2-五华-高新6区", "vid": "5320262755", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新6区", "site": "五华区教场中路249号"},{"rank": 7, "status": "🆕新", "tag": "昆明电力2-西山-大商汇", "vid": "5320197999", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-大商汇", "site": "银海森林2期东门(网约车上车点)金盾苑站点"}];
-var TAGS=["呈贡云南师范大学", "昆明电力1-五华-护国区", "昆明电力1-官渡2-新广丰", "昆明电力2-五华-高新6区", "昆明电力2-西山-大商汇"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320162965", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "红河特色烧烤得胜集团站点"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力1-五华-护国区", "vid": "5320162452", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-五华-护国区", "site": "祥云街港荣新时代潮流广场(同仁街步行街店)站点"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-官渡1-金马", "vid": "5320205392", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-金马", "site": "凤庆路站点B"}];
+var TAGS=["昆明电力1-五华-护国区", "昆明电力1-官渡1-金马", "昆明电力1-官渡2-新广丰"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
