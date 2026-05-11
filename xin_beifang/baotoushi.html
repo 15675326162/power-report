@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 4</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>32</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>王可旋、宋雅菲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东区-东河-维多利摩尔城", "vid": "5320459476", "lost": 8, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-维多利摩尔城", "site": "S级-包头市-东河区-维多利摩尔城东北口"},{"rank": 2, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320455127", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "S级-包头市-九原区-轻工学院北门（蓝框）"},{"rank": 3, "status": "🆕新", "tag": "西区-青山北-正翔国际", "vid": "5320183211", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-正翔国际", "site": "友春家具(九星国际广场店)九星国际广场站点A彩框"},{"rank": 4, "status": "🆕新", "tag": "西区-青山北-主城一机集团", "vid": "5320176745", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-主城一机集团", "site": "包头市-青山区-包师院清理违停专用雪点（包头市青山区共享彩框)"}];
-var TAGS=["东区-东河-维多利摩尔城", "东区-九原-包头轻工学院", "西区-青山北-主城一机集团", "西区-青山北-正翔国际"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "东区-东河-维多利摩尔城", "vid": "5320459476", "lost": 11, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "东区-东河-维多利摩尔城", "site": "包头-东河区-东河区河东街道巴彦塔拉东大街包头天元电机有限公司4-商圈"},{"rank": 2, "status": "🔴2轮", "tag": "西区-青山北-正翔国际", "vid": "5320183211", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "西区-青山北-正翔国际", "site": "友春家具(九星国际广场店)九星国际广场站点A彩框"},{"rank": 3, "status": "🆕新", "tag": "西区-青山北-主城一机集团", "vid": "5320176616", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-主城一机集团", "site": "呼得木林大街包头市青山区彩框点位"},{"rank": 4, "status": "🆕新", "tag": "西区-稀土-凡尔赛官邸", "vid": "5320459546", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-稀土-凡尔赛官邸", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "西区-昆区南-黄河小区", "vid": "5320176294", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-黄河小区", "site": "包头市-青山区-万青路街道民族东路金苑-居民区门口eb7包头市青山区白框"}];
+var TAGS=["东区-东河-维多利摩尔城", "西区-昆区南-黄河小区", "西区-稀土-凡尔赛官邸", "西区-青山北-主城一机集团", "西区-青山北-正翔国际"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
