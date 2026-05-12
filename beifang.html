@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 北方大区 — 高频缺电 TOP 2</h1>
+  <h1>📍 北方大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>9</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>51</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
-    <div class="s"><b>乔春阳、何孟凡、张小灵</b>负责人</div>
+    <div class="s"><b>12</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>乔春阳</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "银川市", "vid": "7010524922", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-4区", "site": "初创文化艺术培训中心万达华宅B区站点A"},{"rank": 2, "status": "🆕新", "tag": "牡丹江市", "vid": "5310596964", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "融合-牡丹江4区", "site": "爱民区303"}];
-var TAGS=["牡丹江市", "银川市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "瓦房店市", "vid": "7110169911", "lost": 11, "h1": 11, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "瓦房店市", "vid": "7110077976", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "瓦房店市", "vid": "7110181416", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "瓦房店市", "vid": "7110396775", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格", "site": "恒力重工宿舍12号楼站点"},{"rank": 5, "status": "🆕新", "tag": "瓦房店市", "vid": "7110138042", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "佳木斯市", "vid": "5310753590", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "佳木斯18区", "site": "佳木斯市前进区和平街道安庆街188号康居嘉园(安庆街)"},{"rank": 7, "status": "🆕新", "tag": "朔州市", "vid": "5320198864", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "朔州南2区", "site": "紫金街南城派出所站点"},{"rank": 8, "status": "🆕新", "tag": "银川市", "vid": "7010525554", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-6区", "site": "西夏区西花园路街道锦润秀府锦园(北门)"},{"rank": 9, "status": "🆕新", "tag": "农安县", "vid": "7900237428", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "合隆镇换电网格", "site": "荣发时代新城站点M"},{"rank": 10, "status": "🆕新", "tag": "沈阳市", "vid": "3930069203", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院", "site": "何氏医学院：六舍站点"},{"rank": 11, "status": "🆕新", "tag": "瓦房店市", "vid": "7110181918", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "瓦房店恒力重工产业园换电网格", "site": "-"},{"rank": 12, "status": "🆕新", "tag": "沈阳市", "vid": "3930072088", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院", "site": "何氏医学院：咖啡厅三舍站点"}];
+var TAGS=["佳木斯市", "农安县", "朔州市", "沈阳市", "瓦房店市", "银川市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
