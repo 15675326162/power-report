@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 1</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>27</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>刘景丰</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "石家庄市", "vid": "5310156184", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "二战-长安区-勒泰", "site": "丰河苑东区"}];
-var TAGS=["石家庄市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "临淄区", "vid": "5310335697", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "临淄西南", "site": "大顺路85-11号东高生活区站点"},{"rank": 2, "status": "🆕新", "tag": "张家口市", "vid": "5320322383", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "张家口市-北部区域", "site": "【早午晚】西坝岗路188号水岸丽城站点"},{"rank": 3, "status": "🆕新", "tag": "徐水区", "vid": "2000046515", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "隔离Z-保定市-二战区-徐水区-乐凯大街街道-雷通购物广场-城西北", "site": "乐凯北大街宝玉宾馆站点"},{"rank": 4, "status": "🆕新", "tag": "徐水区", "vid": "7960002782", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "333省道站点Z13"},{"rank": 5, "status": "🆕新", "tag": "沧州市", "vid": "7900281163", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "运南-阿尔卡迪亚-5-1", "site": "运河区南环中路街道开元南大道金地小区-2462"},{"rank": 6, "status": "🆕新", "tag": "古冶区", "vid": "7960186219", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "古冶-金山主城", "site": "东华金山壹号(东门)东华温馨家园站点"},{"rank": 7, "status": "🆕新", "tag": "潍坊市", "vid": "5910756693", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "潍坊市", "vid": "5910808650", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格", "site": "永春路鼎泰·春风里·城市广场站点"}];
+var TAGS=["临淄区", "古冶区", "张家口市", "徐水区", "沧州市", "潍坊市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
