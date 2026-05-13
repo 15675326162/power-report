@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "肇庆市", "vid": "3720162760", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "鼎湖-永安镇电力", "site": "永安镇派出所站点"},{"rank": 2, "status": "🆕新", "tag": "吉安市", "vid": "7010420351", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "肇庆市", "vid": "2000033270", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-产业园区电力", "site": "鼎湖区荔苑民宿站点Z1"}];
-var TAGS=["吉安市", "肇庆市"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "汕头市", "vid": "5320035067", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "-", "site": "长旺中街雍颐湾站点"},{"rank": 2, "status": "🆕新", "tag": "南海区", "vid": "5320318174", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "R.桂城2区", "site": "南科路南海万科广场站点Z4"},{"rank": 3, "status": "🔴2轮", "tag": "海门镇", "vid": "7110361580", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "海门镇运营区网格上线", "site": "滨海大道华能汕头海门发电有限责任公司站点"},{"rank": 4, "status": "🆕新", "tag": "仁化县", "vid": "2000053351", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "工业区", "site": "工业园区管委会"},{"rank": 5, "status": "🆕新", "tag": "深圳市", "vid": "5310497594", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "怀化市", "vid": "5310543418", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "D区-湖南医药学院", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "汕头市", "vid": "5320099974", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "6D-广兴村区", "site": "早高峰小区珠池街道珠池路49号停车点"},{"rank": 8, "status": "🆕新", "tag": "仁化县", "vid": "2000059114", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "工业区", "site": "工业园区管委会"},{"rank": 9, "status": "🆕新", "tag": "南海区", "vid": "5320531227", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区", "site": "-"},{"rank": 10, "status": "🆕新", "tag": "遂溪县", "vid": "2000028425", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电网格4", "site": "文明街遂溪县第一中学站点Z……"}];
+var TAGS=["仁化县", "南海区", "怀化市", "汕头市", "海门镇", "深圳市", "遂溪县"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
