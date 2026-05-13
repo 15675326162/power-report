@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>35</b>累计丢单</div>
+    <div class="s"><b>42</b>累计丢单</div>
     <div class="s"><b>6</b>分组数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "南昌市", "vid": "5310266364", "lost": 10, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "江西农业大学", "site": "江西农业大学北区知行楼站点"},{"rank": 2, "status": "🆕新", "tag": "长沙市", "vid": "5320406636", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "D星沙上", "site": "星沙街道东二路39号"},{"rank": 3, "status": "🔴3轮", "tag": "深圳市", "vid": "5310497594", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "顺德区", "vid": "7010528330", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "大良上区E2S2", "site": "大良街道新基一路50号停车点"},{"rank": 5, "status": "🔴2轮", "tag": "衡阳市", "vid": "5310697927", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "衡阳北2区", "site": "音乐钟琴局华耀碧桂园·十里江湾站点"},{"rank": 6, "status": "🔴2轮", "tag": "南康区", "vid": "5310197648", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "龙岭区域", "site": "-"}];
-var TAGS=["南康区", "南昌市", "深圳市", "衡阳市", "长沙市", "顺德区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "长沙市", "vid": "5320371017", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "Y植物园", "site": "洞和路鄱阳·华美佳园站点"},{"rank": 2, "status": "🆕新", "tag": "南海区", "vid": "5320318174", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城2区", "site": "南科路南海万科广场站点Z4"},{"rank": 3, "status": "🆕新", "tag": "南康区", "vid": "6680055221", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "文峰城区域", "site": "迎宾苑(西北门)迎宾苑小区站点"},{"rank": 4, "status": "🆕新", "tag": "佛山市", "vid": "5930068464", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "禅城5区", "site": "汾江南路季华园万科里站点C"},{"rank": 5, "status": "🆕新", "tag": "南海区", "vid": "5320493569", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲1区", "site": "东平路瀚天科技城S2区站点F"},{"rank": 6, "status": "🆕新", "tag": "深圳市", "vid": "5310628285", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "怀化市", "vid": "5310541875", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "D区-湖南医药学院", "site": "顺天南路宏宇新城巴萨名门站点B"}];
+var TAGS=["佛山市", "南康区", "南海区", "怀化市", "深圳市", "长沙市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
