@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 鄂尔多斯市 — 高频缺电 TOP 3</h1>
+  <h1>📍 鄂尔多斯市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>18</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>郭强、宋雅菲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜A5", "vid": "7010458143", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A5", "site": "东腾机动车检测站停车点"},{"rank": 2, "status": "🆕新", "tag": "东胜B2", "vid": "7010439344", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B2", "site": "新奥路22号站点E"},{"rank": 3, "status": "🆕新", "tag": "康巴什区1网格", "vid": "7010378833", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "康巴什区1网格", "site": "雍景紫臺D区南门停车点"}];
-var TAGS=["东胜A5", "东胜B2", "康巴什区1网格"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜A2", "vid": "7010436635", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A2", "site": "盛世明苑站点B"},{"rank": 2, "status": "🔴2轮", "tag": "东胜A5", "vid": "7010458143", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东胜A5", "site": "东腾机动车检测站停车点"},{"rank": 3, "status": "🔴2轮", "tag": "东胜B2", "vid": "7010439344", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东胜B2", "site": "郝家圪卜路华研·水岸华城站点D"},{"rank": 4, "status": "🆕新", "tag": "康巴什区3网格", "vid": "7010420525", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "康巴什区3网格", "site": "-"}];
+var TAGS=["东胜A2", "东胜A5", "东胜B2", "康巴什区3网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
