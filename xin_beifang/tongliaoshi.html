@@ -41,7 +41,7 @@ tr.rep{background:#fff8f8}
     <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>陈奇鹤、宋雅菲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "网格六", "vid": "7010427416", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "网格六", "site": "中心大街格林豪泰智选酒店(通辽火车站金街店)站点B"}];
-var TAGS=["网格六"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "网格四", "vid": "7010391625", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "网格四", "site": "西拉木伦大街香格里拉站点E"}];
+var TAGS=["网格四"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
