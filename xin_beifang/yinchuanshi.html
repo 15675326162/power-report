@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 9</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>53</b>累计丢单</div>
-    <div class="s"><b>8</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>10</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "西夏区-4区", "vid": "7010524922", "lost": 12, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西夏区-4区", "site": "西夏金街万达华宅站点"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320326192", "lost": 9, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道味绝天下汉系烧烤(中海国际店)中海国际社区西区"},{"rank": 3, "status": "🔴4轮", "tag": "兴庆区-兴庆8区", "vid": "5320438624", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-兴庆8区", "site": "兴庆区解放西街街道民族北街玉兰园"},{"rank": 4, "status": "🔴2轮", "tag": "金凤区-南5区", "vid": "5320474490", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-南5区", "site": "金凤区长城中路街道幸福脑文化艺术培训中心御景湖城1期"},{"rank": 5, "status": "🆕新", "tag": "金凤区-北6区", "vid": "5320477147", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北6区", "site": "康平路135-号楼银新苑三区站点"},{"rank": 6, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320037612", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "阿超煲仔(常春藤店)汇融·常春藤站点"},{"rank": 7, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320023883", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "湖畔路中海国际社区西区站点I"},{"rank": 8, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320350385", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320442435", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "怀远西路283号怀远小区站点"}];
-var TAGS=["兴庆区-兴庆8区", "兴庆区-超区 2", "西夏区-1区", "西夏区-3区", "西夏区-4区", "金凤区-北6区", "金凤区-南5区", "金凤区-南6区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "兴庆区-超区 2", "vid": "5320350385", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区 2", "site": "瀚海街站点A"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南2区", "vid": "5320472495", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区", "site": "富安东巷宁夏医科大学总医院心脑血管病医院站点F"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-兴庆8区", "vid": "5320534699", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆8区", "site": "春华巷中冶·幸福宸站点C"}];
+var TAGS=["兴庆区-兴庆8区", "兴庆区-超区 2", "金凤区-南2区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
