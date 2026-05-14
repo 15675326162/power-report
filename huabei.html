@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>43</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>4</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>刘景丰</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "徐水区", "vid": "2000040441", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "徐水区", "vid": "2000050765", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "沧州市", "vid": "7780157147", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新华-悦港城--5-2", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "济南市", "vid": "5320141112", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-山大街道-山大", "site": "洪家楼南路聚隆广场站点B"},{"rank": 5, "status": "🆕新", "tag": "东营市", "vid": "5310672022", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东1区-核-鲁班公寓", "site": "助测绘点位-058"},{"rank": 6, "status": "🆕新", "tag": "龙口市", "vid": "7940017534", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东海东2", "site": "月亮湾服装城（装饰材料中间）"}];
-var TAGS=["东营市", "徐水区", "沧州市", "济南市", "龙口市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "徐水区", "vid": "2000052821", "lost": 10, "h1": 10, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "徐水区", "vid": "2000050765", "lost": 8, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "徐水区", "vid": "2000040441", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "沧州市", "vid": "7780157147", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新华-悦港城--5-2", "site": "-"},{"rank": 5, "status": "🔴2轮", "tag": "龙口市", "vid": "7940017534", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东海东2", "site": "月亮湾服装城（装饰材料中间）"},{"rank": 6, "status": "🆕新", "tag": "高碑店市", "vid": "7720164445", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高碑店迎宾路-东", "site": "算法推荐308"},{"rank": 7, "status": "🆕新", "tag": "诸城市", "vid": "5310408727", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "核心区", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "济南市", "vid": "5320119328", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-华山街道-艺术学院", "site": "将军机关小区站点"}];
+var TAGS=["徐水区", "沧州市", "济南市", "诸城市", "高碑店市", "龙口市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
