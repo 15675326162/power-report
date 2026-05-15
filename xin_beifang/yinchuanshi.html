@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 银川市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>50</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>59</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "德胜区-德胜2区", "vid": "7010525520", "lost": 27, "h1": 15, "delta": "<span class='up'>↑15</span>", "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇花园南街宁夏交通学校1"},{"rank": 2, "status": "🆕新", "tag": "西夏区-4区", "vid": "5320478078", "lost": 13, "h1": 11, "delta": "<span class='flat'>-</span>", "grid": "西夏区-4区", "site": "培华路站点W"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320029505", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "天天香酸菜刀削面(一分店)和平社区站点"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-兴庆8区", "vid": "5320348347", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆8区", "site": "北京东路站点Z72"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320250780", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "银川市技工学校(西门)银川市高级技工学校站点A"}];
-var TAGS=["兴庆区-兴庆8区", "兴庆区-超区 2", "兴庆区-超区1", "德胜区-德胜2区", "西夏区-4区"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "德胜区-德胜2区", "vid": "7010525520", "lost": 31, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇花园南街宁夏交通学校1"},{"rank": 2, "status": "🆕新", "tag": "德胜区-德胜2区", "vid": "5320042360", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇花园南街宁夏交通学校1"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320289889", "lost": 10, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "金凤区长城中路街道凤仪路中海城1"},{"rank": 4, "status": "🔴2轮", "tag": "兴庆区-兴庆8区", "vid": "5320348347", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-兴庆8区", "site": "北京东路站点Z72"},{"rank": 5, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320442467", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道康银巷湖映康晨3"}];
+var TAGS=["兴庆区-兴庆20区", "兴庆区-兴庆8区", "德胜区-德胜2区", "金凤区-南6区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
