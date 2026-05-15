@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 晋中市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>21</b>累计丢单</div>
+    <div class="s"><b>19</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
     <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>王锐鹏、候蕾</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "晋中电力5区万达广场", "vid": "5320206779", "lost": 10, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "晋中电力5区万达广场", "site": "晋中市-榆次区-郭家堡乡传奇蛋糕兰田传奇576"},{"rank": 2, "status": "🆕新", "tag": "晋中电力10区榆次火车站", "vid": "5320210099", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "晋中电力10区榆次火车站", "site": "蕴华街636号教育局小区站点"},{"rank": 3, "status": "🆕新", "tag": "晋中电力5区万达广场", "vid": "7010382394", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力5区万达广场", "site": "玉湖北路199号恒基·文华苑站点A"}];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "晋中电力10区榆次火车站", "vid": "5320210099", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力10区榆次火车站", "site": "蕴华街636号教育局小区站点"},{"rank": 2, "status": "🆕新", "tag": "晋中电力5区万达广场", "vid": "5310474216", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "晋中电力5区万达广场", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "晋中电力10区榆次火车站", "vid": "5320210348", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力10区榆次火车站", "site": "主干道-迎宾街铁建榆次家园01"}];
 var TAGS=["晋中电力10区榆次火车站", "晋中电力5区万达广场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
