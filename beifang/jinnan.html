@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 津南区 — 高频缺电 TOP 3</h1>
+  <h1>📍 津南区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>39</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>芦永亮</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "津南换电网格东沽路", "vid": "7100044868", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "津南换电网格东沽路", "site": "津南区咸水沽镇津沽公路卢浮广场"},{"rank": 2, "status": "🆕新", "tag": "津南换电网格咸水沽", "vid": "7110107574", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格咸水沽", "site": "咸水沽镇祥福里_48d"},{"rank": 3, "status": "🆕新", "tag": "津南换电网格辛庄", "vid": "7110351533", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格辛庄", "site": "ebike_wwgmyy96"}];
-var TAGS=["津南换电网格东沽路", "津南换电网格咸水沽", "津南换电网格辛庄"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "津南换电网格东沽路", "vid": "7100044868", "lost": 11, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "津南换电网格东沽路", "site": "津南区咸水沽镇津沽公路卢浮广场"},{"rank": 2, "status": "🔴2轮", "tag": "津南换电网格辛庄", "vid": "7110351533", "lost": 8, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "津南换电网格辛庄", "site": "ebike_wwgmyy96"},{"rank": 3, "status": "🆕新", "tag": "津南换电网格双港", "vid": "7110146299", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港", "site": "发港南路天开高教科创园津南园站点F"},{"rank": 4, "status": "🆕新", "tag": "津南换电网格辛庄", "vid": "7110339001", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格辛庄", "site": "金地·格林世界橄榄苑(C区)金地·格林世界橄榄苑C区站点C"},{"rank": 5, "status": "🆕新", "tag": "津南换电网格双港", "vid": "7110151528", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港", "site": "津沽公路站点Z20"},{"rank": 6, "status": "🆕新", "tag": "津南换电网格双港", "vid": "7110446821", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港", "site": "睿平道天开高教科创园津南园站点H"},{"rank": 7, "status": "🆕新", "tag": "津南换电网格双港", "vid": "7110368113", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港", "site": "金地·格林世界橄榄苑(C区)金地·格林世界橄榄苑C区站点B"},{"rank": 8, "status": "🆕新", "tag": "津南换电网格双港", "vid": "7110235220", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "津南换电网格双港", "site": "天津恒生科技园"}];
+var TAGS=["津南换电网格东沽路", "津南换电网格双港", "津南换电网格辛庄"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
