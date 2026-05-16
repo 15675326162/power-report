@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 8</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>50</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>46</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "吉安市", "vid": "5310653921", "lost": 17, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "上江界B区(北3门)站点"},{"rank": 2, "status": "🆕新", "tag": "汕尾市", "vid": "7960037812", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "汕尾城区-B区", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "赣州市", "vid": "7010419000", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "主城-赣州站", "site": "五洲大道赣州站站点C5"},{"rank": 4, "status": "🆕新", "tag": "金利镇", "vid": "5930068256", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "金龙大道金盛大酒店站点A"},{"rank": 5, "status": "🆕新", "tag": "澄海区", "vid": "7960254696", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二区-老城区", "site": "澄海区蓬岭路63号9"},{"rank": 6, "status": "🆕新", "tag": "吉安市", "vid": "7010420351", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "吉安市自营电力网格", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "南海区", "vid": "5320318729", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区", "site": "依云天汇亿能国际广场站点J"},{"rank": 8, "status": "🆕新", "tag": "澄迈县", "vid": "5930069131", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "金马大道澄迈文化广场站点"}];
-var TAGS=["南海区", "吉安市", "汕尾市", "澄海区", "澄迈县", "赣州市", "金利镇"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "吉安市", "vid": "5310653921", "lost": 18, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "上江界B区(北3门)站点"},{"rank": 2, "status": "🔴2轮", "tag": "金利镇", "vid": "5930068256", "lost": 10, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "换电策略地图", "site": "金利大道158号高要名都宾馆站点"},{"rank": 3, "status": "🆕新", "tag": "南海区", "vid": "5320318657", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区", "site": "海七路招商置地中心站点A"},{"rank": 4, "status": "🆕新", "tag": "金利镇", "vid": "5930046224", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "金沙大道95号新喜悦盛宴站点"},{"rank": 5, "status": "🆕新", "tag": "云溪区", "vid": "7780048102", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "凌泊湖", "site": "喜相逢湖南运想重工有限公司站点A"},{"rank": 6, "status": "🆕新", "tag": "南海区", "vid": "5320318592", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.桂城1区", "site": "桂澜路辅路金铂中心站点B"},{"rank": 7, "status": "🆕新", "tag": "高州市", "vid": "5310299680", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高州4区", "site": "桂圆东路站点J"}];
+var TAGS=["云溪区", "南海区", "吉安市", "金利镇", "高州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
