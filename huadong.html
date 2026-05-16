@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 1</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>43</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
-    <div class="s"><b>-</b>负责人</div>
+    <div class="s"><b>12</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>胡丹萍</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "启东市", "vid": "7900203144", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "启东市电力网格2", "site": "林洋路锦绣家园A区站点"}];
-var TAGS=["启东市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "南通市", "vid": "5320096012", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "能达中央公园网格", "site": "宏兴东路中兴兰溪荟站点B"},{"rank": 2, "status": "🆕新", "tag": "溧阳市", "vid": "5930044362", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "溧阳换电网格 高新区北", "site": "南昌拌粉中关村创智园站点A"},{"rank": 3, "status": "🆕新", "tag": "苏州市", "vid": "7010417290", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高新区--横塘", "site": "金色家园站点Z1"},{"rank": 4, "status": "🆕新", "tag": "丽水市", "vid": "7900108254", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "A-碧湖镇万洋网格", "site": "工业路浙江(丽水)万洋众创城站点"},{"rank": 5, "status": "🆕新", "tag": "苏州市", "vid": "5310735366", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "丰县", "vid": "5310570249", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "城南d区", "site": "河滨路-左岸人家东门停车点"},{"rank": 7, "status": "🆕新", "tag": "南通市", "vid": "5310148030", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "开发区网格", "site": "巢湖路龙吟公寓站点C"},{"rank": 8, "status": "🆕新", "tag": "溧阳市", "vid": "3720211286", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "溧阳换电网格 高新区北", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "南通市", "vid": "5320004717", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "职业技术学院网格", "site": "竹林路世家花园站点I"},{"rank": 10, "status": "🆕新", "tag": "南通市", "vid": "7010495778", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "张芝山", "site": "蒲公英路香樟公寓站点"},{"rank": 11, "status": "🆕新", "tag": "南通市", "vid": "5310305231", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "职业技术学院网格", "site": "上海路30号星海大厦(福州路)站点"},{"rank": 12, "status": "🆕新", "tag": "织里镇", "vid": "5320415627", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "核心-湖州-织里镇-云村-居民-南区网格组-许长志", "site": "利济路东尼新能源(四区)站点"}];
+var TAGS=["丰县", "丽水市", "南通市", "溧阳市", "织里镇", "苏州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
