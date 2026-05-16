@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 商丘市 — 高频缺电 TOP 1</h1>
+  <h1>📍 商丘市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>9</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>张学全</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "1区第一中学新校区", "vid": "5320454457", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "1区第一中学新校区", "site": "宋城东路商丘汇佳学校站点M"}];
-var TAGS=["1区第一中学新校区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "1区万达", "vid": "5310750427", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "1区万达", "site": "馨语蛋糕店商丘医学高等专科学校站点"},{"rank": 2, "status": "🆕新", "tag": "6区第一人民医院", "vid": "5320455037", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "6区第一人民医院", "site": "汉庭酒店商丘古城店宏伟·蓝郡"}];
+var TAGS=["1区万达", "6区第一人民医院"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
