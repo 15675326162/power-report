@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 4</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>15</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>31</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320163520", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "彩云北路辅路新亚洲体育城站点Z3"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡超区", "vid": "5320331902", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-官渡1-金马", "vid": "5320208639", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-金马", "site": "金马路站点Z33"},{"rank": 4, "status": "🆕新", "tag": "昆明电力2-西山-五一路", "vid": "5320199033", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-五一路", "site": "环城南路545号云纺小区站点"}];
-var TAGS=["昆明电力1-官渡1-金马", "昆明电力1-官渡2-新亚洲", "昆明电力1-官渡超区", "昆明电力2-西山-五一路"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明电力1-官渡超区", "vid": "5320331902", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡超区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-盘呈-同德区", "vid": "5320165284", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-同德区", "site": "拓东路达阵广场站点B"},{"rank": 3, "status": "🔴2轮", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320163520", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "彩云北路辅路新亚洲体育城站点Z3"},{"rank": 4, "status": "🆕新", "tag": "昆明电力2-西山-度假区", "vid": "5320195771", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-度假区", "site": "海埂路昆明江林宾馆站点H"},{"rank": 5, "status": "🆕新", "tag": "-", "vid": "5320191877", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320189990", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "雨龙路站点F"},{"rank": 7, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320157381", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "贵昆路辅路昆明祥茂宾馆站点"}];
+var TAGS=["-", "昆明电力1-官渡2-新亚洲", "昆明电力1-官渡2-新广丰", "昆明电力1-官渡超区", "昆明电力1-盘呈-同德区", "昆明电力2-西山-度假区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
