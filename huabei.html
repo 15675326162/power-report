@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>52</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>刘景丰</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "徐水区", "vid": "7110168757", "lost": 18, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "保定市徐水区正村镇一工厂共享服务中心徐水长城总装2期总装车间"},{"rank": 2, "status": "🆕新", "tag": "威海市", "vid": "7960188426", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "哈工大电力网格", "site": "学子路哈尔滨工业大学威海校区站点C"},{"rank": 3, "status": "🆕新", "tag": "石家庄市", "vid": "5310137028", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战-桥西区-解放广场", "site": "-"}];
-var TAGS=["威海市", "徐水区", "石家庄市"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "徐水区", "vid": "7110168757", "lost": 19, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "朝阳大街东", "site": "保定市徐水区正村镇一工厂共享服务中心徐水长城总装2期总装车间"},{"rank": 2, "status": "🆕新", "tag": "徐水区", "vid": "7110106454", "lost": 11, "h1": 11, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "徐水区", "vid": "2000059522", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "徐水区", "vid": "7960207047", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "缓冲Z-保定市-二战区-徐水区-朝阳大街街道-长城园区-城东", "site": "联城大街徐水动力分公司站点B"},{"rank": 5, "status": "🔴2轮", "tag": "石家庄市", "vid": "5310137028", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战-桥西区-解放广场", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "平阴县", "vid": "7960241321", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "主城Z-平阴县-华北鲁西-平阴县榆山街道-云翠街-南网格-B", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "三河市", "vid": "5310601669", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "超区C-四战3-通州区-【通州区】-东北部超区-超区H", "site": "燕灵路598号迎宾北路社区卫生中心站点"}];
+var TAGS=["三河市", "平阴县", "徐水区", "石家庄市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
