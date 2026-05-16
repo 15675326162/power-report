@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 3</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>64</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320484993", "lost": 17, "h1": 17, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320348799", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "培华路银川科技学院站点G"},{"rank": 3, "status": "🆕新", "tag": "金凤区-南1区C", "vid": "5320303187", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南1区C", "site": "金凤区黄河东路街道新开渠街外来务工人员公寓"}];
-var TAGS=["西夏区-1区", "西夏区-3区", "金凤区-南1区C"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西夏区-3区", "vid": "5320484993", "lost": 27, "h1": 10, "delta": "<span class='up'>↑10</span>", "grid": "西夏区-3区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "兴庆区-兴庆5区", "vid": "5320441047", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆5区", "site": "兴庆区丽景街街道清和北街1122号庆丰苑"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-兴庆6区", "vid": "5320472286", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆6区", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-兴庆8区", "vid": "5320439223", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆8区", "site": "广实巷塞北嘉苑小区站点"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "7010495316", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "桃源东路174号典雅居B区站点A"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-兴庆6区", "vid": "7010524252", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆6区", "site": "兴庆区丽景街街道海宝路景墨家园A区4"},{"rank": 7, "status": "🆕新", "tag": "兴庆区-兴庆5区", "vid": "5320062560", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆5区", "site": "宁景南巷庆丰苑站点"},{"rank": 8, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320037612", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "阿超煲仔(常春藤店)汇融·常春藤站点"},{"rank": 9, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320441313", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "金凤区长城中路街道六盘山中路中海城"}];
+var TAGS=["兴庆区-兴庆20区", "兴庆区-兴庆5区", "兴庆区-兴庆6区", "兴庆区-兴庆8区", "兴庆区-超区1", "西夏区-1区", "西夏区-3区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
