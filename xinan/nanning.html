@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 南宁市 — 高频缺电 TOP 4</h1>
+  <h1>📍 南宁市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>31</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>43</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>李天劲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "良庆-良庆镇-五象南", "vid": "5320222754", "lost": 16, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "良庆-良庆镇-五象南", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "江南-那洪街道-普罗旺斯", "vid": "5320227789", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "江南-那洪街道-普罗旺斯", "site": "规划二路中房·碧翠园"},{"rank": 3, "status": "🆕新", "tag": "西乡塘-安吉街道-安吉客运站", "vid": "5320221334", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-安吉街道-安吉客运站", "site": "安阳路23号G7503"},{"rank": 4, "status": "🆕新", "tag": "兴宁-朝阳街道-火车站", "vid": "5320223453", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兴宁-朝阳街道-火车站", "site": "邕武路快环建材装饰机电批发市场站点"}];
-var TAGS=["兴宁-朝阳街道-火车站", "江南-那洪街道-普罗旺斯", "良庆-良庆镇-五象南", "西乡塘-安吉街道-安吉客运站"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "良庆-良庆镇-五象南", "vid": "5320222754", "lost": 26, "h1": 10, "delta": "<span class='up'>↑10</span>", "grid": "良庆-良庆镇-五象南", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "兴宁-朝阳街道-快环建材市场", "vid": "5320226094", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴宁-朝阳街道-快环建材市场", "site": "金宁路8号G4661"},{"rank": 3, "status": "🆕新", "tag": "西乡塘-衡阳街道-衡阳", "vid": "5320233068", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-衡阳街道-衡阳", "site": "秀灵路27号小区停车点1"},{"rank": 4, "status": "🆕新", "tag": "西乡塘-北湖街道-中医院", "vid": "5320220505", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-北湖街道-中医院", "site": "秀厢大道199号金宁路口G7795"},{"rank": 5, "status": "🆕新", "tag": "青秀-建政街道-金茶花公园", "vid": "5320236146", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "青秀-建政街道-金茶花公园", "site": "奇妙颜正宗桂林米粉(长岗六分店)广西水利电力职业技术学院站点"}];
+var TAGS=["兴宁-朝阳街道-快环建材市场", "良庆-良庆镇-五象南", "西乡塘-北湖街道-中医院", "西乡塘-衡阳街道-衡阳", "青秀-建政街道-金茶花公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
