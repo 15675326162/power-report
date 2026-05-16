@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 巴彦淖尔市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
+    <div class="s"><b>17</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>郭强、宋雅菲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-主城-摩登公馆", "vid": "5320311704", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "西区-主城-摩登公馆", "site": "胜利路华海尚都站点C"},{"rank": 2, "status": "🆕新", "tag": "东区-缓冲-河套学院东校区", "vid": "5320351007", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-缓冲-河套学院东校区", "site": "闻都名苑站点"}];
-var TAGS=["东区-缓冲-河套学院东校区", "西区-主城-摩登公馆"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-道南", "vid": "5320350515", "lost": 12, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-道南", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "-", "vid": "5320311568", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"}];
+var TAGS=["-", "西区-道南"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
