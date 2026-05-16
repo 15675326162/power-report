@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 9</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>67</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>28</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "西夏区-1区", "vid": "5320037612", "lost": 31, "h1": 9, "delta": "<span class='up'>↑9</span>", "grid": "西夏区-1区", "site": "阿超煲仔(常春藤店)汇融·常春藤站点"},{"rank": 2, "status": "🔴2轮", "tag": "德胜区-德胜2区", "vid": "5320349722", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "德胜区-德胜2区", "site": "凤凰华府B区(南门)站点"},{"rank": 3, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320442348", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道贺兰山中路7"},{"rank": 4, "status": "🔴3轮", "tag": "金凤区-北8区", "vid": "5320478367", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-北8区", "site": "人民广场东街宁夏博物馆站点D"},{"rank": 5, "status": "🆕新", "tag": "德胜区-德胜1区", "vid": "5320475656", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜1区", "site": "贺兰县习岗镇虹桥北街宁夏凯晨电气集团有限公司"},{"rank": 6, "status": "🆕新", "tag": "德胜区-德胜1区", "vid": "5320348201", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜1区", "site": "贺兰县习岗镇虹桥北街宁夏铁马公司"},{"rank": 7, "status": "🆕新", "tag": "德胜区-德胜1区", "vid": "5320472134", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜1区", "site": "贺兰县习岗镇虹桥北街银川安利捷丰田汽车销售服务有限公司"},{"rank": 8, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "7010504657", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "西夏区-7区", "vid": "5320478271", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-7区", "site": "平运路战略新兴材料加工区站点"}];
-var TAGS=["兴庆区-兴庆20区", "德胜区-德胜1区", "德胜区-德胜2区", "西夏区-1区", "西夏区-7区", "金凤区-北5区", "金凤区-北8区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320484993", "lost": 17, "h1": 17, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320348799", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "培华路银川科技学院站点G"},{"rank": 3, "status": "🆕新", "tag": "金凤区-南1区C", "vid": "5320303187", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南1区C", "site": "金凤区黄河东路街道新开渠街外来务工人员公寓"}];
+var TAGS=["西夏区-1区", "西夏区-3区", "金凤区-南1区C"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
