@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 成都市 — 高频缺电 TOP 2</h1>
+  <h1>📍 成都市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>19</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>29</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b>张龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "双流区-西南民族大学航空港校区电力网格", "vid": "5310345429", "lost": 15, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "双流区-西南民族大学航空港校区电力网格", "site": "银杏大道西南民族大学航空港校区南区站点Z17"},{"rank": 2, "status": "🆕新", "tag": "涌泉-温江区-成都市-电力网格", "vid": "5320158413", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "涌泉-温江区-成都市-电力网格", "site": "天宝东街成都合生汇站点G"}];
-var TAGS=["双流区-西南民族大学航空港校区电力网格", "涌泉-温江区-成都市-电力网格"];
+var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "双流区-西南民族大学航空港校区电力网格", "vid": "5310345429", "lost": 17, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "双流区-西南民族大学航空港校区电力网格", "site": "银杏大道西南民族大学航空港校区南区站点Z19"},{"rank": 2, "status": "🆕新", "tag": "天府-温江区-成都市-电力网格", "vid": "5320155803", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "天府-温江区-成都市-电力网格", "site": "雕刻时光站点I"},{"rank": 3, "status": "🆕新", "tag": "金马-温江区-成都市-电力网格", "vid": "5320146916", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "金马-温江区-成都市-电力网格", "site": "科盛路柳岸锦城站点D"}];
+var TAGS=["双流区-西南民族大学航空港校区电力网格", "天府-温江区-成都市-电力网格", "金马-温江区-成都市-电力网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
