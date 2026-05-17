@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>29</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>23</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
     <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>王可旋、宋雅菲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-昆区南-神华大酒店", "vid": "5320160370", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "西区-昆区南-神华大酒店", "site": "包头市一昆区一（彩框）新光东路华丽家族站点Z4"},{"rank": 2, "status": "🔴2轮", "tag": "西区-青山北-锦林公园", "vid": "5320158796", "lost": 8, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "西区-青山北-锦林公园", "site": "包头市-青山区-邻圃道1号-写字楼彩框"},{"rank": 3, "status": "🆕新", "tag": "西区-稀土-稀土公园", "vid": "5320471027", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-稀土-稀土公园", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "西区-稀土-凡尔赛官邸", "vid": "5320159290", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西区-稀土-凡尔赛官邸", "site": "友谊大街金苑白框"},{"rank": 5, "status": "🆕新", "tag": "西区-青山北-保利花园", "vid": "5320168214", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-保利花园", "site": "昌福道25号百兴小区（白框点位）站点"}];
-var TAGS=["西区-昆区南-神华大酒店", "西区-稀土-凡尔赛官邸", "西区-稀土-稀土公园", "西区-青山北-保利花园", "西区-青山北-锦林公园"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "西区-昆区南-神华大酒店", "vid": "5320160370", "lost": 12, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-昆区南-神华大酒店", "site": "包头市一昆区一（彩框）新光东路华丽家族站点Z4"},{"rank": 2, "status": "🆕新", "tag": "西区-青山北-锦林公园", "vid": "5320416458", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-锦林公园", "site": "包头市-青山区富强路82号彩框"},{"rank": 3, "status": "🆕新", "tag": "西区-青山北-万达广场", "vid": "5320159220", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-万达广场", "site": "高精度测绘点4034包头市青山区彩框"},{"rank": 4, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320456796", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "沪上阿姨·精选茶饮(包头医学院校外店)包头医学院站点"}];
+var TAGS=["东区-九原-包头医学院", "西区-昆区南-神华大酒店", "西区-青山北-万达广场", "西区-青山北-锦林公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
