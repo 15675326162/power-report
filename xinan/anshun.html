@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 安顺市 — 高频缺电 TOP 4</h1>
+  <h1>📍 安顺市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>16</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>11</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>王煜</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "电力1区-万象旅游城", "vid": "7960065171", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力1区-万象旅游城", "site": "102省道站点集圣中学"},{"rank": 2, "status": "🆕新", "tag": "电力5区-小十字天街", "vid": "7960270441", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力5区-小十字天街", "site": "黄果树大街站点55Z"},{"rank": 3, "status": "🆕新", "tag": "电力3区-黔中商贸城", "vid": "7960060919", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力3区-黔中商贸城", "site": "西航路派力花园站点A"},{"rank": 4, "status": "🆕新", "tag": "电力5区-小十字天街", "vid": "5310728451", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力5区-小十字天街", "site": "-"}];
-var TAGS=["电力1区-万象旅游城", "电力3区-黔中商贸城", "电力5区-小十字天街"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "电力5区-小十字天街", "vid": "7960270441", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力5区-小十字天街", "site": "黄果树大街站点55Z"},{"rank": 2, "status": "🆕新", "tag": "电力2区-安顺学院", "vid": "5310079122", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力2区-安顺学院", "site": "西水路岚桥花园7"}];
+var TAGS=["电力2区-安顺学院", "电力5区-小十字天街"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
