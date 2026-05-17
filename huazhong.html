@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 2</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>6</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>52</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李月涛</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "开封市", "vid": "5310319665", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南5区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "上街区", "vid": "7110355607", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "上街一区R", "site": "郑州市上街区中心路街道孟津路林溪苑小区"}];
-var TAGS=["上街区", "开封市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "合肥市", "vid": "5310297834", "lost": 23, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-逍遥津公园", "site": "庐阳区九狮桥街给"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5310336541", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-逍遥津公园", "site": "芬格嘉美整形外科医院易捷特大厦站点"},{"rank": 3, "status": "🆕新", "tag": "固始县", "vid": "7010411115", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "固始县五区R", "site": "CAA五区华联超市2站点"},{"rank": 4, "status": "🆕新", "tag": "合肥市", "vid": "5320486000", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-柏堰中心", "site": "玉兰大道美的集团合肥工业园站点A"},{"rank": 5, "status": "🔴2轮", "tag": "开封市", "vid": "5310319665", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "南5区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "合肥市", "vid": "5320422509", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-合肥二中", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "合肥市", "vid": "5310437429", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战区-庐阳区-庐阳经开区", "site": "汲桥路庐阳经开区工业园站点D"},{"rank": 8, "status": "🆕新", "tag": "肥东县", "vid": "5310654372", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "渠道战区-核心-肥东-肥东县区域C", "site": "合肥市肥东县店埠镇桂王路斌峰公园001"}];
+var TAGS=["合肥市", "固始县", "开封市", "肥东县"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
