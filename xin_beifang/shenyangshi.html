@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 5</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>21</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>11</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b>胡志鑫、乔春阳</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "三战A-铁西区-沈阳站西广场", "vid": "5320368512", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-沈阳站西广场", "site": "铁西区爱工北街凯旋门站点B"},{"rank": 2, "status": "🆕新", "tag": "四战-高校-沈北区-辽宁传媒学院（北校区）", "vid": "2000047143", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "四战-高校-沈北区-辽宁传媒学院（北校区）", "site": "沈北区高校-辽宁传媒学院(北校区)站点26"},{"rank": 3, "status": "🔴2轮", "tag": "二战A-和平区-东北大学东", "vid": "5320321122", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "二战A-和平区-东北大学东", "site": "和平区望湖北路东北大学(南湖校区)站点J"},{"rank": 4, "status": "🆕新", "tag": "三战-高校-何氏眼科学院", "vid": "3930061586", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院", "site": "何氏医学院：辽宁何氏医学院北校区(艺术创新园区)站点"},{"rank": 5, "status": "🆕新", "tag": "三战C-超区-铁西区-红旗台互通", "vid": "5320319385", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战C-超区-铁西区-红旗台互通", "site": "铁西区北一西路沈阳卓多汽车销售服务有限公司站点A"}];
-var TAGS=["三战-高校-何氏眼科学院", "三战A-铁西区-沈阳站西广场", "三战C-超区-铁西区-红旗台互通", "二战A-和平区-东北大学东", "四战-高校-沈北区-辽宁传媒学院（北校区）"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "三战-高校-何氏眼科学院", "vid": "3930061586", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战-高校-何氏眼科学院", "site": "何氏医学院：辽宁何氏医学院北校区(艺术创新园区)站点"},{"rank": 2, "status": "🆕新", "tag": "三战-高校-何氏眼科学院", "vid": "3930069912", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "二战A-和平区-新世界", "vid": "5310453948", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-新世界", "site": "-"}];
+var TAGS=["三战-高校-何氏眼科学院", "二战A-和平区-新世界"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
