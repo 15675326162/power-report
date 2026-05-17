@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>29</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320196192", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "珥季路259号小板桥家家综合商场站点A"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力1-盘龙-北辰2区", "vid": "5320195198", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-盘龙-北辰2区", "site": "金实路昆明博悦宾馆站点"},{"rank": 3, "status": "🔴6轮", "tag": "昆明电力1-官渡超区", "vid": "5320331902", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡超区", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-盘呈-同德区", "vid": "5320159030", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-同德区", "site": "白云路滨江俊园一期站点B"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-五华-高新4区", "vid": "5320176815", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新4区", "site": "研科路凯里亚德酒店(昆明高新区吾悦广场店)站点A"}];
-var TAGS=["昆明电力1-官渡2-新亚洲", "昆明电力1-官渡超区", "昆明电力1-盘呈-同德区", "昆明电力1-盘龙-北辰2区", "昆明电力2-五华-高新4区"];
+var DATA=[{"rank": 1, "status": "🔴7轮", "tag": "昆明电力1-官渡超区", "vid": "5320331902", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡超区", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力2-五华-高新4区", "vid": "5320176815", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-五华-高新4区", "site": "研科路凯里亚德酒店(昆明高新区吾悦广场店)站点A"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320169021", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "星耀路331号星天地商业广场站点D"},{"rank": 4, "status": "🆕新", "tag": "昆明-呈贡-大学城", "vid": "5320344079", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城", "site": "昆明市呈贡区雨花街道中心幼儿园站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-西山-五一路", "vid": "5320203867", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-五一路", "site": "官渡241号路和美欣城·春园站点E"},{"rank": 6, "status": "🆕新", "tag": "昆明电力2-西山-大商汇", "vid": "5320386725", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-大商汇", "site": "广福路680号长城滇池花苑站点"},{"rank": 7, "status": "🆕新", "tag": "昆明电力1-盘呈-同德区", "vid": "5320164448", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-同德区", "site": "颐华路12号滨江俊园Ⅱ期塞纳站点"}];
+var TAGS=["昆明-呈贡-大学城", "昆明电力1-官渡2-新亚洲", "昆明电力1-官渡超区", "昆明电力1-盘呈-同德区", "昆明电力2-五华-高新4区", "昆明电力2-西山-五一路", "昆明电力2-西山-大商汇"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
