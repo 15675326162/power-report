@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 4</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>14</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>鲁宏伟</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "厦门市", "vid": "5320391751", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力-集美-华大ioi", "site": "白石路厦门云城万科里站点A"},{"rank": 2, "status": "🆕新", "tag": "盐都区", "vid": "5910841823", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "盐都电力网格-东南片区", "site": "海底捞火锅(南金鹰聚龙湖店)金鹰天地广场站点"},{"rank": 3, "status": "🆕新", "tag": "宁波市", "vid": "7010408965", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西战-天一", "site": "宁波测绘站点0112-9821"},{"rank": 4, "status": "🆕新", "tag": "漳浦县", "vid": "5910851696", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "漳浦B区", "site": "龙成尊庭「阿丽百货」站点"}];
-var TAGS=["厦门市", "宁波市", "漳浦县", "盐都区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "宁波市", "vid": "7780068037", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南战-奉化电力网格", "site": "中山东路华信国际城站点B"},{"rank": 2, "status": "🆕新", "tag": "徐州市", "vid": "7960210702", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "泉山四区-1换电", "site": "泉山解放南路瑞龙广场临时015"},{"rank": 3, "status": "🆕新", "tag": "江宁区", "vid": "5320341828", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格-江宁区-高新园区三中队", "site": "天元东路2229号科工科技园站点"}];
+var TAGS=["宁波市", "徐州市", "江宁区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
