@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 华南大区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>47</b>累计丢单</div>
     <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>4</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "电白区", "vid": "7900171024", "lost": 11, "h1": 2, "delta": "<span class='dn'>↓3</span>", "grid": "万达广场区", "site": "【超大容错-谨慎操作】凤凰大道站点Z12"},{"rank": 2, "status": "🆕新", "tag": "汕头市", "vid": "5320067587", "lost": 8, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "3C-卜蜂中心区", "site": "华山北路长之江主题酒店(汕头高新店)站点"},{"rank": 3, "status": "🆕新", "tag": "鹰潭市", "vid": "2000049787", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "月湖区", "site": "站江路格林豪泰酒店(鹰潭火车站店)站点"},{"rank": 4, "status": "🆕新", "tag": "海丰县", "vid": "2000050067", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "主城-上汾", "site": "赤山路5号业兴大厦站点"},{"rank": 5, "status": "🆕新", "tag": "金利镇", "vid": "5930070961", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "城北路站点Z203"},{"rank": 6, "status": "🆕新", "tag": "沧水铺镇", "vid": "7960160600", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "沧水铺镇", "site": "沧泉路站点H"},{"rank": 7, "status": "🆕新", "tag": "贵溪市", "vid": "5310092331", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区", "site": "信江路太平洋购物广场(信江路店)站点B"}];
-var TAGS=["汕头市", "沧水铺镇", "海丰县", "电白区", "贵溪市", "金利镇", "鹰潭市"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "电白区", "vid": "7900171024", "lost": 12, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "万达广场区", "site": "【超大容错-谨慎操作】凤凰大道站点Z12"},{"rank": 2, "status": "🔴2轮", "tag": "汕头市", "vid": "5320067587", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "3C-卜蜂中心区", "site": "金平区华山北路88号22栋"},{"rank": 3, "status": "🔴2轮", "tag": "鹰潭市", "vid": "2000049787", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "月湖区", "site": "站江路华盛大酒店站点"},{"rank": 4, "status": "🆕新", "tag": "南海区", "vid": "5320318246", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城3区", "site": "灯湖西路千灯湖公园站点B"},{"rank": 5, "status": "🔴2轮", "tag": "沧水铺镇", "vid": "7960160600", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "沧水铺镇", "site": "沧泉路站点H"},{"rank": 6, "status": "🆕新", "tag": "新余市", "vid": "5930057144", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新余高新区电力网格B", "site": "赛维大道468号电子小区B区站点A"},{"rank": 7, "status": "🆕新", "tag": "南康区", "vid": "5910830984", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "商业中心区域", "site": "蕲艾艾灸馆龙祥·城南花园站点"}];
+var TAGS=["南康区", "南海区", "新余市", "汕头市", "沧水铺镇", "电白区", "鹰潭市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
