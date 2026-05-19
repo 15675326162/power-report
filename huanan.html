@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 华南大区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>26</b>累计丢单</div>
+    <div class="s"><b>20</b>累计丢单</div>
     <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "肇庆市", "vid": "5930048986", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-产业园区电力", "site": "科技二路广东环球易购(肇庆)跨境电子商务产业园站点D"},{"rank": 2, "status": "🔴3轮", "tag": "金利镇", "vid": "5930044936", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "换电策略地图", "site": "金信路站点J"},{"rank": 3, "status": "🆕新", "tag": "吉安市", "vid": "7010420351", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吉安市自营电力网格", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "惠东县", "vid": "7110250412", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吉隆石湖头", "site": "广汕路站点Z466"},{"rank": 5, "status": "🆕新", "tag": "南康区", "vid": "5310308771", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "龙岭区域", "site": "赣州星驿商务宾馆李家山安置点站点"}];
-var TAGS=["南康区", "吉安市", "惠东县", "肇庆市", "金利镇"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "南昌市", "vid": "5320067112", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "南昌县-复兴", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "电白区", "vid": "7900111329", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电白体育馆区", "site": "凤凰大道电白碧桂园站点E"},{"rank": 3, "status": "🆕新", "tag": "南海区", "vid": "5320317845", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城4区", "site": "华翠北路36号良溪村球场站点A"},{"rank": 4, "status": "🆕新", "tag": "白马井镇", "vid": "5910771306", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "洋浦镇区域", "site": "儋州洋浦汽车站"},{"rank": 5, "status": "🆕新", "tag": "普宁市", "vid": "5320179753", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "普宁电力3区", "site": "环城南路站点Z380"}];
+var TAGS=["南昌市", "南海区", "普宁市", "电白区", "白马井镇"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
