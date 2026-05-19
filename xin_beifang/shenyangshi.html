@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 2</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>45</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>胡志鑫、乔春阳</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "四战B-皇姑区-北塔", "vid": "5310497862", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "四战B-皇姑区-北塔", "site": "皇姑区永安街华润置地荣华府站点C"},{"rank": 2, "status": "🆕新", "tag": "三战B-铁西区-启工街", "vid": "5310623232", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-启工街", "site": "铁西区北四西路1甲8号建设花园站点B"}];
-var TAGS=["三战B-铁西区-启工街", "四战B-皇姑区-北塔"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "四战B-皇姑区-北塔", "vid": "5310497862", "lost": 11, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "四战B-皇姑区-北塔", "site": "皇姑区永安街城建北尚站点G"},{"rank": 2, "status": "🆕新", "tag": "三战A-于洪区-吉利湖", "vid": "5320395422", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "三战A-于洪区-吉利湖", "site": "城东湖街宏发三千院站点A"},{"rank": 3, "status": "🆕新", "tag": "三战A-铁西区-沈阳站西广场", "vid": "5320442077", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-沈阳站西广场", "site": "宏伟名都B座宏伟茗都站点B"},{"rank": 4, "status": "🔴2轮", "tag": "三战B-铁西区-启工街", "vid": "5310623232", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战B-铁西区-启工街", "site": "铁西区北四西路1甲8号建设花园站点B"},{"rank": 5, "status": "🆕新", "tag": "三战A-铁西区-麦德龙商场", "vid": "5320365092", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-麦德龙商场", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "三战B-铁西区-启工街", "vid": "5310499856", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-启工街", "site": "北四西路美好愿景站点F"},{"rank": 7, "status": "🆕新", "tag": "四战B-皇姑区-恒大城", "vid": "5310482289", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "四战B-皇姑区-恒大城", "site": "于洪区晓美一品斗牛炭火烤肉店松山安居小区北区站点A"},{"rank": 8, "status": "🆕新", "tag": "二战B-和平区-长白东", "vid": "5320343798", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战B-和平区-长白东", "site": "和平区远洋和平府(东南门)站点B"}];
+var TAGS=["三战A-于洪区-吉利湖", "三战A-铁西区-沈阳站西广场", "三战A-铁西区-麦德龙商场", "三战B-铁西区-启工街", "二战B-和平区-长白东", "四战B-皇姑区-北塔", "四战B-皇姑区-恒大城"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
