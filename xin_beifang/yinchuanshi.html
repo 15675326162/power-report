@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 1</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>4</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>36</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西夏区-7区", "vid": "5320044102", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西夏区-7区", "site": "文萃南街舜天润泽府站点D"}];
-var TAGS=["西夏区-7区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西夏区-7区", "vid": "5320044102", "lost": 8, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "西夏区-7区", "site": "文萃南街舜天润泽府站点D"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南2区", "vid": "5320475714", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区", "site": "亲水南大街53号亲水花园站点B"},{"rank": 3, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320280898", "lost": 7, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道康银巷湖映康晨3"},{"rank": 4, "status": "🆕新", "tag": "西夏区-5区", "vid": "5320434796", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-5区", "site": "百合堂医药(文宸店)嘉屋文宸府站点"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-兴庆18区", "vid": "5320476525", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆18区", "site": "兴庆区解放西街街道解放西街144号银川国贸中心酒店"},{"rank": 6, "status": "🆕新", "tag": "金凤区-南6区", "vid": "7010506950", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤五路保伏桥新村A区站点B"},{"rank": 7, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320472580", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "西夏区朔方路街道怀远东路宁夏大学怀远校区1"}];
+var TAGS=["兴庆区-兴庆18区", "西夏区-3区", "西夏区-5区", "西夏区-7区", "金凤区-南2区", "金凤区-南6区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
