@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 6</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>50</b>累计丢单</div>
-    <div class="s"><b>6</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>25</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "西夏区-7区", "vid": "7010524507", "lost": 16, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西夏区-7区", "site": "文萃南街舜天润泽府站点H"},{"rank": 2, "status": "🆕新", "tag": "西夏区-6区", "vid": "7010524922", "lost": 13, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-6区", "site": "西夏区西花园路街道怀远东路263号万达华宅"},{"rank": 3, "status": "🔴2轮", "tag": "金凤区-北1区", "vid": "5320439608", "lost": 11, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-北1区", "site": "福州南街262号紫馨苑站点"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320476576", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "富兴北街如意湖公园站点A"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-兴庆12区", "vid": "5320438672", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆12区", "site": "兴庆区文化街街道中山北街德胜四村"},{"rank": 6, "status": "🆕新", "tag": "金凤区-南4区", "vid": "5320283331", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "金凤区长城中路街道庆丰街468号嘉屋·上河公寓"}];
-var TAGS=["兴庆区-兴庆12区", "兴庆区-超区1", "西夏区-6区", "西夏区-7区", "金凤区-北1区", "金凤区-南4区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320438977", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "奥园小区(西北门)站点"},{"rank": 2, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320349341", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "利民西路长城惠兰园站点Q"},{"rank": 3, "status": "🔴2轮", "tag": "兴庆区-兴庆12区", "vid": "5320438672", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兴庆区-兴庆12区", "site": "兴庆区文化街街道中山北街德胜四村"},{"rank": 4, "status": "🆕新", "tag": "德胜区-德胜2区", "vid": "5320282381", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇花园南街虹桥御景"}];
+var TAGS=["兴庆区-兴庆12区", "兴庆区-超区1", "德胜区-德胜2区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
