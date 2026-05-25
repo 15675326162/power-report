@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 7</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>42</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b>李卫明、张文兴</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "金凤区-南3区", "vid": "5320561308", "lost": 10, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南3区", "site": "金凤区北京中路街道新昌东路"},{"rank": 2, "status": "🆕新", "tag": "金凤区-北6区", "vid": "5320555075", "lost": 8, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北6区", "site": "金凤区贺兰山中路街道望海路宁夏中房玺悦湾2"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "7010524472", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320257928", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "人民广场西街银川国际会展中心站点"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320439249", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "丽银街金地自在城站点"},{"rank": 6, "status": "🆕新", "tag": "金凤区-北8区", "vid": "5320562517", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北8区", "site": "福安巷金安家园站点I"},{"rank": 7, "status": "🆕新", "tag": "金凤区-南4区", "vid": "5320372946", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "金凤区长城中路街道凤台路28号东方尚都"}];
-var TAGS=["兴庆区-兴庆20区", "兴庆区-超区1", "金凤区-北5区", "金凤区-北6区", "金凤区-北8区", "金凤区-南3区", "金凤区-南4区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320281541", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "彩云街中海城站点A"}];
+var TAGS=["兴庆区-兴庆20区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
