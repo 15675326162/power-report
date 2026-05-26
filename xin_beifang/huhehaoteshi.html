@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 2</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>26</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
     <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
-    <div class="s"><b>罗志强、宋雅菲</b>负责人</div>
+    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "电力西区-新城区-赛马场-04区", "vid": "5320308088", "lost": 7, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "电力西区-新城区-赛马场-04区", "site": "爱尚街坤和-马路-新【中】"},{"rank": 2, "status": "🆕新", "tag": "毫沁营-01", "vid": "5320389719", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "毫沁营-01", "site": "-"}];
-var TAGS=["毫沁营-01", "电力西区-新城区-赛马场-04区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "电力西区-新城区-工大-05区", "vid": "5320308088", "lost": 14, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "电力西区-新城区-工大-05区", "site": "爱尚街坤和-马路-新【中】"},{"rank": 2, "status": "🔴2轮", "tag": "毫沁营-01", "vid": "5320389719", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "毫沁营-01", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "东征区-赛罕区-巨海城29南", "vid": "5320396620", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东征区-赛罕区-巨海城29南", "site": "SH-05-019-S1"},{"rank": 4, "status": "🆕新", "tag": "电力西区-新城区-公主府-08区", "vid": "5320186823", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力西区-新城区-公主府-08区", "site": "XC-02-198"}];
+var TAGS=["东征区-赛罕区-巨海城29南", "毫沁营-01", "电力西区-新城区-公主府-08区", "电力西区-新城区-工大-05区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
