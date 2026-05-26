@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 经开区 — 高频缺电 TOP 1</h1>
+  <h1>📍 经开区 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>17</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>李喆</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "经开-富士康工业园-核心(换电)", "vid": "5310397513", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "经开-富士康工业园-核心(换电)", "site": "郑州枫尚精品酒店芙蓉酒店(高铁东站店)站点"}];
-var TAGS=["经开-富士康工业园-核心(换电)"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "经开-富士康工业园-核心(换电)", "vid": "5310397513", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "经开-富士康工业园-核心(换电)", "site": "郑州枫尚精品酒店芙蓉酒店(高铁东站店)站点"},{"rank": 2, "status": "🆕新", "tag": "经开-恒大绿洲/日产产业园-主城(换电)", "vid": "5310704064", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "经开-恒大绿洲/日产产业园-主城(换电)", "site": "经南四路恒大绿洲规范停车点Z"},{"rank": 3, "status": "🆕新", "tag": "经开-富士康工业园-核心(换电)", "vid": "5310519352", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "经开-富士康工业园-核心(换电)", "site": "经北六路郑州文博城规范停车点Z5"},{"rank": 4, "status": "🆕新", "tag": "经开-梁湖社区-主城(换电)", "vid": "5310726607", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开-梁湖社区-主城(换电)", "site": "经开第三大街梁湖社区站点B"}];
+var TAGS=["经开-富士康工业园-核心(换电)", "经开-恒大绿洲/日产产业园-主城(换电)", "经开-梁湖社区-主城(换电)"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
