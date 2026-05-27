@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>33</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>14</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明电力1-官渡2--螺蛳湾", "vid": "5320193997", "lost": 11, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "昆明电力1-官渡2--螺蛳湾", "site": "居观云海:云漫岭站点【H】"},{"rank": 2, "status": "🆕新", "tag": "昆明电力2-西山-棕树营", "vid": "5320376024", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-棕树营", "site": "顺鑫招待所(鱼翅路)海伦堡中央广场站点E"},{"rank": 3, "status": "🔴2轮", "tag": "昆明电力1-官渡2--螺蛳湾", "vid": "7010517297", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2--螺蛳湾", "site": "渔村段成英宾馆(螺蛳湾高庙村店)站点E"},{"rank": 4, "status": "🆕新", "tag": "昆明电力2-西山-南亚", "vid": "5320162281", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-南亚", "site": "福景路绿景花园站点A"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-五华-莲花池", "vid": "5320341875", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-莲花池", "site": "教武巷莲花池畔停车点"}];
-var TAGS=["昆明电力1-官渡2--螺蛳湾", "昆明电力2-五华-莲花池", "昆明电力2-西山-南亚", "昆明电力2-西山-棕树营"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "昆明电力1-官渡2--螺蛳湾", "vid": "7010517297", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2--螺蛳湾", "site": "渔村段成英宾馆(螺蛳湾高庙村店)站点E"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320185637", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "彩云北路辅路星泽园站点A"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-盘呈-红云1区", "vid": "5320207463", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-红云1区", "site": "龙泉路金地家园站点"}];
+var TAGS=["昆明电力1-官渡2--螺蛳湾", "昆明电力1-官渡2-新亚洲", "昆明电力1-盘呈-红云1区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
