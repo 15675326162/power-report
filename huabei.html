@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 4</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>54</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>孙磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "徐水区", "vid": "2000043158", "lost": 14, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "主城Z-保定市-二战区-徐水区-朝阳大街街道-长城园区-制造部", "site": "保定市徐水区正村镇一工厂共享服务中心徐水长城总装2期总装车间"},{"rank": 2, "status": "🆕新", "tag": "徐水区", "vid": "2000059455", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "三河市", "vid": "5320458623", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "超区C-四战3-通州区-【通州区】-东北部超区-超区H", "site": "燕灵路中共交通运输部党校站点B"},{"rank": 4, "status": "🆕新", "tag": "三河市", "vid": "5320413274", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "超区C-四战3-通州区-【通州区】-东北部超区-超区H", "site": "燕灵路燕郊电子城小区站点C"}];
-var TAGS=["三河市", "徐水区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "徐水区", "vid": "2000043158", "lost": 16, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "主城Z-保定市-二战区-徐水区-朝阳大街街道-长城园区-制造部", "site": "保定市徐水区正村镇一工厂共享服务中心徐水长城总装2期总装车间"},{"rank": 2, "status": "🔴2轮", "tag": "徐水区", "vid": "2000059455", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "朝阳大街东", "site": "保定市徐水区正村镇一工厂共享服务中心徐水长城总装2期总装车间"},{"rank": 3, "status": "🆕新", "tag": "临邑县", "vid": "7960244450", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "临邑县电力网格A", "site": "花园大街郭夫斋安置区站点A"},{"rank": 4, "status": "🆕新", "tag": "徐水区", "vid": "2000051245", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "济南市", "vid": "5320119884", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "济南市-历城区-鲍山街道-凤鸣路东", "site": "中新国际东城和玺四区北区(北门)中新·国际城站点"},{"rank": 6, "status": "🆕新", "tag": "石家庄市", "vid": "5310679160", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "三战-裕华区-万达广场", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "徐水区", "vid": "2000045567", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "淄博市", "vid": "5320380429", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "（孙）主城-1区-银泰城", "site": "张店区兰雁大道38号"},{"rank": 9, "status": "🆕新", "tag": "淄博市", "vid": "5310486055", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "（孙）主城-1区-银泰城", "site": "负收益-金信银都花园北门"},{"rank": 10, "status": "🆕新", "tag": "龙口市东城西城区", "vid": "5910758165", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "核心D-龙口市东城西城区-龙港街道-龙口广场", "site": "振兴中路福臻园站点A"}];
+var TAGS=["临邑县", "徐水区", "济南市", "淄博市", "石家庄市", "龙口市东城西城区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
