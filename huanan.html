@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 4</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>34</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "唐江镇", "vid": "7960108410", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "唐江镇两轮网格", "site": "旭日大道富士康工业富联(赣州)智能制造站点B"},{"rank": 2, "status": "🆕新", "tag": "怀集县", "vid": "7960220302", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "城中路城西市场(国泰路)站点B"},{"rank": 3, "status": "🆕新", "tag": "吉安市", "vid": "5310777702", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吉安市自营电力网格", "site": "文山路文山街道办事处站点"},{"rank": 4, "status": "🆕新", "tag": "沧水铺镇", "vid": "7960194757", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "沧水铺镇", "site": "高新大道湖南口味王实业有限公司站点A"}];
-var TAGS=["吉安市", "唐江镇", "怀集县", "沧水铺镇"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "唐江镇", "vid": "7960182373", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "唐江镇两轮网格", "site": "旭日大道富士康工业富联(赣州)智能制造站点B"},{"rank": 2, "status": "🆕新", "tag": "金利镇", "vid": "3720190679", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "金贸中路21号金利镇中心小学(低学区)站点"},{"rank": 3, "status": "🆕新", "tag": "三乡镇", "vid": "7960244048", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "三级超区-三乡-北", "site": "宝元大道薪愿居站点A"},{"rank": 4, "status": "🆕新", "tag": "南海区", "vid": "5320317922", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲3区", "site": "佳莱福服装购物广场智越综合楼站点A"},{"rank": 5, "status": "🆕新", "tag": "唐江镇", "vid": "7960085741", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "唐江镇两轮网格", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "南海区", "vid": "5320318789", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城12区", "site": "桂澜路辅路南海奥骏商业广场站点D"},{"rank": 7, "status": "🆕新", "tag": "惠东县", "vid": "7110448010", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吉隆鞋城", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "金利镇", "vid": "5930068186", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "金湾南路万景商务公寓站点A"}];
+var TAGS=["三乡镇", "南海区", "唐江镇", "惠东县", "金利镇"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
