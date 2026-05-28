@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 包头市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>16</b>累计丢单</div>
+    <div class="s"><b>19</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>2</b>🔴未处理</div>
     <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-稀土-稀土公园", "vid": "5320158690", "lost": 11, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-稀土-稀土公园", "site": "A级-包头市-昆都仑区-科技大学北门西侧"},{"rank": 2, "status": "🔴2轮", "tag": "西区-青山-工商联大厦", "vid": "5320417631", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-青山-工商联大厦", "site": "呼得木林大街包头市青山区彩框点位"}];
-var TAGS=["西区-稀土-稀土公园", "西区-青山-工商联大厦"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "西区-昆区南-恒大名都", "vid": "5320158690", "lost": 12, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区南-恒大名都", "site": "包头市_昆都仑区_（彩框）民族西路(南段)包头钢铁职业技术学院站点C"},{"rank": 2, "status": "🔴3轮", "tag": "西区-青山-工商联大厦", "vid": "5320417631", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-青山-工商联大厦", "site": "呼得木林大街包头市青山区彩框点位"}];
+var TAGS=["西区-昆区南-恒大名都", "西区-青山-工商联大厦"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
