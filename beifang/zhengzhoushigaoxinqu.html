@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 郑州市高新区 — 高频缺电 TOP 4</h1>
+  <h1>📍 郑州市高新区 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>29</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>25</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>胡世友</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "高新区两轮融合网格", "vid": "5310545349", "lost": 9, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "高新区两轮融合网格", "site": "石楠路龙湖冠寓站点"},{"rank": 2, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310529960", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "长租车融合网格", "vid": "5310546021", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "长租车融合网格", "site": "须水河东路须水河滨河公园站点L"},{"rank": 4, "status": "🆕新", "tag": "高新区网格", "vid": "5310222123", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "高新区网格", "site": "山桃路葛寨文苑站点A"}];
-var TAGS=["长租车融合网格", "高新区两轮融合网格", "高新区网格"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "高新区两轮融合网格", "vid": "5310545349", "lost": 12, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "高新区两轮融合网格", "site": "石楠路龙湖冠寓站点"},{"rank": 2, "status": "🔴2轮", "tag": "高新区两轮融合网格", "vid": "5310529960", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "高新区两轮融合网格", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "惠济超区（西）", "vid": "5310644232", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "惠济超区（西）", "site": "碧桃路郑州高新企业加速器产业园站点D"}];
+var TAGS=["惠济超区（西）", "高新区两轮融合网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
