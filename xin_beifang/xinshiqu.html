@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 新市区 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
+    <div class="s"><b>15</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-核心-警察学校", "vid": "3720181166", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-核心-警察学校", "site": "杭州东街新疆警察学院-北区站点"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-太百商场", "vid": "5310572757", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-太百商场", "site": "北京南路辅路中铁一院集团新疆铁道勘察设计院站点"},{"rank": 3, "status": "🆕新", "tag": "新市区-隔离-四工村", "vid": "3720163838", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-四工村", "site": "乌鲁木齐市新市区二工乡百园路车辆段综合楼"}];
-var TAGS=["新市区-核心-太百商场", "新市区-核心-警察学校", "新市区-隔离-四工村"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "3720141820", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "北京南路辅路站点L"},{"rank": 2, "status": "🔴2轮", "tag": "新市区-核心-太百商场", "vid": "5310572757", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-核心-太百商场", "site": "北京南路辅路中铁一院集团新疆铁道勘察设计院站点"},{"rank": 3, "status": "🔴2轮", "tag": "新市区-隔离-四工村", "vid": "3720163838", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-隔离-四工村", "site": "-"}];
+var TAGS=["新市区-核心-太百商场", "新市区-缓冲-美仑环球港", "新市区-隔离-四工村"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
