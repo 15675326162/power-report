@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 1</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>8</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>27</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆16区", "vid": "5320477740", "lost": 8, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆16区", "site": "兴庆区银古路街道宝湖东路康桥水郡1"}];
-var TAGS=["兴庆区-兴庆16区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西夏区-6区", "vid": "7010524922", "lost": 11, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-6区", "site": "西夏区西花园路街道怀远东路云熙府(装修中)"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南4区", "vid": "5320481761", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "金凤区长城中路街道长城东路国际村"},{"rank": 3, "status": "🆕新", "tag": "金凤区-南4区", "vid": "5320562317", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "银川市金凤区上海西路街道尹家渠北街悦海新天地"},{"rank": 4, "status": "🆕新", "tag": "金凤区-南4区", "vid": "5320389599", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "长城中路143号海悦广场站点"},{"rank": 5, "status": "🆕新", "tag": "金凤区-南3区", "vid": "5320561905", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南3区", "site": "旺旺批发超市长城花园北区站点A"}];
+var TAGS=["西夏区-6区", "金凤区-南3区", "金凤区-南4区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
