@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 1</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>22</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>孙磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "沧州市", "vid": "7780044049", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新华-悦港城--5-2", "site": "-"}];
-var TAGS=["沧州市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "徐水区", "vid": "2000042560", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "膳美楼饭店OYO鑫一凡商务酒店(大次良村店)站点"},{"rank": 2, "status": "🆕新", "tag": "临邑县", "vid": "7960244450", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "临邑县电力网格A", "site": "花园大街郭夫斋安置区站点A"},{"rank": 3, "status": "🔴2轮", "tag": "沧州市", "vid": "7780044049", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新华-悦港城--5-2", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "白沟镇", "vid": "2000043859", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "白沟镇两轮融合网格西部片区", "site": "富民大街秀水华庭站点"},{"rank": 5, "status": "🆕新", "tag": "迁西县", "vid": "7960180162", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "津西外扩区", "site": "迁西静馨宾馆站点"}];
+var TAGS=["临邑县", "徐水区", "沧州市", "白沟镇", "迁西县"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
