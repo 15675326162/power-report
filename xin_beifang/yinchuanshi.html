@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 2</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>9</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>26</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "金凤区-南4区", "vid": "5320562317", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "银川市金凤区上海西路街道尹家渠北街悦海新天地"},{"rank": 2, "status": "🔴2轮", "tag": "德胜区-德胜2区", "vid": "5320474101", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇新风街海亮滨河壹号"}];
-var TAGS=["德胜区-德胜2区", "金凤区-南4区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "金凤区-南4区", "vid": "5320562317", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南4区", "site": "银川市金凤区上海西路街道尹家渠北街悦海新天地"},{"rank": 2, "status": "🆕新", "tag": "金凤区-北7区", "vid": "5320437854", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北7区", "site": "阅欣路6号阅海万家站点"},{"rank": 3, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320037612", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "西夏区怀远路街道同心北街汇融·常春藤"},{"rank": 4, "status": "🆕新", "tag": "金凤区-南4区", "vid": "5320436924", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "金凤区长城中路街道庆丰街"},{"rank": 5, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320349738", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "兴泰巷金凤区综合执法局站点B"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320348647", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "湖东巷如意湖公园站点E"},{"rank": 7, "status": "🆕新", "tag": "金凤区-南4区", "vid": "7010505063", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南4区", "site": "金凤区长城中路街道庆丰街468号嘉屋·上河公寓"}];
+var TAGS=["兴庆区-超区1", "西夏区-1区", "金凤区-北5区", "金凤区-北7区", "金凤区-南4区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
