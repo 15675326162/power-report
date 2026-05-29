@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 郑州市高新区 — 高频缺电 TOP 6</h1>
+  <h1>📍 郑州市高新区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>33</b>累计丢单</div>
+    <div class="s"><b>71</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>胡世友</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "高新区两轮融合网格", "vid": "5310543957", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "高新区两轮融合网格", "site": "长椿路谦祥·万和城站点F"},{"rank": 2, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310543699", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "高新区两轮融合网格", "vid": "5310564175", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "高新区两轮融合网格", "site": "枫香街郑州轻工业大学科学校区站点L"},{"rank": 4, "status": "🆕新", "tag": "长租车融合网格", "vid": "5310546021", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "长租车融合网格", "site": "须水河东路须水河滨河公园站点Z1"},{"rank": 5, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310743356", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "冬青街郑州高新区妇幼保健所站点A"},{"rank": 6, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310567896", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "雪兰路站点D"}];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "高新区两轮融合网格", "vid": "5310564175", "lost": 17, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "高新区两轮融合网格", "site": "枫香街郑州轻工业大学科学校区站点L"},{"rank": 2, "status": "🔴4轮", "tag": "高新区两轮融合网格", "vid": "5310543957", "lost": 13, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "高新区两轮融合网格", "site": "长椿路谦祥·万和城站点F"},{"rank": 3, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310543699", "lost": 12, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "金梭路总部企业基地站点"},{"rank": 4, "status": "🔴2轮", "tag": "高新区两轮融合网格", "vid": "5310755308", "lost": 11, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "高新区两轮融合网格", "site": "翠竹街郑州外国语新枫杨学校站点"},{"rank": 5, "status": "🆕新", "tag": "长租车融合网格", "vid": "5310546021", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "长租车融合网格", "site": "金盏街御馨苑站点D"},{"rank": 6, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310589408", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "樱花街帝苑别墅站点"},{"rank": 7, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310539227", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310557616", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "金梭路翰林国际城桃李园站点A"}];
 var TAGS=["长租车融合网格", "高新区两轮融合网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
