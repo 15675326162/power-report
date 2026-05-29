@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 郑州市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>79</b>累计丢单</div>
+    <div class="s"><b>90</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>张雅博</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "-", "vid": "7960103646", "lost": 29, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "-", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "-", "vid": "7960211893", "lost": 15, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "雪松路朗悦·公园道1号·V公馆站点E"},{"rank": 3, "status": "🔴3轮", "tag": "管城助力车电力网格", "vid": "5310721825", "lost": 12, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "管城助力车电力网格", "site": "K郑州市金岱241112测绘站点030"},{"rank": 4, "status": "🆕新", "tag": "管城助力车电力网格", "vid": "5310667888", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "管城助力车电力网格", "site": "新虹艺美术馆正商·中州城站点"},{"rank": 5, "status": "🆕新", "tag": "管城助力车电力网格", "vid": "5310751604", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "管城助力车电力网格", "site": "十八里河测绘点位0822-73"},{"rank": 6, "status": "🆕新", "tag": "管城助力车电力网格", "vid": "5310727171", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "管城助力车电力网格", "site": "-"}];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "-", "vid": "7960103646", "lost": 31, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "-", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "-", "vid": "7960211893", "lost": 17, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "-", "site": "翠竹街朗悦公园茂站点B"},{"rank": 3, "status": "🔴4轮", "tag": "管城助力车电力网格", "vid": "5310721825", "lost": 13, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "管城助力车电力网格", "site": "K郑州市金岱241112测绘站点030"},{"rank": 4, "status": "🆕新", "tag": "管城助力车电力网格", "vid": "5310546020", "lost": 13, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "管城助力车电力网格", "site": "十八里河测绘点位0822-74"},{"rank": 5, "status": "🔴2轮", "tag": "管城助力车电力网格", "vid": "5310667888", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "管城助力车电力网格", "site": "新虹艺美术馆正商·中州城站点"},{"rank": 6, "status": "🔴2轮", "tag": "管城助力车电力网格", "vid": "5310727171", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "管城助力车电力网格", "site": "K郑州市金岱241112测绘站点009"}];
 var TAGS=["-", "管城助力车电力网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
