@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 华北大区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>26</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>22</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>孙磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "潍坊市", "vid": "5930036882", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格", "site": "永春路歌尔光电园2期站点B"},{"rank": 2, "status": "🆕新", "tag": "三河市", "vid": "7010390995", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "超区C-四战3-通州区-【通州区】-东北部超区-超区H", "site": "海油大街45所小区1区站点A"},{"rank": 3, "status": "🆕新", "tag": "石家庄市", "vid": "5310130794", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "三战-高开区-石门大厦", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "秦皇岛市", "vid": "3760072645", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "开发4-n区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "曲阳县", "vid": "5930069269", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "融合-政务大厅", "site": "恒山东路上东城站点C"},{"rank": 6, "status": "🆕新", "tag": "烟台市", "vid": "7010470397", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "福山区工程学院网格", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "东营市", "vid": "5310495013", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "超区·东北", "site": "-"}];
-var TAGS=["三河市", "东营市", "曲阳县", "潍坊市", "烟台市", "石家庄市", "秦皇岛市"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "烟台市", "vid": "7010470397", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "福山区工程学院网格", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "高密市", "vid": "5320521124", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西南区域R", "site": "高密市密水街道齐商银行银座商城东停车点"},{"rank": 3, "status": "🆕新", "tag": "张家口市", "vid": "5320366044", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张家口市-北部区域", "site": "算法推荐1008"},{"rank": 4, "status": "🆕新", "tag": "潍坊市", "vid": "5910821546", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格", "site": "桃园街歌尔光电园2期站点A"},{"rank": 5, "status": "🆕新", "tag": "济宁市", "vid": "5310241389", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高新区（六区）", "site": "【新】孟子大道中国重汽集团济宁商用车有限公司站点"},{"rank": 6, "status": "🆕新", "tag": "秦皇岛市", "vid": "3760077609", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "开发3-j区", "site": "【晚】小区-青馨嘉苑4区北门卫生服务站"},{"rank": 7, "status": "🆕新", "tag": "高密市", "vid": "5320522609", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西南区域R", "site": "夷安大道和泰嘉园站点"}];
+var TAGS=["张家口市", "济宁市", "潍坊市", "烟台市", "秦皇岛市", "高密市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
