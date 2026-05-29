@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>16</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>30</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力1-官渡2-世纪城", "vid": "5320162334", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-世纪城", "site": "金源大道海伦堡·海伦国际站点"},{"rank": 2, "status": "🆕新", "tag": "昆明电力2-五华-高新3区", "vid": "5320187486", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新3区", "site": "笼中仙(春城慧谷店)春城慧谷站点"},{"rank": 3, "status": "🆕新", "tag": "昆明电力2-五华-高新4区", "vid": "5320378872", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新4区", "site": "沙河路融创春风十里云翥苑站点G"},{"rank": 4, "status": "🆕新", "tag": "昆明电力2-西山超区", "vid": "5320156005", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山超区", "site": "马街南路3号悠家尚华苑站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-西山-大商汇", "vid": "5320026187", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-大商汇", "site": "陈家段陈家营村站点E"}];
-var TAGS=["昆明电力1-官渡2-世纪城", "昆明电力2-五华-高新3区", "昆明电力2-五华-高新4区", "昆明电力2-西山-大商汇", "昆明电力2-西山超区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-西山-棕树营", "vid": "5320359687", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-棕树营", "site": "觅食小吃(丹霞路店)丹平里站点"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力2-五华-高新4区", "vid": "5320378872", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力2-五华-高新4区", "site": "沙河路融创春风十里云翥苑站点G"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-盘龙-北辰2区", "vid": "5320162489", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北辰2区", "site": "金秋路115号聚实园停车点"},{"rank": 4, "status": "🆕新", "tag": "昆明电力2-五华-丰宁2区", "vid": "5320190992", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-丰宁2区", "site": "科泰路站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-西山-西山区政府", "vid": "5320015650", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-西山区政府", "site": "科发路桂鑫园站点A"},{"rank": 6, "status": "🆕新", "tag": "昆明电力2-西山-南亚", "vid": "5320025137", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-南亚", "site": "西昌路288号iuhotel酒店站点"},{"rank": 7, "status": "🆕新", "tag": "昆明电力2-五华-翠湖区", "vid": "5320243542", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-翠湖区", "site": "龙翔街道东风西路309号"}];
+var TAGS=["昆明电力1-盘龙-北辰2区", "昆明电力2-五华-丰宁2区", "昆明电力2-五华-翠湖区", "昆明电力2-五华-高新4区", "昆明电力2-西山-南亚", "昆明电力2-西山-棕树营", "昆明电力2-西山-西山区政府"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
