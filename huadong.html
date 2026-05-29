@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 1</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>6</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>36</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
-    <div class="s"><b>鲁宏伟</b>负责人</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>胡丹萍、项紫艳、鲁宏伟</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "宁波市", "vid": "7900209893", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南战——印象城", "site": "鄞州区中河街道嵩江东路宁波万象汇停车点"}];
-var TAGS=["宁波市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "苏州市", "vid": "5310676511", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "高新区--狮山", "site": "何山路710号苏州西门子电器有限公司站点"},{"rank": 2, "status": "🆕新", "tag": "南京市", "vid": "5320448851", "lost": 8, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力网格-南京市-南航大学", "site": "集成电路学院"},{"rank": 3, "status": "🆕新", "tag": "金华市", "vid": "5310551670", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金华市-婺城区-秋滨街道-主城-唐宅村-郑跃强", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "宁波市", "vid": "5310141320", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西战-丽园路超区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "瓯海区", "vid": "5320046808", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "瓯海区-智造小镇", "site": "东沈街瓯海时尚智造小镇站点A"},{"rank": 6, "status": "🆕新", "tag": "苏州市", "vid": "5310028952", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吴江区-城南花园", "site": "庞杨路2186号城南花苑南区站点"},{"rank": 7, "status": "🆕新", "tag": "泉州台商投资区", "vid": "6680057834", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "远宏", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "安海镇", "vid": "7960213432", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "核心-华东生态业务组-二组-安海镇-安海镇商圈-詹晓亮", "site": "泉州市晋江市安海镇鸿江中路中石化森美安海加油站"}];
+var TAGS=["南京市", "宁波市", "安海镇", "泉州台商投资区", "瓯海区", "苏州市", "金华市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
