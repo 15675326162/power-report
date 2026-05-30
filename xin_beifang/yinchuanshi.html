@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 12</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>74</b>累计丢单</div>
-    <div class="s"><b>10</b>分组数</div>
-    <div class="s"><b>5</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西夏区-6区", "vid": "7010524922", "lost": 21, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西夏区-6区", "site": "西夏区西花园路街道怀远东路云熙府(装修中)"},{"rank": 2, "status": "🔴3轮", "tag": "金凤区-南3区", "vid": "5320476187", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南3区", "site": "正源南街239#号西环小区站点"},{"rank": 3, "status": "🔴2轮", "tag": "兴庆区-兴庆17区", "vid": "5320565497", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兴庆区-兴庆17区", "site": "兴庆区银古路街道友爱街颐园小区3"},{"rank": 4, "status": "🆕新", "tag": "金凤区-北9区", "vid": "5320477670", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北9区", "site": "金凤区贺兰山中路街道后海路世茂·世悦府3"},{"rank": 5, "status": "🔴2轮", "tag": "金凤区-南3区", "vid": "5320550665", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-南3区", "site": "金凤区贺兰山中路街道福安巷金安家园2"},{"rank": 6, "status": "🆕新", "tag": "德胜区-德胜2区", "vid": "5320564634", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇花园南街宁夏交通学校2"},{"rank": 7, "status": "🔴2轮", "tag": "金凤区-南4区", "vid": "5320478420", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南4区", "site": "金凤区长城中路街道长城中路238号长兴花园"},{"rank": 8, "status": "🆕新", "tag": "德胜区-德胜3区", "vid": "5320440589", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜3区", "site": "贺兰县习岗镇花园南街宁夏交通学校2"},{"rank": 9, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320037612", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "西夏区怀远路街道同心北街汇融·常春藤"},{"rank": 10, "status": "🆕新", "tag": "西夏区-2区", "vid": "5320482568", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-2区", "site": "西夏区北京西路园缘小区站点D"},{"rank": 11, "status": "🆕新", "tag": "西夏区-1区", "vid": "7010523932", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "-"},{"rank": 12, "status": "🆕新", "tag": "西夏区-超区 2", "vid": "5320439061", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西夏区-超区 2", "site": "文昌南街站点Z1"}];
-var TAGS=["兴庆区-兴庆17区", "德胜区-德胜2区", "德胜区-德胜3区", "西夏区-1区", "西夏区-2区", "西夏区-6区", "西夏区-超区 2", "金凤区-北9区", "金凤区-南3区", "金凤区-南4区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320472247", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "兴贸路新百贺兰中心站点"}];
+var TAGS=["兴庆区-超区1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
