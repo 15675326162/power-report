@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 3</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>25</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>60</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "东区-九原-九原万达", "vid": "5320163928", "lost": 13, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "东区-九原-九原万达", "site": "A级-包头市-九原区-天福广场站路南（蓝框）"},{"rank": 2, "status": "🔴2轮", "tag": "西区-稀土-稀土公园", "vid": "5320418508", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-稀土-稀土公园", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "东区-九原-九原万达", "vid": "5320418068", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原万达", "site": "建设路包头市建设广场站点A"}];
-var TAGS=["东区-九原-九原万达", "西区-稀土-稀土公园"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "东区-九原-包头轻工学院", "vid": "5320163928", "lost": 16, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "东区-九原-包头轻工学院", "site": "A级-包头市-九原区-天福广场站路南（蓝框）"},{"rank": 2, "status": "🆕新", "tag": "西区-青山北-主城一机集团", "vid": "5320453302", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-主城一机集团", "site": "呼得木林大街包头市青山区彩框点位"},{"rank": 3, "status": "🔴3轮", "tag": "东区-九原-九原万达", "vid": "5320418068", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东区-九原-九原万达", "site": "建设路包头市建设广场站点A"},{"rank": 4, "status": "🆕新", "tag": "西区-昆区南-科技大学", "vid": "5320416563", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-科技大学", "site": "校园路时代广场站点C"},{"rank": 5, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320460614", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "包头市第六医院(南门)站点"},{"rank": 6, "status": "🆕新", "tag": "西区-青山北-正翔国际", "vid": "5320459154", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-正翔国际", "site": "包头市-青山区-富强路9号街坊40栋（更新）包头市青山区彩框"},{"rank": 7, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320456611", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "包头市-九原区-白音席勒街道世城烟酒超市景晟开元小区952"},{"rank": 8, "status": "🆕新", "tag": "西区-青山南-赵家营", "vid": "5320160081", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山南-赵家营", "site": "彩框富强中路24号赵家营子村站点A"},{"rank": 9, "status": "🆕新", "tag": "东区-东河-西脑包", "vid": "5320167556", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-西脑包", "site": "包头市-东河区-东门大街285号-居民区门口144"},{"rank": 10, "status": "🆕新", "tag": "西区-昆区南-科技大学", "vid": "5320459305", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-科技大学", "site": "(彩框)S级-包头市-昆都仑区-火车站邮政"}];
+var TAGS=["东区-东河-西脑包", "东区-九原-九原万达", "东区-九原-包头轻工学院", "西区-昆区南-科技大学", "西区-青山北-主城一机集团", "西区-青山北-正翔国际", "西区-青山南-赵家营"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
