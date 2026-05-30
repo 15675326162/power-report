@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 4</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>14</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>43</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>孙磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "泰安市", "vid": "5310272317", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "岱岳区-泰安站1", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "沧州市", "vid": "7780093830", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新华-恒顺世纪中心-3-5", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "香河县", "vid": "7720139255", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "香河县两轮融合网格", "site": "天琴湾风湿骨病医院站点A"},{"rank": 4, "status": "🆕新", "tag": "高密市", "vid": "5320469949", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "超区D-胶州市-胶西街道-西超区水牛村", "site": "豪迈之家站点"}];
-var TAGS=["沧州市", "泰安市", "香河县", "高密市"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "高密市", "vid": "5320469949", "lost": 10, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "超区D-胶州市-胶西街道-西超区水牛村", "site": "豪迈之家站点"},{"rank": 2, "status": "🔴2轮", "tag": "泰安市", "vid": "5310272317", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "岱岳区-泰安站1", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "龙口市", "vid": "7940015256", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东海东2", "site": "建行"},{"rank": 4, "status": "🆕新", "tag": "高密市", "vid": "5320538961", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "超区D-胶州市-胶西街道-西超区水牛村", "site": "潍坊豪迈科技职业中等专业学校站点"},{"rank": 5, "status": "🆕新", "tag": "秦皇岛市", "vid": "7960195031", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "开发4-m区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "龙口市", "vid": "7940015629", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东海东2", "site": "星海苑铭悦小厨"},{"rank": 7, "status": "🆕新", "tag": "高密市", "vid": "5320543830", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "超区D-胶州市-胶西街道-西超区水牛村", "site": "潍坊豪迈科技职业中等专业学校站点"},{"rank": 8, "status": "🆕新", "tag": "诸城市", "vid": "5310409452", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "河西区", "site": "兴华西路222-8号东方逸品站点A"},{"rank": 9, "status": "🆕新", "tag": "东营市", "vid": "5310154798", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东6区-新新家园", "site": "助测绘点位-2351"},{"rank": 10, "status": "🆕新", "tag": "潍坊市", "vid": "5910821546", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格", "site": "桃园街歌尔光电园2期站点A"}];
+var TAGS=["东营市", "泰安市", "潍坊市", "秦皇岛市", "诸城市", "高密市", "龙口市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
