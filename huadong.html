@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 2</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>35</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>胡丹萍</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "苏州市", "vid": "5310470348", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吴中区-石湖东", "site": "石湖西路万达晶座站点"},{"rank": 2, "status": "🆕新", "tag": "苏州市", "vid": "5310632286", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吴江区-庞金工业坊", "site": "龙字湾路吴江出口加工区宿舍区站点B"}];
-var TAGS=["苏州市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "南通市", "vid": "5320005767", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "职业技术学院网格", "site": "南通环球转向器制造有限公司金庭酒店站点A"},{"rank": 2, "status": "🔴2轮", "tag": "苏州市", "vid": "5310632286", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "吴江区-庞金工业坊", "site": "龙字湾路吴江出口加工区宿舍区站点D"},{"rank": 3, "status": "🆕新", "tag": "厦门市", "vid": "5310265858", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力-集美-华大ioi", "site": "兑山西路＿R＿70h"},{"rank": 4, "status": "🆕新", "tag": "徐州市", "vid": "5310433907", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电", "site": "铜山街道-大学路-8229-壹方城"},{"rank": 5, "status": "🆕新", "tag": "苏州市", "vid": "5310462589", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "吴江区-庞金路", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "六合区", "vid": "7960061077", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力战区-六合区-电力C区", "site": "潘杨路冠城大通蓝郡竹苑站点"},{"rank": 7, "status": "🆕新", "tag": "苏州市", "vid": "5310609318", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吴江区-庞金路", "site": "益郎路常青吉家公寓站点D"},{"rank": 8, "status": "🆕新", "tag": "南通市", "vid": "5320144434", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "开发区网格", "site": "乐成路枫丹悦园站点A"}];
+var TAGS=["六合区", "南通市", "厦门市", "徐州市", "苏州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
