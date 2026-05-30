@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 遂宁市 — 高频缺电 TOP 5</h1>
+  <h1>📍 遂宁市 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>32</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>63</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>王磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "经开区-城南5区", "vid": "5320304432", "lost": 13, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "经开区-城南5区", "site": "富源路46号金梅市场小区站点"},{"rank": 2, "status": "🆕新", "tag": "河东新区-4区", "vid": "5320306809", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "河东新区-4区", "site": "南海路仁里镇人民政府站点"},{"rank": 3, "status": "🆕新", "tag": "河东新区-超区2区", "vid": "5320183187", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "河东新区-超区2区", "site": "能源职业学院"},{"rank": 4, "status": "🆕新", "tag": "船山区-城北1区", "vid": "5320261052", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "船山区-城北1区", "site": "最终中路大黄蜂"},{"rank": 5, "status": "🆕新", "tag": "经开区-城南10区", "vid": "5320287100", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "经开区-城南10区", "site": "问陶路遂宁绿然国际学校站点A"}];
-var TAGS=["河东新区-4区", "河东新区-超区2区", "经开区-城南10区", "经开区-城南5区", "船山区-城北1区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "河东新区-2区", "vid": "5320308131", "lost": 13, "h1": 13, "delta": "<span class='flat'>-</span>", "grid": "河东新区-2区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "河东新区-2区", "vid": "5320203406", "lost": 12, "h1": 12, "delta": "<span class='flat'>-</span>", "grid": "河东新区-2区", "site": "川教"},{"rank": 3, "status": "🔴2轮", "tag": "河东新区-超区2区", "vid": "5320183187", "lost": 9, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "河东新区-超区2区", "site": "能源职业学院"},{"rank": 4, "status": "🆕新", "tag": "河东新区-2区", "vid": "5320192752", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "河东新区-2区", "site": "德水北路正黄金域国际站点C"},{"rank": 5, "status": "🆕新", "tag": "船山区-商务2区", "vid": "5320192479", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "船山区-商务2区", "site": "德胜东路26号新世纪百货遂宁新都站点"},{"rank": 6, "status": "🆕新", "tag": "船山区-城北1区", "vid": "5320202635", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "船山区-城北1区", "site": "遂州中路电力小区站点A"},{"rank": 7, "status": "🆕新", "tag": "河东新区-3区", "vid": "5320191802", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "河东新区-3区", "site": "东平中路中铁·尚城馨苑站点"},{"rank": 8, "status": "🆕新", "tag": "经开区-城北3区", "vid": "5320303648", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开区-城北3区", "site": "明月路川江苑站点"},{"rank": 9, "status": "🆕新", "tag": "河东新区-3区", "vid": "5320261243", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "河东新区-3区", "site": "紫竹路龙腾御锦(香林南路)站点"}];
+var TAGS=["河东新区-2区", "河东新区-3区", "河东新区-超区2区", "经开区-城北3区", "船山区-商务2区", "船山区-城北1区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
