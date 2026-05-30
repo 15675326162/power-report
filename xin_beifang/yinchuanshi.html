@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 1</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>7</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>33</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "金凤区-南1区A", "vid": "5320476086", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南1区A", "site": "金凤区黄河东路街道福州南街安怡家园E区1"}];
-var TAGS=["金凤区-南1区A"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320477367", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "朔方南街太阳城A区站点E"},{"rank": 2, "status": "🆕新", "tag": "西夏区-5区", "vid": "5320014457", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-5区", "site": "天瑞祥医药舜天嘉园站点"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320472247", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "兴贸路新百贺兰中心站点"},{"rank": 4, "status": "🆕新", "tag": "金凤区-南1区A", "vid": "5320562346", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南1区A", "site": "金凤区黄河东路街道黄河东路54号双悦新村南区"},{"rank": 5, "status": "🆕新", "tag": "金凤区-南1区B", "vid": "5320303347", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南1区B", "site": "金凤区黄河东路街道长城中路昌昊汽车工贸公司"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320476964", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "兴燕路宁夏医科大学(雁湖校区)站点"},{"rank": 7, "status": "🆕新", "tag": "兴庆区-兴庆15区", "vid": "5320562816", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆15区", "site": "兴庆区大新镇燕兴路大新镇人民政府"},{"rank": 8, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320279238", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "华美街太阳城C区站点A"}];
+var TAGS=["兴庆区-兴庆15区", "兴庆区-兴庆20区", "兴庆区-超区1", "西夏区-5区", "金凤区-南1区A", "金凤区-南1区B"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
