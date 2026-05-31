@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>40</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明市", "vid": "5320214999", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-西山-五一路", "site": "昆明市第一人民医院急诊昆明市第-停车点"},{"rank": 2, "status": "🆕新", "tag": "普洱市", "vid": "5320402802", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "普洱市换电1区", "site": "琳淳母婴护理服务部岱骏融悦广场站点"},{"rank": 3, "status": "🆕新", "tag": "成都市", "vid": "5320146027", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "永宁-温江区-成都市-电力网格", "site": "和居路和居路339号小区站点"},{"rank": 4, "status": "🆕新", "tag": "昆明市", "vid": "5320201252", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "官渡-经开建工新城", "site": "G56杭瑞高速欣宇宾馆(Z044)站点"},{"rank": 5, "status": "🆕新", "tag": "南宁市", "vid": "5320220992", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "青秀-中山街道-桃源桥", "site": "民族大道1号21G2800"}];
-var TAGS=["南宁市", "成都市", "昆明市", "普洱市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "南宁市", "vid": "5320226495", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "青秀-中山街道-桃源桥", "site": "民族大道1号21G2800"},{"rank": 2, "status": "🔴3轮", "tag": "昆明市", "vid": "5320214999", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力2-西山-五一路", "site": "昆明市第一人民医院急诊昆明市第-停车点"},{"rank": 3, "status": "🆕新", "tag": "河口瑶族自治县", "vid": "5310582261", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "河口县槟榔寨1区-新", "site": "红河哈尼族彝族自治州河口瑶族自治县河口镇环城路"},{"rank": 4, "status": "🔴2轮", "tag": "成都市", "vid": "5320146027", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "永宁-温江区-成都市-电力网格", "site": "和居路和居路339号小区站点"},{"rank": 5, "status": "🆕新", "tag": "成都市", "vid": "5320132066", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "涌泉-温江区-成都市-电力网格", "site": "锦绣森邻站点L"},{"rank": 6, "status": "🆕新", "tag": "芒市", "vid": "5310751033", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "芒市中区", "site": "德宏职业学院第一附属医院德宏友谊医院站点A"},{"rank": 7, "status": "🆕新", "tag": "丽江市", "vid": "5310498996", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "丽江市-束河-束河上半", "site": "东阳路天域阳光·丽阳苑站点"},{"rank": 8, "status": "🆕新", "tag": "南宁市", "vid": "5320225141", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "良庆-良庆镇-五象南", "site": "金海路龙光玖珑郡站点B"},{"rank": 9, "status": "🆕新", "tag": "昆明市", "vid": "5320190992", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-万达", "site": "日新路昆明幕居酒店站点"}];
+var TAGS=["丽江市", "南宁市", "成都市", "昆明市", "河口瑶族自治县", "芒市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
