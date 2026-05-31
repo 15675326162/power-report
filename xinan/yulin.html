@@ -41,7 +41,7 @@ tr.rep{background:#fff8f8}
     <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>李文翼</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "北区-客运中心-教育东路", "vid": "5310350510", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "北区-客运中心-教育东路", "site": "崇高街站点E"}];
-var TAGS=["北区-客运中心-教育东路"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "玉州-富安居-二环东路", "vid": "5310447164", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "玉州-富安居-二环东路", "site": "-"}];
+var TAGS=["玉州-富安居-二环东路"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
