@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 4</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>26</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "金凤区-北6区", "vid": "5320564479", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北6区", "site": "正源北街枕水花园站点C"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南2区", "vid": "5320560952", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区", "site": "金凤区长城中路街道宁安大街352号银川市第一人民医院康复医院"},{"rank": 3, "status": "🔴2轮", "tag": "金凤区-南5区", "vid": "5320560794", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-南5区", "site": "金凤区长城中路街道香榭花园(北1门)"},{"rank": 4, "status": "🆕新", "tag": "金凤区-南1区A", "vid": "5320564832", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南1区A", "site": "金凤区黄河东路街道川丰巷锦祥家园"}];
-var TAGS=["金凤区-北6区", "金凤区-南1区A", "金凤区-南2区", "金凤区-南5区"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "金凤区-南5区", "vid": "5320560794", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-南5区", "site": "金凤区长城中路街道大有巷亲水人家6"},{"rank": 2, "status": "🔴2轮", "tag": "金凤区-北6区", "vid": "5320564479", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-北6区", "site": "正源北街枕水花园站点C"},{"rank": 3, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320472112", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "培华路银川科技学院站点H"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-兴庆19区", "vid": "5320477344", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆19区", "site": "兴庆区新华街街道书苑东巷新世纪花园2"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320438568", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "金凤区长城中路街道彩云街中海城9"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320562347", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "金凤区长城中路街道金凤十五路中海城"}];
+var TAGS=["兴庆区-兴庆19区", "兴庆区-兴庆20区", "西夏区-1区", "金凤区-北6区", "金凤区-南5区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
