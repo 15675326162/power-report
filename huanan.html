@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
+    <div class="s"><b>42</b>累计丢单</div>
     <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "汕尾市", "vid": "5310653547", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "汕尾城区-B区", "site": "汕尾大道南信利城市广场(汕尾店)站点A"},{"rank": 2, "status": "🆕新", "tag": "南海区", "vid": "5320318789", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城12区", "site": "桂澜路辅路大正小成广场站点"},{"rank": 3, "status": "🆕新", "tag": "电白区", "vid": "7900131319", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电白体育馆区", "site": "【超大容错-谨慎操作】凤凰大道站点Z12"},{"rank": 4, "status": "🆕新", "tag": "金利镇", "vid": "5930069790", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "高要名都宾馆站点"},{"rank": 5, "status": "🔴2轮", "tag": "吉安县", "vid": "7960269434", "lost": 3, "h1": 2, "delta": "<span class='dn'>↓4</span>", "grid": "-", "site": "-"}];
-var TAGS=["南海区", "吉安县", "汕尾市", "电白区", "金利镇"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "汕尾市", "vid": "5310653547", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "汕尾城区-B区", "site": "汕尾大道南信利城市广场(汕尾店)站点A"},{"rank": 2, "status": "🔴2轮", "tag": "金利镇", "vid": "5930069790", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "换电策略地图", "site": "高要名都宾馆站点"},{"rank": 3, "status": "🆕新", "tag": "肇庆市", "vid": "5930057999", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-产业园区电力", "site": "-"},{"rank": 4, "status": "🔴3轮", "tag": "吉安县", "vid": "7960269434", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "肇庆市", "vid": "2000027816", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-产业园区电力", "site": "晚高峰工业区科技一路站点G"},{"rank": 6, "status": "🆕新", "tag": "吉安县", "vid": "7780220056", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "肇庆市", "vid": "7960172524", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-产业园区电力", "site": "晚高峰工业区科技一路站点G"},{"rank": 8, "status": "🆕新", "tag": "普宁市", "vid": "5320241172", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "普宁电力4区", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "吉安县", "vid": "7900269636", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"}];
+var TAGS=["吉安县", "普宁市", "汕尾市", "肇庆市", "金利镇"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
