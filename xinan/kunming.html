@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 9</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>58</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>9</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明电力2-五华-翠湖区", "vid": "5320375044", "lost": 10, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "昆明电力2-五华-翠湖区", "site": "昆明创隆泰家饰靓品广场(中心店)中铁十五局单位房站点"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡1-巫家坝", "vid": "5320184830", "lost": 9, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-巫家坝", "site": "官渡农村合作银行(小街分理处)北科建·春城大观站点"},{"rank": 3, "status": "🆕新", "tag": "昆明-呈贡-大学城", "vid": "5320303679", "lost": 9, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城", "site": "春融街站点U"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-盘龙-北市1区", "vid": "5320164854", "lost": 8, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区", "site": "龙泉街道_0vq"},{"rank": 5, "status": "🆕新", "tag": "昆明电力1-官渡1-巫家坝", "vid": "5320378838", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-巫家坝", "site": "官渡241号路万科·翡翠站点L"},{"rank": 6, "status": "🔴2轮", "tag": "昆明电力2-五华-翠湖区", "vid": "5320189868", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-五华-翠湖区", "site": "文化巷17号文苑商住楼停车点"},{"rank": 7, "status": "🆕新", "tag": "昆明电力2-西山-五一路", "vid": "5930054895", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-五一路", "site": "环城西路396号致尚楼站点"},{"rank": 8, "status": "🆕新", "tag": "昆明电力1-盘呈-新迎区", "vid": "5320194399", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-新迎区", "site": "石闸路昆明瑞鼎城悦容汇购物公园站点"},{"rank": 9, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320197370", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "俊发·东福佳园宏仁裕苑站点A"}];
-var TAGS=["昆明-呈贡-大学城", "昆明电力1-官渡1-巫家坝", "昆明电力1-官渡2-新亚洲", "昆明电力1-盘呈-新迎区", "昆明电力1-盘龙-北市1区", "昆明电力2-五华-翠湖区", "昆明电力2-西山-五一路"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力1-官渡2-西亮塘", "vid": "5320367857", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-西亮塘", "site": "矣六街道先锋路544号"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-云南农业大学", "vid": "5320015075", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-云南农业大学", "site": "沣源路52号云南农业大学(西校区)站点"}];
+var TAGS=["昆明电力1-云南农业大学", "昆明电力1-官渡2-西亮塘"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
