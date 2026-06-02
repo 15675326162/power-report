@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>50</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>孙磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "高唐县", "vid": "5310057926", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "时风路辅路双隆购物广场(高唐店)站点A"},{"rank": 2, "status": "🆕新", "tag": "沧州市", "vid": "7780044489", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新华-悦港城--5-2", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "潍坊市", "vid": "5910791548", "lost": 3, "h1": 2, "delta": "<span class='dn'>↓2</span>", "grid": "潍坊市-高新区南电力网格", "site": "-"}];
-var TAGS=["沧州市", "潍坊市", "高唐县"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "徐水区", "vid": "2000059362", "lost": 13, "h1": 13, "delta": "<span class='flat'>-</span>", "grid": "朝阳大街东", "site": "333省道宁兴公寓站点B"},{"rank": 2, "status": "🆕新", "tag": "徐水区", "vid": "2000060186", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "超区Z-保定市-二战区-徐水区-大王店镇-长城园区-运营区外", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "徐水区", "vid": "2000045526", "lost": 7, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "超区Z-保定市-二战区-徐水区-大王店镇-长城园区-运营区外", "site": "大次良平超卫生室大次良家禾公寓站点"},{"rank": 4, "status": "🔴3轮", "tag": "潍坊市", "vid": "5910791548", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "潍坊市-高新区南电力网格", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "唐县", "vid": "5310795088", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "唐县网格东北", "site": "国防东路亚峰制衣站点"},{"rank": 6, "status": "🆕新", "tag": "德州市", "vid": "5320407664", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "核心-德州市-一战区-德城区-新华街道R", "site": "创业路兆惠·阳光99站点"},{"rank": 7, "status": "🆕新", "tag": "固安县", "vid": "7010446748", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "固安北部新城", "site": "廊坊市固安县固安镇方街孔雀城英国宫·竹园"},{"rank": 8, "status": "🆕新", "tag": "烟台市", "vid": "7010470397", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "福山区工程学院网格", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "潍坊市", "vid": "5910821546", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "潍坊市-高新区南电力网格", "site": "-"},{"rank": 10, "status": "🆕新", "tag": "烟台市", "vid": "7010511336", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "福山区万科假日润园网格", "site": "嘉福公寓北门"}];
+var TAGS=["唐县", "固安县", "徐水区", "德州市", "潍坊市", "烟台市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
