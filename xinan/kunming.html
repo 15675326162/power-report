@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 10</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>53</b>累计丢单</div>
-    <div class="s"><b>8</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>5</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320147715", "lost": 10, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "彩云北辅28【H】"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320365916", "lost": 10, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "贵昆路辅路牛街庄单身公寓站点"},{"rank": 3, "status": "🔴2轮", "tag": "昆明电力2-五华-高新2区", "vid": "5320263399", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力2-五华-高新2区", "site": "静一路海源财富中心站点L"},{"rank": 4, "status": "🔴2轮", "tag": "昆明电力1-云南农业大学", "vid": "7010497306", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-云南农业大学", "site": "沣源路52号云南农业大学(西校区)站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320155018", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "溢香园昭通天麻火腿鸡站点"},{"rank": 6, "status": "🆕新", "tag": "昆明电力1-官渡2-云大西路", "vid": "5320189520", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-云大西路", "site": "顺通大道铭春花园温泉度假酒店站点D"},{"rank": 7, "status": "🆕新", "tag": "昆明电力1-官渡2-经开茶高山", "vid": "5320198697", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-经开茶高山", "site": "云大西路中国石化云大西路加油站站点J"},{"rank": 8, "status": "🆕新", "tag": "昆明电力2-五华-高新3区", "vid": "5320186507", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新3区", "site": "住宅区金泰国际1期北1门停车点【H】"},{"rank": 9, "status": "🆕新", "tag": "昆明-空港-换电3区长水新村", "vid": "5320015674", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明-空港-换电3区长水新村", "site": "中宁路万纬昆明浩源物流园站点B"},{"rank": 10, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320163975", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "贵昆路品胜花园酒店"}];
-var TAGS=["昆明-空港-换电3区长水新村", "昆明电力1-云南农业大学", "昆明电力1-官渡2-云大西路", "昆明电力1-官渡2-新亚洲", "昆明电力1-官渡2-新广丰", "昆明电力1-官渡2-经开茶高山", "昆明电力2-五华-高新2区", "昆明电力2-五华-高新3区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-五华-翠湖区", "vid": "5320206100", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-翠湖区", "site": "明永历帝殉国处碑昆明市妇幼保健院(华山院区)站点"}];
+var TAGS=["昆明电力2-五华-翠湖区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
