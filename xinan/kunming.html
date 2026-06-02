@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 2</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>25</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>39</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320243943", "lost": 20, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "-"},{"rank": 2, "status": "🔴3轮", "tag": "昆明电力2-五华-莲花池", "vid": "5320167100", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-五华-莲花池", "site": "双全住宿小区南教场东路"}];
-var TAGS=["昆明电力1-官渡2-新亚洲", "昆明电力2-五华-莲花池"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力1-官渡2-新亚洲", "vid": "5320243943", "lost": 24, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新亚洲", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡2-世纪城", "vid": "5320009780", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-世纪城", "site": "昌宏西路辅路悦满欣城站点H"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-盘龙-北市1区", "vid": "5320157060", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区", "site": "民莹学校(龙泉校区)站点A"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-官渡2-经开茶高山", "vid": "5320147715", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-经开茶高山", "site": "小区内出售枫丹白露站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力1-官渡超区", "vid": "5320331902", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区", "site": "-"}];
+var TAGS=["昆明电力1-官渡2-世纪城", "昆明电力1-官渡2-新亚洲", "昆明电力1-官渡2-经开茶高山", "昆明电力1-官渡超区", "昆明电力1-盘龙-北市1区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
