@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 4</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 6</h1>
   <div class="stats">
     <div class="s"><b>31</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
     <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "东征区-赛罕区-摩尔城15区", "vid": "5320155436", "lost": 19, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "东征区-赛罕区-摩尔城15区", "site": "金阳光小区摩尔城C站点M"},{"rank": 2, "status": "🆕新", "tag": "西战区-回民区-维多利广场19区", "vid": "5320408534", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西战区-回民区-维多利广场19区", "site": "文化宫路新华书店文化宫街29号家属院站点"},{"rank": 3, "status": "🆕新", "tag": "西战区-新城区-鼓楼14区", "vid": "5320441586", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西战区-新城区-鼓楼14区", "site": "星火巷-马路-新【中】"},{"rank": 4, "status": "🆕新", "tag": "西战区-回民区-维多利广场19区", "vid": "5320441678", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西战区-回民区-维多利广场19区", "site": "-"}];
-var TAGS=["东征区-赛罕区-摩尔城15区", "西战区-回民区-维多利广场19区", "西战区-新城区-鼓楼14区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西战区-回民区-维多利广场19区", "vid": "5320408534", "lost": 9, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "西战区-回民区-维多利广场19区", "site": "文化宫路新华书店文化宫街29号家属院站点"},{"rank": 2, "status": "🔴2轮", "tag": "西战区-新城区-鼓楼14区", "vid": "5320441586", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西战区-新城区-鼓楼14区", "site": "星火巷-马路-新【中】"},{"rank": 3, "status": "🔴2轮", "tag": "西战区-回民区-维多利广场19区", "vid": "5320441678", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西战区-回民区-维多利广场19区", "site": "体育局家属院东南门-小区-回-【早】"},{"rank": 4, "status": "🆕新", "tag": "西战区-新城区-鼓楼14区", "vid": "5320406086", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西战区-新城区-鼓楼14区", "site": "HY-外运住宅小区赤诚房地产开发公司外贸住宅楼站点"},{"rank": 5, "status": "🆕新", "tag": "东征区-赛罕区-摩尔城 16区", "vid": "5320440424", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东征区-赛罕区-摩尔城 16区", "site": "团结小区东区西门-小区-新【中晚】"},{"rank": 6, "status": "🆕新", "tag": "东征区-新城区-航苑小区-24区", "vid": "5320397647", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东征区-新城区-航苑小区-24区", "site": "维多利国际东门-商圈-新【全天】"}];
+var TAGS=["东征区-新城区-航苑小区-24区", "东征区-赛罕区-摩尔城 16区", "西战区-回民区-维多利广场19区", "西战区-新城区-鼓楼14区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
