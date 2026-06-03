@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 1</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>28</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
-    <div class="s"><b>胡丹萍、张茹榕、鲁宏伟、张香香、项紫艳</b>负责人</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>胡丹萍、鲁宏伟</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "嘉兴市", "vid": "5310056621", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "长水街道-电力网格-城南网格组", "site": "-"}];
-var TAGS=["嘉兴市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "苏州市", "vid": "5310716631", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "吴中区-小石湖城", "site": "田上江路东湖剑桥幼儿园站点"},{"rank": 2, "status": "🆕新", "tag": "苏州市", "vid": "5310504267", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吴中区-吴中中心区", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "余姚市", "vid": "5320181708", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "余姚人民医院", "site": "北环东路江丰电子站点"},{"rank": 4, "status": "🆕新", "tag": "厦门市", "vid": "5320390574", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "融合-新阳四区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "瑞安市", "vid": "7900018774", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "塘下镇——塘下六区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "宁波市", "vid": "5310057916", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东战-宁波体育中心", "site": "速8酒店(宁波美和店)青年汇公寓停车点"},{"rank": 7, "status": "🆕新", "tag": "南安市", "vid": "7100066813", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "核心-华东生态业务组-二组-南安市-石井镇-三安半导体-三安半导体商圈-刘锦彬", "site": "25-26 单元门楼 门口步道"}];
+var TAGS=["余姚市", "南安市", "厦门市", "宁波市", "瑞安市", "苏州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
