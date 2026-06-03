@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 2</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>23</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>58</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>张家煊、曾攀、张小灵、冯欣晨、刘逸</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "白沙镇", "vid": "7960107839", "lost": 13, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "白沙镇两轮融合网格", "site": "金港时尚酒店(中牟方特店)中原保险大厦站点"},{"rank": 2, "status": "🔴4轮", "tag": "金水区", "vid": "7960118722", "lost": 10, "h1": 3, "delta": "<span class='dn'>↓31</span>", "grid": "金水-龙子湖2区", "site": "龙子湖地铁站出入口正商博雅广场规范停车点"}];
-var TAGS=["白沙镇", "金水区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "白沙镇", "vid": "7960107839", "lost": 21, "h1": 8, "delta": "<span class='up'>↑8</span>", "grid": "白沙镇两轮融合网格", "site": "金港时尚酒店(中牟方特店)中原保险大厦站点"},{"rank": 2, "status": "🔴5轮", "tag": "金水区", "vid": "7960118722", "lost": 12, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金水-龙子湖2区", "site": "龙子湖地铁站出入口正商博雅广场规范停车点"},{"rank": 3, "status": "🆕新", "tag": "合肥市", "vid": "5310767660", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-长宁社区", "site": "树呆熊网咖(龙湖光年店)龙湖光年站点"},{"rank": 4, "status": "🆕新", "tag": "郑州市", "vid": "5310512135", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "银杏路中鸿花园站点D"},{"rank": 5, "status": "🆕新", "tag": "武汉市", "vid": "5310794104", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "江夏-北华街", "site": "【超大容错-谨慎操作】文化大道江夏中央大公园站点"},{"rank": 6, "status": "🆕新", "tag": "合肥市", "vid": "7010450153", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-海棠公园", "site": "安徽省合肥市庐阳区逍遥津街道淮-停车点"},{"rank": 7, "status": "🆕新", "tag": "蚌埠市", "vid": "5320029161", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "B区-第二中学", "site": "虎山东路江淮院子(建设中)站点A"},{"rank": 8, "status": "🆕新", "tag": "西青区", "vid": "7010411079", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-中北镇A", "site": "汪庄村中街汪庄子菜市场站点E"}];
+var TAGS=["合肥市", "武汉市", "白沙镇", "蚌埠市", "西青区", "郑州市", "金水区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
