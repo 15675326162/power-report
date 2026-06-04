@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>15</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-青山北-主城一机集团", "vid": "5320458043", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-主城一机集团", "site": "自由南路自由路十三号街坊站点A（包头市青山区彩框点位）"},{"rank": 2, "status": "🔴3轮", "tag": "西区-昆区南-黄河小区", "vid": "5320418018", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区南-黄河小区", "site": "红岩道友谊大街17号街坊站点I"},{"rank": 3, "status": "🔴2轮", "tag": "东区-东河-北梁北区", "vid": "5320419537", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-东河-北梁北区", "site": "文华巷北梁新区北六区西区站点"},{"rank": 4, "status": "🆕新", "tag": "西区-昆区南-科技大学", "vid": "5320459083", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-科技大学", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320458187", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "景晟开元小区南区(东2门)站点B（蓝框）"}];
-var TAGS=["东区-东河-北梁北区", "东区-九原-包头轻工学院", "西区-昆区南-科技大学", "西区-昆区南-黄河小区", "西区-青山北-主城一机集团"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东区-九原-九原万达", "vid": "5320455678", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原万达", "site": "箭丽艺术培训中心复正大厦站点"},{"rank": 2, "status": "🆕新", "tag": "西区-稀土-凡尔赛官邸", "vid": "5320458384", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "西区-稀土-凡尔赛官邸", "site": "小区-街道友谊大街58号白框"},{"rank": 3, "status": "🆕新", "tag": "-", "vid": "5320176079", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"}];
+var TAGS=["-", "东区-九原-九原万达", "西区-稀土-凡尔赛官邸"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
