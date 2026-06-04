@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华北大区 — 高频缺电 TOP 1</h1>
+  <h1>📍 华北大区 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>4</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>12</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>孙磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "北京市", "vid": "5310352410", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战-昌平-天通苑南", "site": "天通苑(五区)站点Z1"}];
-var TAGS=["北京市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "滦州市", "vid": "7720148026", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金鼎东南都会", "site": "天福道金鼎·东南都会站点B"},{"rank": 2, "status": "🆕新", "tag": "石家庄市", "vid": "5310654858", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战-长安区-荣盛", "site": "高收益-天润家园(义堂东)国瑞园北区"},{"rank": 3, "status": "🆕新", "tag": "石家庄市", "vid": "5320304224", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战-新华区-水上公园", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "石家庄市", "vid": "5310084875", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战-高开区-石门大厦", "site": "-"}];
+var TAGS=["滦州市", "石家庄市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
