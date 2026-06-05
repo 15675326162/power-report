@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 昆明市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>9</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320195476", "lost": 9, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "河南卤肉馆_2mf，留"},{"rank": 2, "status": "🆕新", "tag": "昆明-呈贡-七彩云南", "vid": "5320213192", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-七彩云南", "site": "谊康北路七彩云南·第壹城时代广场站点A"}];
-var TAGS=["昆明-呈贡-七彩云南", "昆明电力1-官渡2-新广丰"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-五华-高新4区", "vid": "5320163180", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新4区", "site": "王筇路吾悦广场(昆明五华店)站点J"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力2-西山-度假区", "vid": "5320191136", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-西山-度假区", "site": "滇池路1485号昆明二建集团大楼站点"}];
+var TAGS=["昆明电力2-五华-高新4区", "昆明电力2-西山-度假区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
