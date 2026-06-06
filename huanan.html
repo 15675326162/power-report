@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>15</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>24</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "顺德区", "vid": "3720179025", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "中下区-印象城", "site": "大容错点位（临时用）"},{"rank": 2, "status": "🔴2轮", "tag": "贵溪市", "vid": "5310070647", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区", "site": "景悦酒店(贵溪天虹店)天虹购物中心(鹰潭贵溪店)站点"},{"rank": 3, "status": "🆕新", "tag": "江城区", "vid": "2000048289", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "江城区-城西-新达城", "site": "马南路富通停车场站点B"}];
-var TAGS=["江城区", "贵溪市", "顺德区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "中山市", "vid": "5310153794", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "南朗-华南医药城", "site": "时珍路完美(广东)日用品有限公司生活区(公寓)站点J"},{"rank": 2, "status": "🆕新", "tag": "云溪区", "vid": "7780030795", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "凌泊湖", "site": "峰果果(凌泊湖小区店)凌泊湖小区站点A"},{"rank": 3, "status": "🆕新", "tag": "顺德区", "vid": "5930058658", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "近良1", "site": "新疆美味烤羊肉串(顺屏楼店)顺屏楼站点"},{"rank": 4, "status": "🆕新", "tag": "宁乡市", "vid": "7960042887", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高新区1", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "云溪区", "vid": "7780058657", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "松杨湖", "site": "峰果果(凌泊湖小区店)凌泊湖小区站点A"},{"rank": 6, "status": "🆕新", "tag": "南海区", "vid": "5320318502", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "佛山禅桂边缘隔离网格2区", "site": "桂城(地铁站)越秀·星汇云锦站点"}];
+var TAGS=["中山市", "云溪区", "南海区", "宁乡市", "顺德区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
