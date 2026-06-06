@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>27</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
     <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
-    <div class="s"><b>胡丹萍、鲁宏伟</b>负责人</div>
+    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>胡丹萍</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "苏州市", "vid": "5310644200", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吴中区-越溪厂区", "site": "天鹅荡路苏州欣天新精密机械有限公司站点"},{"rank": 2, "status": "🆕新", "tag": "徐州市", "vid": "5310325448", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "经开四区换电", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "宁波市", "vid": "7780019765", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南战-奉化电力网格", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "义乌市", "vid": "5310159585", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-杨村居民区-稠江网格组", "site": "戚继光路站点M"},{"rank": 5, "status": "🆕新", "tag": "泉港区", "vid": "5320103774", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "杨厝", "site": "南山中路758号泉港汽车站"},{"rank": 6, "status": "🆕新", "tag": "宁波市", "vid": "7780034128", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西战-月湖", "site": "a-月湖街道长春路柳汀街ji十字路口"}];
-var TAGS=["义乌市", "宁波市", "徐州市", "泉港区", "苏州市"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "义乌市", "vid": "5310159585", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力-杨村居民区-稠江网格组", "site": "戚继光路义乌市心上人服饰有限公司站点C"},{"rank": 2, "status": "🔴2轮", "tag": "泉港区", "vid": "5320103774", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "杨厝", "site": "南山中路758号泉港汽车站"},{"rank": 3, "status": "🆕新", "tag": "苏州市", "vid": "5310264996", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吴中区-吴中中心区", "site": "北沿河巷宝怡大厦站点"},{"rank": 4, "status": "🆕新", "tag": "徐州市", "vid": "5310406828", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "铜山四区换电", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "厦门市", "vid": "5310412924", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "融合-东孚一区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "南通市", "vid": "7010504064", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "张芝山", "site": "锡通大道南通五洲国际汽车博览城站点A"},{"rank": 7, "status": "🆕新", "tag": "苏州市", "vid": "5310665085", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "吴江区-山湖花园", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "滨江区", "vid": "5310178733", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "滨江区-电力网格", "site": "庙后王路基督之家站点B"}];
+var TAGS=["义乌市", "南通市", "厦门市", "徐州市", "泉港区", "滨江区", "苏州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
