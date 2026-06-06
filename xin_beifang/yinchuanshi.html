@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 2</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>50</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "金凤区-超区 1", "vid": "5320564975", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-超区 1", "site": "-"},{"rank": 2, "status": "🔴3轮", "tag": "兴庆区-兴庆20区", "vid": "5320329902", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-兴庆20区", "site": "凤仪路中海城站点J"}];
-var TAGS=["兴庆区-兴庆20区", "金凤区-超区 1"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320484986", "lost": 10, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "同华巷宁夏大学新华学院站点"},{"rank": 2, "status": "🔴4轮", "tag": "兴庆区-兴庆20区", "vid": "5320329902", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兴庆区-兴庆20区", "site": "凤仪路中海城站点E"},{"rank": 3, "status": "🆕新", "tag": "西夏区-4区", "vid": "5320473706", "lost": 8, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "西夏区-4区", "site": "轻纺巷西城府邸站点C"},{"rank": 4, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320279380", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "西夏区贺兰山西路街道芦花苑(西门)"},{"rank": 5, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320564515", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "怀远东路191号区建二公司小区站点"},{"rank": 6, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320552460", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "朔方路31号怡祥小区站点"},{"rank": 7, "status": "🆕新", "tag": "金凤区-南2区", "vid": "5320024609", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320439218", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "西夏区贺兰山西路街道同心北街银川职业技术学院"},{"rank": 9, "status": "🆕新", "tag": "金凤区-南3区", "vid": "5320347866", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南3区", "site": "金凤区黄河东路街道福州南街新琇苑2"}];
+var TAGS=["兴庆区-兴庆20区", "西夏区-1区", "西夏区-3区", "西夏区-4区", "金凤区-南2区", "金凤区-南3区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
