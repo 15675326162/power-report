@@ -41,7 +41,7 @@ tr.rep{background:#fff8f8}
     <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320266668", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "段家滩路1599号亚太·城市月光站点B"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-西固区-四区", "vid": "5320255394", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-四区", "site": "西固区-福利东路-小区-东城家园对面马牌轮胎门口"}];
-var TAGS=["兰州-二区-西固区-四区", "兰州市-二区-雁滩-红星迈凯伦"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-城关区-南关", "vid": "3930077036", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-南关", "site": "兰州市-七里河区-西湖街道西津东路电力公司住宅小区-道路交叉口"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320352749", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "雁北路新港城站点O"}];
+var TAGS=["兰州市-二区-城关区-南关", "兰州市-二区-雁滩-新港城"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
