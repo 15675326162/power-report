@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 4</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>30</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>48</b>累计丢单</div>
+    <div class="s"><b>8</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "昆明电力1-官渡2-云大西路", "vid": "5320162253", "lost": 17, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "昆明电力1-官渡2-云大西路", "site": "鑫鑫宾馆站点C"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-盘龙-北市1区", "vid": "5320204148", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区", "site": "北京路1684号万科·金域缇香站点A"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-官渡2--螺蛳湾", "vid": "5320164702", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2--螺蛳湾", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-盘呈-拓东区", "vid": "5320202426", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-拓东区", "site": "昆前路10号帮德酒店火车站店"}];
-var TAGS=["昆明电力1-官渡2--螺蛳湾", "昆明电力1-官渡2-云大西路", "昆明电力1-盘呈-拓东区", "昆明电力1-盘龙-北市1区"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "昆明电力1-官渡2-云大西路", "vid": "5320162253", "lost": 19, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2-云大西路", "site": "鑫鑫宾馆站点C"},{"rank": 2, "status": "🆕新", "tag": "昆明电力2-五华-高新4区", "vid": "5320384294", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新4区", "site": "慧谷路碧桂园·春城映象站点C"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-盘龙-红云2区", "vid": "5320206730", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-红云2区", "site": "霖雨路建投学府站点A"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-官渡2-世纪城", "vid": "5320195926", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-世纪城", "site": "广福路辅路海伦堡·海伦国际站点C"},{"rank": 5, "status": "🆕新", "tag": "昆明-呈贡-呈贡超区", "vid": "5320208782", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-呈贡超区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "昆明电力1-官渡超区", "vid": "5320331902", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡超区", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "官渡-经开建工新城", "vid": "5320383779", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "官渡-经开建工新城", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "昆明电力2-西山-棕树营", "vid": "5320360538", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-棕树营", "site": "龙翔街道龙翔街13号面包工坊停车点"}];
+var TAGS=["官渡-经开建工新城", "昆明-呈贡-呈贡超区", "昆明电力1-官渡2-世纪城", "昆明电力1-官渡2-云大西路", "昆明电力1-官渡超区", "昆明电力1-盘龙-红云2区", "昆明电力2-五华-高新4区", "昆明电力2-西山-棕树营"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
