@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 7</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>72</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>8</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "电力西区-新城区-公主府-08区", "vid": "5320397638", "lost": 29, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力西区-新城区-公主府-08区", "site": "蒙专西门北侧-学校- 新【全天】"},{"rank": 2, "status": "🔴2轮", "tag": "东征区-赛罕区-摩尔城15区", "vid": "5320410657", "lost": 17, "h1": 11, "delta": "<span class='up'>↑11</span>", "grid": "东征区-赛罕区-摩尔城15区", "site": "维多利国际东门-商圈-新【全天】"},{"rank": 3, "status": "🔴2轮", "tag": "电力西区-新城区-赛马场-04区", "vid": "5320440500", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力西区-新城区-赛马场-04区", "site": "XC-08-103"},{"rank": 4, "status": "🔴2轮", "tag": "电力东区-新城区-南店-07区", "vid": "5320409291", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力东区-新城区-南店-07区", "site": "内蒙古博物院(西门)站点"},{"rank": 5, "status": "🆕新", "tag": "东征区-新城区-新城宾馆23区", "vid": "5320441967", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东征区-新城区-新城宾馆23区", "site": "F-内蒙古大学医院内蒙古大学(北校区)站点A"},{"rank": 6, "status": "🆕新", "tag": "东征区-赛罕区-如意开发区30区南", "vid": "5320159827", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东征区-赛罕区-如意开发区30区南", "site": "敕勒川路街道金隅时代城金隅环球金融中心-写字楼632-办公-赛-【早午晚】-S1"},{"rank": 7, "status": "🆕新", "tag": "西战区-玉泉区-金宇新天地-34区", "vid": "5320421767", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西战区-玉泉区-金宇新天地-34区", "site": "蓝宇花园酒店-小区-玉-【早】"}];
-var TAGS=["东征区-新城区-新城宾馆23区", "东征区-赛罕区-如意开发区30区南", "东征区-赛罕区-摩尔城15区", "电力东区-新城区-南店-07区", "电力西区-新城区-公主府-08区", "电力西区-新城区-赛马场-04区", "西战区-玉泉区-金宇新天地-34区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东征区-赛罕区-东万达17区", "vid": "5320441604", "lost": 8, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东征区-赛罕区-东万达17区", "site": "新春路北口-马路-新【早】"}];
+var TAGS=["东征区-赛罕区-东万达17区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
