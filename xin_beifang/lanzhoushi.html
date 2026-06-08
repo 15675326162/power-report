@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 2</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>6</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>15</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320354358", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "雁滩路站点B"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320244607", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "雁滩路金地花园站点"}];
-var TAGS=["兰州市-二区-雁滩-新港城", "兰州市-二区-雁滩-红星迈凯伦"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-西固区-三区", "vid": "5320292579", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-三区", "site": "兰州市西固区陈坪街道西固中路金城中心"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-安宁区-植物园", "vid": "5320355010", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-植物园", "site": "河湾堡东街世茂宏建·云煦园站点A"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-七里河区-西客站", "vid": "5320284054", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-西客站", "site": "彭家坪东路龚家湾第一小学站点F"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-雁滩-兰州大学", "vid": "5320296718", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-兰州大学", "site": "麦积山路兰州大学第一家属区站点L"}];
+var TAGS=["兰州-二区-七里河区-西客站", "兰州-二区-安宁区-植物园", "兰州-二区-西固区-三区", "兰州市-二区-雁滩-兰州大学"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
