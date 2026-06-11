@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>30</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>34</b>累计丢单</div>
+    <div class="s"><b>9</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "儋州市", "vid": "7960008621", "lost": 11, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-儋州文化广场", "site": "伏波东路鼎尚时代广场站点E"},{"rank": 2, "status": "🆕新", "tag": "吉安市", "vid": "5310663274", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "吉安市自营电力网格", "site": "世兴庙路3吉安东升民宿酒店站点"},{"rank": 3, "status": "🆕新", "tag": "吉安市", "vid": "5310763266", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "车站广场北路财富广场(正气路)站点B"},{"rank": 4, "status": "🆕新", "tag": "白马井镇", "vid": "5910781099", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "洋浦镇区域", "site": "滨海公园站点"},{"rank": 5, "status": "🔴2轮", "tag": "金利镇", "vid": "2000028899", "lost": 3, "h1": 1, "delta": "<span class='dn'>↓2</span>", "grid": "换电策略地图", "site": "金沙大道170号金利镇初级中学-金利一中站点"}];
-var TAGS=["儋州市", "吉安市", "白马井镇", "金利镇"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "吉安市", "vid": "5310763266", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "车站广场北路财富广场(正气路)站点B"},{"rank": 2, "status": "🆕新", "tag": "吉安县", "vid": "7780210382", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "南朗镇", "vid": "3720134520", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "时珍路完美(广东)日用品有限公司生活区(公寓)站点J"},{"rank": 4, "status": "🔴3轮", "tag": "金利镇", "vid": "2000028899", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "换电策略地图", "site": "金沙大道170号金利镇初级中学-金利一中站点"},{"rank": 5, "status": "🆕新", "tag": "吉安县", "vid": "7900180408", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "南海区", "vid": "5320318772", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "R.桂城10区", "site": "南海万科广场住宅区三期站点"},{"rank": 7, "status": "🆕新", "tag": "三乡镇", "vid": "7960263206", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三级超区-三乡-北", "site": "宝元大道站点C"},{"rank": 8, "status": "🆕新", "tag": "三水区", "vid": "7900227448", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "1区-核心-中医院", "site": "文锋西路站点A"},{"rank": 9, "status": "🆕新", "tag": "贵溪市", "vid": "5310174570", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "贵溪2区", "site": "-"},{"rank": 10, "status": "🆕新", "tag": "长沙市", "vid": "5310245904", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "Y环保学院16", "site": "先锋路辅路高升时代广场住宅楼站点"}];
+var TAGS=["三乡镇", "三水区", "南朗镇", "南海区", "吉安县", "吉安市", "贵溪市", "金利镇", "长沙市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
