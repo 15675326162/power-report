@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>21</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>40</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>张家煊、曾攀、张小灵、冯欣晨、刘逸</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "合肥市", "vid": "5320343079", "lost": 12, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-逍遥津公园", "site": "芬格嘉美整形外科医院易捷特大厦站点"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5320549215", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-合工大", "site": "马鞍山路绿地赢海国际大厦站点A"},{"rank": 3, "status": "🆕新", "tag": "宿州市", "vid": "7110064231", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电-国购网格", "site": "-"}];
-var TAGS=["合肥市", "宿州市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "合肥市", "vid": "5320333973", "lost": 14, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-电商产业园", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "金水区", "vid": "7960263756", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "中牟北超区小区R", "site": "薛夏北街河南省直青年人才公寓博学苑站点A"},{"rank": 3, "status": "🔴2轮", "tag": "宿州市", "vid": "7110064231", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电-国购网格", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "长丰县", "vid": "6680035547", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "北城-北城金科半岛一号", "site": "梅冲湖路京冠·北城华府站点C"},{"rank": 5, "status": "🆕新", "tag": "金水区", "vid": "7960087504", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "中牟北超区小区R", "site": "博学路郑东新区规范停车点Z173"},{"rank": 6, "status": "🆕新", "tag": "合肥市", "vid": "7010409163", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力二区-经开区-海恒社区", "site": "合肥市蜀山区海恒社区繁华大道天麦生物科技园"},{"rank": 7, "status": "🆕新", "tag": "合肥市", "vid": "5310798785", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-大东门", "site": "长江东路1098号圣大国际商贸中心站点"},{"rank": 8, "status": "🆕新", "tag": "合肥市", "vid": "5320481033", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-汽车南站", "site": "龙图路淝南家园站点H"},{"rank": 9, "status": "🆕新", "tag": "合肥市", "vid": "5320558214", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力二区-包河区-包河万达", "site": "香港街东方广场住宅区站点E"}];
+var TAGS=["合肥市", "宿州市", "金水区", "长丰县"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
