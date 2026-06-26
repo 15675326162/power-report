@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 6</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>27</b>累计丢单</div>
-    <div class="s"><b>6</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>36</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320279415", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "金凤区-北5区", "vid": "7010524324", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道贺兰山中路9"},{"rank": 3, "status": "🆕新", "tag": "金凤区-北3区", "vid": "5320063674", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北3区", "site": "哈尔滨路宁夏中房花语轩站点B"},{"rank": 4, "status": "🆕新", "tag": "金凤区-北7区", "vid": "5320350012", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北7区", "site": "金凤区贺兰山中路街道正源北街阅海万家6"},{"rank": 5, "status": "🆕新", "tag": "-", "vid": "5320248980", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320349300", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "瀚海街站点B"}];
-var TAGS=["-", "兴庆区-超区 2", "兴庆区-超区1", "金凤区-北3区", "金凤区-北5区", "金凤区-北7区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320552127", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "西夏区贺兰山西路街道大连路润恒城"},{"rank": 2, "status": "🔴2轮", "tag": "金凤区-北5区", "vid": "7010524324", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道贺兰山中路9"},{"rank": 3, "status": "🆕新", "tag": "德胜区-德胜2区", "vid": "5320535793", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇花园南街宁夏交通学校1"},{"rank": 4, "status": "🔴2轮", "tag": "金凤区-北3区", "vid": "5320063674", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-北3区", "site": "哈尔滨路宁夏中房花语轩站点B"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-兴庆18区", "vid": "5320562709", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆18区", "site": "兴庆区胜利街街道清和南街1352-1号舒胜大酒店"},{"rank": 6, "status": "🔴2轮", "tag": "兴庆区-超区 2", "vid": "5320349300", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区 2", "site": "瀚海街站点B"},{"rank": 7, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320574872", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "兴庆区-兴庆20区", "vid": "5320561272", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆20区", "site": "-"}];
+var TAGS=["兴庆区-兴庆18区", "兴庆区-兴庆20区", "兴庆区-超区 2", "德胜区-德胜2区", "西夏区-1区", "金凤区-北3区", "金凤区-北5区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
