@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>30</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>45</b>累计丢单</div>
+    <div class="s"><b>8</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
-    <div class="s"><b>胡丹萍</b>负责人</div>
+    <div class="s"><b>10</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>鲁宏伟</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "安吉县", "vid": "7900084526", "lost": 16, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "安吉县-递铺街道-核心-九州广场", "site": "九州肯德基"},{"rank": 2, "status": "🆕新", "tag": "漳浦县", "vid": "5910869275", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "漳浦1区", "site": "漳浦县绥安镇府前街桥头公园停车点"},{"rank": 3, "status": "🆕新", "tag": "泰州市", "vid": "5320192431", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力2区-蓝思精密", "site": "可胜路蓝思精密泰州有限公司(一园)站点Q"},{"rank": 4, "status": "🆕新", "tag": "苏州市", "vid": "7010382868", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "吴中区-吴中西北角", "site": "吴中二村苏州景泰之家公寓(4号店)站点"},{"rank": 5, "status": "🆕新", "tag": "南通市", "vid": "5320094558", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "主城区东区-1", "site": "人民中路东景国际尚层站点H"}];
-var TAGS=["南通市", "安吉县", "泰州市", "漳浦县", "苏州市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "水头镇", "vid": "3720138984", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "水头中心区", "site": "解放路宗艺商业广场站点B"},{"rank": 2, "status": "🆕新", "tag": "南通市", "vid": "5320091930", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "主城区东区-1", "site": "世伦路站点F"},{"rank": 3, "status": "🆕新", "tag": "安吉县", "vid": "7900077971", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "安吉县-递铺街道-核心-九州广场", "site": "湖州市安吉县昌硕街道永兴路九州昌硕广场"},{"rank": 4, "status": "🆕新", "tag": "南通市", "vid": "5320004729", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "张芝山", "site": "蒲公英路香樟公寓站点"},{"rank": 5, "status": "🆕新", "tag": "漳州市", "vid": "5310677756", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "隔离-漳州市D区-漳州市D区网格组", "site": "南环城路漳州站站点K"},{"rank": 6, "status": "🆕新", "tag": "宁波市", "vid": "5320324735", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南战-罗蒙环球城", "site": "湖南路749-2号银河湾停车点"},{"rank": 7, "status": "🆕新", "tag": "德清县", "vid": "5310580667", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "中区-主城-武康街道-隐龙山庄-袁斌", "site": "群益街塔山村大厦站点"},{"rank": 8, "status": "🆕新", "tag": "泉港区", "vid": "5320074348", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "杨厝", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "宁波市", "vid": "5310253935", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南战--南高教", "site": "大道_s54"},{"rank": 10, "status": "🆕新", "tag": "泉州台商投资区", "vid": "5320061565", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "张坂镇", "site": "海城大道-华世(福建)科技有限公司舒华体育股份有限公司站点"}];
+var TAGS=["南通市", "宁波市", "安吉县", "德清县", "水头镇", "泉州台商投资区", "泉港区", "漳州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
