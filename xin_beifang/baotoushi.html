@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>39</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-昆区北-海威小区", "vid": "5320160064", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-海威小区", "site": "中海望京府(北门)站点"},{"rank": 2, "status": "🔴2轮", "tag": "西区-青山北-锦林公园", "vid": "5320509152", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-青山北-锦林公园", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "西区-昆区南-馥室成双", "vid": "5320461912", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-馥室成双", "site": "（彩框）930全@嘉凯影城（孙广军）"},{"rank": 4, "status": "🆕新", "tag": "东区-九原-装备园区", "vid": "5320404141", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-装备园区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "东区-东河-北梁北区", "vid": "5320419162", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-北梁北区", "site": "四季老火锅(康复路店)鼎太风华站点A"}];
-var TAGS=["东区-东河-北梁北区", "东区-九原-装备园区", "西区-昆区北-海威小区", "西区-昆区南-馥室成双", "西区-青山北-锦林公园"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-昆区北-海威小区", "vid": "5320160064", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区北-海威小区", "site": "中海望京府(北门)站点"},{"rank": 2, "status": "🆕新", "tag": "西区-昆区北-苏宁广场", "vid": "5320419549", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-苏宁广场", "site": "包头市-昆都仑区-阿尔丁大街街道阿尔丁北大街新星壹品小区御园-居民区门口cca(王建英 任嘉兴)"},{"rank": 3, "status": "🔴2轮", "tag": "西区-昆区南-馥室成双", "vid": "5320461912", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区南-馥室成双", "site": "（新增）白云鄂博路包头恒大天玺站点G"},{"rank": 4, "status": "🔴2轮", "tag": "东区-九原-装备园区", "vid": "5320404141", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-装备园区", "site": "世纪北路包头职业教育园区站点"},{"rank": 5, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320510349", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "新春街同心幼儿园站点蓝框"},{"rank": 6, "status": "🆕新", "tag": "东区-东河-北梁南区", "vid": "5320168515", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-北梁南区", "site": "-"}];
+var TAGS=["东区-东河-北梁南区", "东区-九原-九原广场", "东区-九原-装备园区", "西区-昆区北-海威小区", "西区-昆区北-苏宁广场", "西区-昆区南-馥室成双"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
