@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 伊春市 — 高频缺电 TOP 6</h1>
+  <h1>📍 伊春市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>52</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>5</b>🔴未处理</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>苏羽</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴6轮", "tag": "伊春市两轮融合网格F区", "vid": "3720186894", "lost": 23, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "伊春市两轮融合网格F区", "site": "花园路新荣小区站点"},{"rank": 2, "status": "🔴3轮", "tag": "伊春市两轮融合网格E区", "vid": "3720185448", "lost": 13, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "伊春市两轮融合网格E区", "site": "花园路新荣小区站点"},{"rank": 3, "status": "🔴2轮", "tag": "伊春市两轮融合网格C区", "vid": "3720186742", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "伊春市两轮融合网格C区", "site": "青山西大街亿科·傲城居住小区站点J"},{"rank": 4, "status": "🔴2轮", "tag": "伊春市两轮融合网格C区", "vid": "3720147811", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "伊春市两轮融合网格C区", "site": "育林路11号楼站点A"},{"rank": 5, "status": "🔴2轮", "tag": "伊春市两轮融合网格F区", "vid": "3720186262", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "伊春市两轮融合网格F区", "site": "乌带路乌马河广场站点"},{"rank": 6, "status": "🆕新", "tag": "伊春市两轮融合网格C区", "vid": "3720187137", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格C区", "site": "新兴西大街169号伊春开放大学站点"}];
-var TAGS=["伊春市两轮融合网格C区", "伊春市两轮融合网格E区", "伊春市两轮融合网格F区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "伊春市两轮融合网格D区", "vid": "3720187088", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "伊春市两轮融合网格D区", "site": "新兴西大街194号伊春市社会保险事业管理局站点"}];
+var TAGS=["伊春市两轮融合网格D区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
