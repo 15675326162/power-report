@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 6</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>35</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>31</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320555528", "lost": 15, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道上海西路亲水苑C区3"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南2区", "vid": "5320474900", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区", "site": "金凤区上海西路街道正源北街馨和苑1"},{"rank": 3, "status": "🔴2轮", "tag": "兴庆区-超区1", "vid": "5320477381", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区1", "site": "和平北街祥和家苑站点"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-兴庆4区", "vid": "5320478364", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆4区", "site": "兴庆区凤凰北街街道康平路锦泰花园8"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-兴庆8区", "vid": "5320563156", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆8区", "site": "兴庆区玉皇阁北街街道广实巷中冶·幸福宸1"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320472217", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "富兴北街月湖名邸西区站点"}];
-var TAGS=["兴庆区-兴庆4区", "兴庆区-兴庆8区", "兴庆区-超区1", "金凤区-北5区", "金凤区-南2区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "金凤区-北5区", "vid": "5320555528", "lost": 17, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道上海西路亲水苑C区3"},{"rank": 2, "status": "🆕新", "tag": "金凤区-北3区", "vid": "5320510133", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北3区", "site": "怀远东路333号云熙府(装修中)站点"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320349368", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "富兴北街逸泉院站点B"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320439115", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320257463", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "-"}];
+var TAGS=["兴庆区-超区 2", "兴庆区-超区1", "金凤区-北3区", "金凤区-北5区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
