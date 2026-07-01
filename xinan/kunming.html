@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 6</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>21</b>累计丢单</div>
-    <div class="s"><b>6</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>17</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-西山-西山公园", "vid": "5320360687", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-西山公园", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡2-经开茶高山", "vid": "5320167368", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-经开茶高山", "site": "红枫路思兰雅苑站点C"},{"rank": 3, "status": "🆕新", "tag": "昆明电力2-五华-高新4区", "vid": "5320168737", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新4区", "site": "陈家营路昆明地铁四号线大漾田车辆段站点E"},{"rank": 4, "status": "🆕新", "tag": "昆明电力2-西山-棕树营", "vid": "5320166009", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-棕树营", "site": "昆明系统推荐点位1602"},{"rank": 5, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320186033", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "昆船大道昆船花园3号站点"},{"rank": 6, "status": "🆕新", "tag": "昆明电力1-官渡1-太和区", "vid": "5320155560", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-太和区", "site": "吴井路337号昆明市第三人民医院"}];
-var TAGS=["昆明电力1-官渡1-太和区", "昆明电力1-官渡2-新广丰", "昆明电力1-官渡2-经开茶高山", "昆明电力2-五华-高新4区", "昆明电力2-西山-棕树营", "昆明电力2-西山-西山公园"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明电力1-官渡2-经开茶高山", "vid": "5320167368", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "昆明电力1-官渡2-经开茶高山", "site": "红枫路建工新城站点E"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力1-官渡1-太和区", "vid": "5320155560", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力1-官渡1-太和区", "site": "吴井路337号昆明市第三人民医院"},{"rank": 3, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320192202", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "雨龙路华洋家居广场站点"},{"rank": 4, "status": "🆕新", "tag": "呈贡云南师范大学", "vid": "7010516693", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "呈贡云南师范大学", "site": "云南师范大学呈贡校区东区贝壳广场云南师范大学呈贡校区文聚站点"}];
+var TAGS=["呈贡云南师范大学", "昆明电力1-官渡1-太和区", "昆明电力1-官渡2-新广丰", "昆明电力1-官渡2-经开茶高山"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
