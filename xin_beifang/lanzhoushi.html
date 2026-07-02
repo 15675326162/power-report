@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 9</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>38</b>累计丢单</div>
-    <div class="s"><b>8</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "兰州-二区-安宁区-都市春天", "vid": "3930017295", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兰州-二区-安宁区-都市春天", "site": "安宁堡家园(西区西南门)站点"},{"rank": 2, "status": "🔴2轮", "tag": "兰州市-二区-城关区-金城盆景园", "vid": "5320570584", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州市-二区-城关区-金城盆景园", "site": "广场北路6号兰州万象城站点"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-西固区-三区", "vid": "5320450187", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-三区", "site": "公园东路兰州石化职业技术学院_2u1"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-安宁区-都市春天", "vid": "5320355856", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天", "site": "兰州市-安宁区-银安路-城院B地铁口"},{"rank": 5, "status": "🔴2轮", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320571459", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "南昌路盛达中心站点"},{"rank": 6, "status": "🆕新", "tag": "兰州市-二区-城关区-南关", "vid": "5320573534", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-南关", "site": "武都路宏丰大厦(武都路)站点"},{"rank": 7, "status": "🆕新", "tag": "兰州-二区-安宁区-交通大学", "vid": "5320445728", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-交通大学", "site": "安宁西路302号中国农业银行(安宁区支行)站点A"},{"rank": 8, "status": "🆕新", "tag": "兰州-二区-七里河区-恒大翡翠华庭", "vid": "5320353694", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-恒大翡翠华庭", "site": "庞大一众汽车销售服务有限公司兰州万达茂站点"},{"rank": 9, "status": "🆕新", "tag": "兰州-二区-七里河区-兰州中心", "vid": "5320450378", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-兰州中心", "site": "七里河区-南滨河中-第九四〇医院站点"}];
-var TAGS=["兰州-二区-七里河区-兰州中心", "兰州-二区-七里河区-恒大翡翠华庭", "兰州-二区-安宁区-交通大学", "兰州-二区-安宁区-都市春天", "兰州-二区-西固区-三区", "兰州市-二区-城关区-南关", "兰州市-二区-城关区-金城盆景园", "兰州市-二区-雁滩-新港城"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "3930081315", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "敦煌路万辉国际广场站点A"}];
+var TAGS=["兰州-二区-七里河区-豪布斯卡西客站"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
