@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 2</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>55</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>张家煊、曾攀、张小灵、冯欣晨、刘逸</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "航空港区", "vid": "5310583592", "lost": 9, "h1": 9, "delta": "<span class='dn'>↓50</span>", "grid": "航空港两轮融合网格", "site": "豫康新城(B区)豫康新城B区站点G"},{"rank": 2, "status": "🆕新", "tag": "郧西县", "vid": "7960146642", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "郧西县C区", "site": "新花样花艺停车点"}];
-var TAGS=["航空港区", "郧西县"];
+var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "航空港区", "vid": "5310583592", "lost": 24, "h1": 15, "delta": "<span class='up'>↑15</span>", "grid": "航空港两轮融合网格", "site": "巡航路郑州航空港经济综合实验区站点Z30"},{"rank": 2, "status": "🆕新", "tag": "琅琊区", "vid": "5310063868", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "滁州市琅琊区网格", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "琅琊区", "vid": "5310180193", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "滁州市琅琊区网格", "site": "文忠路站点Z15"},{"rank": 4, "status": "🆕新", "tag": "肥东县", "vid": "5310782741", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "渠道战区-主城-肥东-肥东县区域A", "site": "禹州中央广场商场C站点"},{"rank": 5, "status": "🆕新", "tag": "利辛县", "vid": "7960057345", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "文武学校区域", "site": "经四路-体育场西南角站点"},{"rank": 6, "status": "🆕新", "tag": "亳州市", "vid": "3720215714", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "缓冲-北万达-新-B-2区", "site": "政府亳州市谯城区花戏楼街道花戏楼街444"},{"rank": 7, "status": "🆕新", "tag": "济源市", "vid": "5310021884", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "济源3区", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "洛阳市", "vid": "5320498394", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高校-洛龙-伊滨", "site": "-"}];
+var TAGS=["亳州市", "利辛县", "洛阳市", "济源市", "琅琊区", "肥东县", "航空港区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
