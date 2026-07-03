@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 乌兰浩特市 — 高频缺电 TOP 5</h1>
+  <h1>📍 乌兰浩特市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>16</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>陈奇鹤</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "乌兰浩特运营区-缓冲-乌兰牧骑宫", "vid": "5320289074", "lost": 9, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "乌兰浩特运营区-缓冲-乌兰牧骑宫", "site": "罕山西大街兴安盟人民医院(一院部)站点A"},{"rank": 2, "status": "🆕新", "tag": "乌兰浩特运营区-缓冲-乌兰哈达", "vid": "5320279031", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-缓冲-乌兰哈达", "site": "欣民小区站点"},{"rank": 3, "status": "🆕新", "tag": "前旗运营区-核心-兴安职业大学", "vid": "5320268105", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "前旗运营区-核心-兴安职业大学", "site": "学院路兴安盟教师住宅园区站点D"},{"rank": 4, "status": "🆕新", "tag": "乌兰浩特运营区-核心-札萨克图北-合展小学", "vid": "5320257817", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-核心-札萨克图北-合展小学", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "乌兰浩特运营区-主城-都林街南", "vid": "5320241757", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-主城-都林街南", "site": "-"}];
-var TAGS=["乌兰浩特运营区-主城-都林街南", "乌兰浩特运营区-核心-札萨克图北-合展小学", "乌兰浩特运营区-缓冲-乌兰哈达", "乌兰浩特运营区-缓冲-乌兰牧骑宫", "前旗运营区-核心-兴安职业大学"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "乌兰浩特运营区-缓冲-乌兰哈达", "vid": "5320279031", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "乌兰浩特运营区-缓冲-乌兰哈达", "site": "欣民小区站点"},{"rank": 2, "status": "🔴2轮", "tag": "前旗运营区-核心-兴安职业大学", "vid": "5320268105", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "前旗运营区-核心-兴安职业大学", "site": "学院路兴安盟教师住宅园区站点D"},{"rank": 3, "status": "🆕新", "tag": "乌兰浩特运营区-主城-政务服务中心", "vid": "5320241306", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-主城-政务服务中心", "site": "铁西北大路君御华庭2期站点D"}];
+var TAGS=["乌兰浩特运营区-主城-政务服务中心", "乌兰浩特运营区-缓冲-乌兰哈达", "前旗运营区-核心-兴安职业大学"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
