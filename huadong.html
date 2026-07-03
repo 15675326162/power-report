@@ -35,14 +35,14 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华东大区 — 高频缺电 TOP 1</h1>
+  <h1>📍 华东大区 — 高频缺电 TOP 13</h1>
   <div class="stats">
-    <div class="s"><b>4</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>48</b>累计丢单</div>
+    <div class="s"><b>11</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
-    <div class="s"><b>胡丹萍、张茹榕、鲁宏伟、张香香、项紫艳</b>负责人</div>
+    <div class="s"><b>13</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>鲁宏伟、胡丹萍</b>负责人</div>
   </div>
 </div>
 <div class="filter">
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "泉港区", "vid": "5320065155", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "植物园", "site": "植物园天桥下"}];
-var TAGS=["泉港区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "通州区", "vid": "5320031976", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "通州电力2", "site": "碧华路金缘花苑站点B"},{"rank": 2, "status": "🆕新", "tag": "宁波市", "vid": "5310251635", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "南战-奉化电力网格", "site": "宁波测绘A0214-257"},{"rank": 3, "status": "🆕新", "tag": "苏州市", "vid": "5310497441", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "吴江区-城南花园", "site": "26元自助旋转小火锅(城南花园店)城南花苑南区站点"},{"rank": 4, "status": "🆕新", "tag": "通州区", "vid": "5320030825", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "通州电力2", "site": "碧华路金缘花苑站点H"},{"rank": 5, "status": "🆕新", "tag": "徐州市", "vid": "5320450109", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "云龙四区换电", "site": "汉风路-绿地缤纷城-云-8022（哈啰）"},{"rank": 6, "status": "🆕新", "tag": "安吉县", "vid": "7900084984", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "安吉县-递铺街道-核心-赵家下", "site": "湖州市安吉县递铺街道浙江瑞天机械有限公司浙江富特科技股份有限公司"},{"rank": 7, "status": "🆕新", "tag": "徐州市", "vid": "5320452214", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "经开二区换电", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "建瓯市", "vid": "5320327677", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "主城-华东生态业务组-二组-建瓯市-瓯宁街道-中山西路商圈-王贵生", "site": "中山西路101号宏业佳园站点"},{"rank": 9, "status": "🆕新", "tag": "六合区", "vid": "7960053235", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力战区-六合区-电力C区", "site": "龙湾路55号冠城大通蓝郡站点"},{"rank": 10, "status": "🆕新", "tag": "寿宁县", "vid": "6680036047", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "寿宁县-螯阳镇-核心-汽车站", "site": "瀚誉广场C道钉站点"},{"rank": 11, "status": "🆕新", "tag": "丽水市", "vid": "5310217999", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "丽水助力车超区2网格", "site": "B-纬五路-花都风情苑站点"},{"rank": 12, "status": "🆕新", "tag": "泉港区", "vid": "5320073768", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "植物园", "site": "植物园天桥下"},{"rank": 13, "status": "🆕新", "tag": "泰州市", "vid": "5320401211", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力2区-高港南", "site": "-"}];
+var TAGS=["丽水市", "六合区", "宁波市", "安吉县", "寿宁县", "建瓯市", "徐州市", "泉港区", "泰州市", "苏州市", "通州区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
