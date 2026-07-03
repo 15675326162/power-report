@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>57</b>累计丢单</div>
+    <div class="s"><b>9</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>10</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "金利镇", "vid": "3720190259", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "换电策略地图", "site": "珠江大道肇庆尚枫酒店(金利收费站店)站点B"},{"rank": 2, "status": "🆕新", "tag": "佛山市", "vid": "5930068724", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "南庄2区", "site": "季华西路永利达广场站点C"},{"rank": 3, "status": "🆕新", "tag": "南昌市", "vid": "5320175355", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "住宅-青山湖区-万达", "site": "-"}];
-var TAGS=["佛山市", "南昌市", "金利镇"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "翠亨新区", "vid": "5320143682", "lost": 10, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "翠亨新区网格3", "site": "五桂路站点Z16"},{"rank": 2, "status": "🆕新", "tag": "翠亨新区", "vid": "5320137948", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "翠亨新区网格3", "site": "飞鹅山正街中山嘉明电力有限公司站点Z9"},{"rank": 3, "status": "🆕新", "tag": "三乡镇", "vid": "7960206120", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "三级超区-三乡-北", "site": "黄屋坑路武夷商场站点"},{"rank": 4, "status": "🔴2轮", "tag": "金利镇", "vid": "3720190259", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "换电策略地图", "site": "珠江大道肇庆尚枫酒店(金利收费站店)站点B"},{"rank": 5, "status": "🆕新", "tag": "海丰县", "vid": "2000033220", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "核心街道-天虹广场", "site": "二环南路59号富德小区站点A"},{"rank": 6, "status": "🔴2轮", "tag": "佛山市", "vid": "5930068724", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "南庄2区", "site": "季华西路永利达广场站点C"},{"rank": 7, "status": "🆕新", "tag": "南昌市", "vid": "5320174542", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高校-高新区-江西师大", "site": "创新二路站点R"},{"rank": 8, "status": "🆕新", "tag": "白马井镇", "vid": "5910771342", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "洋浦镇区域", "site": "远洋东路站点"},{"rank": 9, "status": "🆕新", "tag": "南康区", "vid": "5910784334", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "龙岭区域", "site": "迎宾东大道祥龙景苑站点"},{"rank": 10, "status": "🆕新", "tag": "三乡镇", "vid": "7960257250", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三级超区-三乡-北", "site": "金光大道华丰花园7区站点"},{"rank": 11, "status": "🆕新", "tag": "惠东县", "vid": "7110248509", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄埠海滨路", "site": "海滨四路站点N"},{"rank": 12, "status": "🆕新", "tag": "三乡镇", "vid": "7960152090", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三级超区-三乡-北", "site": "甘泉路甘泉花园站点A"}];
+var TAGS=["三乡镇", "佛山市", "南康区", "南昌市", "惠东县", "海丰县", "白马井镇", "翠亨新区", "金利镇"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
