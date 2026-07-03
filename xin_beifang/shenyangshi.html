@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 3</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "三战B-铁西区-启工街", "vid": "5320326690", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战B-铁西区-启工街", "site": "铁西区小北一中路19门金地·名京南区站点B"},{"rank": 2, "status": "🔴2轮", "tag": "一战-皇姑-万科", "vid": "5320357651", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战-皇姑-万科", "site": "文大路龙湖锦璘原著站点B"},{"rank": 3, "status": "🆕新", "tag": "二战B-浑南区-彩霞街", "vid": "5320636256", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战B-浑南区-彩霞街", "site": "浑南区辽宁沈阳沈水湾高尔夫俱乐部浑南市民公园站点Z10"}];
-var TAGS=["一战-皇姑-万科", "三战B-铁西区-启工街", "二战B-浑南区-彩霞街"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "四战A-超区-沈北区-航空航天", "vid": "5320390277", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "四战A-超区-沈北区-航空航天", "site": "-"}];
+var TAGS=["四战A-超区-沈北区-航空航天"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
