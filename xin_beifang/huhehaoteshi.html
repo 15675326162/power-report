@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 4</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>33</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>34</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "呼市助力车换电网格27北", "vid": "5320408786", "lost": 11, "h1": 11, "delta": "<span class='flat'>-</span>", "grid": "呼市助力车换电网格27北", "site": "绿景苑小区内蒙古自治区通信管理局站点D"},{"rank": 2, "status": "🔴3轮", "tag": "电力-赛罕区-平泰小区-35区", "vid": "5320397477", "lost": 10, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "电力-赛罕区-平泰小区-35区", "site": "-"},{"rank": 3, "status": "🔴4轮", "tag": "电力网格-39-1", "vid": "5320409698", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力网格-39-1", "site": "馨苑小区内蒙古农业大学西校区站点Q"},{"rank": 4, "status": "🆕新", "tag": "电力西区-新城区-赛马场-04区", "vid": "5320361145", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力西区-新城区-赛马场-04区", "site": "隆川大厦便民市场对面-市场-新【晚】"}];
-var TAGS=["呼市助力车换电网格27北", "电力-赛罕区-平泰小区-35区", "电力网格-39-1", "电力西区-新城区-赛马场-04区"];
+var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "呼市助力车换电网格27北", "vid": "5320409698", "lost": 16, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "呼市助力车换电网格27北", "site": "馨苑小区内蒙古农业大学西校区站点Q"},{"rank": 2, "status": "🆕新", "tag": "电力东区-新城区-恒大城-06区", "vid": "5320169203", "lost": 8, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力东区-新城区-恒大城-06区", "site": "丰州路巨华世纪城弘福园站点O"},{"rank": 3, "status": "🆕新", "tag": "西战区-新城区-火车站13区", "vid": "5320442456", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西战区-新城区-火车站13区", "site": "王府饭店对面（火车站）-交通-新【早中晚】"},{"rank": 4, "status": "🆕新", "tag": "东征区-新城区-航苑小区-24区", "vid": "5320159018", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东征区-新城区-航苑小区-24区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "东征区-新城区-新城宾馆23区", "vid": "5320155646", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东征区-新城区-新城宾馆23区", "site": "大统体育-马路-新【中晚】"}];
+var TAGS=["东征区-新城区-新城宾馆23区", "东征区-新城区-航苑小区-24区", "呼市助力车换电网格27北", "电力东区-新城区-恒大城-06区", "西战区-新城区-火车站13区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
