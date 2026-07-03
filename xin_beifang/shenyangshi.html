@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 沈阳市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
+    <div class="s"><b>22</b>累计丢单</div>
     <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "四战A-超区-沈北区-航空航天", "vid": "5320390277", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "四战A-超区-沈北区-航空航天", "site": "学子街辽宁传媒学院公寓站点"},{"rank": 2, "status": "🆕新", "tag": "二战B-浑南区-彩霞街", "vid": "5320636256", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战B-浑南区-彩霞街", "site": "浑南区辽宁沈阳沈水湾高尔夫俱乐部浑南市民公园站点Z10"},{"rank": 3, "status": "🆕新", "tag": "二战A-和平区-南八马路", "vid": "5320395109", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-南八马路", "site": "和平区枫香庭站点M"},{"rank": 4, "status": "🆕新", "tag": "二战A-和平区-新世界", "vid": "5320370988", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-新世界", "site": "-"}];
-var TAGS=["二战A-和平区-南八马路", "二战A-和平区-新世界", "二战B-浑南区-彩霞街", "四战A-超区-沈北区-航空航天"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "四战A-超区-沈北区-航空航天", "vid": "5320390277", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "四战A-超区-沈北区-航空航天", "site": "学子街辽宁传媒学院公寓站点"},{"rank": 2, "status": "🔴2轮", "tag": "二战B-浑南区-彩霞街", "vid": "5320636256", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "二战B-浑南区-彩霞街", "site": "浑南区辽宁沈阳沈水湾高尔夫俱乐部浑南市民公园站点Z6"},{"rank": 3, "status": "🆕新", "tag": "三战A-铁西区-家具城", "vid": "5320336962", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-家具城", "site": "铁西区兴华园惠和大厦住宅楼站点E"},{"rank": 4, "status": "🆕新", "tag": "四战B-皇姑区-恒大城", "vid": "5320319380", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "四战B-皇姑区-恒大城", "site": "金地·悦时光29号楼碧桂园大城印象站点"}];
+var TAGS=["三战A-铁西区-家具城", "二战B-浑南区-彩霞街", "四战A-超区-沈北区-航空航天", "四战B-皇姑区-恒大城"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
