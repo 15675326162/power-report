@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 2</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>9</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>31</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-西固区-二区", "vid": "5320264593", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-二区", "site": "西固中街32号西固百货大楼"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-兰州大学", "vid": "5320264131", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-兰州大学", "site": "南环东路红山绿茵站点X"}];
-var TAGS=["兰州-二区-西固区-二区", "兰州市-二区-雁滩-兰州大学"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "-", "vid": "5320264593", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "-", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "兰州市-二区-雁滩-兰州大学", "vid": "5320264131", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兰州市-二区-雁滩-兰州大学", "site": "南环东路红山绿茵站点W"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-七里河区-彭家坪理工大", "vid": "5320255681", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-彭家坪理工大", "site": "马有德牛大碗鲁商·广健花园站点A"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-雁滩-文理学院", "vid": "5320573567", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-文理学院", "site": "雁北路雁滩北面滩新村站点Z1"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320566934", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "红星路甘肃省兰州市人民检察院站点C"},{"rank": 6, "status": "🆕新", "tag": "兰州市-二区-雁滩-兰州大学", "vid": "5320573516", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-兰州大学", "site": "定西路667号八冶家园站点A"},{"rank": 7, "status": "🆕新", "tag": "兰州-二区-西固区-三区", "vid": "5320264969", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-三区", "site": "兰州市西固区陈坪街道西固中路金城中心"}];
+var TAGS=["-", "兰州-二区-七里河区-彭家坪理工大", "兰州-二区-西固区-三区", "兰州市-二区-雁滩-兰州大学", "兰州市-二区-雁滩-文理学院", "兰州市-二区-雁滩-红星迈凯伦"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
