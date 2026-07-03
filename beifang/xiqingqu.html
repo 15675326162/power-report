@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西青区 — 高频缺电 TOP 5</h1>
+  <h1>📍 西青区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>27</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>46</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>芦永亮</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "五战-西青区-大学城", "vid": "5320325900", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-大学城", "site": "潘馨园小区慧杰佳园站点Y"},{"rank": 2, "status": "🆕新", "tag": "五战-西青区-学府工业区", "vid": "5320326639", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-学府工业区", "site": "才智道天开高教科创园西青园站点Z5"},{"rank": 3, "status": "🔴2轮", "tag": "五战-西青区-工业大学", "vid": "5320325652", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "五战-西青区-工业大学", "site": "碧缘道天津工大国际学术交流中心站点"},{"rank": 4, "status": "🆕新", "tag": "五战-西青区-工业大学", "vid": "5310347815", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-工业大学", "site": "公寓天津工业大学新校区"},{"rank": 5, "status": "🆕新", "tag": "五战-西青区-学府工业区", "vid": "5310382128", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-学府工业区", "site": "-"}];
-var TAGS=["五战-西青区-大学城", "五战-西青区-学府工业区", "五战-西青区-工业大学"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "五战-西青区-高新区B", "vid": "5320325046", "lost": 13, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-高新区B", "site": "碧水家园碧水家园E区站点G"},{"rank": 2, "status": "🆕新", "tag": "五战-西青区-高新区B", "vid": "5310373764", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-高新区B", "site": "成智路格调松间站点E"},{"rank": 3, "status": "🆕新", "tag": "五战-西青区-高新区A", "vid": "5320325899", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-高新区A", "site": "北环路万科西华府站点U"},{"rank": 4, "status": "🔴2轮", "tag": "五战-西青区-学府工业区", "vid": "5310382128", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "五战-西青区-学府工业区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "五战-西青区-大学城", "vid": "5320345225", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-大学城", "site": "天津优匠防水科技有限公司天津电商城东区站点F"},{"rank": 6, "status": "🆕新", "tag": "五战-西青区-精武镇B", "vid": "7010426498", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-精武镇B", "site": "京华道精武门·中华武林园站点E"},{"rank": 7, "status": "🆕新", "tag": "五战-西青区-中北镇B", "vid": "5320333448", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "五战-西青区-中北镇B", "site": "海泰北道天开华苑科技园站点Z41"}];
+var TAGS=["五战-西青区-中北镇B", "五战-西青区-大学城", "五战-西青区-学府工业区", "五战-西青区-精武镇B", "五战-西青区-高新区A", "五战-西青区-高新区B"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
