@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>26</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>49</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "西区-昆区南-黄河小区", "vid": "5320168482", "lost": 9, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西区-昆区南-黄河小区", "site": "包头市一昆都仑区一（彩框）白云鄂博路馥室成双商住小区站点D"},{"rank": 2, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320155711", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "青山路(青山段)包头轻工职业技术学院站点H彩框"},{"rank": 3, "status": "🔴2轮", "tag": "东区-九原-包头轻工学院", "vid": "5320418095", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东区-九原-包头轻工学院", "site": "包头轻工职业技术学院(西北门)站点彩框"},{"rank": 4, "status": "🆕新", "tag": "西区-昆区北-长途客运站", "vid": "5320456474", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-长途客运站", "site": "南排道明日星城·知乐苑站点A"},{"rank": 5, "status": "🆕新", "tag": "东区-九原-装备园区", "vid": "5320471520", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-装备园区", "site": "君子兰酒店(包头装备园区店)沙尔庆社区站点A"}];
-var TAGS=["东区-九原-包头轻工学院", "东区-九原-装备园区", "西区-昆区北-长途客运站", "西区-昆区南-黄河小区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "东区-九原-包头轻工学院", "vid": "5320155711", "lost": 16, "h1": 10, "delta": "<span class='up'>↑10</span>", "grid": "东区-九原-包头轻工学院", "site": "青山路(青山段)包头轻工职业技术学院站点H彩框"},{"rank": 2, "status": "🔴3轮", "tag": "东区-九原-包头轻工学院", "vid": "5320418095", "lost": 12, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "东区-九原-包头轻工学院", "site": "S级-包头市-九原区-轻工学院西门（蓝框）"},{"rank": 3, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320457999", "lost": 8, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320455970", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "包头市-东河区-铁西路28号-居民区门口896"},{"rank": 5, "status": "🆕新", "tag": "西区-青山北-万达广场", "vid": "5320459545", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-万达广场", "site": "包头市-昆都仑区-（红框）930早启明星托管"},{"rank": 6, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320457253", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "包头市-九原区-沙河街道哈屯高勒路10-27号-写字楼e6f"}];
+var TAGS=["东区-九原-包头医学院", "东区-九原-包头轻工学院", "西区-青山北-万达广场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
