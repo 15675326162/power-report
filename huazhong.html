@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 4</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 6</h1>
   <div class="stats">
     <div class="s"><b>22</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>张家煊、曾攀、张小灵、冯欣晨、刘逸</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "合肥市", "vid": "5320479925", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-大东门", "site": "滁州路圣大国际商贸中心站点B"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5320344361", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-金大地1912", "site": "望江西路辅路建科大厦站点"},{"rank": 3, "status": "🆕新", "tag": "怀宁县", "vid": "5910833293", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "孔雀商城", "site": "黄梅路21号黄梅山庄站点"},{"rank": 4, "status": "🆕新", "tag": "潢川县", "vid": "6680069781", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "潢川县", "site": "SAS-二区-三环路51号停车点"}];
-var TAGS=["合肥市", "怀宁县", "潢川县"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "开封市", "vid": "5320267183", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "北3区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "登封市", "vid": "5320340481", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "登封市融合网格", "site": "嵩阳家属院登封万佳生活广场悦刻专卖店站点"},{"rank": 3, "status": "🆕新", "tag": "孝感临空经济区", "vid": "7960043593", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "主城-闵集镇", "site": "三八线(大容错）站点"},{"rank": 4, "status": "🆕新", "tag": "咸宁市", "vid": "5320408618", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三级超区D-江东4区-江夏区-安山街道-外围-江东-资产4区-民主路片区", "site": "长安大道202号咸宁万达广场站点"},{"rank": 5, "status": "🆕新", "tag": "禹州市", "vid": "5930031326", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "禹州4区", "site": "禹州市颍川街道轩辕路停车点112233"},{"rank": 6, "status": "🆕新", "tag": "鄂州市", "vid": "5320107241", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "鄂州7区", "site": "黄龙路鸿盛花园站点"}];
+var TAGS=["咸宁市", "孝感临空经济区", "开封市", "登封市", "禹州市", "鄂州市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
