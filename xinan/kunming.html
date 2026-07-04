@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 5</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>6</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力1-官渡2-经开茶高山", "vid": "5320167368", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-经开茶高山", "site": "拓翔路思兰雅苑站点B"},{"rank": 2, "status": "🆕新", "tag": "昆明-呈贡-大学城", "vid": "5320219049", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-大学城", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "昆明电力2-西山-五一路", "vid": "5320191026", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-五一路", "site": "安康路昆明市西山区工人新村小学停车点"},{"rank": 4, "status": "🆕新", "tag": "昆明电力1-官渡2-新广丰", "vid": "5320199705", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "昆船大道船舶小区C区1号站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-五华-高新2区", "vid": "5320378578", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新2区", "site": "滇缅大道昱竹园站点"}];
-var TAGS=["昆明-呈贡-大学城", "昆明电力1-官渡2-新广丰", "昆明电力1-官渡2-经开茶高山", "昆明电力2-五华-高新2区", "昆明电力2-西山-五一路"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-西山-西山公园", "vid": "5320167311", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-西山公园", "site": "地铁-西山区-车家壁地铁站A口"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-盘龙-北市1区", "vid": "5320287715", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘龙-北市1区", "site": "北京路1520号金江小区瑞园站点"}];
+var TAGS=["昆明电力1-盘龙-北市1区", "昆明电力2-西山-西山公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
