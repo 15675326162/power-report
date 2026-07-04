@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 韩城市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>16</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>朱阳阳</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "超区3西1", "vid": "5310381656", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "超区3西1", "site": "烟泉北路司马小区停车点"},{"rank": 2, "status": "🆕新", "tag": "西A-4", "vid": "5310351406", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西A-4", "site": "韩城市新城街道黄河大街321号停车点"}];
-var TAGS=["西A-4", "超区3西1"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东A-3", "vid": "5310470578", "lost": 11, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东A-3", "site": "韩城市梅特莱斯国际汽车美容连锁-停车点c"},{"rank": 2, "status": "🆕新", "tag": "新东B-1", "vid": "5310382084", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新东B-1", "site": "韩城市新城街道沿黄观光路新梅苑C区停车点"}];
+var TAGS=["东A-3", "新东B-1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
