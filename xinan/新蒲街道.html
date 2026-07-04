@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新蒲街道 — 高频缺电 TOP 7</h1>
+  <h1>📍 新蒲街道 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>31</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>26</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>4</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>-</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "遵义助力车1区", "vid": "5310360989", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "遵义助力车1区", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "遵义助力车1区", "vid": "5310301314", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "遵义助力车1区", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "遵义助力车1区", "vid": "5310260538", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "遵义助力车1区", "site": "合兴大道遵义市新蒲湿地公园站点E"},{"rank": 4, "status": "🆕新", "tag": "遵义3区", "vid": "5310279917", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "遵义3区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "遵义助力车1区", "vid": "5310266147", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "遵义助力车1区", "site": "播州大道遵义市第四中学站点A"},{"rank": 6, "status": "🆕新", "tag": "遵义3区", "vid": "5310333358", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "遵义3区", "site": "丽辉酒店(遵义奥体中心店)贵州航天职业技术学院新蒲校区站点"},{"rank": 7, "status": "🆕新", "tag": "遵义助力车1区", "vid": "5310294789", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "遵义助力车1区", "site": "-"}];
-var TAGS=["遵义3区", "遵义助力车1区"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "遵义助力车1区", "vid": "5310301314", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "遵义助力车1区", "site": "-"},{"rank": 2, "status": "🔴3轮", "tag": "遵义助力车1区", "vid": "5310260538", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "遵义助力车1区", "site": "合兴大道遵义市新蒲湿地公园站点E"},{"rank": 3, "status": "🆕新", "tag": "遵义3区", "vid": "5310281583", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "遵义3区", "site": "播州大道遵义市实验学校站点D"},{"rank": 4, "status": "🔴2轮", "tag": "遵义助力车1区", "vid": "5310294789", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "遵义助力车1区", "site": "-"},{"rank": 5, "status": "🔴2轮", "tag": "遵义3区", "vid": "5310333358", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "遵义3区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "34", "vid": "5310342479", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "34", "site": "-"}];
+var TAGS=["34", "遵义3区", "遵义助力车1区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
