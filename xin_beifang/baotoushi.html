@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 1</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-稀土-稀土公园", "vid": "5320416694", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-稀土-稀土公园", "site": "包头市-九原区-九原区稀土路街道富强南路中建·御澜世家-小区高新彩框"}];
-var TAGS=["西区-稀土-稀土公园"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-昆区北-苏宁广场", "vid": "5320167062", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-苏宁广场", "site": "包头市—昆都仑区（彩框）青年路阿尔丁植物园站点D"},{"rank": 2, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320547157", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "A级-包头市-东河区-东方俪城西门"},{"rank": 3, "status": "🆕新", "tag": "东区-九原-装备园区", "vid": "5320456807", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-装备园区", "site": "S级-包头市-九原区-职教园区西门"}];
+var TAGS=["东区-九原-包头医学院", "东区-九原-装备园区", "西区-昆区北-苏宁广场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
