@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 4</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>46</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "三战A-铁西区-家具城", "vid": "5320336962", "lost": 11, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "三战A-铁西区-家具城", "site": "铁西区兴华园惠和大厦住宅楼站点E"},{"rank": 2, "status": "🆕新", "tag": "一战A-沈河区-市府广场", "vid": "5320383673", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战A-沈河区-市府广场", "site": "沈河区西顺城街22号太清宫站点E"},{"rank": 3, "status": "🔴2轮", "tag": "二战A-和平区-新世界", "vid": "5320370988", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "二战A-和平区-新世界", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "二战A-和平区-新世界", "vid": "5320364461", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-新世界", "site": "-"}];
-var TAGS=["一战A-沈河区-市府广场", "三战A-铁西区-家具城", "二战A-和平区-新世界"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "三战A-铁西区-家具城", "vid": "5320336962", "lost": 15, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "三战A-铁西区-家具城", "site": "铁西区兴华园惠和大厦住宅楼站点E"},{"rank": 2, "status": "🔴2轮", "tag": "一战C-沈河区-中街", "vid": "5320383673", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "一战C-沈河区-中街", "site": "沈河区西顺城街18号太清宫站点C"},{"rank": 3, "status": "🆕新", "tag": "二战A-和平区-新世界", "vid": "5320392078", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-新世界", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "二战B-和平区-长白东", "vid": "5320364461", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "二战B-和平区-长白东", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "四战B-皇姑区-克俭公园", "vid": "5320338692", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "四战B-皇姑区-克俭公园", "site": "铁西区振工街沈阳站站点Z21"},{"rank": 6, "status": "🆕新", "tag": "一战C-沈河区-五爱街", "vid": "5320384187", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "一战C-沈河区-五爱街", "site": "沈河区风雨坛街148号宏运·金座(建设中)站点A"},{"rank": 7, "status": "🆕新", "tag": "二战B-超区-浑南区-银卡东路", "vid": "5320322057", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战B-超区-浑南区-银卡东路", "site": "浑南中路悟空商业.琥珀天地站点"}];
+var TAGS=["一战C-沈河区-中街", "一战C-沈河区-五爱街", "三战A-铁西区-家具城", "二战A-和平区-新世界", "二战B-和平区-长白东", "二战B-超区-浑南区-银卡东路", "四战B-皇姑区-克俭公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
