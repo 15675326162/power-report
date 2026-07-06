@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 10</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>61</b>累计丢单</div>
-    <div class="s"><b>8</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>6</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴6轮", "tag": "金凤区-北3区", "vid": "5320476548", "lost": 16, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-北3区", "site": "丰泰家园(东门)丰祥家园站点"},{"rank": 2, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320555528", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道上海西路亲水苑C区3"},{"rank": 3, "status": "🔴2轮", "tag": "西夏区-1区", "vid": "5320589946", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西夏区-1区", "site": "兴庆区银古路街道丽景南街1"},{"rank": 4, "status": "🔴2轮", "tag": "德胜区-德胜2区", "vid": "5320282831", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "德胜区-德胜2区", "site": "复兴街海亮国际社区5号地站点C"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320508935", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "和平北街祥和家苑站点"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-兴庆15区", "vid": "5320476307", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆15区", "site": "兴庆区大新镇孔司路长长长大酒店"},{"rank": 7, "status": "🆕新", "tag": "金凤区-北3区", "vid": "5320258637", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北3区", "site": "贺兰山中路站点Z12"},{"rank": 8, "status": "🆕新", "tag": "金凤区-北9区", "vid": "5320279401", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北9区", "site": "金凤区上海西路街道正源北街瑞银·财富中心2"},{"rank": 9, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320476574", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "水源街欣兰广场站点D"},{"rank": 10, "status": "🆕新", "tag": "金凤区-南2区", "vid": "5320561784", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区", "site": "宝湖中路站点Z8"}];
-var TAGS=["兴庆区-兴庆15区", "兴庆区-超区1", "德胜区-德胜2区", "西夏区-1区", "金凤区-北3区", "金凤区-北5区", "金凤区-北9区", "金凤区-南2区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆19区", "vid": "5320458511", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆19区", "site": "新华东路金茂建材城站点C"},{"rank": 2, "status": "🆕新", "tag": "兴庆区-兴庆6区", "vid": "5320463081", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆6区", "site": "兴庆区丽景街街道八里桥社区金沙家园2"}];
+var TAGS=["兴庆区-兴庆19区", "兴庆区-兴庆6区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
