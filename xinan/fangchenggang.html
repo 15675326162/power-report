@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 防城港市 — 高频缺电 TOP 8</h1>
+  <h1>📍 防城港市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>43</b>累计丢单</div>
+    <div class="s"><b>48</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>6</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>钟伟杰</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "防城区-3区民族大道", "vid": "5310130048", "lost": 8, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "防城区-3区民族大道", "site": "E3CCC516金花茶大道辅路萌福园"},{"rank": 2, "status": "🆕新", "tag": "防城区-3区民族大道", "vid": "5310141167", "lost": 7, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "防城区-3区民族大道", "site": "E4金花茶大道辅路琦林大酒店"},{"rank": 3, "status": "🆕新", "tag": "防城区-3区民族大道", "vid": "5310144211", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "防城区-3区民族大道", "site": "E4金花茶大道辅路琦林大酒店"},{"rank": 4, "status": "🔴2轮", "tag": "防城区-2区防城站", "vid": "5310136046", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-2区防城站", "site": "防城区防邕路嘉乐城沃尔玛入口"},{"rank": 5, "status": "🔴2轮", "tag": "防城区-3区民族大道", "vid": "5310117872", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-3区民族大道", "site": "B10防城区福满地·世纪华庭"},{"rank": 6, "status": "🔴2轮", "tag": "防城区-3区民族大道", "vid": "5310127519", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-3区民族大道", "site": "E3CCC493民族大道158号"},{"rank": 7, "status": "🆕新", "tag": "防城区-2区防城站", "vid": "5310118796", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-2区防城站", "site": "防城区防邕路嘉乐城运动潮流馆店站点"},{"rank": 8, "status": "🆕新", "tag": "中心区-4区防城港北站", "vid": "5310197659", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "中心区-4区防城港北站", "site": "四季美饮食店站点A"}];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "防城区-3区民族大道", "vid": "5310130048", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-3区民族大道", "site": "B辅路佳润水晶国际"},{"rank": 2, "status": "🔴2轮", "tag": "防城区-3区民族大道", "vid": "5310141167", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-3区民族大道", "site": "E4金花茶大道辅路琦林大酒店"},{"rank": 3, "status": "🔴3轮", "tag": "防城区-2区防城站", "vid": "5310136046", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-2区防城站", "site": "防城区防邕路嘉乐城运动潮流馆店站点"},{"rank": 4, "status": "🔴3轮", "tag": "防城区-3区民族大道", "vid": "5310117872", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-3区民族大道", "site": "B10防城区福满地·世纪华庭"},{"rank": 5, "status": "🔴2轮", "tag": "防城区-3区民族大道", "vid": "5310144211", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "防城区-3区民族大道", "site": "E4金花茶大道辅路琦林大酒店"},{"rank": 6, "status": "🔴2轮", "tag": "中心区-4区防城港北站", "vid": "5310197659", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "中心区-4区防城港北站", "site": "四季美饮食店站点A"},{"rank": 7, "status": "🆕新", "tag": "防城区-3区民族大道", "vid": "5310080972", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-3区民族大道", "site": "防城区文昌街道群星大道89"}];
 var TAGS=["中心区-4区防城港北站", "防城区-2区防城站", "防城区-3区民族大道"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
