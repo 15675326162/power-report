@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>19</b>累计丢单</div>
+    <div class="s"><b>41</b>累计丢单</div>
     <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>张家煊、曾攀、张小灵、冯欣晨、刘逸</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "无为市", "vid": "7960075427", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "无为中医院区", "site": "无城镇东门外大街_3n9"},{"rank": 2, "status": "🆕新", "tag": "固始县", "vid": "5310510371", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "固始七区", "site": "河南省信阳市固始县番城街道204省道5"},{"rank": 3, "status": "🆕新", "tag": "合肥市", "vid": "5320524023", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-瑶海区-火车站元一", "site": "站前路紫颐大厦站点C"},{"rank": 4, "status": "🆕新", "tag": "黄冈市", "vid": "5310168478", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄冈艺术学院", "site": "西湖三路奥兴小区站点A"},{"rank": 5, "status": "🆕新", "tag": "淮滨县", "vid": "6680042009", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "淮滨火车站", "site": "中共楠杆镇火车站社区支部委员会站点B"}];
-var TAGS=["合肥市", "固始县", "无为市", "淮滨县", "黄冈市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "琅琊区", "vid": "5310108144", "lost": 11, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "滁州市琅琊区网格", "site": "滁州市南谯区大王街道双城路中新苏滁·苏大天宫科技园"},{"rank": 2, "status": "🆕新", "tag": "繁昌区", "vid": "5310139016", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "横山街道", "site": "安徽繁昌人力资源服务产业园横山新城站点"},{"rank": 3, "status": "🔴2轮", "tag": "固始县", "vid": "5310510371", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "固始七区", "site": "河南省信阳市固始县番城街道204省道5"},{"rank": 4, "status": "🆕新", "tag": "合肥市", "vid": "5310696101", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-天乐", "site": "天智路合肥市原创动漫园站点H"},{"rank": 5, "status": "🆕新", "tag": "黄冈市", "vid": "5310362954", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄冈科技职业学院", "site": "黄州大道博大青年城站点A"},{"rank": 6, "status": "🆕新", "tag": "合肥市", "vid": "5320551542", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-长宁社区", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "合肥市", "vid": "7010377160", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-高新-长宁社区", "site": "东北老街麻辣烫(龙湖光年店)龙湖合肥高新天街站点"},{"rank": 8, "status": "🆕新", "tag": "黄冈市", "vid": "5310367808", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄冈艺术学院", "site": "望湖路升华翡翠城站点"}];
+var TAGS=["合肥市", "固始县", "琅琊区", "繁昌区", "黄冈市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
