@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 钦州市 — 高频缺电 TOP 4</h1>
+  <h1>📍 钦州市 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>21</b>累计丢单</div>
+    <div class="s"><b>54</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>卢超</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "钦南1区", "vid": "7960097041", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "扬帆南大道北部湾国际建材商贸城站点H"},{"rank": 2, "status": "🆕新", "tag": "钦南2区", "vid": "5310276595", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "扬帆北大道恒祥豪苑站点B"},{"rank": 3, "status": "🔴2轮", "tag": "超越1区", "vid": "5310217246", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "超越1区", "site": "沙窝路口"},{"rank": 4, "status": "🆕新", "tag": "钦南2区", "vid": "5310278481", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "杨帆北大道辅路钦州新时代商业广场站点A"}];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "钦南1区", "vid": "7960097041", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "钦南1区", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "钦南2区", "vid": "5310276595", "lost": 9, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "钦南2区", "site": "扬帆北大道恒祥豪苑站点B"},{"rank": 3, "status": "🆕新", "tag": "钦南2区", "vid": "5310161541", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "子材东大街阳光曼哈顿站点B"},{"rank": 4, "status": "🔴3轮", "tag": "超越1区", "vid": "5310217246", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "超越1区", "site": "西门街钦季国际酒店(钦州老街中山公园店)站点"},{"rank": 5, "status": "🆕新", "tag": "钦南1区", "vid": "5310278310", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "金海湾东大街辅路吾悦广场(钦州店)站点"},{"rank": 6, "status": "🆕新", "tag": "钦南1区", "vid": "5310201021", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "钦南2区", "vid": "5310173823", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "针颜社医疗美容阳光曼哈顿站点"},{"rank": 8, "status": "🆕新", "tag": "超越1区", "vid": "5310368366", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "超越1区", "site": "新兴街家兴苑七区"},{"rank": 9, "status": "🆕新", "tag": "钦南2区", "vid": "5310119016", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "扬帆北大道钦州市第九中学站点"}];
 var TAGS=["超越1区", "钦南1区", "钦南2区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
