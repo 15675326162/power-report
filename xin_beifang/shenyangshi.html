@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 2</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 5</h1>
   <div class="stats">
     <div class="s"><b>16</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "二战A-和平区-医大一", "vid": "5320395871", "lost": 13, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "二战A-和平区-医大一", "site": "和平区和平北大街15号八一公园站点D"},{"rank": 2, "status": "🆕新", "tag": "三战B-铁西区-四中", "vid": "5320333913", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-四中", "site": "铁西区绣工东街61号齐贤家园站点B"}];
-var TAGS=["三战B-铁西区-四中", "二战A-和平区-医大一"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "三战B-铁西区-四中", "vid": "5320333913", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战B-铁西区-四中", "site": "铁西区绣工东街61号齐贤家园站点B"},{"rank": 2, "status": "🆕新", "tag": "三战-高校-何氏眼科学院", "vid": "3930072624", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院", "site": "辽宁何氏医学院-中国眼博物馆站点"},{"rank": 3, "status": "🆕新", "tag": "三战-高校-何氏眼科学院", "vid": "3930071275", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院", "site": "辽宁何氏医学院-中国眼博物馆站点"},{"rank": 4, "status": "🆕新", "tag": "二战A-和平区-新世界", "vid": "5320376065", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-新世界", "site": "和平区新世界花园新世界花园二期站点Z21"},{"rank": 5, "status": "🆕新", "tag": "三战-高校-何氏眼科学院", "vid": "3930069121", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战-高校-何氏眼科学院", "site": "辽宁何氏医学院-中国眼博物馆站点"}];
+var TAGS=["三战-高校-何氏眼科学院", "三战B-铁西区-四中", "二战A-和平区-新世界"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
