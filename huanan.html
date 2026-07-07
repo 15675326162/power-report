@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 6</h1>
+  <h1>📍 华南大区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>27</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>39</b>累计丢单</div>
+    <div class="s"><b>8</b>分组数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李怡</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "南昌市", "vid": "5320265569", "lost": 10, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "商圈-东湖区-八一广场", "site": "福州路江旅·都市方舟站点T"},{"rank": 2, "status": "🔴2轮", "tag": "三亚市", "vid": "7110062268", "lost": 4, "h1": 1, "delta": "<span class='dn'>↓2</span>", "grid": "三亚市人民医院", "site": "春光路艺术家新村站点E"},{"rank": 3, "status": "🔴2轮", "tag": "三亚市", "vid": "7110249727", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三亚市人民医院", "site": "团结街中国农业银行(三亚分行)站点"},{"rank": 4, "status": "🆕新", "tag": "澄迈县", "vid": "5930071925", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "文明北路125号瑞佳花园站点"},{"rank": 5, "status": "🆕新", "tag": "赣州市", "vid": "5320665268", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.水南东二区", "site": "章贡区水南镇赣江源大道三和悦城停车点"},{"rank": 6, "status": "🆕新", "tag": "肇庆市", "vid": "2000023477", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-永安镇电力", "site": "-"}];
-var TAGS=["三亚市", "南昌市", "澄迈县", "肇庆市", "赣州市"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "南昌市", "vid": "5320265569", "lost": 12, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "商圈-东湖区-八一广场", "site": "福州路江旅·都市方舟站点T"},{"rank": 2, "status": "🆕新", "tag": "沧水铺镇", "vid": "7960200864", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "沧水铺镇", "site": "鱼形山路辅路湖南金博碳素股份有限公司站点E"},{"rank": 3, "status": "🆕新", "tag": "佛山市", "vid": "5310064696", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "顺德农商银行(沙滘分社)站点"},{"rank": 4, "status": "🔴2轮", "tag": "肇庆市", "vid": "2000023477", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "鼎湖-永安镇电力", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "肇庆市", "vid": "2000033367", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "鼎湖-永安镇电力", "site": "434县道站点L"},{"rank": 6, "status": "🆕新", "tag": "益阳市", "vid": "5320589346", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "益阳三区（万达）", "site": "老益阳围炉麻辣烫万达广场站点"},{"rank": 7, "status": "🆕新", "tag": "海门镇", "vid": "7110360046", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "海门镇运营区网格上线", "site": "滨海大道华能汕头海门发电有限责任公司站点"},{"rank": 8, "status": "🆕新", "tag": "常德市", "vid": "7780036121", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "武陵六区-友阿", "site": "朗州路友阿国际广场"},{"rank": 9, "status": "🆕新", "tag": "南康区", "vid": "5320664046", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "龙岭区域", "site": "南康区两新组织党组织孵化中心荡坪钨矿大厦站点"}];
+var TAGS=["佛山市", "南康区", "南昌市", "常德市", "沧水铺镇", "海门镇", "益阳市", "肇庆市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
