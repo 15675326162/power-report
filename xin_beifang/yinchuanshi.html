@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 5</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>6</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆5区", "vid": "5320563290", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆5区", "site": "兴庆区丽景街街道双庄巷澳海清河坊"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南2区", "vid": "5320561217", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南2区", "site": "金凤区长城中路街道南塘巷天山熙湖"},{"rank": 3, "status": "🆕新", "tag": "西夏区-1区", "vid": "5320580334", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-1区", "site": "黄河农村商业银行(芦花支行)芦花洲小区站点A"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-兴庆7区", "vid": "5320036376", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆7区", "site": "北京东路43号宁夏回族自治区人民检察院站点A"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320547064", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "怡园路永胜花园站点"}];
-var TAGS=["兴庆区-兴庆5区", "兴庆区-兴庆7区", "兴庆区-超区1", "西夏区-1区", "金凤区-南2区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆9区", "vid": "5320512592", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆9区", "site": "艺晓美育建元都市阳光·春熙苑站点"},{"rank": 2, "status": "🆕新", "tag": "西夏区-3区", "vid": "5320473161", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西夏区-3区", "site": "-"}];
+var TAGS=["兴庆区-兴庆9区", "西夏区-3区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
