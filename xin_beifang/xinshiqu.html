@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 7</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>38</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-隔离-机场片区", "vid": "6680040665", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-隔离-机场片区", "site": "大地窝堡地铁站A口速8优选酒店(乌鲁木齐机场大地窝堡地铁站点"},{"rank": 2, "status": "🔴2轮", "tag": "新市区-核心-警察学校", "vid": "5310572722", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-核心-警察学校", "site": "长春中路1497号诚信祥钢材市场站点"},{"rank": 3, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "3720177800", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "5910855091", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "迎宾路馨家缘商务宾馆站点"},{"rank": 5, "status": "🆕新", "tag": "米东-文体公园", "vid": "7010452081", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-文体公园", "site": "中颐北路站点A"},{"rank": 6, "status": "🆕新", "tag": "新市区-核心-警察学校", "vid": "3720181439", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-警察学校", "site": "喀什东路47号新疆农业职业技术大学(粮油食品与储备学院)站点"},{"rank": 7, "status": "🆕新", "tag": "新市区-核心-警察学校", "vid": "5310571485", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-警察学校", "site": "喀什东路56-附1号安装公司家属院站点A"}];
-var TAGS=["新市区-核心-警察学校", "新市区-缓冲-美仑环球港", "新市区-隔离-机场片区", "米东-文体公园"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-二宫体育馆", "vid": "5310738114", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-二宫体育馆", "site": "天津北路中南上悦城站点B"}];
+var TAGS=["新市区-核心-二宫体育馆"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
