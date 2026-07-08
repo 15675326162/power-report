@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>27</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>31</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
     <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320452673", "lost": 7, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "A级-包头市-九原区-包头医学院(东北门)站点B（篮框）"},{"rank": 2, "status": "🔴2轮", "tag": "东区-九原-包头医学院", "vid": "5320464492", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-包头医学院", "site": "莎木佳路6号恒大帝景站点B"},{"rank": 3, "status": "🔴3轮", "tag": "东区-九原-九原广场", "vid": "5320404212", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原广场", "site": "黄河大街桐荷嘉苑站点J"},{"rank": 4, "status": "🆕新", "tag": "东区-东河-环西通顺", "vid": "5320558394", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-环西通顺", "site": "东门大街星月家园站点B（彩框）"},{"rank": 5, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320416860", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "包头市-九原区-沙河街道哈屯高勒路10-27号-写字楼e6f"}];
-var TAGS=["东区-东河-环西通顺", "东区-九原-九原广场", "东区-九原-包头医学院"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "东区-九原-包头医学院", "vid": "5320452673", "lost": 17, "h1": 10, "delta": "<span class='up'>↑10</span>", "grid": "东区-九原-包头医学院", "site": "A级-包头市-九原区-包头医学院(东北门)站点B（篮框）"},{"rank": 2, "status": "🆕新", "tag": "西区-青山北-万达广场", "vid": "5320456975", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-万达广场", "site": "民族东路78号凯旋银河线站点"},{"rank": 3, "status": "🆕新", "tag": "西区-昆区北-苏宁广场", "vid": "5320457177", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-苏宁广场", "site": "（彩框）前进道甲13南门钢院小区站点"},{"rank": 4, "status": "🆕新", "tag": "西区-青山南-赵家营", "vid": "5320508232", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-青山南-赵家营", "site": "930晚@少先路锡华世纪花园109（彩框）"}];
+var TAGS=["东区-九原-包头医学院", "西区-昆区北-苏宁广场", "西区-青山北-万达广场", "西区-青山南-赵家营"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
