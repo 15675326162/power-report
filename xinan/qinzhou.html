@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 钦州市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>26</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>21</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>卢超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "钦北1区", "vid": "5310276318", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "钦北1区", "site": "桂林银行(钦州元通观天下小微支行)元通·观天下站点"},{"rank": 2, "status": "🆕新", "tag": "钦南2区", "vid": "5310161541", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "子材东大街阳光曼哈顿站点B"},{"rank": 3, "status": "🆕新", "tag": "钦北1区", "vid": "7960198260", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦北1区", "site": "育才路266号金茂·江滨豪园站点A"},{"rank": 4, "status": "🆕新", "tag": "钦南2区", "vid": "5310173823", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "针颜社医疗美容阳光曼哈顿站点"},{"rank": 5, "status": "🆕新", "tag": "钦南2区", "vid": "5310827194", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "扬帆北大道辅路东升豪庭站点B"},{"rank": 6, "status": "🆕新", "tag": "超越1区", "vid": "7960048474", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "超越1区", "site": "南珠西大街49号城市便捷酒店(钦州人民路大花园店)站点"}];
-var TAGS=["超越1区", "钦北1区", "钦南2区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "钦北1区", "vid": "7960198260", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "钦北1区", "site": "育才路266号金茂·江滨豪园站点A"},{"rank": 2, "status": "🔴2轮", "tag": "钦南2区", "vid": "5310173823", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "钦南2区", "site": "针颜社医疗美容阳光曼哈顿站点"},{"rank": 3, "status": "🆕新", "tag": "钦南1区", "vid": "5310127827", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "东门1"},{"rank": 4, "status": "🆕新", "tag": "钦北1区", "vid": "5310049278", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦北1区", "site": "南珠西大街站点Q"},{"rank": 5, "status": "🆕新", "tag": "钦北1区", "vid": "5310277457", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦北1区", "site": "钦州湾大道物资大厦站点J"},{"rank": 6, "status": "🆕新", "tag": "超越1区", "vid": "5310203248", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "超越1区", "site": "南珠西大街广西壮族自治区钦城地区人民检察院站点A"}];
+var TAGS=["超越1区", "钦北1区", "钦南1区", "钦南2区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
