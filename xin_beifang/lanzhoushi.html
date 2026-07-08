@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 1</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>8</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>37</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "兰州-二区-西固区-三区", "vid": "5320266756", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-西固区-三区", "site": "重邦康城三期站点"}];
-var TAGS=["兰州-二区-西固区-三区"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "兰州-二区-西固区-三区", "vid": "5320266756", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兰州-二区-西固区-三区", "site": "重邦康城三期站点"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩区-东部市场", "vid": "5320352969", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩区-东部市场", "site": "金昌南路482号月亮酒店(兰州火车站东方红广场店)站点"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-城关区-招银大厦", "vid": "5320654777", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-招银大厦", "site": "酒泉路甘肃省话剧院家属院站点"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320570135", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "盐场路上川嘉园站点A"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-城关区-金城盆景园", "vid": "5320353587", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-金城盆景园", "site": "南滨河东路省政府小区站点A"},{"rank": 6, "status": "🆕新", "tag": "兰州-二区-西固区-三区", "vid": "5320571133", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-三区", "site": "福利西路1号18幢悦兴·景华大酒店"},{"rank": 7, "status": "🆕新", "tag": "兰州市-二区-雁滩-万达", "vid": "5320573107", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-万达", "site": "盐场路甘肃省农业建设项目管理站站点B"},{"rank": 8, "status": "🆕新", "tag": "兰州-二区-七里河区-省博物馆", "vid": "5320567189", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-省博物馆", "site": "兰州市-七里河区-西湖街道西津东路583号金雨大厦-地铁口"}];
+var TAGS=["兰州-二区-七里河区-省博物馆", "兰州-二区-西固区-三区", "兰州市-二区-城关区-招银大厦", "兰州市-二区-城关区-金城盆景园", "兰州市-二区-雁滩-万达", "兰州市-二区-雁滩-新港城", "兰州市-二区-雁滩区-东部市场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
