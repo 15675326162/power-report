@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 7</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>37</b>累计丢单</div>
-    <div class="s"><b>6</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>15</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "兰州-二区-七里河区-小西湖", "vid": "5320244604", "lost": 12, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "兰州-二区-七里河区-小西湖", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "兰州-二区-城关-大沙坪", "vid": "5320571828", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-城关-大沙坪", "site": "北滨河中路川仪小区站点B"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-七里河区-小西湖", "vid": "5320573011", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-小西湖", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "兰州市-二区-城关区-金城盆景园", "vid": "5320571585", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州市-二区-城关区-金城盆景园", "site": "B346号路兰州市文化市场行政执法支队站点"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320654676", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "雁南路405号兰州天庆实验中学站点"},{"rank": 6, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320569925", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "小区-银雁家园停车点"},{"rank": 7, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320266572", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "商客隆超市(南滨河路店)甘肃省纺织品进出口公司家属院站点A"}];
-var TAGS=["兰州-二区-七里河区-小西湖", "兰州-二区-城关-大沙坪", "兰州市-二区-城关区-金城盆景园", "兰州市-二区-雁滩-新港城", "兰州市-二区-雁滩-省医", "兰州市-二区-雁滩-红星迈凯伦"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "兰州-二区-七里河区-小西湖", "vid": "5320573011", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-七里河区-小西湖", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-西固区-三区", "vid": "5320266756", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-三区", "site": "重邦康城三期站点"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-城关区-西北宾馆", "vid": "5320314053", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-西北宾馆", "site": "南昌路盛达中心站点Q"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320570781", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "天水中路66号站点"}];
+var TAGS=["兰州-二区-七里河区-小西湖", "兰州-二区-西固区-三区", "兰州市-二区-城关区-西北宾馆", "兰州市-二区-雁滩-新港城"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
