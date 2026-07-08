@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>29</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东区-东河-环西通顺", "vid": "5320176246", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-环西通顺", "site": "包头市-东河区-@头部-通顺街11号（肖红波）"},{"rank": 2, "status": "🆕新", "tag": "西区-青山北-正翔国际", "vid": "5320416155", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-正翔国际", "site": "正翔国际北门共享彩框"},{"rank": 3, "status": "🆕新", "tag": "西区-昆区北-苏宁广场", "vid": "5320457177", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-苏宁广场", "site": "（彩框）前进道甲13南门钢院小区站点"},{"rank": 4, "status": "🆕新", "tag": "西区-青山北-万达广场", "vid": "5320456975", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-万达广场", "site": "民族东路78号凯旋银河线站点"},{"rank": 5, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320404212", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "黄河大街桐荷嘉苑站点J"}];
-var TAGS=["东区-东河-环西通顺", "东区-九原-九原广场", "西区-昆区北-苏宁广场", "西区-青山北-万达广场", "西区-青山北-正翔国际"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-青山北-正翔国际", "vid": "5320416155", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-青山北-正翔国际", "site": "正翔国际北门共享彩框"},{"rank": 2, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320464492", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "达尔罕路包头市恒大未来城站点D"},{"rank": 3, "status": "🔴2轮", "tag": "东区-九原-九原广场", "vid": "5320404212", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原广场", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320417039", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "包头市-九原区-沙河街道新春街兰溪花园-居民区门口320"},{"rank": 5, "status": "🆕新", "tag": "东区-东河-维多利摩尔城", "vid": "5320416290", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-维多利摩尔城", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "西区-稀土-稀土公园", "vid": "5320459859", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-稀土-稀土公园", "site": "稀土大街金力永磁(包头)科技有限公司站点A高新白框"},{"rank": 7, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320452968", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "西区-青山南-赵家营", "vid": "5320508232", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山南-赵家营", "site": "少先路荣资梦乡站点P"}];
+var TAGS=["东区-东河-维多利摩尔城", "东区-九原-九原广场", "东区-九原-包头医学院", "西区-稀土-稀土公园", "西区-青山北-正翔国际", "西区-青山南-赵家营"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
