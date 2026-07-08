@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 钦州市 — 高频缺电 TOP 5</h1>
+  <h1>📍 钦州市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>24</b>累计丢单</div>
+    <div class="s"><b>25</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>卢超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "钦南2区", "vid": "7960214499", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "黔家婆·贵州酸汤鲜牛肉火锅(钦州钦南美食广场店)悦江畔宴站点"},{"rank": 2, "status": "🔴8轮", "tag": "钦南1区", "vid": "5310177212", "lost": 4, "h1": 1, "delta": "<span class='dn'>↓21</span>", "grid": "钦南1区", "site": "安州大道钦州市妇幼保健院站点F"},{"rank": 3, "status": "🔴5轮", "tag": "钦南1区", "vid": "7960042519", "lost": 4, "h1": 1, "delta": "<span class='dn'>↓13</span>", "grid": "钦南1区", "site": "安州大道白石湖公园站点A"},{"rank": 4, "status": "🆕新", "tag": "钦南2区", "vid": "5310113404", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "杨帆北大道辅路钦州新时代商业广场站点A"},{"rank": 5, "status": "🆕新", "tag": "超越1区", "vid": "7960197782", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "超越1区", "site": "人民路60号站点B"}];
-var TAGS=["超越1区", "钦南1区", "钦南2区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "钦南1区", "vid": "7960202266", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "建业街站点L"},{"rank": 2, "status": "🆕新", "tag": "钦北1区", "vid": "5310276318", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "钦北1区", "site": "桂林银行(钦州元通观天下小微支行)元通·观天下站点"},{"rank": 3, "status": "🆕新", "tag": "钦南1区", "vid": "7960046451", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "渡口街安悦宾馆站点"},{"rank": 4, "status": "🆕新", "tag": "钦北1区", "vid": "7960198260", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦北1区", "site": "育才路266号金茂·江滨豪园站点A"},{"rank": 5, "status": "🆕新", "tag": "钦北1区", "vid": "5310201815", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦北1区", "site": "钦州湾大道28-1号物资大厦站点A"},{"rank": 6, "status": "🆕新", "tag": "钦南2区", "vid": "5310178807", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "扬帆北大道辅路站点C"},{"rank": 7, "status": "🆕新", "tag": "钦南1区", "vid": "5310152343", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "安州大道奥林商业站点D"}];
+var TAGS=["钦北1区", "钦南1区", "钦南2区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
