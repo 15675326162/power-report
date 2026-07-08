@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 2</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>7</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>18</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西战区-回民区-维多利广场19区", "vid": "5320365979", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西战区-回民区-维多利广场19区", "site": "体育医院-马路-回-【午晚】"},{"rank": 2, "status": "🆕新", "tag": "电力东区-新城区-恒大城-06区", "vid": "5320411266", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力东区-新城区-恒大城-06区", "site": "爱民街呼和浩特恒大城站点K"}];
-var TAGS=["电力东区-新城区-恒大城-06区", "西战区-回民区-维多利广场19区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西战区-回民区-维多利广场19区", "vid": "5320399161", "lost": 9, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "西战区-回民区-维多利广场19区", "site": "奥威花园南门-小区-回-【早】"},{"rank": 2, "status": "🆕新", "tag": "呼市助力车电力网格-30区北", "vid": "5320409323", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "呼市助力车电力网格-30区北", "site": "讨号板高层南门-小区-赛-【早午】-S1"},{"rank": 3, "status": "🆕新", "tag": "赛罕区-金桥2路-40区", "vid": "5320409479", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "赛罕区-金桥2路-40区", "site": "-"}];
+var TAGS=["呼市助力车电力网格-30区北", "西战区-回民区-维多利广场19区", "赛罕区-金桥2路-40区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
