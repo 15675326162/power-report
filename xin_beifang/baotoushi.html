@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>33</b>累计丢单</div>
+    <div class="s"><b>18</b>累计丢单</div>
     <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-青山北-锦林公园", "vid": "5320261587", "lost": 14, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-锦林公园", "site": "民族东路(北段)意城晶华站点E"},{"rank": 2, "status": "🔴4轮", "tag": "西区-昆区北-海威小区", "vid": "5320406462", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区北-海威小区", "site": "民族西路站点L"},{"rank": 3, "status": "🔴2轮", "tag": "西区-昆区北-苏宁广场", "vid": "5320548079", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区北-苏宁广场", "site": "市府西路包头宾馆(海纳百川店)站点D"},{"rank": 4, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320453063", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "西区-昆区北-海威小区", "vid": "5320412380", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-海威小区", "site": "海威小区二区23号楼海威小区三区站点A"}];
-var TAGS=["东区-九原-包头轻工学院", "西区-昆区北-海威小区", "西区-昆区北-苏宁广场", "西区-青山北-锦林公园"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-昆区北-苏宁广场", "vid": "5320458611", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-苏宁广场", "site": "包头市—昆都仑区（彩框）青年路阿尔丁植物园站点D"},{"rank": 2, "status": "🆕新", "tag": "东区-东河-维多利摩尔城", "vid": "5320166930", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-维多利摩尔城", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "西区-青山北-保利花园", "vid": "5320462062", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-保利花园", "site": "包头市-东河区-青山路-包头医学院站点C（篮框）"},{"rank": 4, "status": "🆕新", "tag": "西区-青山北-锦林公园", "vid": "5320456157", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-锦林公园", "site": "A级-包头市-青山区-阳光上西苑北门彩框"}];
+var TAGS=["东区-东河-维多利摩尔城", "西区-昆区北-苏宁广场", "西区-青山北-保利花园", "西区-青山北-锦林公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
