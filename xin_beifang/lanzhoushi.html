@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 3</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>36</b>累计丢单</div>
+    <div class="s"><b>8</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-雁滩-万达", "vid": "5320245139", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-万达", "site": "秦安路兰州市第三中学站点R"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-西固区-四区", "vid": "5320244635", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-四区", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-城关-甘肃二院", "vid": "5320264649", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关-甘肃二院", "site": "静宁北路中海国际站点A"}];
-var TAGS=["兰州-二区-西固区-四区", "兰州市-二区-城关-甘肃二院", "兰州市-二区-雁滩-万达"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320654716", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "火星街348号仁恒美林郡站点"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-安宁区-都市春天", "vid": "5320572765", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天", "site": "建安西路兰州职业技术学院站点H"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-城关-大沙坪", "vid": "5320266765", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-城关-大沙坪", "site": "元通大道元森·北新时代玫瑰园站点B"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320266695", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "东岗东路兰州财经大学长青学院鱼池口校区站点C"},{"rank": 5, "status": "🆕新", "tag": "兰州-二区-七里河区-彭家坪理工大", "vid": "5320265687", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-彭家坪理工大", "site": "兰州市-七里河区-西站街道建西西路兰西火车站家属院-公交车站"},{"rank": 6, "status": "🆕新", "tag": "兰州市-二区-雁滩-东岗", "vid": "5320355475", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-东岗", "site": "东岗东路845-884号东岗世纪新村站点"},{"rank": 7, "status": "🆕新", "tag": "兰州市-二区-城关区-望河停", "vid": "5320654766", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-望河停", "site": "雁宁路优胜美地站点A"},{"rank": 8, "status": "🆕新", "tag": "兰州市-二区-雁滩-段家滩", "vid": "5320256570", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-段家滩", "site": "雁兴路3630号中国石油雁兴路加油加气站(CNG)站点"},{"rank": 9, "status": "🆕新", "tag": "兰州-二区-安宁区-都市春天", "vid": "5320355867", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天", "site": "蓝科路中海广场站点G"}];
+var TAGS=["兰州-二区-七里河区-彭家坪理工大", "兰州-二区-七里河区-豪布斯卡西客站", "兰州-二区-城关-大沙坪", "兰州-二区-安宁区-都市春天", "兰州市-二区-城关区-望河停", "兰州市-二区-雁滩-东岗", "兰州市-二区-雁滩-段家滩", "兰州市-二区-雁滩-红星迈凯伦"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
