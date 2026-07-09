@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 3</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 10</h1>
   <div class="stats">
-    <div class="s"><b>19</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>35</b>累计丢单</div>
+    <div class="s"><b>10</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>10</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "兰州市-二区-城关区-南关", "vid": "5320570000", "lost": 11, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兰州市-二区-城关区-南关", "site": "南滨河路973号兰医二院家属院站点"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-城关区-南关", "vid": "5320572025", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-南关", "site": "硷沟沿新华园小区站点A"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320264975", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "南滨河东路新港城站点A"}];
-var TAGS=["兰州市-二区-城关区-南关", "兰州市-二区-雁滩-省医"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-西固区-一区", "vid": "5320264263", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-一区", "site": "临洮街新乐花园北区_s2u"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-西固区-三区", "vid": "5320266756", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-三区", "site": "重邦康城三期站点"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-西固区-四区", "vid": "5320244635", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-四区", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-雁滩-拱星墩", "vid": "5320568693", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-拱星墩", "site": "雁儿湾路521号中国石油勘探开发研究院西北分院站点"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩区-东部市场", "vid": "5320315029", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩区-东部市场", "site": "嘉峪关北路100号华城小区西区站点A"},{"rank": 6, "status": "🆕新", "tag": "兰州-二区-七里河区-彭家坪理工大", "vid": "5320352892", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-彭家坪理工大", "site": "瓜州路590号亚太西苑小区站点"},{"rank": 7, "status": "🆕新", "tag": "兰州市-二区-城关区-南关", "vid": "5320353192", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-南关", "site": "西津东路兰州市工人文化宫站点A"},{"rank": 8, "status": "🆕新", "tag": "兰州-二区-城关-大沙坪", "vid": "5320267706", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-城关-大沙坪", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "兰州-二区-七里河区-小西湖", "vid": "5320573011", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-小西湖", "site": "-"},{"rank": 10, "status": "🆕新", "tag": "-", "vid": "5320352633", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"}];
+var TAGS=["-", "兰州-二区-七里河区-小西湖", "兰州-二区-七里河区-彭家坪理工大", "兰州-二区-城关-大沙坪", "兰州-二区-西固区-一区", "兰州-二区-西固区-三区", "兰州-二区-西固区-四区", "兰州市-二区-城关区-南关", "兰州市-二区-雁滩-拱星墩", "兰州市-二区-雁滩区-东部市场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
