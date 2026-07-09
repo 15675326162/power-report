@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 7</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>30</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>10</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "兴庆区-兴庆20区", "vid": "5320477401", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-兴庆20区", "site": "金凤区长城中路街道凤仪路中海城4"},{"rank": 2, "status": "🔴2轮", "tag": "兴庆区-超区1", "vid": "5320560730", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区1", "site": "虹桥路永胜花园站点"},{"rank": 3, "status": "🔴2轮", "tag": "兴庆区-超区1", "vid": "5320472553", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区1", "site": "桃林南街长城惠兰园站点J"},{"rank": 4, "status": "🔴2轮", "tag": "兴庆区-超区1", "vid": "5320575112", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区1", "site": "居安西路居安苑东区站点B"},{"rank": 5, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320562036", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "安兴路美茵湖城站点E"},{"rank": 6, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320476388", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320590830", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "富兴北街逸泉院站点"}];
-var TAGS=["兴庆区-兴庆20区", "兴庆区-超区1", "金凤区-北5区"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "兴庆区-超区1", "vid": "5320472553", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区1", "site": "桃林南街长城惠兰园站点J"},{"rank": 2, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320348625", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道康银巷湖映康晨3"}];
+var TAGS=["兴庆区-超区1", "金凤区-南6区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
