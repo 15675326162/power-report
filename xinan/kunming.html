@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 1</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>7</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>38</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-西山-万达", "vid": "5320374501", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-万达", "site": "润锦街润城第一大道站点B"}];
-var TAGS=["昆明电力2-西山-万达"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-西山-大商汇", "vid": "5320206854", "lost": 12, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-大商汇", "site": "度假区广福路1689号停车点"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡1-关上区", "vid": "5320202310", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-关上区", "site": "昆明市官渡区关上街道昆明祥琼宾馆和谐宾馆(总店)"},{"rank": 3, "status": "🆕新", "tag": "昆明电力2-西山-大商汇", "vid": "5320185955", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-大商汇", "site": "广福路辅路南悦城站点E"},{"rank": 4, "status": "🆕新", "tag": "昆明-空港-换电2区大板桥", "vid": "5320176337", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明-空港-换电2区大板桥", "site": "晴川街北京齐家6加1飞行礼仪幼儿园站点"},{"rank": 5, "status": "🆕新", "tag": "昆明电力2-西山-大商汇", "vid": "5320192419", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-大商汇", "site": "官南大道107号站点"},{"rank": 6, "status": "🆕新", "tag": "昆明电力2-西山-万达", "vid": "5320202793", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-万达", "site": "昆明骨科医院(希望路)复地云极一期站点A"},{"rank": 7, "status": "🆕新", "tag": "昆明电力2-西山-西山区政府", "vid": "5320160123", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-西山区政府", "site": "西园北路云南省第一安装工程公司职工宿舍站点D"},{"rank": 8, "status": "🆕新", "tag": "昆明-呈贡-七彩云南", "vid": "5320176785", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明-呈贡-七彩云南", "site": "兴呈路绿地·东海岸海逸名苑站点A"}];
+var TAGS=["昆明-呈贡-七彩云南", "昆明-空港-换电2区大板桥", "昆明电力1-官渡1-关上区", "昆明电力2-西山-万达", "昆明电力2-西山-大商汇", "昆明电力2-西山-西山区政府"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
