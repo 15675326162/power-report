@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 11</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>127</b>累计丢单</div>
-    <div class="s"><b>10</b>分组数</div>
-    <div class="s"><b>6</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>10</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>0</b>🆕新增</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "三战A-铁西区-家具城", "vid": "5320336962", "lost": 35, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战A-铁西区-家具城", "site": "铁西区兴华园惠和大厦住宅楼站点E"},{"rank": 2, "status": "🔴2轮", "tag": "二战B-浑南区-奥体", "vid": "5320377550", "lost": 17, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "二战B-浑南区-奥体", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "三战A-铁西区-红星美凯龙", "vid": "5320331030", "lost": 14, "h1": 11, "delta": "<span class='up'>↑11</span>", "grid": "三战A-铁西区-红星美凯龙", "site": "三战铁西-商场-宜家（北二路路口）-早晚峰期"},{"rank": 4, "status": "🆕新", "tag": "三战A-铁西区-家具城", "vid": "5320345300", "lost": 13, "h1": 13, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-家具城", "site": "兴华南街铁西万达广场站点C"},{"rank": 5, "status": "🔴2轮", "tag": "四战B-皇姑区-陵西", "vid": "5320435366", "lost": 12, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "四战B-皇姑区-陵西", "site": "于洪区香炉山路辽宁省农业发展服务中心农村能源环保事业部站点C"},{"rank": 6, "status": "🆕新", "tag": "三战B-铁西区-万科润园", "vid": "5320389979", "lost": 11, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-万科润园", "site": "铁西区停车场(沈阳市铁西区华康医院北)中国工业博物馆站点D"},{"rank": 7, "status": "🔴2轮", "tag": "一战C-沈河区-中街", "vid": "5320362667", "lost": 7, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "一战C-沈河区-中街", "site": "沈河区茂泉小区东区站点Z37"},{"rank": 8, "status": "🆕新", "tag": "二战B-超区-浑南-建筑大学", "vid": "5320394678", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战B-超区-浑南-建筑大学", "site": "浑南中路辅路塞纳家园站点"},{"rank": 9, "status": "🔴2轮", "tag": "一战B-大东区-东中街", "vid": "5320440532", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战B-大东区-东中街", "site": "沈河区市府大路迎宾社区站点L"},{"rank": 10, "status": "🆕新", "tag": "二战B-和平区-长白东", "vid": "5320394354", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战B-和平区-长白东", "site": "-"},{"rank": 11, "status": "🆕新", "tag": "二战B-浑南区-沈营大街", "vid": "5320387753", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战B-浑南区-沈营大街", "site": "浑南区金阳大街荣盛·爱家郦都站点W"}];
-var TAGS=["一战B-大东区-东中街", "一战C-沈河区-中街", "三战A-铁西区-家具城", "三战A-铁西区-红星美凯龙", "三战B-铁西区-万科润园", "二战B-和平区-长白东", "二战B-浑南区-奥体", "二战B-浑南区-沈营大街", "二战B-超区-浑南-建筑大学", "四战B-皇姑区-陵西"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "二战B-浑南区-奥体", "vid": "5320377550", "lost": 10, "h1": 2, "delta": "<span class='dn'>↓7</span>", "grid": "二战B-浑南区-奥体", "site": "浑南四路沈阳花园城购物中心站点K"}];
+var TAGS=["二战B-浑南区-奥体"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
