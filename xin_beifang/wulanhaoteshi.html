@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 乌兰浩特市 — 高频缺电 TOP 5</h1>
+  <h1>📍 乌兰浩特市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>21</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b>陈奇鹤</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "乌兰浩特运营区-缓冲-罕山东大街北", "vid": "5320267335", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-缓冲-罕山东大街北", "site": "兴安北大路成吉思汗公园站点"},{"rank": 2, "status": "🔴2轮", "tag": "前旗运营区-缓冲-居力很镇", "vid": "5320179690", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "前旗运营区-缓冲-居力很镇", "site": "天骄南路站点D"},{"rank": 3, "status": "🆕新", "tag": "乌兰浩特运营区-缓冲-罕山东大街北", "vid": "5320189048", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-缓冲-罕山东大街北", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "前旗运营区-缓冲-工业园区", "vid": "5310054744", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "前旗运营区-缓冲-工业园区", "site": "科右前旗工投公司高标准农田设备展厅站点"},{"rank": 5, "status": "🆕新", "tag": "乌兰浩特运营区-主城-都林街南", "vid": "5320187845", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-主城-都林街南", "site": "-"}];
-var TAGS=["乌兰浩特运营区-主城-都林街南", "乌兰浩特运营区-缓冲-罕山东大街北", "前旗运营区-缓冲-居力很镇", "前旗运营区-缓冲-工业园区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "乌兰浩特运营区-主城-乌兰东大街南", "vid": "5320268906", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-主城-乌兰东大街南", "site": "乌兰东大街温州商贸城(乌兰东街店)站点"},{"rank": 2, "status": "🆕新", "tag": "乌兰浩特运营区-主城-兴安北大路东", "vid": "5320277606", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-主城-兴安北大路东", "site": "民和北路万佳社保楼站点"},{"rank": 3, "status": "🆕新", "tag": "乌兰浩特运营区-核心-万达广场-龙珠新城", "vid": "5320282631", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "乌兰浩特运营区-核心-万达广场-龙珠新城", "site": "-"}];
+var TAGS=["乌兰浩特运营区-主城-乌兰东大街南", "乌兰浩特运营区-主城-兴安北大路东", "乌兰浩特运营区-核心-万达广场-龙珠新城"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
