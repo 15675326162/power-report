@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 5</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>8</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-七里河区-彭家坪理工大", "vid": "5320571048", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-彭家坪理工大", "site": "甘肃兰驼集团有限责任公司兰州搪瓷厂家属院站点A"},{"rank": 2, "status": "🔴2轮", "tag": "兰州-二区-安宁区-十里店", "vid": "5320566109", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-安宁区-十里店", "site": "兰州市-安宁区-培黎街道北滨河西路劳作所家属院-居民区门口"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-城关-大沙坪", "vid": "5320189225", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-城关-大沙坪", "site": "北滨河中路兰州市政公司家属院(北滨河中路)站点F"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320571656", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "兰州市-七里河区-西站街道西津西路兰州西站中天健广场美居酒店-居民区门口"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320567115", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "东岗西路中国科学院寒区旱区环境与工程研究所(东岗西路)站点F"}];
-var TAGS=["兰州-二区-七里河区-彭家坪理工大", "兰州-二区-七里河区-豪布斯卡西客站", "兰州-二区-城关-大沙坪", "兰州-二区-安宁区-十里店", "兰州市-二区-雁滩-省医"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "兰州-二区-安宁区-十里店", "vid": "5320566109", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-安宁区-十里店", "site": "兰州市-安宁区-培黎街道北滨河西路劳作所家属院-居民区门口"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-七里河区-兰工坪网格", "vid": "5320570704", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-兰工坪网格", "site": "-"}];
+var TAGS=["兰州-二区-七里河区-兰工坪网格", "兰州-二区-安宁区-十里店"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
