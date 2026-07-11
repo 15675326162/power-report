@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 防城港市 — 高频缺电 TOP 5</h1>
+  <h1>📍 防城港市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>22</b>累计丢单</div>
+    <div class="s"><b>21</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>钟伟杰</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "防城区-2区防城站", "vid": "5310135326", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-2区防城站", "site": "E2CCC106防钦路6号爱儿乐母婴"},{"rank": 2, "status": "🔴2轮", "tag": "防城区-1区伯南公园", "vid": "5310125500", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "防城区-1区伯南公园", "site": "防城区灵峰大道江畔明珠门口"},{"rank": 3, "status": "🆕新", "tag": "防城区-1区伯南公园", "vid": "5310278533", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-1区伯南公园", "site": "ebike_w7v59yby"},{"rank": 4, "status": "🆕新", "tag": "防城区-2区防城站", "vid": "5310218138", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-2区防城站", "site": "防城区防港路防城民族商场路口站点"},{"rank": 5, "status": "🆕新", "tag": "防城区-1区伯南公园", "vid": "5310081187", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-1区伯南公园", "site": "E2沙埠街1巷"}];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "防城区-2区防城站", "vid": "5310136588", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-2区防城站", "site": "防城区防邕路嘉乐城运动潮流馆店站点"},{"rank": 2, "status": "🆕新", "tag": "防城区-1区伯南公园", "vid": "5310130526", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "防城区-1区伯南公园", "site": "防城区防东路正宗荔枝柴烧鸡"},{"rank": 3, "status": "🆕新", "tag": "防城区-2区防城站", "vid": "5310118020", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-2区防城站", "site": "防城区696县道五菱4S店站点"},{"rank": 4, "status": "🆕新", "tag": "防城区-1区伯南公园", "vid": "5310196262", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-1区伯南公园", "site": "E2沙埠街1巷"},{"rank": 5, "status": "🆕新", "tag": "防城区-2区防城站", "vid": "5310245008", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-2区防城站", "site": "防城区防钦路三官路百源商行"},{"rank": 6, "status": "🆕新", "tag": "防城区-2区防城站", "vid": "5310116880", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "防城区-2区防城站", "site": "防钦路东六巷维也纳酒店防城店站点"}];
 var TAGS=["防城区-1区伯南公园", "防城区-2区防城站"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
