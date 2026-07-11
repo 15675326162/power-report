@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 航空港区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>42</b>累计丢单</div>
+    <div class="s"><b>46</b>累计丢单</div>
     <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>胡世友</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "航空港两轮融合网格", "vid": "5310185727", "lost": 13, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "大寨路86号郑州航空港经济综合实验区站点"},{"rank": 2, "status": "🆕新", "tag": "航空港两轮融合网格", "vid": "5310611234", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "巡航路郑州航空港经济综合实验区站点Z12"},{"rank": 3, "status": "🔴2轮", "tag": "航空港两轮融合网格", "vid": "5310586411", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "航空港两轮融合网格", "site": "巡航路郑州航空港经济综合实验区站点C"},{"rank": 4, "status": "🔴3轮", "tag": "航空港两轮融合网格", "vid": "5310023748", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "航空港两轮融合网格", "site": "护航路云瓴国际站点J"},{"rank": 5, "status": "🆕新", "tag": "航空港两轮融合网格", "vid": "7010427974", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "大寨路郑州航空港经济综合实验区站点Z5"}];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "航空港两轮融合网格", "vid": "5310611234", "lost": 13, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "航空港两轮融合网格", "site": "巡航路郑州航空港经济综合实验区站点Z12"},{"rank": 2, "status": "🔴3轮", "tag": "航空港两轮融合网格", "vid": "5310586411", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "航空港两轮融合网格", "site": "巡航路郑州航空港经济综合实验区站点C"},{"rank": 3, "status": "🆕新", "tag": "航空港两轮融合网格", "vid": "5310604037", "lost": 10, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "华夏大道郑州大学第一附属医院(南院区)站点A"},{"rank": 4, "status": "🔴4轮", "tag": "航空港两轮融合网格", "vid": "5310023748", "lost": 9, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "航空港两轮融合网格", "site": "护航路云瓴国际站点J"},{"rank": 5, "status": "🆕新", "tag": "航空港两轮融合网格", "vid": "5310459534", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "世界港·丽宫郑州航空港经济综合实验区站点Z98"}];
 var TAGS=["航空港两轮融合网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
