@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 3</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>24</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
     <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "一战B-大东区-东中街", "vid": "5320402506", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战B-大东区-东中街", "site": "大什字街华家小区站点E"},{"rank": 2, "status": "🆕新", "tag": "四战B-皇姑区-乐天百货", "vid": "5320440688", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "四战B-皇姑区-乐天百货", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "一战B-大东区-东中街", "vid": "5320335922", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "一战B-大东区-东中街", "site": "大东区小什字街南华中环广场站点K"}];
-var TAGS=["一战B-大东区-东中街", "四战B-皇姑区-乐天百货"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "一战B-大东区-东中街", "vid": "5320402506", "lost": 10, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "一战B-大东区-东中街", "site": "大什字街华家小区站点E"},{"rank": 2, "status": "🔴2轮", "tag": "四战B-皇姑区-乐天百货", "vid": "5320440688", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "四战B-皇姑区-乐天百货", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "三战A-铁西区-家具城", "vid": "5320336962", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-家具城", "site": "铁西区兴华园惠和大厦住宅楼站点E"},{"rank": 4, "status": "🆕新", "tag": "三战A-铁西区-艳粉", "vid": "5320331303", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-艳粉", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "一战A-沈河区-市府广场", "vid": "5320396808", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战A-沈河区-市府广场", "site": "市府大路迎宾社区站点N"}];
+var TAGS=["一战A-沈河区-市府广场", "一战B-大东区-东中街", "三战A-铁西区-家具城", "三战A-铁西区-艳粉", "四战B-皇姑区-乐天百货"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
