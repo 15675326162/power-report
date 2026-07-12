@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 5</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>44</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>82</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>张家煊、曾攀、张小灵、冯欣晨、刘逸</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "合肥市", "vid": "5310480814", "lost": 27, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-逍遥津公园", "site": "长江中路138号邮政大厦(宿州路)站点"},{"rank": 2, "status": "🔴3轮", "tag": "航空港区", "vid": "5310508605", "lost": 8, "h1": 4, "delta": "<span class='up'>↑1</span>", "grid": "航空港两轮融合网格", "site": "凌空街郑州航空港经济综合实验区站点Z10"},{"rank": 3, "status": "🆕新", "tag": "黄冈市", "vid": "5310087600", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "黄冈-瑞天广场", "site": "新港二路黄冈市交通运输局站点"},{"rank": 4, "status": "🆕新", "tag": "航空港区", "vid": "7010423813", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "苇航路郑州航空港经济综合实验区站点D"},{"rank": 5, "status": "🆕新", "tag": "航空港区", "vid": "5310508029", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "洞庭湖路郑州航空港经济综合实验区站点Z19"}];
-var TAGS=["合肥市", "航空港区", "黄冈市"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "航空港区", "vid": "5310508605", "lost": 47, "h1": 39, "delta": "<span class='up'>↑39</span>", "grid": "航空港两轮融合网格", "site": "远航路郑州航空港经济综合实验区站点Z15"},{"rank": 2, "status": "🆕新", "tag": "合肥市", "vid": "5320539986", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-庐阳区-逍遥津公园", "site": "阜阳路安徽省话剧院宿舍区站点"},{"rank": 3, "status": "🔴2轮", "tag": "航空港区", "vid": "5310508029", "lost": 6, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "航空港两轮融合网格", "site": "洞庭湖路郑州航空港经济综合实验区站点Z19"},{"rank": 4, "status": "🔴2轮", "tag": "黄冈市", "vid": "5310087600", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "黄冈-瑞天广场", "site": "新港二路黄冈市交通运输局站点"},{"rank": 5, "status": "🆕新", "tag": "郑州市高新区", "vid": "5310754039", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "谦祥万和城谦祥·万和城站点A"},{"rank": 6, "status": "🆕新", "tag": "航空港区", "vid": "5310023748", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "护航路云瓴国际站点E"},{"rank": 7, "status": "🆕新", "tag": "新县", "vid": "6680048096", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新县二区", "site": "SAO 新县二区 新县公安局交通警察大队车辆管理所站点"},{"rank": 8, "status": "🆕新", "tag": "琅琊区", "vid": "5310112632", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "滁州市琅琊区网格", "site": "规划支路国誉锦城站点E"}];
+var TAGS=["合肥市", "新县", "琅琊区", "航空港区", "郑州市高新区", "黄冈市"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
