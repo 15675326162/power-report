@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沙坪坝区 — 高频缺电 TOP 3</h1>
+  <h1>📍 沙坪坝区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>31</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>47</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>王伟</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "师范大学", "vid": "7010340729", "lost": 17, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "师范大学", "site": "大学城中路远洋朗基·枫桦四季站点"},{"rank": 2, "status": "🆕新", "tag": "科技学院", "vid": "5310433073", "lost": 9, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "科技学院", "site": "大学城东路重庆科技大学虎溪校区站点L"},{"rank": 3, "status": "🔴2轮", "tag": "师范大学", "vid": "7010364285", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "师范大学", "site": "-"}];
-var TAGS=["师范大学", "科技学院"];
+var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "师范大学", "vid": "7010340729", "lost": 21, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "师范大学", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "科技学院", "vid": "5310433073", "lost": 13, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "科技学院", "site": "大学城东路重庆科技大学虎溪校区站点L"},{"rank": 3, "status": "🔴3轮", "tag": "师范大学", "vid": "7010364285", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "师范大学", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "康居西城", "vid": "7010351863", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "康居西城", "site": "香悦路协信·天骄名城站点A"},{"rank": 5, "status": "🆕新", "tag": "微电园", "vid": "7010362613", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "微电园", "site": "永盛路西永安置房三期站点F"}];
+var TAGS=["师范大学", "康居西城", "微电园", "科技学院"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
