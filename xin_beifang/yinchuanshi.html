@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 8</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>56</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "金凤区-北9区", "vid": "7010525013", "lost": 17, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "金凤区-北9区", "site": "金凤区上海西路街道正源北街瑞银·财富中心2"},{"rank": 2, "status": "🔴2轮", "tag": "金凤区-北3区", "vid": "5320578655", "lost": 13, "h1": 10, "delta": "<span class='up'>↑10</span>", "grid": "金凤区-北3区", "site": "金凤区贺兰山中路街道后海路银川阅海湾中央商务区5"},{"rank": 3, "status": "🆕新", "tag": "金凤区-北5区", "vid": "7010524324", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道贺兰山中路9"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-兴庆9区", "vid": "5320564489", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆9区", "site": "兴庆区银古路街道上海东路满春家园1"},{"rank": 5, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320350169", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "海珀兰轩·二区(北门)站点"},{"rank": 6, "status": "🆕新", "tag": "兴庆区-兴庆13区", "vid": "5320256942", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆13区", "site": "兴庆区银古路街道景福巷凤鸣佳苑2"},{"rank": 7, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320475776", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "金凤区上海西路街道上海西路亲水苑C区3"},{"rank": 8, "status": "🆕新", "tag": "金凤区-北3区", "vid": "5320511141", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北3区", "site": "金凤区贺兰山中路街道南海路银川阅海湾中央商务区2"}];
-var TAGS=["兴庆区-兴庆13区", "兴庆区-兴庆9区", "金凤区-北3区", "金凤区-北5区", "金凤区-北9区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆12区", "vid": "5320579538", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆12区", "site": "兴庆区玉皇阁北街街道解放东路浙江大厦"}];
+var TAGS=["兴庆区-兴庆12区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
