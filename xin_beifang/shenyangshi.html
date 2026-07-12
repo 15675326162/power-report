@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 6</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>44</b>累计丢单</div>
-    <div class="s"><b>6</b>分组数</div>
-    <div class="s"><b>5</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>28</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "一战B-大东区-东中街", "vid": "5320402506", "lost": 17, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战B-大东区-东中街", "site": "大东路62号华家小区站点D"},{"rank": 2, "status": "🔴3轮", "tag": "四战B-皇姑区-新乐遗址", "vid": "5320390794", "lost": 9, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "四战B-皇姑区-新乐遗址", "site": "皇姑区怒江街大都会·公元站点H"},{"rank": 3, "status": "🔴2轮", "tag": "四战B-皇姑区-恒大城", "vid": "5320394619", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "四战B-皇姑区-恒大城", "site": "于洪区怒江北街恒大都市广场(恒大城店)站点A"},{"rank": 4, "status": "🔴2轮", "tag": "四战B-皇姑区-怒江公园", "vid": "5320413765", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "四战B-皇姑区-怒江公园", "site": "颂工街18号华策·恒辉园站点"},{"rank": 5, "status": "🔴2轮", "tag": "三战A-铁西区-滑翔", "vid": "5320390272", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "三战A-铁西区-滑翔", "site": "凌空一街滑翔五小区站点Y"},{"rank": 6, "status": "🆕新", "tag": "二战A-和平区-中山公园", "vid": "5320335579", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-中山公园", "site": "沈河区西滨河路青年公园站点Z44"}];
-var TAGS=["一战B-大东区-东中街", "三战A-铁西区-滑翔", "二战A-和平区-中山公园", "四战B-皇姑区-怒江公园", "四战B-皇姑区-恒大城", "四战B-皇姑区-新乐遗址"];
+var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "四战B-皇姑区-新乐遗址", "vid": "5320390794", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "四战B-皇姑区-新乐遗址", "site": "皇姑区怒江街大都会·公元站点H"},{"rank": 2, "status": "🔴3轮", "tag": "四战B-皇姑区-恒大城", "vid": "5320394619", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "四战B-皇姑区-恒大城", "site": "于洪区怒江北街恒大都市广场(恒大城店)站点A"},{"rank": 3, "status": "🆕新", "tag": "三战A-铁西区-艳粉", "vid": "5320331303", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-艳粉", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "二战A-和平区-中山公园", "vid": "5320335579", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "二战A-和平区-中山公园", "site": "沈河区西滨河路青年公园站点Z44"},{"rank": 5, "status": "🆕新", "tag": "三战B-铁西区-万科润园", "vid": "5320389979", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-万科润园", "site": "-"}];
+var TAGS=["三战A-铁西区-艳粉", "三战B-铁西区-万科润园", "二战A-和平区-中山公园", "四战B-皇姑区-恒大城", "四战B-皇姑区-新乐遗址"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
