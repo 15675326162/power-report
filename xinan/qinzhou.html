@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 钦州市 — 高频缺电 TOP 7</h1>
+  <h1>📍 钦州市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>6</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>卢超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "钦南1区", "vid": "5310277133", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "钦南1区", "site": "安州大道交投·白石印站点A"},{"rank": 2, "status": "🔴2轮", "tag": "钦南2区", "vid": "5310276326", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "钦南2区", "site": "扬帆北大道恒大御景半岛站点E"},{"rank": 3, "status": "🆕新", "tag": "钦北3区", "vid": "5310285458", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦北3区", "site": "福环路钦州市钦北区人民政府站点"},{"rank": 4, "status": "🆕新", "tag": "钦南2区", "vid": "5310278560", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "扬帆北大道站点Z16"},{"rank": 5, "status": "🆕新", "tag": "钦南3区", "vid": "5310152336", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南3区", "site": "钦州润美整形中地·滨江国际站点D"},{"rank": 6, "status": "🆕新", "tag": "钦南1区", "vid": "5310127827", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南1区", "site": "东门1"},{"rank": 7, "status": "🆕新", "tag": "钦南2区", "vid": "7960048007", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "沙埠街钦州市第三中学站点"}];
-var TAGS=["钦北3区", "钦南1区", "钦南2区", "钦南3区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "钦南3区", "vid": "5310156275", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南3区", "site": "老台门汤包(钦州碧桂园天玺湾店)钦州碧桂园天玺湾站点B"},{"rank": 2, "status": "🆕新", "tag": "钦南2区", "vid": "5310048550", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "钦南2区", "site": "子材东大街盛天华府站点U"}];
+var TAGS=["钦南2区", "钦南3区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
