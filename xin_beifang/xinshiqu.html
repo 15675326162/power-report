@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 2</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>12</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>30</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-太百商场", "vid": "6680058951", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-太百商场", "site": "北京中路879号金实业精品广场(河南西路)站点A"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-科学院", "vid": "7010455507", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "-"}];
-var TAGS=["新市区-核心-太百商场", "新市区-核心-科学院"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-太百商场", "vid": "7010455507", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-太百商场", "site": "北京南路站点B25"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-二宫体育馆", "vid": "2000032262", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-二宫体育馆", "site": "北京中路196号嘉德园站点"},{"rank": 3, "status": "🆕新", "tag": "新市区-主城-中海天悦府", "vid": "7960038851", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "新市区-主城-中海天悦府", "site": "友兴街上海城站点C"},{"rank": 4, "status": "🆕新", "tag": "新市区-核心-植物园", "vid": "3720158125", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-植物园", "site": "河北东路1009号站点A"},{"rank": 5, "status": "🆕新", "tag": "新市区-隔离-三工六队", "vid": "3720179775", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-三工六队", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "新市区-核心-轴承厂", "vid": "7010431279", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "新市区-核心-二宫体育馆", "vid": "6680054069", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-二宫体育馆", "site": "新体巷红蜻蜓幼儿园(新体巷)站点"}];
+var TAGS=["新市区-主城-中海天悦府", "新市区-核心-二宫体育馆", "新市区-核心-太百商场", "新市区-核心-植物园", "新市区-核心-轴承厂", "新市区-隔离-三工六队"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
