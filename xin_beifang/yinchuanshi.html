@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 5</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>20</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>4</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "兴庆区-兴庆4区", "vid": "5320441055", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-兴庆4区", "site": "兴庆区解放西街街道上海东路472#号海宝小区福天苑"},{"rank": 2, "status": "🆕新", "tag": "兴庆区-兴庆4区", "vid": "5320481802", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆4区", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "金凤区-南1区C", "vid": "5320546290", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南1区C", "site": "胜利街杨家湾子清真大寺站点"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320349478", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "德胜区-德胜3区", "vid": "5320474572", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "德胜区-德胜3区", "site": "绿地21城A座站点B"}];
-var TAGS=["兴庆区-兴庆4区", "兴庆区-超区 2", "德胜区-德胜3区", "金凤区-南1区C"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆4区", "vid": "5320441313", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆4区", "site": "康平路海宝西区站点L"}];
+var TAGS=["兴庆区-兴庆4区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
