@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 6</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>33</b>累计丢单</div>
+    <div class="s"><b>30</b>累计丢单</div>
     <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-轴承厂", "vid": "7010451596", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂", "site": "北京北路辅路嘉丰园站点"},{"rank": 2, "status": "🆕新", "tag": "新市区-缓冲-高新万达", "vid": "5310457175", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-高新万达", "site": "长沙路百信康城站点C"},{"rank": 3, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "3720174999", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "城北大道辅路站点L"},{"rank": 4, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "7960197259", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "龙盛街辅路乌鲁木齐华通丰田汽车销售服务有限公司站点A"},{"rank": 5, "status": "🆕新", "tag": "新市区-核心-澳龙广场", "vid": "7010456319", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-澳龙广场", "site": "阳光小区亚中机电小区站点"},{"rank": 6, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "5910835648", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "-"}];
-var TAGS=["新市区-核心-澳龙广场", "新市区-核心-轴承厂", "新市区-缓冲-美仑环球港", "新市区-缓冲-高新万达", "新市区-隔离-机场片区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-核心-轴承厂", "vid": "7010451596", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-核心-轴承厂", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-美居大都会", "vid": "3720146581", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-美居大都会", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "新市区-核心-澳龙广场", "vid": "7010456319", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-核心-澳龙广场", "site": "阳光小区亚中机电小区站点"},{"rank": 4, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "5910853534", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "居安巷御园世家站点D"},{"rank": 5, "status": "🆕新", "tag": "新市区-隔离-四工村", "vid": "3720169331", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-四工村", "site": "麦桥村新中式糕点新馨美寓站点"}];
+var TAGS=["新市区-核心-澳龙广场", "新市区-核心-美居大都会", "新市区-核心-轴承厂", "新市区-缓冲-美仑环球港", "新市区-隔离-四工村"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
