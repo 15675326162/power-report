@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 鄂尔多斯市 — 高频缺电 TOP 2</h1>
+  <h1>📍 鄂尔多斯市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>7</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>12</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>郭强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜A3", "vid": "7010454082", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A3", "site": "铁路小区亿宸大厦站点D"},{"rank": 2, "status": "🆕新", "tag": "东胜B3", "vid": "7010461796", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B3", "site": "鄂尔多斯东街林荫广场站点A"}];
-var TAGS=["东胜A3", "东胜B3"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜A2", "vid": "7010484334", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A2", "site": "蒙泰西门对面"},{"rank": 2, "status": "🆕新", "tag": "东胜A3", "vid": "7010483860", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A3", "site": "伊化北路荣景苑北区站点A"},{"rank": 3, "status": "🆕新", "tag": "东胜B2", "vid": "7010487721", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东胜B2", "site": "乌审西街恒利国际广场站点D"},{"rank": 4, "status": "🆕新", "tag": "东胜A2", "vid": "7010453890", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A2", "site": "维邦紫瑞府销售中心维邦紫瑞府(建设中)站点"}];
+var TAGS=["东胜A2", "东胜A3", "东胜B2"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
