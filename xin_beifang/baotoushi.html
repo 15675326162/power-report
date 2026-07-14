@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 1</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>7</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>18</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-青山北-万达广场", "vid": "5320159245", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-青山北-万达广场", "site": "包头市-青山区-富强路28包头市青山区彩框"}];
-var TAGS=["西区-青山北-万达广场"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "西区-青山北-万达广场", "vid": "5320159245", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-青山北-万达广场", "site": "包头市-青山区-富强路28包头市青山区彩框"},{"rank": 2, "status": "🆕新", "tag": "西区-青山北-正翔国际", "vid": "5320176012", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-正翔国际", "site": "包头市-青山区-科学路249号包头市青山区彩框"},{"rank": 3, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320513003", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "横竖街雅澜甄选酒店(九原万达广场横竖街店)站点E"},{"rank": 4, "status": "🆕新", "tag": "西区-昆区南-馥室成双", "vid": "5320453298", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-馥室成双", "site": "（新增）三八路站点U"}];
+var TAGS=["东区-九原-九原广场", "西区-昆区南-馥室成双", "西区-青山北-万达广场", "西区-青山北-正翔国际"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
