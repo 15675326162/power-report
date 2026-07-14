@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 6</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>33</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>5</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-隔离-机场片区", "vid": "3720129563", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "新市区-隔离-机场片区", "site": "迎宾路路锦家园站点"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-美居大都会", "vid": "3720146581", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-美居大都会", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "5910853534", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "御园公馆御园公馆B区站点"},{"rank": 4, "status": "🆕新", "tag": "新市区-核心-轴承厂", "vid": "7010486391", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂", "site": "北京北路辅路新联物业景辉小区站点A"},{"rank": 5, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "2000030737", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "迎宾路昆仑府站点C"},{"rank": 6, "status": "🆕新", "tag": "-", "vid": "3720163865", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"}];
-var TAGS=["-", "新市区-核心-美居大都会", "新市区-核心-轴承厂", "新市区-缓冲-美仑环球港", "新市区-隔离-机场片区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "7010463424", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "城北大道辅路乌鲁木齐天山国际机场站点A"}];
+var TAGS=["新市区-隔离-机场片区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
