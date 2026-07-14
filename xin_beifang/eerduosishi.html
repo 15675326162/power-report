@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 鄂尔多斯市 — 高频缺电 TOP 9</h1>
+  <h1>📍 鄂尔多斯市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>37</b>累计丢单</div>
-    <div class="s"><b>7</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>郭强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜B2", "vid": "7010456282", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东胜B2", "site": "大恒郦城站点R"},{"rank": 2, "status": "🆕新", "tag": "伊旗3区", "vid": "5310438292", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "伊旗3区", "site": "达尔扈特路金苑小区站点A"},{"rank": 3, "status": "🆕新", "tag": "东胜A3", "vid": "7010454082", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A3", "site": "伊金霍洛西街7天连锁酒店(鄂尔多斯东胜火车站店)站点"},{"rank": 4, "status": "🆕新", "tag": "东胜A1", "vid": "7010453223", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A1", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "康巴什区3网格", "vid": "7010393967", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "康巴什区3网格", "site": "-"},{"rank": 6, "status": "🔴2轮", "tag": "东胜A3", "vid": "7010483860", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东胜A3", "site": "伊化北路荣景苑北区站点A"},{"rank": 7, "status": "🆕新", "tag": "东胜B1", "vid": "7010451670", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东胜B1", "site": "鄂尔多斯市东胜区巴音门克街道科技街鄂尔多斯华世隆大酒店"},{"rank": 8, "status": "🆕新", "tag": "东胜A3", "vid": "7010451662", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A3", "site": "鄂尔多斯西街青海省藏医院鄂尔多斯蒙藏医院站点A"},{"rank": 9, "status": "🆕新", "tag": "东胜B3", "vid": "7010451702", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜B3", "site": "-"}];
-var TAGS=["东胜A1", "东胜A3", "东胜B1", "东胜B2", "东胜B3", "伊旗3区", "康巴什区3网格"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东胜A5", "vid": "7010464729", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东胜A5", "site": "【高假】煜春园小区北对面"}];
+var TAGS=["东胜A5"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
