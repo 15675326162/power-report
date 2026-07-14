@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 达拉特旗 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>23</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>25</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>郭强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "达拉特旗陶瓷广场网格-4", "vid": "7010436859", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "达拉特旗陶瓷广场网格-4", "site": "南园街站点V"},{"rank": 2, "status": "🔴2轮", "tag": "达拉特旗陶瓷广场网格-1", "vid": "7010485151", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "达拉特旗陶瓷广场网格-1", "site": "鄂尔多斯市达拉特旗工业街道树林召大街耿盛大厦"},{"rank": 3, "status": "🆕新", "tag": "达拉特旗政府网格-1", "vid": "7010457057", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "达拉特旗政府网格-1", "site": "树林召大街未来现代城站点"},{"rank": 4, "status": "🆕新", "tag": "达拉特旗陶瓷广场网格-3", "vid": "7010464894", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "达拉特旗陶瓷广场网格-3", "site": "【晚】鄂尔多斯市达拉特旗锡尼街道农牧小区"},{"rank": 5, "status": "🆕新", "tag": "达拉特旗北国广场网格-3", "vid": "7010431501", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "达拉特旗北国广场网格-3", "site": "-"}];
-var TAGS=["达拉特旗北国广场网格-3", "达拉特旗政府网格-1", "达拉特旗陶瓷广场网格-1", "达拉特旗陶瓷广场网格-3", "达拉特旗陶瓷广场网格-4"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "达拉特旗汽车南站网格", "vid": "7010436859", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "达拉特旗汽车南站网格", "site": "南园街站点V"},{"rank": 2, "status": "🆕新", "tag": "达拉特旗陶瓷广场网格-4", "vid": "7010474607", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "达拉特旗陶瓷广场网格-4", "site": "德胜街站点D"},{"rank": 3, "status": "🔴3轮", "tag": "达拉特旗陶瓷广场网格-1", "vid": "7010485151", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "达拉特旗陶瓷广场网格-1", "site": "鄂尔多斯市达拉特旗工业街道瀚墨薪传书法培训中心"},{"rank": 4, "status": "🆕新", "tag": "达拉特旗汽车南站网格", "vid": "7010487106", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "达拉特旗汽车南站网格", "site": "育才(C区)育才C区站点B"},{"rank": 5, "status": "🆕新", "tag": "达拉特旗北国广场网格-2", "vid": "7010436598", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "达拉特旗北国广场网格-2", "site": "梦景舞苑紫御花园站点"}];
+var TAGS=["达拉特旗北国广场网格-2", "达拉特旗汽车南站网格", "达拉特旗陶瓷广场网格-1", "达拉特旗陶瓷广场网格-4"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
