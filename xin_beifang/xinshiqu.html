@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 3</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>16</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>21</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-隔离-职业大学", "vid": "7010451609", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-职业大学", "site": "城北大道辅路站点M"},{"rank": 2, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "3720165668", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "大地窝堡地铁站A口速8优选酒店(乌鲁木齐机场大地窝堡地铁站点"},{"rank": 3, "status": "🆕新", "tag": "新市区-核心-植物园", "vid": "7010495006", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-植物园", "site": "河北东路14号天合大厦(河北东路南一巷)站点"}];
-var TAGS=["新市区-核心-植物园", "新市区-隔离-机场片区", "新市区-隔离-职业大学"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-隔离-机场片区", "vid": "3720165668", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-隔离-机场片区", "site": "大地窝堡地铁站A口速8优选酒店(乌鲁木齐机场大地窝堡地铁站点"},{"rank": 2, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "7960195463", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "迎宾路东三巷钢花迎宾苑站点A"},{"rank": 3, "status": "🆕新", "tag": "米东-新疆轻工职业技术学院", "vid": "7010507477", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "米东-新疆轻工职业技术学院", "site": "米东南路73号交通运输厅米东住宅小区站点"},{"rank": 4, "status": "🆕新", "tag": "新市区-核心-澳龙广场", "vid": "2000043499", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-澳龙广场", "site": "河南东路停车点"},{"rank": 5, "status": "🆕新", "tag": "新市区-隔离-东方御景", "vid": "7010454616", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-东方御景", "site": "四平路旭力达驾校站点"},{"rank": 6, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "5910862579", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"}];
+var TAGS=["新市区-核心-澳龙广场", "新市区-缓冲-美仑环球港", "新市区-隔离-东方御景", "新市区-隔离-机场片区", "米东-新疆轻工职业技术学院"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
