@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 1</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>14</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-安宁区-十里店", "vid": "5320566143", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-十里店", "site": "敦煌路阳光家园玫瑰苑站点A"}];
-var TAGS=["兰州-二区-安宁区-十里店"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-城关区-招银大厦", "vid": "5320264226", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-招银大厦", "site": "庆阳路109号兰州时尚百盛(兰州店)站点A"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320570506", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "雁滩路至诚·枫叶国际站点A"}];
+var TAGS=["兰州市-二区-城关区-招银大厦", "兰州市-二区-雁滩-新港城"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
