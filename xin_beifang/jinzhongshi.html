@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 晋中市 — 高频缺电 TOP 3</h1>
+  <h1>📍 晋中市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
+    <div class="s"><b>34</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>王锐鹏</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "晋中电力12区榆次老城", "vid": "5320240351", "lost": 10, "h1": 10, "delta": "<span class='flat'>-</span>", "grid": "晋中电力12区榆次老城", "site": "新集东街东华世家东区站点A"},{"rank": 2, "status": "🆕新", "tag": "晋中电力11区晋中市政府", "vid": "5310458569", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-锦纶东街荣和家园(锦纶东街)站点A-居民区门口648"},{"rank": 3, "status": "🆕新", "tag": "晋中电力9区柳西", "vid": "5310516806", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "晋中电力9区柳西", "site": "-"}];
-var TAGS=["晋中电力11区晋中市政府", "晋中电力12区榆次老城", "晋中电力9区柳西"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "晋中电力12区榆次老城", "vid": "5320240351", "lost": 12, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力12区榆次老城", "site": "新集东街东华世家东区站点A"},{"rank": 2, "status": "🆕新", "tag": "晋中电力5区万达广场", "vid": "5320210279", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力5区万达广场", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "晋中电力11区晋中市政府", "vid": "5310458569", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-锦纶东街荣和家园(锦纶东街)站点A-居民区门口648"},{"rank": 4, "status": "🆕新", "tag": "晋中电力11区晋中市政府", "vid": "5320220391", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-北关街道砖窑街83号晋丰一品936"}];
+var TAGS=["晋中电力11区晋中市政府", "晋中电力12区榆次老城", "晋中电力5区万达广场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
