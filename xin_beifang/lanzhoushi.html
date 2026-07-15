@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 兰州市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
+    <div class="s"><b>8</b>累计丢单</div>
     <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-城关区-南关", "vid": "5320444789", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-南关", "site": "甘肃省质量技术监督局产品质量监督检验中心天奥珠宝黄金检测站点"},{"rank": 2, "status": "🔴2轮", "tag": "兰州市-二区-城关-甘肃二院", "vid": "5320572805", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州市-二区-城关-甘肃二院", "site": "铁路通物流有限公司新乐苑站点"}];
-var TAGS=["兰州市-二区-城关-甘肃二院", "兰州市-二区-城关区-南关"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-雁滩-文理学院", "vid": "5320573355", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-文理学院", "site": "雁滩路4340号大润发(兰州店)站点"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-西固区-三区", "vid": "5320566417", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-三区", "site": "山丹街494号兰州石化十五中街区"}];
+var TAGS=["兰州-二区-西固区-三区", "兰州市-二区-雁滩-文理学院"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
