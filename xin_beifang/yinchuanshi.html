@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 银川市 — 高频缺电 TOP 3</h1>
+  <h1>📍 银川市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "金凤区-超区 1", "vid": "5320475821", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-超区 1", "site": "黎明村村委会奥莱小镇东区站点"},{"rank": 2, "status": "🔴2轮", "tag": "兴庆区-兴庆8区", "vid": "5320472411", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兴庆区-兴庆8区", "site": "兴庆区文化街街道北京东路361号光明小区"},{"rank": 3, "status": "🔴2轮", "tag": "兴庆区-兴庆17区", "vid": "5320438842", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-兴庆17区", "site": "兴庆区银古路街道丽景南街龙盘装饰材料市场(清和南街店)2"}];
-var TAGS=["兴庆区-兴庆17区", "兴庆区-兴庆8区", "金凤区-超区 1"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兴庆区-兴庆5区", "vid": "5320559474", "lost": 11, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆5区", "site": "兴庆区大新镇宁夏易通驾校(南1门)宁夏交通物流园区"},{"rank": 2, "status": "🔴3轮", "tag": "金凤区-超区 1", "vid": "5320475821", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金凤区-超区 1", "site": "黎明村村委会奥莱小镇东区站点"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320564388", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "如意湖东路典雅居站点A"},{"rank": 4, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320552706", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道湖畔路五里水乡1"},{"rank": 5, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320476722", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道正源南街五里湖畔1"},{"rank": 6, "status": "🆕新", "tag": "金凤区-北5区", "vid": "5320472622", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "金凤区-北5区", "site": "银川森林公园北大门停车场站点"},{"rank": 7, "status": "🆕新", "tag": "金凤区-南6区", "vid": "5320510184", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "金凤区-南6区", "site": "金凤区长城中路街道尚文巷宝湖福邸9"}];
+var TAGS=["兴庆区-兴庆5区", "兴庆区-超区1", "金凤区-北5区", "金凤区-南6区", "金凤区-超区 1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
