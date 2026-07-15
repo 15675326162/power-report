@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 西南大区 — 高频缺电 TOP 4</h1>
+  <h1>📍 西南大区 — 高频缺电 TOP 11</h1>
   <div class="stats">
-    <div class="s"><b>60</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>44</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>10</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>李凤翎</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明市", "vid": "5320388479", "lost": 47, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-盘呈-同德区", "site": "北京路金色年华站点B"},{"rank": 2, "status": "🆕新", "tag": "昆明市", "vid": "5320154841", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-度假区", "site": "观景路听涛雅苑站点J"},{"rank": 3, "status": "🆕新", "tag": "昆明市", "vid": "5320165846", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-度假区", "site": "红塔东路昆明二建集团大楼站点B"},{"rank": 4, "status": "🆕新", "tag": "成都市", "vid": "5320191302", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "涌泉-温江区-成都市-电力网格", "site": "-"}];
-var TAGS=["成都市", "昆明市"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明市", "vid": "5320163111", "lost": 8, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡1-大树营区", "site": "民航路香樟俊园站点"},{"rank": 2, "status": "🔴2轮", "tag": "成都市", "vid": "5320191302", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "涌泉-温江区-成都市-电力网格", "site": "五洞桥路769号恒大城停车点"},{"rank": 3, "status": "🆕新", "tag": "福贡县", "vid": "7720154546", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "福贡1区", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "丽江市", "vid": "5320438856", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "丽江市-束河-束河上半", "site": "龙泉路束河古镇站点E"},{"rank": 5, "status": "🆕新", "tag": "昆明市", "vid": "5320176751", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-高新3区", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "沙坪坝区", "vid": "7010360453", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "曾家镇", "site": "曾康街54号和谐佳园A区站点"},{"rank": 7, "status": "🆕新", "tag": "昆明市", "vid": "5320163366", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-爱琴海", "site": "昆明前卫西路19号停车点"},{"rank": 8, "status": "🆕新", "tag": "河口瑶族自治县", "vid": "5310584395", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "河口县槟榔寨1区-新", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "昆明市", "vid": "5320342820", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-新广丰", "site": "雨龙路银都汇站点B"},{"rank": 10, "status": "🆕新", "tag": "昆明市", "vid": "5320199661", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明-空港-换电1区机场前", "site": "-"},{"rank": 11, "status": "🆕新", "tag": "沙坪坝区", "vid": "7010360973", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "曾家镇", "site": "中兴街金泰酒店站点"}];
+var TAGS=["丽江市", "成都市", "昆明市", "沙坪坝区", "河口瑶族自治县", "福贡县"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
