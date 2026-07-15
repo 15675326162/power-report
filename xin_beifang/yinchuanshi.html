@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 银川市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>32</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>38</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>李卫明</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "兴庆区-兴庆5区", "vid": "5320559474", "lost": 15, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "兴庆区-兴庆5区", "site": "车管所兴庆考场(南门)宁夏交通物流园区站点"},{"rank": 2, "status": "🆕新", "tag": "兴庆区-兴庆8区", "vid": "5320472411", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆8区", "site": "兴庆区文化街街道北京东路361号光明小区"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-兴庆8区", "vid": "5320561807", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆8区", "site": "兴庆区丽景街街道北安街15#号银川市中级人民法院"},{"rank": 4, "status": "🆕新", "tag": "兴庆区-超区1", "vid": "5320032947", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区1", "site": "奥园小区(西北门)站点"}];
-var TAGS=["兴庆区-兴庆5区", "兴庆区-兴庆8区", "兴庆区-超区1"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "兴庆区-兴庆5区", "vid": "5320559474", "lost": 19, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "兴庆区-兴庆5区", "site": "车管所兴庆考场(南门)宁夏交通物流园区站点"},{"rank": 2, "status": "🆕新", "tag": "金凤区-超区 1", "vid": "5320475821", "lost": 10, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "金凤区-超区 1", "site": "黎明村村委会奥莱小镇东区站点"},{"rank": 3, "status": "🆕新", "tag": "兴庆区-超区 2", "vid": "5320349478", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-超区 2", "site": "102县道新创家园站点"},{"rank": 4, "status": "🔴2轮", "tag": "兴庆区-超区1", "vid": "5320032947", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兴庆区-超区1", "site": "奥园小区(西北门)站点"}];
+var TAGS=["兴庆区-兴庆5区", "兴庆区-超区 2", "兴庆区-超区1", "金凤区-超区 1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
