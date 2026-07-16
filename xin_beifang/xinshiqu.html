@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 1</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-缓冲-四平路", "vid": "7960243828", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-四平路", "site": "喀什东路628号少管所高层住宅站点"}];
-var TAGS=["新市区-缓冲-四平路"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-主城-新世界广场", "vid": "6680058238", "lost": 8, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-主城-新世界广场", "site": "河北东路华源·国秀家园站点B"},{"rank": 2, "status": "🆕新", "tag": "米东-人民公园", "vid": "3720179925", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-人民公园", "site": "古牧地西路朝阳雅居站点C"},{"rank": 3, "status": "🆕新", "tag": "新市区-主城-新世界广场", "vid": "7010463705", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-主城-新世界广场", "site": "河北东路华源·国秀家园站点E"},{"rank": 4, "status": "🔴2轮", "tag": "新市区-缓冲-四平路", "vid": "7960243828", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-缓冲-四平路", "site": "喀什东路628号少管所高层住宅站点"},{"rank": 5, "status": "🆕新", "tag": "新市区-核心-警察学校", "vid": "7010457175", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-警察学校", "site": "鲤鱼山北路站点D"},{"rank": 6, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "7010465717", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "迎宾路九运司家属院站点G"},{"rank": 7, "status": "🆕新", "tag": "新市区-核心-科学院", "vid": "6680041905", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "西域马木萨晶橙酒店(乌鲁木齐赛博特国际汽车城店)站点"},{"rank": 8, "status": "🆕新", "tag": "新市区-核心-二宫体育馆", "vid": "7010434342", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-二宫体育馆", "site": "河南东路707号新疆轻工职业技术学院(铁路局校区)站点A"},{"rank": 9, "status": "🆕新", "tag": "米东-人民公园", "vid": "3720149042", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-人民公园", "site": "-"}];
+var TAGS=["新市区-主城-新世界广场", "新市区-核心-二宫体育馆", "新市区-核心-科学院", "新市区-核心-警察学校", "新市区-缓冲-四平路", "新市区-隔离-机场片区", "米东-人民公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
