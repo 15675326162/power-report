@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 华中大区 — 高频缺电 TOP 3</h1>
+  <h1>📍 华中大区 — 高频缺电 TOP 12</h1>
   <div class="stats">
-    <div class="s"><b>50</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>118</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>9</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>张家煊、曾攀、张小灵、冯欣晨、刘逸</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "航空港区", "vid": "5310511303", "lost": 23, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "雍州路郑州航空港经济综合实验区站点Z64"},{"rank": 2, "status": "🆕新", "tag": "航空港区", "vid": "7010382467", "lost": 21, "h1": 7, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "凌空街郑州航空港经济综合实验区站点Z11"},{"rank": 3, "status": "🆕新", "tag": "航空港区", "vid": "5310515337", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "远航路郑州航空港经济综合实验区站点Z8"}];
-var TAGS=["航空港区"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "航空港区", "vid": "5310511303", "lost": 28, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "航空港两轮融合网格", "site": "雍州路郑州航空港经济综合实验区站点Z64"},{"rank": 2, "status": "🔴2轮", "tag": "航空港区", "vid": "7010382467", "lost": 23, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "航空港两轮融合网格", "site": "远航路郑州航空港经济综合实验区站点Z50"},{"rank": 3, "status": "🔴2轮", "tag": "航空港区", "vid": "5310515337", "lost": 13, "h1": 7, "delta": "<span class='up'>↑7</span>", "grid": "航空港两轮融合网格", "site": "远航路郑州航空港经济综合实验区站点Z8"},{"rank": 4, "status": "🆕新", "tag": "航空港区", "vid": "5310496103", "lost": 12, "h1": 12, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "凌飞街郑州航空港经济综合实验区站点B"},{"rank": 5, "status": "🆕新", "tag": "航空港区", "vid": "5310472787", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "华夏大道郑州航空港经济综合实验区站点Z32"},{"rank": 6, "status": "🆕新", "tag": "航空港区", "vid": "7010395549", "lost": 8, "h1": 8, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "雍州路87-4号郑州航空港经济综合实验区站点"},{"rank": 7, "status": "🆕新", "tag": "航空港区", "vid": "5310286772", "lost": 7, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "凌空街郑州航空港经济综合实验区站点Z72"},{"rank": 8, "status": "🆕新", "tag": "航空港区", "vid": "7010391090", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "豫康新城(B区)家家欣购物中心港区锦荣店站点B"},{"rank": 9, "status": "🆕新", "tag": "航空港区", "vid": "7010382243", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "航空港两轮融合网格", "site": "雍州路郑州航空港经济综合实验区站点Z70"},{"rank": 10, "status": "🆕新", "tag": "宿州市", "vid": "7110066966", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电-义务商贸城网格", "site": "助-测绘站点074"},{"rank": 11, "status": "🆕新", "tag": "开封市", "vid": "5320694924", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "景3区", "site": "宏学街22号楼宋都皇城旅游度假区站点"},{"rank": 12, "status": "🆕新", "tag": "合肥市", "vid": "5310255259", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力一区-蜀山区-金大地1912", "site": "怀宁路新粮仓站点E"}];
+var TAGS=["合肥市", "宿州市", "开封市", "航空港区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
