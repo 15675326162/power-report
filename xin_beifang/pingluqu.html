@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 平鲁区 — 高频缺电 TOP 1</h1>
+  <h1>📍 平鲁区 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>5</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>16</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>陈磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "平鲁区-4", "vid": "7960203125", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "平鲁区-4", "site": "花园街紫河花园站点A"}];
-var TAGS=["平鲁区-4"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "缓冲-1", "vid": "7960249652", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "缓冲-1", "site": "堡子沟(公交站)站点B"},{"rank": 2, "status": "🔴2轮", "tag": "平鲁区-4", "vid": "7960203125", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "平鲁区-4", "site": "花园街紫河花园站点A"},{"rank": 3, "status": "🆕新", "tag": "缓冲-1", "vid": "7960094335", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "缓冲-1", "site": "善学街文苑小区站点A"}];
+var TAGS=["平鲁区-4", "缓冲-1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
