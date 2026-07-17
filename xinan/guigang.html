@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 贵港市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>41</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>7</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>32</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>卢超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "凤凰街", "vid": "7720125579", "lost": 11, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "凤凰街", "site": "生活港喜相逢商务酒店站"},{"rank": 2, "status": "🆕新", "tag": "龙圣", "vid": "5320045160", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "龙圣", "site": "贵城街道民主路77停车点"},{"rank": 3, "status": "🆕新", "tag": "龙圣", "vid": "7720158895", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "龙圣", "site": "马克网咖后门站"},{"rank": 4, "status": "🆕新", "tag": "港南区", "vid": "7720127802", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "港南区", "site": "水岸郦都29栋水岸郦都"},{"rank": 5, "status": "🆕新", "tag": "龙圣", "vid": "7720165177", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "龙圣", "site": "龙圣新村龙岗啤酒城站"},{"rank": 6, "status": "🆕新", "tag": "凤凰街", "vid": "7720124377", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "凤凰街", "site": "贵城街道凤凰一街107号停车点"},{"rank": 7, "status": "🆕新", "tag": "石羊塘", "vid": "7720184136", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "石羊塘", "site": "中山路大西园站"}];
-var TAGS=["凤凰街", "港南区", "石羊塘", "龙圣"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "龙圣", "vid": "7720165177", "lost": 9, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "龙圣", "site": "龙圣新村龙岗啤酒城站"},{"rank": 2, "status": "🔴2轮", "tag": "港南区", "vid": "7720127802", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "港南区", "site": "水岸郦都29栋水岸郦都"},{"rank": 3, "status": "🔴2轮", "tag": "凤凰街", "vid": "7720184136", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "凤凰街", "site": "中山路大西园站"},{"rank": 4, "status": "🆕新", "tag": "东湖", "vid": "7720159060", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东湖", "site": "新货场路7号"},{"rank": 5, "status": "🆕新", "tag": "-", "vid": "7720169028", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "德宝花城", "vid": "7720125116", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "德宝花城", "site": "中山路达坚杂货店站"},{"rank": 7, "status": "🆕新", "tag": "万达广场", "vid": "7720183071", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "万达广场", "site": "布山路盛世名门南门"}];
+var TAGS=["-", "万达广场", "东湖", "凤凰街", "德宝花城", "港南区", "龙圣"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
