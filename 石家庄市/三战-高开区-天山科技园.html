@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>三战-高开区-天山科技园 · 高频缺电详情</title>
+  <style>
+    :root{--accent:#2563eb;--danger:#dc2626;--success:#16a34a;--surface:#ffffff;--bg:#f4f7fb;--ink:#172033;--muted:#667085;--line:#e6eaf0;--warning:#d97706;--shadow:0 14px 40px rgba(25,36,60,.08)}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
+    button,input{font:inherit}.shell{width:min(1180px,100%);margin:auto;padding:24px 18px 48px}.hero{position:relative;overflow:hidden;border-radius:22px;padding:24px;color:#fff;background:linear-gradient(135deg,#111827,var(--accent));box-shadow:var(--shadow)}
+    .hero:after{content:"";position:absolute;right:-80px;top:-120px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.1)}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.72}.hero h1{position:relative;margin:6px 0 18px;font-size:clamp(22px,5vw,34px);line-height:1.2}.metrics{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.metric{min-height:76px;border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:11px 12px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px)}.metric b{display:block;font-size:20px;line-height:1.25}.metric span{font-size:12px;opacity:.72}
+    .panel{margin-top:16px;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.toolbar{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;padding:16px;border-bottom:1px solid var(--line)}.filter-block{min-width:0;flex:1}.label{display:block;margin-bottom:6px;color:var(--muted);font-size:12px;font-weight:650}.tags{display:flex;gap:7px;overflow:auto;padding-bottom:2px}.tag-button{flex:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:var(--muted);cursor:pointer}.tag-button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}.threshold{width:180px}.threshold input{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;outline:none}.threshold input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 15%,transparent)}
+    .summary{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;color:var(--muted);font-size:12px}.reset{border:0;background:transparent;color:var(--accent);cursor:pointer}.table-wrap{overflow:auto;border-radius:0 0 18px 18px}table{width:100%;border-collapse:collapse;min-width:860px}th{position:sticky;top:0;z-index:1;padding:11px 10px;background:#f8fafc;color:var(--muted);font-size:11px;letter-spacing:.04em;text-align:left;text-transform:uppercase}td{padding:12px 10px;border-top:1px solid var(--line)}tr.repeat{background:color-mix(in srgb,var(--danger) 4%,var(--surface))}.rank{color:#98a2b3}.vehicle{font:600 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}.number{font-weight:750;text-align:right}.lost{color:var(--danger)}.recent{color:var(--warning)}.delta.up{color:var(--danger)}.delta.down{color:var(--success)}.status{font-size:12px;font-weight:700;white-space:nowrap}.status.repeat{color:var(--danger)}.status.new{color:var(--success)}.clip{max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}.empty{padding:38px;text-align:center;color:var(--muted)}
+    @media(max-width:760px){.shell{padding:12px 10px 32px}.hero{padding:19px 16px;border-radius:18px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{min-height:66px}.toolbar{align-items:stretch;flex-direction:column}.threshold{width:100%}.panel{border-radius:16px}.summary{position:sticky;left:0}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">HFB · 17:00 data window</div>
+      <h1>三战-高开区-天山科技园 高频缺电 TOP 1</h1>
+      <section class="metrics" aria-label="关键指标">
+        <div class="metric"><b>6</b><span>累计丢单</span></div>
+        <div class="metric"><b>1</b><span>分组数</span></div>
+        <div class="metric"><b>0</b><span>持续未处理</span></div>
+        <div class="metric"><b>1</b><span>本轮新增</span></div>
+        <div class="metric"><b>17 点</b><span>统计时段</span></div>
+        <div class="metric"><b>-</b><span>负责人</span></div>
+      </section>
+    </header>
+
+    <section class="panel">
+      <div class="toolbar">
+        <div class="filter-block"><span class="label">分组筛选</span><div class="tags" id="tags"></div></div>
+        <label class="threshold"><span class="label">最低累计丢单</span><input id="minimum" type="number" min="0" inputmode="numeric" placeholder="输入阈值"></label>
+      </div>
+      <div class="summary"><span id="summary"></span><button class="reset" id="reset" type="button">重置筛选</button></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>状态</th><th>分组</th><th>车编</th><th style="text-align:right">累计</th><th style="text-align:right">近 1h</th><th>变化</th><th>网格</th><th>站点</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "三战-高开区-天山科技园", "vid": "5320574284", "lost": 6, "h1": 4, "delta": 0, "grid": "三战-高开区-天山科技园", "site": "长江大道_sev"}];const TAGS=["三战-高开区-天山科技园"];const selected=new Set();
+    const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
+    function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
+    function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
+    for(const tag of TAGS){const button=document.createElement('button');button.type='button';button.className='tag-button';button.textContent=tag;button.setAttribute('aria-pressed','false');button.onclick=()=>{selected.has(tag)?selected.delete(tag):selected.add(tag);button.setAttribute('aria-pressed',String(selected.has(tag)));render()};tags.appendChild(button)}
+    minimum.addEventListener('input',render);document.getElementById('reset').onclick=()=>{selected.clear();minimum.value='';for(const button of tags.children)button.setAttribute('aria-pressed','false');render()};render();
+  </script>
+</body>
+</html>
