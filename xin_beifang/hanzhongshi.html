@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 汉中市 — 高频缺电 TOP 1</h1>
+  <h1>📍 汉中市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b>朱阳阳</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西A北", "vid": "5320417198", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西A北", "site": "法国厦贝供暖(民乐花苑2期南区店)民乐花苑站点"}];
-var TAGS=["西A北"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西A北", "vid": "5320417198", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西A北", "site": "法国厦贝供暖(民乐花苑2期南区店)民乐花苑站点"},{"rank": 2, "status": "🆕新", "tag": "西A南 （西）", "vid": "5320418691", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西A南 （西）", "site": "汉中市-汉台区-汉中路街道劳动中路华盛购物广场(西环路店)-公交车站57c"}];
+var TAGS=["西A北", "西A南 （西）"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
