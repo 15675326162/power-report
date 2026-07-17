@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 普洱市 — 高频缺电 TOP 1</h1>
+  <h1>📍 普洱市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>-</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "普洱市换电3区", "vid": "5320471117", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "普洱市换电3区", "site": "-"}];
-var TAGS=["普洱市换电3区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "普洱市换电4区", "vid": "5320477156", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "普洱市换电4区", "site": "鱼水路思茅公路机械施工队小区站点B"},{"rank": 2, "status": "🆕新", "tag": "普洱市换电2区", "vid": "5320535477", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "普洱市换电2区", "site": "思茅区边城路10号回梓街派出所"}];
+var TAGS=["普洱市换电2区", "普洱市换电4区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
