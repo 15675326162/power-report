@@ -41,7 +41,7 @@ tr.rep{background:#fff8f8}
     <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>路林广</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "义马北2", "vid": "7110198866", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "义马北2", "site": "银杏路站点J"}];
-var TAGS=["义马北2"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "义马南1", "vid": "7110300796", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "义马南1", "site": "三门峡市义马市泰山路街道千秋路义马体育公园"}];
+var TAGS=["义马南1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
