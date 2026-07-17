@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 3</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>9</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
     <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-青山北-保利花园", "vid": "5320459752", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-保利花园", "site": "包头市-青山区-青福镇文化路624白框点位"},{"rank": 2, "status": "🆕新", "tag": "东区-九原-九原万达", "vid": "5320455065", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原万达", "site": "华悦酒店(包头国际会展中心天福广场店)富力城站点"},{"rank": 3, "status": "🆕新", "tag": "西区-昆区北-苏宁广场", "vid": "5320456494", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-苏宁广场", "site": "民族西路番茄社区站点M"}];
-var TAGS=["东区-九原-九原万达", "西区-昆区北-苏宁广场", "西区-青山北-保利花园"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-青山北-保利花园", "vid": "5320459752", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-青山北-保利花园", "site": "包头市-青山区-青福镇文化路624白框点位"},{"rank": 2, "status": "🆕新", "tag": "西区-青山南-赵家营", "vid": "5320455715", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-青山南-赵家营", "site": "包头市-昆都仑区-（红框）林荫路街道包钢少年宫围棋学校少先路26号街坊-综合医院门口632（新增）"},{"rank": 3, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320452885", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "莎木佳路包头市第四十六中学站点G"},{"rank": 4, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320375135", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "修远路包头市第九中学外国语学校站点B"}];
+var TAGS=["东区-九原-包头医学院", "东区-九原-包头轻工学院", "西区-青山北-保利花园", "西区-青山南-赵家营"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
