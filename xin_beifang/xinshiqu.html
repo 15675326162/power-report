@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 新市区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>45</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>28</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "新市区-核心-轴承厂", "vid": "7010457955", "lost": 13, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "新市区-核心-轴承厂", "site": "锦州东路城建京府站点"},{"rank": 2, "status": "🔴2轮", "tag": "新市区-核心-警察学校", "vid": "7010458061", "lost": 12, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "新市区-核心-警察学校", "site": "杭州东街四季风情园小区北区站点"},{"rank": 3, "status": "🔴3轮", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "米东-红光雅居", "vid": "3720155232", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "米东-红光雅居", "site": "米东南路1375号中国石化卡子湾加油站站点"},{"rank": 5, "status": "🆕新", "tag": "新市区-隔离-东方御景", "vid": "7010487127", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-东方御景", "site": "新体巷雅仕居小区站点"}];
-var TAGS=["新市区-核心-警察学校", "新市区-核心-轴承厂", "新市区-缓冲-美仑环球港", "新市区-隔离-东方御景", "米东-红光雅居"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "新市区-核心-警察学校", "vid": "7010458061", "lost": 14, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "新市区-核心-警察学校", "site": "杭州东街四季风情园小区北区站点"},{"rank": 2, "status": "🆕新", "tag": "-", "vid": "3720155142", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "新市区-隔离-东方御景", "vid": "7010487127", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-隔离-东方御景", "site": "新体巷雅仕居小区站点"},{"rank": 4, "status": "🆕新", "tag": "-", "vid": "3720149425", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "米东-红光雅居", "vid": "2000030890", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "米东-红光雅居", "site": "-"}];
+var TAGS=["-", "新市区-核心-警察学校", "新市区-隔离-东方御景", "米东-红光雅居"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
