@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 4</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>17</b>累计丢单</div>
+    <div class="s"><b>16</b>累计丢单</div>
     <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-安宁区-十里店", "vid": "5320571234", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-十里店", "site": "安宁东路西北师范大学(云亭校区)站点A"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320353453", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-七里河区-省博物馆", "vid": "5320268541", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-省博物馆", "site": "西津东路492号金百合宾馆站点B"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-城关区-南关", "vid": "5320573794", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-南关", "site": "小区-南滨河路化工机械厂家属院停车点"}];
-var TAGS=["兰州-二区-七里河区-省博物馆", "兰州-二区-安宁区-十里店", "兰州市-二区-城关区-南关", "兰州市-二区-雁滩-新港城"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-城关区-金城盆景园", "vid": "5320258118", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-金城盆景园", "site": "南滨河东路城投·水岸颐苑站点A"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-段家滩", "vid": "5320293540", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-段家滩", "site": "鱼池口路甘肃医药公司家属院站点G"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-城关区-金城盆景园", "vid": "5320255288", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-金城盆景园", "site": "庆阳路32号兰州万象城站点"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-七里河区-兰工坪网格", "vid": "5320244625", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-兰工坪网格", "site": "建西东路甘肃省兰州物资供应站家属小区站点B"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320352887", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "高新路雁栖园站点F"}];
+var TAGS=["兰州-二区-七里河区-兰工坪网格", "兰州市-二区-城关区-金城盆景园", "兰州市-二区-雁滩-段家滩", "兰州市-二区-雁滩-红星迈凯伦"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
