@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 7</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>50</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>60</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>4</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-警察学校", "vid": "7010458061", "lost": 16, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-警察学校", "site": "杭州东街四季风情园小区北区站点"},{"rank": 2, "status": "🔴3轮", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 15, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "-", "vid": "3720155142", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "-", "vid": "3720149425", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "新市区-隔离-职业大学", "vid": "3720176412", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-职业大学", "site": "宣仁墩南街南一巷16号7324家属院站点A"},{"rank": 6, "status": "🆕新", "tag": "-", "vid": "3720174940", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "米东-人民公园", "vid": "5310571626", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-人民公园", "site": "-"}];
-var TAGS=["-", "新市区-核心-警察学校", "新市区-缓冲-美仑环球港", "新市区-隔离-职业大学", "米东-人民公园"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-核心-警察学校", "vid": "7010458061", "lost": 17, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-核心-警察学校", "site": "杭州东街101号室四季风情园小区南区站点"},{"rank": 2, "status": "🔴4轮", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 17, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "新市区-隔离-职业大学", "vid": "3720176412", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "新市区-隔离-职业大学", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "-", "vid": "3720174940", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "-", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "5310571553", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "迎宾路迎宾购物中心站点E"},{"rank": 6, "status": "🆕新", "tag": "-", "vid": "3720172671", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "迎宾路众志公学家属院站点C"},{"rank": 7, "status": "🆕新", "tag": "新市区-隔离-四工村", "vid": "3720133470", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-四工村", "site": "长春北路中国石油乌鲁木齐致富路加油站站点"},{"rank": 8, "status": "🆕新", "tag": "米东-石化", "vid": "7010431124", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "米东-石化", "site": "米东北路1901-2239号泰昌宇宏CNG加油加气站站点"}];
+var TAGS=["-", "新市区-核心-警察学校", "新市区-缓冲-美仑环球港", "新市区-隔离-四工村", "新市区-隔离-机场片区", "新市区-隔离-职业大学", "米东-石化"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
