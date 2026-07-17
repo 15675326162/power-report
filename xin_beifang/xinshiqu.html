@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 3</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>15</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-轴承厂", "vid": "7010457955", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂", "site": "双星体育(锦州东路)汇轩园花园小区站点C"},{"rank": 2, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "米东-新疆轻工职业技术学院", "vid": "7960122703", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-新疆轻工职业技术学院", "site": "长春北路站点R"}];
-var TAGS=["新市区-核心-轴承厂", "新市区-缓冲-美仑环球港", "米东-新疆轻工职业技术学院"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-警察学校", "vid": "7010458061", "lost": 10, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-警察学校", "site": "杭州东街四季风情园小区北区站点"},{"rank": 2, "status": "🔴2轮", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "新市区-核心-轴承厂", "vid": "7010457955", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "新市区-核心-轴承厂", "site": "锦州东路城建京府站点"},{"rank": 4, "status": "🆕新", "tag": "米东-红光雅居", "vid": "3720155232", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-红光雅居", "site": "米东南路1375号中国石化卡子湾加油站站点"},{"rank": 5, "status": "🆕新", "tag": "米东-文体公园", "vid": "7960086667", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-文体公园", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "-", "vid": "3720172671", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "迎宾路众志公学家属院站点C"}];
+var TAGS=["-", "新市区-核心-警察学校", "新市区-核心-轴承厂", "新市区-缓冲-美仑环球港", "米东-文体公园", "米东-红光雅居"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
