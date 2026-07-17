@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 2</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>20</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>34</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
     <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "东征区-赛罕区-摩尔城15区", "vid": "5320378516", "lost": 14, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "东征区-赛罕区-摩尔城15区", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "西战区-新城区-鼓楼14区", "vid": "5320441801", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西战区-新城区-鼓楼14区", "site": "-"}];
-var TAGS=["东征区-赛罕区-摩尔城15区", "西战区-新城区-鼓楼14区"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "东征区-赛罕区-摩尔城15区", "vid": "5320378516", "lost": 16, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东征区-赛罕区-摩尔城15区", "site": "-"},{"rank": 2, "status": "🔴3轮", "tag": "西战区-新城区-鼓楼14区", "vid": "5320441801", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西战区-新城区-鼓楼14区", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "东征区-赛罕区-东万达17区", "vid": "5320398226", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "东征区-赛罕区-东万达17区", "site": "白云道呼和浩特文遗展示中心(呼和浩特规划馆)站点-S1"},{"rank": 4, "status": "🆕新", "tag": "西战区-回民区-海亮广场22区", "vid": "5320441972", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西战区-回民区-海亮广场22区", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "西战区-新城区-火车站13区", "vid": "5320396652", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西战区-新城区-火车站13区", "site": "呼伦路胜利路交叉口东南角-马路-新【晚】"}];
+var TAGS=["东征区-赛罕区-东万达17区", "东征区-赛罕区-摩尔城15区", "西战区-回民区-海亮广场22区", "西战区-新城区-火车站13区", "西战区-新城区-鼓楼14区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
