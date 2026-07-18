@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 成都市 — 高频缺电 TOP 3</h1>
+  <h1>📍 成都市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>12</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>张龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "金马-温江区-成都市-电力网格", "vid": "5320147896", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "金马-温江区-成都市-电力网格", "site": "骑士大道温泉大道三段花样年·花样城站点A"},{"rank": 2, "status": "🆕新", "tag": "涌泉-温江区-成都市-电力网格", "vid": "5320154740", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "涌泉-温江区-成都市-电力网格", "site": "一级-地铁-温江区-温泉大道D口（助）"},{"rank": 3, "status": "🆕新", "tag": "天府-温江区-成都市-电力网格", "vid": "5320155777", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "天府-温江区-成都市-电力网格", "site": "鱼凫路园丁小区04"}];
-var TAGS=["天府-温江区-成都市-电力网格", "涌泉-温江区-成都市-电力网格", "金马-温江区-成都市-电力网格"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "天府-温江区-成都市-电力网格", "vid": "5320155777", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "天府-温江区-成都市-电力网格", "site": "鱼凫路园丁小区04"},{"rank": 2, "status": "🆕新", "tag": "德源-郫都区-成都市-电力网格", "vid": "5310213222", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "德源-郫都区-成都市-电力网格", "site": "蜀贤路二段花样年·龙年国际中心站点B"}];
+var TAGS=["天府-温江区-成都市-电力网格", "德源-郫都区-成都市-电力网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
