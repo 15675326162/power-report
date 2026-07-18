@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>22</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>38</b>累计丢单</div>
+    <div class="s"><b>8</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西区-昆区北-海威小区", "vid": "5320167707", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "西区-昆区北-海威小区", "site": "阿尔丁北大街海威小区站点H"},{"rank": 2, "status": "🆕新", "tag": "西区-稀土-稀土公园", "vid": "5320715030", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-稀土-稀土公园", "site": "包头市-高新区-阿尔丁大街51号稀土大厦站点A（白框）"},{"rank": 3, "status": "🔴2轮", "tag": "西区-昆区北-苏宁广场", "vid": "5320418413", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-昆区北-苏宁广场", "site": "包头市-九原区-远洲国际城(蓝框)"},{"rank": 4, "status": "🆕新", "tag": "东区-九原-装备园区", "vid": "5320471038", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-装备园区", "site": "包头职业教育园区(北1门)站点A"},{"rank": 5, "status": "🆕新", "tag": "西区-昆区南-包头乐园", "vid": "5320164223", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-包头乐园", "site": "-"}];
-var TAGS=["东区-九原-装备园区", "西区-昆区北-海威小区", "西区-昆区北-苏宁广场", "西区-昆区南-包头乐园", "西区-稀土-稀土公园"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "西区-青山北-锦林公园", "vid": "5320457302", "lost": 8, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-锦林公园", "site": "兵工路中段锦尚国际站点M白框"},{"rank": 2, "status": "🆕新", "tag": "西区-昆区南-包头乐园", "vid": "5320164223", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区南-包头乐园", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "东区-九原-装备园区", "vid": "5320456710", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东区-九原-装备园区", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "东区-九原-包头轻工学院", "vid": "5320456410", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-包头轻工学院", "site": "-"},{"rank": 5, "status": "🔴2轮", "tag": "东区-九原-包头医学院", "vid": "5320456924", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-包头医学院", "site": "富力院士廷一期(东门)站点"},{"rank": 6, "status": "🆕新", "tag": "西区-青山北-万达广场", "vid": "5320418525", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-万达广场", "site": "菜园路菜园小区站点D"},{"rank": 7, "status": "🆕新", "tag": "东区-东河-西脑包", "vid": "5320514211", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-东河-西脑包", "site": "巴彦塔拉大街147号铁鑫大厦站点A（彩框）"},{"rank": 8, "status": "🆕新", "tag": "东区-九原-九原万达", "vid": "5320459627", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原万达", "site": "包头市九原区重庆德庄火锅店御融观邸站点A"}];
+var TAGS=["东区-东河-西脑包", "东区-九原-九原万达", "东区-九原-包头医学院", "东区-九原-包头轻工学院", "东区-九原-装备园区", "西区-昆区南-包头乐园", "西区-青山北-万达广场", "西区-青山北-锦林公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
