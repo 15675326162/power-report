@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 嫩江市 — 高频缺电 TOP 2</h1>
+  <h1>📍 嫩江市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>4</b>累计丢单</div>
     <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>赵加慧</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "电力网格3", "vid": "3720192104", "lost": 7, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力网格3", "site": "景观生态家园站点"},{"rank": 2, "status": "🆕新", "tag": "电力网格3", "vid": "3720204199", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力网格3", "site": "墨尔根大街嫩江市公安局站点"}];
-var TAGS=["电力网格3"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "电力网格1", "vid": "3720204327", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力网格1", "site": "墨尔根大街国土嘉园站点"}];
+var TAGS=["电力网格1"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
