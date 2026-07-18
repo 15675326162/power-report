@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 18:00 data window</div>
-      <h1>伊春市 高频缺电 TOP 5</h1>
+      <div class="eyebrow">HFB · 07:00 data window</div>
+      <h1>伊春市 高频缺电 TOP 1</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>27</b><span>累计丢单</span></div>
-        <div class="metric"><b>5</b><span>分组数</span></div>
-        <div class="metric"><b>2</b><span>持续未处理</span></div>
-        <div class="metric"><b>3</b><span>本轮新增</span></div>
-        <div class="metric"><b>18 点</b><span>统计时段</span></div>
+        <div class="metric"><b>4</b><span>累计丢单</span></div>
+        <div class="metric"><b>1</b><span>分组数</span></div>
+        <div class="metric"><b>0</b><span>持续未处理</span></div>
+        <div class="metric"><b>1</b><span>本轮新增</span></div>
+        <div class="metric"><b>07 点</b><span>统计时段</span></div>
         <div class="metric"><b>苏羽</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "伊春市两轮融合网格C区", "vid": "3720193323", "lost": 8, "h1": 1, "delta": 0, "grid": "伊春市两轮融合网格C区", "site": "新兴中大街209号天力印刷厂站点"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "伊春市两轮融合网格D区", "vid": "3720188359", "lost": 7, "h1": 1, "delta": 1, "grid": "伊春市两轮融合网格D区", "site": "通河路恒安商城站点B"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "伊春市两轮融合网格A", "vid": "3720204698", "lost": 5, "h1": 2, "delta": 0, "grid": "伊春市两轮融合网格A", "site": "迎宾北路电力嘉园站点G"}, {"rank": 4, "status": "🔴2轮", "repeat": true, "tag": "伊春市两轮融合网格E区", "vid": "3720207254", "lost": 4, "h1": 1, "delta": 1, "grid": "伊春市两轮融合网格E区", "site": "-"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "伊春市两轮融合网格B区", "vid": "3720193367", "lost": 3, "h1": 1, "delta": 0, "grid": "伊春市两轮融合网格B区", "site": "通河路恒安商城站点B"}];const TAGS=["伊春市两轮融合网格A", "伊春市两轮融合网格B区", "伊春市两轮融合网格C区", "伊春市两轮融合网格D区", "伊春市两轮融合网格E区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "伊春市两轮融合网格A", "vid": "3720197079", "lost": 4, "h1": 3, "delta": 0, "grid": "伊春市两轮融合网格A", "site": "通河路健身广场站点B"}];const TAGS=["伊春市两轮融合网格A"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
