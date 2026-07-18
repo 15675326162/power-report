@@ -39,9 +39,9 @@ tr.rep{background:#fff8f8}
   <div class="stats">
     <div class="s"><b>4</b>累计丢单</div>
     <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>19点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>赵鹏凯</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "永城南3R", "vid": "5310691878", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "永城南3R", "site": "商丘市永城市演集街道长寿西路金博大公馆"}];
-var TAGS=["永城南3R"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "永城北1R", "vid": "5310691878", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "永城北1R", "site": "-"}];
+var TAGS=["永城北1R"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
