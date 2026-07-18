@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 郑州市高新区 — 高频缺电 TOP 8</h1>
+  <h1>📍 郑州市高新区 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>09点</b>时段</div>
+    <div class="s"><b>19</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>10点</b>时段</div>
     <div class="s"><b>胡世友</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "惠济超区（西）", "vid": "5310554392", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "惠济超区（西）", "site": "银屏路保利文化广场尚园站点B"},{"rank": 2, "status": "🆕新", "tag": "惠济超区（西）", "vid": "5310553247", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "惠济超区（西）", "site": "枫杨街大里·鑫桂源站点E"},{"rank": 3, "status": "🆕新", "tag": "高新区网格", "vid": "5310558524", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "高新区网格", "site": "山桃路葛寨文苑站点A"},{"rank": 4, "status": "🆕新", "tag": "惠济超区（西）", "vid": "5310754932", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "惠济超区（西）", "site": "冬青街朗悦公园府站点N"},{"rank": 5, "status": "🆕新", "tag": "惠济超区（西）", "vid": "5310530122", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "惠济超区（西）", "site": "迎春街33号郑州外国语新枫杨学校站点"},{"rank": 6, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310553154", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "玉兰街金科城壹号院站点"},{"rank": 7, "status": "🆕新", "tag": "长租车融合网格", "vid": "5310546223", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "长租车融合网格", "site": "西四环西辅路祥营安置小区站点"},{"rank": 8, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310561973", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "杜鹃街万科城祥顺苑站点"}];
-var TAGS=["惠济超区（西）", "长租车融合网格", "高新区两轮融合网格", "高新区网格"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310553112", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "朗悦公园府秦庄玺园朗悦公园府秦庄玺园北区站点"},{"rank": 2, "status": "🔴2轮", "tag": "惠济超区（西）", "vid": "5310558524", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "惠济超区（西）", "site": "山桃路葛寨文苑站点A"},{"rank": 3, "status": "🔴2轮", "tag": "惠济超区（西）", "vid": "5310553154", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "惠济超区（西）", "site": "玉兰街金科城壹号院站点"},{"rank": 4, "status": "🆕新", "tag": "高新区两轮融合网格", "vid": "5310555355", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高新区两轮融合网格", "site": "瑞达路中国银行(高新技术开发区支行)站点"}];
+var TAGS=["惠济超区（西）", "高新区两轮融合网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
