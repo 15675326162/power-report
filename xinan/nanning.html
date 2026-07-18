@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 南宁市 — 高频缺电 TOP 3</h1>
+  <h1>📍 南宁市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>4</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>0</b>🆕新增</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b>李天劲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西乡塘-新阳街道-新秀公园", "vid": "5320233528", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-新阳街道-新秀公园", "site": "富德路富宁新兴苑壮锦大厦站点"},{"rank": 2, "status": "🆕新", "tag": "邕宁-蒲庙街道-万达茂", "vid": "5320211940", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "邕宁-蒲庙街道-万达茂", "site": "那造路全段G5746"},{"rank": 3, "status": "🆕新", "tag": "西乡塘-安宁街道-邕武路", "vid": "5320233806", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-安宁街道-邕武路", "site": "安峰路保利爱琴海停车出口—安峰路健之佳G262"}];
-var TAGS=["西乡塘-安宁街道-邕武路", "西乡塘-新阳街道-新秀公园", "邕宁-蒲庙街道-万达茂"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "西乡塘-安宁街道-邕武路", "vid": "5320233806", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西乡塘-安宁街道-邕武路", "site": "秀林停车场—秀林2区仓库G5961"}];
+var TAGS=["西乡塘-安宁街道-邕武路"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
