@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 洛阳市 — 高频缺电 TOP 2</h1>
+  <h1>📍 洛阳市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>11</b>累计丢单</div>
+    <div class="s"><b>4</b>累计丢单</div>
     <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>19点</b>时段</div>
     <div class="s"><b>雷亮亮、路林广</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "商圈-洛龙-宝龙广场", "vid": "5320411193", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "商圈-洛龙-宝龙广场", "site": "洛龙区厚载门街39号"},{"rank": 2, "status": "🆕新", "tag": "商圈-洛龙-宝龙广场", "vid": "5320574699", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "商圈-洛龙-宝龙广场", "site": "关圣街怡和嘉园站点L"}];
-var TAGS=["商圈-洛龙-宝龙广场"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "-", "vid": "5310761397", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "东区二路景悦城市名家站点D"}];
+var TAGS=["-"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
