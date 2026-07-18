@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 遂宁市 — 高频缺电 TOP 1</h1>
+  <h1>📍 遂宁市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>4</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>16点</b>时段</div>
+    <div class="s"><b>8</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>王磊</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "经开区-城北2区", "vid": "5320300594", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "经开区-城北2区", "site": "宏桥东街北滨郡府停车点a"}];
-var TAGS=["经开区-城北2区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "船山区-城北2区", "vid": "5320197314", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "船山区-城北2区", "site": "言厨味道(凯旋城店)凯旋城站点A"},{"rank": 2, "status": "🆕新", "tag": "船山区-城南3区", "vid": "5320301244", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "船山区-城南3区", "site": "凯旋中路306号海琪服装城(凯旋下路店)站点"}];
+var TAGS=["船山区-城北2区", "船山区-城南3区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
