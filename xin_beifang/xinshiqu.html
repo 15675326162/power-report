@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 5</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>16</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>15点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-核心-财经大学", "vid": "3720177569", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "新市区-核心-财经大学", "site": "友家宾馆(河北东路)新疆体育中心站点A"},{"rank": 2, "status": "🆕新", "tag": "-", "vid": "6680066446", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "苏州西街南一巷龙海五度站点A"},{"rank": 3, "status": "🆕新", "tag": "米东-米古里", "vid": "3720138620", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-米古里", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "新市区-隔离-机场片区", "vid": "7010439600", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-机场片区", "site": "同心路民航综合服务楼站点"},{"rank": 5, "status": "🆕新", "tag": "新市区-核心-澳龙广场", "vid": "7010437161", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-澳龙广场", "site": "顺达薄利超市(天津北路)中南上悦城一期站点"}];
-var TAGS=["-", "新市区-核心-澳龙广场", "新市区-核心-财经大学", "新市区-隔离-机场片区", "米东-米古里"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-科学院", "vid": "7010507729", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "科学二街中国科学院新疆理化技术研究所站点G"},{"rank": 3, "status": "🆕新", "tag": "米东-交通职业技术大学", "vid": "3720139645", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-交通职业技术大学", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "新市区-核心-植物园", "vid": "5310685120", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-植物园", "site": "-"}];
+var TAGS=["新市区-核心-植物园", "新市区-核心-科学院", "新市区-缓冲-美仑环球港", "米东-交通职业技术大学"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
