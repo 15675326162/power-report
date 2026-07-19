@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 1</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>23</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"}];
-var TAGS=["新市区-缓冲-美仑环球港"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "-", "vid": "7010457219", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-科学院", "vid": "3720140509", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "昆明路京华佳座站点"},{"rank": 3, "status": "🆕新", "tag": "新市区-隔离-三工六队", "vid": "3720163808", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-隔离-三工六队", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "米东-石化", "vid": "7010467236", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-石化", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "-", "vid": "3720133425", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "-", "vid": "3720174984", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"}];
+var TAGS=["-", "新市区-核心-科学院", "新市区-隔离-三工六队", "米东-石化"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
