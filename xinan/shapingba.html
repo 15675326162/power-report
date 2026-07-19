@@ -1,56 +1,83 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>沙坪坝区 · 高频缺电详情</title>
-  <style>
-    :root{--accent:#2563eb;--danger:#dc2626;--success:#16a34a;--surface:#ffffff;--bg:#f4f7fb;--ink:#172033;--muted:#667085;--line:#e6eaf0;--warning:#d97706;--shadow:0 14px 40px rgba(25,36,60,.08)}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
-    button,input{font:inherit}.shell{width:min(1180px,100%);margin:auto;padding:24px 18px 48px}.hero{position:relative;overflow:hidden;border-radius:22px;padding:24px;color:#fff;background:linear-gradient(135deg,#111827,var(--accent));box-shadow:var(--shadow)}
-    .hero:after{content:"";position:absolute;right:-80px;top:-120px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.1)}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.72}.hero h1{position:relative;margin:6px 0 18px;font-size:clamp(22px,5vw,34px);line-height:1.2}.metrics{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.metric{min-height:76px;border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:11px 12px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px)}.metric b{display:block;font-size:20px;line-height:1.25}.metric span{font-size:12px;opacity:.72}
-    .panel{margin-top:16px;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.toolbar{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;padding:16px;border-bottom:1px solid var(--line)}.filter-block{min-width:0;flex:1}.label{display:block;margin-bottom:6px;color:var(--muted);font-size:12px;font-weight:650}.tags{display:flex;gap:7px;overflow:auto;padding-bottom:2px}.tag-button{flex:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:var(--muted);cursor:pointer}.tag-button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}.threshold{width:180px}.threshold input{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;outline:none}.threshold input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 15%,transparent)}
-    .summary{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;color:var(--muted);font-size:12px}.reset{border:0;background:transparent;color:var(--accent);cursor:pointer}.table-wrap{overflow:auto;border-radius:0 0 18px 18px}table{width:100%;border-collapse:collapse;min-width:860px}th{position:sticky;top:0;z-index:1;padding:11px 10px;background:#f8fafc;color:var(--muted);font-size:11px;letter-spacing:.04em;text-align:left;text-transform:uppercase}td{padding:12px 10px;border-top:1px solid var(--line)}tr.repeat{background:color-mix(in srgb,var(--danger) 4%,var(--surface))}.rank{color:#98a2b3}.vehicle{font:600 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}.number{font-weight:750;text-align:right}.lost{color:var(--danger)}.recent{color:var(--warning)}.delta.up{color:var(--danger)}.delta.down{color:var(--success)}.status{font-size:12px;font-weight:700;white-space:nowrap}.status.repeat{color:var(--danger)}.status.new{color:var(--success)}.clip{max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}.empty{padding:38px;text-align:center;color:var(--muted)}
-    @media(max-width:760px){.shell{padding:12px 10px 32px}.hero{padding:19px 16px;border-radius:18px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{min-height:66px}.toolbar{align-items:stretch;flex-direction:column}.threshold{width:100%}.panel{border-radius:16px}.summary{position:sticky;left:0}}
-  </style>
-</head>
-<body>
-  <main class="shell">
-    <header class="hero">
-      <div class="eyebrow">HFB · 16:00 data window</div>
-      <h1>沙坪坝区 高频缺电 TOP 5</h1>
-      <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>40</b><span>累计丢单</span></div>
-        <div class="metric"><b>3</b><span>分组数</span></div>
-        <div class="metric"><b>1</b><span>持续未处理</span></div>
-        <div class="metric"><b>4</b><span>本轮新增</span></div>
-        <div class="metric"><b>16 点</b><span>统计时段</span></div>
-        <div class="metric"><b>王伟</b><span>负责人</span></div>
-      </section>
-    </header>
-
-    <section class="panel">
-      <div class="toolbar">
-        <div class="filter-block"><span class="label">分组筛选</span><div class="tags" id="tags"></div></div>
-        <label class="threshold"><span class="label">最低累计丢单</span><input id="minimum" type="number" min="0" inputmode="numeric" placeholder="输入阈值"></label>
-      </div>
-      <div class="summary"><span id="summary"></span><button class="reset" id="reset" type="button">重置筛选</button></div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>#</th><th>状态</th><th>分组</th><th>车编</th><th style="text-align:right">累计</th><th style="text-align:right">近 1h</th><th>变化</th><th>网格</th><th>站点</th></tr></thead>
-          <tbody id="rows"></tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-  <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "科技学院", "vid": "7010407803", "lost": 23, "h1": 1, "delta": 0, "grid": "科技学院", "site": "大学城中路富力城二期第1区站点L"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "陈家桥", "vid": "7010361501", "lost": 7, "h1": 1, "delta": 0, "grid": "陈家桥", "site": "-"}, {"rank": 3, "status": "🔴2轮", "repeat": true, "tag": "陈家桥", "vid": "7010360264", "lost": 4, "h1": 1, "delta": 1, "grid": "陈家桥", "site": "-"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "重庆大学", "vid": "7010351851", "lost": 3, "h1": 1, "delta": 0, "grid": "重庆大学", "site": "沙坪坝区曾家镇大学城南二路书香溪墅"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "重庆大学", "vid": "7010408574", "lost": 3, "h1": 1, "delta": 0, "grid": "重庆大学", "site": "大学城西路虎溪花园站点J"}];const TAGS=["科技学院", "重庆大学", "陈家桥"];const selected=new Set();
-    const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
-    function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
-    function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
-    for(const tag of TAGS){const button=document.createElement('button');button.type='button';button.className='tag-button';button.textContent=tag;button.setAttribute('aria-pressed','false');button.onclick=()=>{selected.has(tag)?selected.delete(tag):selected.add(tag);button.setAttribute('aria-pressed',String(selected.has(tag)));render()};tags.appendChild(button)}
-    minimum.addEventListener('input',render);document.getElementById('reset').onclick=()=>{selected.clear();minimum.value='';for(const button of tags.children)button.setAttribute('aria-pressed','false');render()};render();
-  </script>
-</body>
-</html>
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>沙坪坝区 缺电详情</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f5f6fa;color:#222;font-size:14px}
+.hd{background:linear-gradient(135deg,#1565c0,#1e88e5);color:#fff;padding:14px 16px}
+.hd h1{font-size:16px;font-weight:700;margin-bottom:10px}
+.stats{display:flex;flex-wrap:wrap;gap:8px}
+.s{background:rgba(255,255,255,.18);border-radius:8px;padding:5px 10px;font-size:12px;line-height:1.6}
+.s b{font-size:18px;display:block;font-weight:700}
+.filter{background:#fff;padding:10px 12px;border-bottom:1px solid #eee}
+.filter-row{display:flex;gap:8px;align-items:center}
+.filter input{border:1px solid #ddd;border-radius:6px;padding:6px 8px;font-size:13px;background:#fafafa;flex:1}
+.filter button{background:#1e88e5;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:13px;cursor:pointer;white-space:nowrap}
+.city-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.city-tag{display:inline-block;padding:4px 10px;border-radius:14px;font-size:12px;border:1px solid #ccc;background:#f5f5f5;color:#555;cursor:pointer;user-select:none;transition:all .2s}
+.city-tag.active{background:#1e88e5;color:#fff;border-color:#1e88e5}
+.cnt{font-size:12px;color:#888;padding:6px 12px;background:#f9f9f9;border-bottom:1px solid #eee}
+table{width:100%;border-collapse:collapse}
+th{background:#f0f2f8;color:#555;padding:8px 6px;font-size:12px;font-weight:600;text-align:left}
+td{padding:8px 6px;border-bottom:1px solid #f0f0f0;font-size:13px;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr.rep{background:#fff8f8}
+.vid{font-family:monospace;font-size:11px;color:#666}
+.num{font-weight:700;color:#d32f2f;text-align:right}
+.h1n{font-weight:700;color:#e65100;text-align:right}
+.up{color:#d32f2f;font-weight:600}.dn{color:#388e3c;font-weight:600}.flat{color:#aaa}
+.tag{font-size:11px;font-weight:600;white-space:nowrap}
+.tag.r{color:#d32f2f}.tag.n{color:#388e3c}
+.grid{color:#999;font-size:11px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empty{text-align:center;padding:30px;color:#aaa}
+</style>
+</head><body>
+<div class="hd">
+  <h1>📍 沙坪坝区 — 高频缺电 TOP 3</h1>
+  <div class="stats">
+    <div class="s"><b>37</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>王伟</b>负责人</div>
+  </div>
+</div>
+<div class="filter">
+  <div class="city-tags" id="cityTags"></div>
+  <div class="filter-row">
+    <input id="fLost" type="number" placeholder="累计丢单≥" min="0">
+    <button onclick="apply()">应用</button>
+    <button onclick="reset()" style="background:#888">重置</button>
+  </div>
+</div>
+<div class="cnt" id="cnt"></div>
+<div style="overflow-x:auto">
+<table>
+<thead><tr>
+  <th style="width:24px">#</th>
+  <th>状态</th>
+  <th>分组</th>
+  <th>车编</th>
+  <th style="text-align:right">累计</th>
+  <th style="text-align:right">近1h</th>
+  <th style="text-align:right">变化</th>
+  <th>网格</th>
+  <th>站点</th>
+</tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+<script>
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "科技学院", "vid": "7010407803", "lost": 24, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "科技学院", "site": "大学城中路富力城二期第1区站点L"},{"rank": 2, "status": "🔴2轮", "tag": "陈家桥", "vid": "7010361501", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "陈家桥", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "科技学院", "vid": "7010353839", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "科技学院", "site": "-"}];
+var TAGS=["科技学院", "陈家桥"];
+var selected=new Set();
+function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
+function apply(){render();}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='<td class="grid" title="'+r.site+'">'+r.site+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="9" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
+initTags();render();
+</script>
+</body></html>
