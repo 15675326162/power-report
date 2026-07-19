@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 5</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>8</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "兰州-二区-西固区-四区", "vid": "5320566015", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兰州-二区-西固区-四区", "site": "西固东路站点C"},{"rank": 2, "status": "🔴2轮", "tag": "-", "vid": "5320573461", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-七里河区-恒大翡翠华庭", "vid": "5320352950", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-恒大翡翠华庭", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-西固区-二区", "vid": "5320267002", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-二区", "site": "西固中路昆仑桶业站点"},{"rank": 5, "status": "🆕新", "tag": "兰州-二区-安宁区-都市春天", "vid": "5320572355", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天", "site": "-"}];
-var TAGS=["-", "兰州-二区-七里河区-恒大翡翠华庭", "兰州-二区-安宁区-都市春天", "兰州-二区-西固区-二区", "兰州-二区-西固区-四区"];
+var DATA=[{"rank": 1, "status": "🔴6轮", "tag": "兰州-二区-西固区-四区", "vid": "5320566015", "lost": 11, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-西固区-四区", "site": "西固区-牌坊路-小区-水晶城门口"},{"rank": 2, "status": "🔴3轮", "tag": "-", "vid": "5320573461", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "兰州-二区-七里河区-恒大翡翠华庭", "vid": "5320352950", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州-二区-七里河区-恒大翡翠华庭", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-西固区-二区", "vid": "5320573294", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-二区", "site": "西固巷173号宜家快捷宾馆西固巷"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320355664", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "南昌路航天和美站点A"},{"rank": 6, "status": "🆕新", "tag": "兰州市-二区-雁滩-万达", "vid": "5320310146", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-万达", "site": "豫丰餐馆居云酒店(大润发万达店)站点"},{"rank": 7, "status": "🆕新", "tag": "兰州-二区-七里河区-奥体中心网格", "vid": "5320567761", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-奥体中心网格", "site": "马滩中街1415号长城·嘉峪苑站点"},{"rank": 8, "status": "🆕新", "tag": "兰州-二区-七里河区-小西湖", "vid": "5320573637", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-小西湖", "site": "南滨河东路兰州水车园_vxs"}];
+var TAGS=["-", "兰州-二区-七里河区-奥体中心网格", "兰州-二区-七里河区-小西湖", "兰州-二区-七里河区-恒大翡翠华庭", "兰州-二区-西固区-二区", "兰州-二区-西固区-四区", "兰州市-二区-雁滩-万达", "兰州市-二区-雁滩-省医"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
