@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新郑市 — 高频缺电 TOP 1</h1>
+  <h1>📍 新郑市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>8</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>李喆</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "北1区", "vid": "5930034659", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "北1区", "site": "祥云路国瑞城站点"}];
-var TAGS=["北1区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "二七区-橄榄城商圈", "vid": "7960107035", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二七区-橄榄城商圈", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "龙湖北1区", "vid": "5930033745", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "龙湖北1区", "site": "学文路智慧城·博园站点"}];
+var TAGS=["二七区-橄榄城商圈", "龙湖北1区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
