@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 2</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>6</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>20</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>6</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320244880", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "张苏滩路张苏滩粮油副食品批发交易市场(南河路店)站点A"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-七里河区-恒大翡翠华庭", "vid": "5320352950", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-恒大翡翠华庭", "site": "-"}];
-var TAGS=["兰州-二区-七里河区-恒大翡翠华庭", "兰州市-二区-雁滩-红星迈凯伦"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-西固区-四区", "vid": "5320566015", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-四区", "site": "西固东路_d75"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320573762", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "顺源商务宾馆雁东路小学站点"},{"rank": 3, "status": "🆕新", "tag": "-", "vid": "5320573461", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-安宁区-都市春天", "vid": "5320266951", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天", "site": "众邦大道中国·兰州众邦电缆集团站点"},{"rank": 5, "status": "🆕新", "tag": "兰州-二区-西固区-二区", "vid": "5320267002", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-二区", "site": "西固中路昆仑桶业站点"},{"rank": 6, "status": "🆕新", "tag": "兰州市-二区-雁滩区-东部市场", "vid": "5320354015", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩区-东部市场", "site": "东岗西路甘肃省人民医院站点B"}];
+var TAGS=["-", "兰州-二区-安宁区-都市春天", "兰州-二区-西固区-二区", "兰州-二区-西固区-四区", "兰州市-二区-雁滩-红星迈凯伦", "兰州市-二区-雁滩区-东部市场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
