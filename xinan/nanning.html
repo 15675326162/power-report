@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 南宁市 — 高频缺电 TOP 1</h1>
+  <h1>📍 南宁市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>李天劲</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "西乡塘-新阳街道-新秀公园", "vid": "5320231628", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西乡塘-新阳街道-新秀公园", "site": "永和路21号G10172"}];
-var TAGS=["西乡塘-新阳街道-新秀公园"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "良庆-良庆镇-五象湖", "vid": "5320232062", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "良庆-良庆镇-五象湖", "site": "五象岭路41号G11065"},{"rank": 2, "status": "🆕新", "tag": "江南-江南街道-翠湖新城", "vid": "5320222188", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "江南-江南街道-翠湖新城", "site": "清川大道辅路站点P"}];
+var TAGS=["江南-江南街道-翠湖新城", "良庆-良庆镇-五象湖"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
