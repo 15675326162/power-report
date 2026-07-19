@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 3</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>14</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>23</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320456410", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "A级-包头市-九原区-特佳汇超市点位（蓝框）"},{"rank": 2, "status": "🔴2轮", "tag": "东区-九原-九原万达", "vid": "5320417280", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原万达", "site": "永茂隆路富力城站点G"},{"rank": 3, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320176264", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "沙河东街1号富康小区站点（蓝框）"}];
-var TAGS=["东区-九原-九原万达", "东区-九原-九原广场"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "东区-九原-九原广场", "vid": "5320456410", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东区-九原-九原广场", "site": "横竖街沙河第一小学站点R"},{"rank": 2, "status": "🔴2轮", "tag": "东区-九原-九原广场", "vid": "5320176264", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原广场", "site": "沙河东街1号富康小区站点（蓝框）"},{"rank": 3, "status": "🆕新", "tag": "东区-九原-包头轻工学院", "vid": "5320459283", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头轻工学院", "site": "A级-包头市-九原区-博学驾校站点（蓝框）"},{"rank": 4, "status": "🆕新", "tag": "西区-青山南-赵家营", "vid": "5320463785", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-青山南-赵家营", "site": "望园南道幸福广场站点白框"},{"rank": 5, "status": "🆕新", "tag": "西区-青山北-万达广场", "vid": "5320405872", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-青山北-万达广场", "site": "包头市—昆都仑区（红框）团结大街47号青松小区站点C"}];
+var TAGS=["东区-九原-九原广场", "东区-九原-包头轻工学院", "西区-青山北-万达广场", "西区-青山南-赵家营"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
