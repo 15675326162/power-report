@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 阳城县 — 高频缺电 TOP 1</h1>
+  <h1>📍 阳城县 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>9</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>7</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>景鸿昌</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "东关-1", "vid": "7960150169", "lost": 9, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "东关-1", "site": "滨河东路龙泽丽苑站点A"}];
-var TAGS=["东关-1"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "东关-2", "vid": "7960177273", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东关-2", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "西河车站北环", "vid": "7960178297", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西河车站北环", "site": "-"}];
+var TAGS=["东关-2", "西河车站北环"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
