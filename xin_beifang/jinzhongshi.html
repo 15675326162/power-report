@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 晋中市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>59</b>累计丢单</div>
+    <div class="s"><b>85</b>累计丢单</div>
     <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>3</b>🔴未处理</div>
     <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>王锐鹏</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "晋中电力8区玉湖公园", "vid": "7960079509", "lost": 15, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "晋中电力8区玉湖公园", "site": "晋中市-榆次区-锦纶街道文苑街17-号商铺晋中电业局宿舍(文苑街)-居民区门口664"},{"rank": 2, "status": "🔴4轮", "tag": "晋中电力11区晋中市政府", "vid": "5310581856", "lost": 15, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市榆次区锦纶街道安宁街天波景苑"},{"rank": 3, "status": "🆕新", "tag": "晋中电力9区柳西", "vid": "5320209260", "lost": 8, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "晋中电力9区柳西", "site": "蕴华街640号新晋府站点"},{"rank": 4, "status": "🔴3轮", "tag": "晋中电力10区榆次火车站", "vid": "5320193608", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "晋中电力10区榆次火车站", "site": "蕴华街271号晋华苑东小区站点"},{"rank": 5, "status": "🆕新", "tag": "晋中电力9区柳西", "vid": "7010427370", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "晋中电力9区柳西", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "晋中电力11区晋中市政府", "vid": "7960070894", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-迎宾街一中小区站点A-居民区门口944"},{"rank": 7, "status": "🆕新", "tag": "晋中电力8区玉湖公园", "vid": "7010392708", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力8区玉湖公园", "site": "龙湖大街辅路站点H"}];
-var TAGS=["晋中电力10区榆次火车站", "晋中电力11区晋中市政府", "晋中电力8区玉湖公园", "晋中电力9区柳西"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "晋中电力9区柳西", "vid": "7960091691", "lost": 20, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "晋中电力9区柳西", "site": "-"},{"rank": 2, "status": "🔴3轮", "tag": "晋中电力8区玉湖公园", "vid": "7960079509", "lost": 17, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力8区玉湖公园", "site": "晋中市-榆次区-锦纶街道文苑街17-号商铺晋中电业局宿舍(文苑街)-居民区门口664"},{"rank": 3, "status": "🔴2轮", "tag": "晋中电力9区柳西", "vid": "5320209260", "lost": 12, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "晋中电力9区柳西", "site": "蕴华街640号新晋府站点"},{"rank": 4, "status": "🆕新", "tag": "晋中电力12区榆次老城", "vid": "5310495568", "lost": 11, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "晋中电力12区榆次老城", "site": "晋中市-榆次区-西南街道顺城街142号-居民区门口738"},{"rank": 5, "status": "🆕新", "tag": "晋中电力9区柳西", "vid": "5320207908", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "晋中电力9区柳西", "site": "-"},{"rank": 6, "status": "🔴2轮", "tag": "晋中电力11区晋中市政府", "vid": "7960070894", "lost": 8, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-迎宾街一中小区站点A-居民区门口944"},{"rank": 7, "status": "🆕新", "tag": "晋中电力8区玉湖公园", "vid": "5320202590", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力8区玉湖公园", "site": "-"}];
+var TAGS=["晋中电力11区晋中市政府", "晋中电力12区榆次老城", "晋中电力8区玉湖公园", "晋中电力9区柳西"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
