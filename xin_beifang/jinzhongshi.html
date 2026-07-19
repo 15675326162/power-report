@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 晋中市 — 高频缺电 TOP 3</h1>
+  <h1>📍 晋中市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>26</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>45</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>王锐鹏</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "晋中电力12区榆次老城", "vid": "5320210085", "lost": 16, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "晋中电力12区榆次老城", "site": "晋中市-榆次区-西南街道颐景巷黄龙江宿舍-居民区门口648"},{"rank": 2, "status": "🔴2轮", "tag": "晋中电力11区晋中市政府", "vid": "7010396492", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-锦纶街道体育西路锦绣园440"},{"rank": 3, "status": "🆕新", "tag": "晋中电力1区太原师范学院", "vid": "5310582707", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力1区太原师范学院", "site": "文津街太原理工大学(明向校区)站点A"}];
-var TAGS=["晋中电力11区晋中市政府", "晋中电力12区榆次老城", "晋中电力1区太原师范学院"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "晋中电力12区榆次老城", "vid": "5320210085", "lost": 19, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "晋中电力12区榆次老城", "site": "晋中市-榆次区-西南街道颐景巷黄龙江宿舍-居民区门口648"},{"rank": 2, "status": "🔴3轮", "tag": "晋中电力11区晋中市政府", "vid": "7010396492", "lost": 11, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-锦纶街道体育西路锦绣园440"},{"rank": 3, "status": "🔴2轮", "tag": "晋中电力1区太原师范学院", "vid": "5310582707", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力1区太原师范学院", "site": "文津街太原理工大学(明向校区)站点A"},{"rank": 4, "status": "🆕新", "tag": "晋中电力11区晋中市政府", "vid": "5310579953", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府", "site": "桥东街233号嘉和东苑小区站点"},{"rank": 5, "status": "🆕新", "tag": "晋中电力3区万科朗润园", "vid": "5310582332", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力3区万科朗润园", "site": "文华街109号晋中万科大学城商业广场站点"},{"rank": 6, "status": "🆕新", "tag": "晋中电力8区玉湖公园", "vid": "7010388101", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力8区玉湖公园", "site": "晋中市-榆次区-龙湖东大街汇景新城站点720"}];
+var TAGS=["晋中电力11区晋中市政府", "晋中电力12区榆次老城", "晋中电力1区太原师范学院", "晋中电力3区万科朗润园", "晋中电力8区玉湖公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
