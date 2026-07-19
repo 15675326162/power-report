@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 新市区 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>22</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "新市区-缓冲-新天润", "vid": "5310457390", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-缓冲-新天润", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "-", "vid": "2000030721", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "-", "vid": "3720174984", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "米东-交通职业技术大学", "vid": "7960247893", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "米东-交通职业技术大学", "site": "-"}];
-var TAGS=["-", "新市区-缓冲-新天润", "米东-交通职业技术大学"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "新市区-缓冲-新天润", "vid": "5310457390", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "新市区-缓冲-新天润", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "河南东路辅路新疆兵团建设集团第一责任有限公司(混凝土公司站点"},{"rank": 3, "status": "🆕新", "tag": "米东-人民公园", "vid": "7010455256", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-人民公园", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "新市区-核心-轴承厂", "vid": "2000036288", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-轴承厂", "site": "喀什东路1065号招商新城·雍璟府站点"}];
+var TAGS=["新市区-核心-轴承厂", "新市区-缓冲-新天润", "新市区-缓冲-美仑环球港", "米东-人民公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
