@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 3</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>12</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>15</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>5</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320573380", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "雁西路803号兰雁小区站点B"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320352933", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "读者大道272号"},{"rank": 3, "status": "🔴2轮", "tag": "兰州市-二区-雁滩-万达", "vid": "5320566147", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "兰州市-二区-雁滩-万达", "site": "雁滩路万达广场(兰州店)站点"}];
-var TAGS=["兰州市-二区-雁滩-万达", "兰州市-二区-雁滩-新港城", "兰州市-二区-雁滩-省医"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "雁滩-隔离东岗", "vid": "5320266421", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "雁滩-隔离东岗", "site": "南河北路站点Y"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-西固区-四区", "vid": "5320566015", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-四区", "site": "西固区-牌坊路-小区-水晶城门口"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-雁滩-兰州大学", "vid": "5320266811", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-兰州大学", "site": "珠子巷金悦府站点H"},{"rank": 4, "status": "🆕新", "tag": "兰州市-二区-雁滩-东岗", "vid": "5320292574", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-东岗", "site": "雁儿湾路652号惠安小区站点"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩-新港城", "vid": "5320354407", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "天水北路智慧MINI国际站点G"}];
+var TAGS=["兰州-二区-西固区-四区", "兰州市-二区-雁滩-东岗", "兰州市-二区-雁滩-兰州大学", "兰州市-二区-雁滩-新港城", "雁滩-隔离东岗"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
