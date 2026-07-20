@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 4</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>38</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>28</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴6轮", "tag": "西战区-新城区-鼓楼14区", "vid": "5320361490", "lost": 18, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "西战区-新城区-鼓楼14区", "site": "光华住宅小区光华小区站点O"},{"rank": 2, "status": "🔴2轮", "tag": "东征区-赛罕区-如意开发区30区南", "vid": "5320361145", "lost": 11, "h1": 6, "delta": "<span class='up'>↑6</span>", "grid": "东征区-赛罕区-如意开发区30区南", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "电力-赛罕区-平泰小区-35区", "vid": "5320435640", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "电力-赛罕区-平泰小区-35区", "site": "检验检疫小区内蒙古科技大厦站点A-办公-赛-【早晚】-S2"},{"rank": 4, "status": "🆕新", "tag": "赛罕区-金桥2路-40区", "vid": "5320362400", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "赛罕区-金桥2路-40区", "site": "包头大街7号永泰城·汇景_148-办公-赛-【早午晚】-S2"}];
-var TAGS=["东征区-赛罕区-如意开发区30区南", "电力-赛罕区-平泰小区-35区", "西战区-新城区-鼓楼14区", "赛罕区-金桥2路-40区"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "东征区-赛罕区-如意开发区30区南", "vid": "5320361145", "lost": 12, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东征区-赛罕区-如意开发区30区南", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "电力-赛罕区-平泰小区-35区", "vid": "5320435640", "lost": 10, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "电力-赛罕区-平泰小区-35区", "site": "检验检疫小区内蒙古科技大厦站点A-办公-赛-【早晚】-S2"},{"rank": 3, "status": "🆕新", "tag": "西战区-玉泉区-金宇新天地-34区", "vid": "5320411173", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "西战区-玉泉区-金宇新天地-34区", "site": "-"}];
+var TAGS=["东征区-赛罕区-如意开发区30区南", "电力-赛罕区-平泰小区-35区", "西战区-玉泉区-金宇新天地-34区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
