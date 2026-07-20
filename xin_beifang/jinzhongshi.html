@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 晋中市 — 高频缺电 TOP 4</h1>
   <div class="stats">
-    <div class="s"><b>52</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>4</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>49</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>2</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>王锐鹏</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴4轮", "tag": "晋中电力12区榆次老城", "vid": "5310506407", "lost": 16, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力12区榆次老城", "site": "汇通南路辅路站点"},{"rank": 2, "status": "🔴5轮", "tag": "晋中电力8区玉湖公园", "vid": "5320208073", "lost": 15, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力8区玉湖公园", "site": "晋中市-榆次区-锦纶街道体育西路金润园(安宁东街)-居民区门口616"},{"rank": 3, "status": "🔴2轮", "tag": "晋中电力11区晋中市政府", "vid": "5320243826", "lost": 14, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "晋中电力11区晋中市政府", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "晋中电力10区榆次火车站", "vid": "5320239947", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力10区榆次火车站", "site": "亲亲宠物医院站点"}];
-var TAGS=["晋中电力10区榆次火车站", "晋中电力11区晋中市政府", "晋中电力12区榆次老城", "晋中电力8区玉湖公园"];
+var DATA=[{"rank": 1, "status": "🔴6轮", "tag": "晋中电力8区玉湖公园", "vid": "5320208073", "lost": 20, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "晋中电力8区玉湖公园", "site": "晋中市-榆次区-体育西路金润园(安宁东街)-居民区门口3b5"},{"rank": 2, "status": "🔴3轮", "tag": "晋中电力10区榆次火车站", "vid": "5320239947", "lost": 12, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "晋中电力10区榆次火车站", "site": "晋中市-榆次区-西南街道蕴华街504号672"},{"rank": 3, "status": "🆕新", "tag": "晋中电力11区晋中市政府", "vid": "5310515466", "lost": 11, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府", "site": "晋中市-榆次区-北关街道中都路78号宜美宜家快捷酒店-公交车站744"},{"rank": 4, "status": "🆕新", "tag": "晋中电力11区晋中市政府", "vid": "5320210382", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府", "site": "-"}];
+var TAGS=["晋中电力10区榆次火车站", "晋中电力11区晋中市政府", "晋中电力8区玉湖公园"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
