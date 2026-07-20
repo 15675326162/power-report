@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 09:00 data window</div>
-      <h1>电力二区-滨湖区-烟墩街道 高频缺电 TOP 4</h1>
+      <div class="eyebrow">HFB · 10:00 data window</div>
+      <h1>电力二区-滨湖区-烟墩街道 高频缺电 TOP 5</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>44</b><span>累计丢单</span></div>
+        <div class="metric"><b>35</b><span>累计丢单</span></div>
         <div class="metric"><b>1</b><span>分组数</span></div>
         <div class="metric"><b>2</b><span>持续未处理</span></div>
-        <div class="metric"><b>2</b><span>本轮新增</span></div>
-        <div class="metric"><b>09 点</b><span>统计时段</span></div>
+        <div class="metric"><b>3</b><span>本轮新增</span></div>
+        <div class="metric"><b>10 点</b><span>统计时段</span></div>
         <div class="metric"><b>-</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "电力二区-滨湖区-烟墩街道", "vid": "7010376752", "lost": 24, "h1": 4, "delta": 4, "grid": "电力二区-滨湖区-烟墩街道", "site": "合肥市公安局交通警察支队滨湖大队旭辉御府站点"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "电力二区-滨湖区-烟墩街道", "vid": "5310786512", "lost": 9, "h1": 4, "delta": 4, "grid": "电力二区-滨湖区-烟墩街道", "site": "贵州路滨湖欣园站点T"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "电力二区-滨湖区-烟墩街道", "vid": "5310788810", "lost": 6, "h1": 6, "delta": 0, "grid": "电力二区-滨湖区-烟墩街道", "site": "徽州大道辅路站点E"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "电力二区-滨湖区-烟墩街道", "vid": "5320530406", "lost": 5, "h1": 4, "delta": 0, "grid": "电力二区-滨湖区-烟墩街道", "site": "成都路滨湖竹园停车点"}];const TAGS=["电力二区-滨湖区-烟墩街道"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴3轮", "repeat": true, "tag": "电力二区-滨湖区-烟墩街道", "vid": "5310786512", "lost": 10, "h1": 1, "delta": 1, "grid": "电力二区-滨湖区-烟墩街道", "site": "贵州路滨湖欣园站点T"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "电力二区-滨湖区-烟墩街道", "vid": "5320530406", "lost": 8, "h1": 3, "delta": 3, "grid": "电力二区-滨湖区-烟墩街道", "site": "成都路滨湖竹园停车点"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "电力二区-滨湖区-烟墩街道", "vid": "5320546784", "lost": 8, "h1": 4, "delta": 0, "grid": "电力二区-滨湖区-烟墩街道", "site": "喆朵咖啡(联发滨语听湖店)滨湖菊园小区站点A"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "电力二区-滨湖区-烟墩街道", "vid": "7010382398", "lost": 5, "h1": 2, "delta": 0, "grid": "电力二区-滨湖区-烟墩街道", "site": "韶山路保利·海上五月花站点Z3"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "电力二区-滨湖区-烟墩街道", "vid": "5320487846", "lost": 4, "h1": 1, "delta": 0, "grid": "电力二区-滨湖区-烟墩街道", "site": "肥叔锅贴(云谷名庭店)云谷名庭站点"}];const TAGS=["电力二区-滨湖区-烟墩街道"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
