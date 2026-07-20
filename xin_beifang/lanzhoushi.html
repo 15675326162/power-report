@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 兰州市 — 高频缺电 TOP 3</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>9</b>累计丢单</div>
     <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "兰州-二区-七里河区-小西湖", "vid": "5320312414", "lost": 7, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兰州-二区-七里河区-小西湖", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "-", "vid": "5320572164", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320266664", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "读者大道南河新村小区站点Z1"}];
-var TAGS=["-", "兰州-二区-七里河区-小西湖", "兰州市-二区-雁滩-省医"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-七里河区-兰州老街", "vid": "5320354078", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-兰州老街", "site": "西津西路956号秀川新村站点"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-城关区-汽车东站", "vid": "5320572345", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-汽车东站", "site": "麦积山路路桥音乐广场站点"},{"rank": 3, "status": "🆕新", "tag": "兰州-二区-安宁区-都市春天", "vid": "5320572355", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-安宁区-都市春天", "site": "-"}];
+var TAGS=["兰州-二区-七里河区-兰州老街", "兰州-二区-安宁区-都市春天", "兰州市-二区-城关区-汽车东站"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
