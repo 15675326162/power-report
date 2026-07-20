@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 体育中心 — 高频缺电 TOP 4</h1>
+  <h1>📍 体育中心 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>13</b>累计丢单</div>
+    <div class="s"><b>29</b>累计丢单</div>
     <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>3</b>🔴未处理</div>
     <div class="s"><b>3</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>蒙芳美</b>负责人</div>
   </div>
 </div>
@@ -71,7 +71,7 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "体育中心", "vid": "7720184430", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "体育中心", "site": "厚禄港式茶餐厅华泰·官邸停车点"},{"rank": 2, "status": "🆕新", "tag": "体育中心", "vid": "7720128774", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "体育中心", "site": "金港大道贵港市大西南农产品综合-停车点a"},{"rank": 3, "status": "🆕新", "tag": "体育中心", "vid": "7720152183", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "体育中心", "site": "金港大道大西南农产品综合市场站点"},{"rank": 4, "status": "🆕新", "tag": "体育中心", "vid": "7720153990", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "体育中心", "site": "金港大道大西南农产品综合市场站点"}];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "体育中心", "vid": "7720183426", "lost": 7, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "体育中心", "site": "-"},{"rank": 2, "status": "🔴3轮", "tag": "体育中心", "vid": "7720184430", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "体育中心", "site": "厚禄港式茶餐厅华泰·官邸停车点"},{"rank": 3, "status": "🔴2轮", "tag": "体育中心", "vid": "7720152183", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "体育中心", "site": "金港大道贵港市大西南农产品综合-停车点a"},{"rank": 4, "status": "🆕新", "tag": "体育中心", "vid": "7720184328", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "体育中心", "site": "荷城路港北区人民医院(新址)站点D"},{"rank": 5, "status": "🔴2轮", "tag": "体育中心", "vid": "7720128774", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "体育中心", "site": "金港大道贵港市大西南农产品综合-停车点a"},{"rank": 6, "status": "🆕新", "tag": "体育中心", "vid": "7720163485", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "体育中心", "site": "金港大道贵港市大西南农产品综合-停车点a"}];
 var TAGS=["体育中心"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
