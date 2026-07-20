@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 拉萨市 — 高频缺电 TOP 9</h1>
+  <h1>📍 拉萨市 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>53</b>累计丢单</div>
+    <div class="s"><b>24</b>累计丢单</div>
     <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>8</b>🆕新增</div>
-    <div class="s"><b>15点</b>时段</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>16点</b>时段</div>
     <div class="s"><b>祁进科</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "电力-布达拉宫网格", "vid": "5320540768", "lost": 20, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-布达拉宫网格", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "电力-八廓街网格", "vid": "5320520966", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-八廓街网格", "site": "-"},{"rank": 3, "status": "🔴2轮", "tag": "电力-西藏大学纳金网格", "vid": "5320526481", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力-西藏大学纳金网格", "site": "塔玛西路贡布堂小区站点C"},{"rank": 4, "status": "🆕新", "tag": "电力-八一路网格", "vid": "5320252793", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-八一路网格", "site": "八一北路32号站点A"},{"rank": 5, "status": "🆕新", "tag": "电力-八廓街网格", "vid": "5320254513", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力-八廓街网格", "site": "江苏东路665号站点"},{"rank": 6, "status": "🆕新", "tag": "电力-八廓街网格", "vid": "5320537666", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力-八廓街网格", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "电力-西藏大学纳金网格", "vid": "5320521558", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学纳金网格", "site": "江苏大道34号塔玛村第四期小康示范江冲小区站点A"},{"rank": 8, "status": "🆕新", "tag": "电力-八一路网格", "vid": "5320360337", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-八一路网格", "site": "金珠西路西藏地勘局地热地质大队站点I"},{"rank": 9, "status": "🆕新", "tag": "电力-西藏大学纳金网格", "vid": "5320537685", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "电力-西藏大学纳金网格", "site": "拉堆路宏盛阳光警苑站点C"}];
-var TAGS=["电力-八一路网格", "电力-八廓街网格", "电力-布达拉宫网格", "电力-西藏大学纳金网格"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "电力-西藏大学纳金网格", "vid": "5320526481", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力-西藏大学纳金网格", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "电力-柳梧火车站网格", "vid": "5320537522", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力-柳梧火车站网格", "site": "商业西路领耀华庭站点"},{"rank": 3, "status": "🔴2轮", "tag": "电力-八一路网格", "vid": "5320360337", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "电力-八一路网格", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "电力-布达拉宫网格", "vid": "5320404102", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "电力-布达拉宫网格", "site": "金珠西路站点Z42"},{"rank": 5, "status": "🆕新", "tag": "电力-布达拉宫网格", "vid": "5320356419", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力-布达拉宫网格", "site": "-"}];
+var TAGS=["电力-八一路网格", "电力-布达拉宫网格", "电力-柳梧火车站网格", "电力-西藏大学纳金网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
