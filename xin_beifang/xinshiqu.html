@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 新市区 — 高频缺电 TOP 2</h1>
+  <h1>📍 新市区 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>9</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>6</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>08点</b>时段</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>09点</b>时段</div>
     <div class="s"><b>白海龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "新市区-核心-太百商场", "vid": "5310573178", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-太百商场", "site": "南二路182号河南路派出所站点"},{"rank": 2, "status": "🆕新", "tag": "米东-九十八中", "vid": "7010511355", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "米东-九十八中", "site": "-"}];
-var TAGS=["新市区-核心-太百商场", "米东-九十八中"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "米东-新疆轻工职业技术学院", "vid": "3720174931", "lost": 7, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "米东-新疆轻工职业技术学院", "site": "规划路一溪语原筑站点A"},{"rank": 2, "status": "🆕新", "tag": "新市区-核心-科学院", "vid": "6680057717", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "乌鲁木齐便民警务站京华杰座站点"},{"rank": 3, "status": "🆕新", "tag": "米东-石化", "vid": "5310455689", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "米东-石化", "site": "东山街德易居站点D"},{"rank": 4, "status": "🆕新", "tag": "新市区-缓冲-新天润", "vid": "5310457390", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-新天润", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "新市区-核心-科学院", "vid": "2000032066", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "新市区-缓冲-美仑环球港", "vid": "6680065974", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "新市区-核心-警察学校", "vid": "3720140010", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-警察学校", "site": "长春中路诚信祥钢材市场站点N"},{"rank": 8, "status": "🆕新", "tag": "新市区-核心-科学院", "vid": "3720140509", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "昆明路京华佳座站点"}];
+var TAGS=["新市区-核心-科学院", "新市区-核心-警察学校", "新市区-缓冲-新天润", "新市区-缓冲-美仑环球港", "米东-新疆轻工职业技术学院", "米东-石化"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
