@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沙坪坝区 — 高频缺电 TOP 5</h1>
+  <h1>📍 沙坪坝区 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>33</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>53</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>7</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>王伟</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "陈家桥", "vid": "7010357590", "lost": 9, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "陈家桥", "site": "崇贤路学府悦园站点Z2"},{"rank": 2, "status": "🆕新", "tag": "康居西城", "vid": "7010361913", "lost": 9, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "康居西城", "site": "康城南路康居西城四组团站点A"},{"rank": 3, "status": "🆕新", "tag": "重庆大学", "vid": "7010351851", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "重庆大学", "site": "沙坪坝区纵五路1096号"},{"rank": 4, "status": "🔴3轮", "tag": "康居西城", "vid": "7010407352", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "康居西城", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "师范大学", "vid": "7010365058", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "师范大学", "site": "-"}];
-var TAGS=["师范大学", "康居西城", "重庆大学", "陈家桥"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "康居西城", "vid": "7010360721", "lost": 10, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "康居西城", "site": "大学城中路协信·天骄名城站点G"},{"rank": 2, "status": "🔴2轮", "tag": "康居西城", "vid": "7010361913", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "康居西城", "site": "康城南路康居西城四组团站点"},{"rank": 3, "status": "🔴2轮", "tag": "重庆大学", "vid": "7010351851", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "重庆大学", "site": "沙坪坝区纵五路1096号"},{"rank": 4, "status": "🆕新", "tag": "重庆大学", "vid": "7010411618", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "重庆大学", "site": "重大南路金科·廊桥水乡三组团站点C"},{"rank": 5, "status": "🆕新", "tag": "陈家桥", "vid": "5310384728", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "陈家桥", "site": "崇贤路学府悦园站点Z2"},{"rank": 6, "status": "🆕新", "tag": "重庆大学", "vid": "7010360064", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "重庆大学", "site": "思贤路407号恒大未来城站点"},{"rank": 7, "status": "🆕新", "tag": "重庆大学", "vid": "7010349601", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "重庆大学", "site": "思贤路80号东方剑桥南区站点"},{"rank": 8, "status": "🆕新", "tag": "康居西城", "vid": "7010345600", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "康居西城", "site": "沙坪坝区曾家大道55号"},{"rank": 9, "status": "🆕新", "tag": "康居西城", "vid": "7010349599", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "康居西城", "site": "康城南路康居西城四组团站点A"}];
+var TAGS=["康居西城", "重庆大学", "陈家桥"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
