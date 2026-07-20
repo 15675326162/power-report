@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 成都市 — 高频缺电 TOP 2</h1>
+  <h1>📍 成都市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>35</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>59</b>累计丢单</div>
+    <div class="s"><b>4</b>分组数</div>
     <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>17点</b>时段</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>18点</b>时段</div>
     <div class="s"><b>张龙</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "郫筒-郫都区-成都市-电力网格", "vid": "5310224296", "lost": 27, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "郫筒-郫都区-成都市-电力网格", "site": "【重点】新画郫筒雨林网咖-实体政府点位"},{"rank": 2, "status": "🔴2轮", "tag": "万盛-温江区-成都市-电力网格", "vid": "5320162301", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "万盛-温江区-成都市-电力网格", "site": "永宁路站点W"}];
-var TAGS=["万盛-温江区-成都市-电力网格", "郫筒-郫都区-成都市-电力网格"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "郫筒-郫都区-成都市-电力网格", "vid": "5310224296", "lost": 29, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "郫筒-郫都区-成都市-电力网格", "site": "【重点】新画郫筒雨林网咖-实体政府点位"},{"rank": 2, "status": "🔴3轮", "tag": "万盛-温江区-成都市-电力网格", "vid": "5320162301", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "万盛-温江区-成都市-电力网格", "site": "永宁路站点W"},{"rank": 3, "status": "🆕新", "tag": "万盛-温江区-成都市-电力网格", "vid": "5320205747", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "万盛-温江区-成都市-电力网格", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "金马-温江区-成都市-电力网格", "vid": "5320189824", "lost": 6, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "金马-温江区-成都市-电力网格", "site": "青啤大道海科中小企业孵化园站点A"},{"rank": 5, "status": "🆕新", "tag": "郫筒-郫都区-成都市-电力网格", "vid": "5310224085", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "郫筒-郫都区-成都市-电力网格", "site": "蜀都苑(郫县中小企业局西北)小蜀都苑站点A"},{"rank": 6, "status": "🆕新", "tag": "涌泉-温江区-成都市-电力网格", "vid": "5320164350", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "涌泉-温江区-成都市-电力网格", "site": "温泉大道一段光华之心站点A"}];
+var TAGS=["万盛-温江区-成都市-电力网格", "涌泉-温江区-成都市-电力网格", "郫筒-郫都区-成都市-电力网格", "金马-温江区-成都市-电力网格"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
