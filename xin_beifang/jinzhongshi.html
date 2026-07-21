@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 晋中市 — 高频缺电 TOP 6</h1>
+  <h1>📍 晋中市 — 高频缺电 TOP 7</h1>
   <div class="stats">
-    <div class="s"><b>31</b>累计丢单</div>
-    <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>6</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>47</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>6</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>王锐鹏</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "晋中电力3区万科朗润园", "vid": "5320319867", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力3区万科朗润园", "site": "定阳路怡和天誉站点H"},{"rank": 2, "status": "🆕新", "tag": "晋中电力9区柳西", "vid": "7960131444", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力9区柳西", "site": "经纬南路256号尚客优连锁酒店(晋中顺城西街店)站点"},{"rank": 3, "status": "🆕新", "tag": "晋中电力12区榆次老城", "vid": "5320215656", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力12区榆次老城", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "晋中电力4区奥特莱斯", "vid": "5320207090", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力4区奥特莱斯", "site": "-"},{"rank": 5, "status": "🆕新", "tag": "晋中电力3区万科朗润园", "vid": "5310491868", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力3区万科朗润园", "site": "仁和街怡和天誉站点D"},{"rank": 6, "status": "🆕新", "tag": "晋中电力4区奥特莱斯", "vid": "5320243362", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力4区奥特莱斯", "site": "晋中市-榆次区-郭家堡乡定阳路191号阳光城文澜府288"}];
-var TAGS=["晋中电力12区榆次老城", "晋中电力3区万科朗润园", "晋中电力4区奥特莱斯", "晋中电力9区柳西"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "晋中电力3区万科朗润园", "vid": "5320319867", "lost": 10, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力3区万科朗润园", "site": "锦纶路201号中铁三局六公司锦东小区"},{"rank": 2, "status": "🔴2轮", "tag": "晋中电力9区柳西", "vid": "7960131444", "lost": 9, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "晋中电力9区柳西", "site": "经纬南路260号晟景苑东区站点A"},{"rank": 3, "status": "🔴2轮", "tag": "晋中电力12区榆次老城", "vid": "5320215656", "lost": 8, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力12区榆次老城", "site": "-"},{"rank": 4, "status": "🔴2轮", "tag": "晋中电力4区奥特莱斯", "vid": "5320207090", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "晋中电力4区奥特莱斯", "site": "-"},{"rank": 5, "status": "🔴2轮", "tag": "晋中电力3区万科朗润园", "vid": "5310491868", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "晋中电力3区万科朗润园", "site": "仁和街万科.朗润园2期站点G"},{"rank": 6, "status": "🆕新", "tag": "晋中电力11区晋中市政府", "vid": "5310130203", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "晋中电力11区晋中市政府", "site": "主路-蕴华街中都广场"},{"rank": 7, "status": "🔴2轮", "tag": "晋中电力4区奥特莱斯", "vid": "5320243362", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "晋中电力4区奥特莱斯", "site": "晋中市-榆次区-郭家堡乡定阳路191号阳光城文澜府288"}];
+var TAGS=["晋中电力11区晋中市政府", "晋中电力12区榆次老城", "晋中电力3区万科朗润园", "晋中电力4区奥特莱斯", "晋中电力9区柳西"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
