@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 6</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 4</h1>
   <div class="stats">
     <div class="s"><b>28</b>累计丢单</div>
-    <div class="s"><b>5</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>11点</b>时段</div>
+    <div class="s"><b>4</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>12点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "三战A-铁西区-麦德龙商场", "vid": "5320441401", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-麦德龙商场", "site": "铁西区虹桥路98号兴工一校站点A"},{"rank": 2, "status": "🔴3轮", "tag": "四战B-皇姑区-乐天百货", "vid": "5320364507", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "四战B-皇姑区-乐天百货", "site": "-"},{"rank": 3, "status": "🆕新", "tag": "三战A-铁西区-三十一中", "vid": "5320319763", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-三十一中", "site": "铁西区热工街热工街小区站点A"},{"rank": 4, "status": "🔴2轮", "tag": "三战A-铁西区-铁西万象汇", "vid": "5320326213", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "三战A-铁西区-铁西万象汇", "site": "铁西区建设东路47号爱馨苑小区站点B"},{"rank": 5, "status": "🆕新", "tag": "三战A-铁西区-三十一中", "vid": "5320440924", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-三十一中", "site": "-"},{"rank": 6, "status": "🆕新", "tag": "一战C-沈河区-南塔", "vid": "5320375781", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战C-沈河区-南塔", "site": "-"}];
-var TAGS=["一战C-沈河区-南塔", "三战A-铁西区-三十一中", "三战A-铁西区-铁西万象汇", "三战A-铁西区-麦德龙商场", "四战B-皇姑区-乐天百货"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "三战B-铁西区-万科润园", "vid": "5320440892", "lost": 15, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-万科润园", "site": "铁西区北启工街碧水俪城站点R"},{"rank": 2, "status": "🆕新", "tag": "二战A-和平区-太原街南", "vid": "5320321710", "lost": 6, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-太原街南", "site": "和平区民族南街沈铁·胜利佳园站点B"},{"rank": 3, "status": "🔴2轮", "tag": "一战C-沈河区-南塔", "vid": "5320375781", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "一战C-沈河区-南塔", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "三战A-铁西区-家具城", "vid": "5320336962", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-家具城", "site": "铁西区兴华园惠和大厦住宅楼站点E"}];
+var TAGS=["一战C-沈河区-南塔", "三战A-铁西区-家具城", "三战B-铁西区-万科润园", "二战A-和平区-太原街南"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
