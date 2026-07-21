@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 包头市 — 高频缺电 TOP 4</h1>
+  <h1>📍 包头市 — 高频缺电 TOP 2</h1>
   <div class="stats">
-    <div class="s"><b>30</b>累计丢单</div>
-    <div class="s"><b>3</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
+    <div class="s"><b>15</b>累计丢单</div>
+    <div class="s"><b>2</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>12点</b>时段</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>王可旋</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "东区-九原-九原广场", "vid": "5320403340", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-九原广场", "site": "A级-包头市-九原区-黄河大街桐荷嘉苑十字路口（蓝框）"},{"rank": 2, "status": "🔴2轮", "tag": "东区-九原-九原万达", "vid": "5320456701", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原万达", "site": "沙河街三鲜生都市庭苑彩框I"},{"rank": 3, "status": "🔴2轮", "tag": "西区-青山北-万达广场", "vid": "5320509069", "lost": 7, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "西区-青山北-万达广场", "site": "番茄社区1区(南门)中海望京府站点B"},{"rank": 4, "status": "🔴2轮", "tag": "东区-九原-九原万达", "vid": "5320452671", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原万达", "site": "包头市-九原区-九原区赛汗街道九原区重庆德庄火锅店富力城-底店（蓝框）"}];
-var TAGS=["东区-九原-九原万达", "东区-九原-九原广场", "西区-青山北-万达广场"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "西区-青山北-万达广场", "vid": "5320509069", "lost": 8, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "西区-青山北-万达广场", "site": "番茄社区1区(南门)中海望京府站点B"},{"rank": 2, "status": "🆕新", "tag": "东区-九原-包头医学院", "vid": "5320715714", "lost": 7, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东区-九原-包头医学院", "site": "包头市-九原区-莎木佳路白音席勒街道办事处站点(彩框)"}];
+var TAGS=["东区-九原-包头医学院", "西区-青山北-万达广场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
