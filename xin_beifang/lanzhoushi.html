@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 2</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 8</h1>
   <div class="stats">
-    <div class="s"><b>9</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>07点</b>时段</div>
+    <div class="s"><b>46</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>08点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "兰州市-二区-城关区-南关", "vid": "5320255755", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "兰州市-二区-城关区-南关", "site": "皋兰路106号嘉成大厦站点"},{"rank": 2, "status": "🆕新", "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320567404", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "兰州西高铁综合公寓站点"}];
-var TAGS=["兰州-二区-七里河区-豪布斯卡西客站", "兰州市-二区-城关区-南关"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-七里河区-兰工坪网格", "vid": "5320353177", "lost": 10, "h1": 10, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-兰工坪网格", "site": "建西东路铁建丽苑站点A"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320266599", "lost": 9, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "雁南路3032号大润发(兰州店)站点A"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-雁滩-红星迈凯伦", "vid": "5320444804", "lost": 6, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-红星迈凯伦", "site": "雁滩路天庆花园站点A"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-七里河区-西站十字", "vid": "5320354222", "lost": 5, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-西站十字", "site": "兰州市-七里河区-西站街道建西东路430-432号铁建丽苑-居民区门口"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-城关-市政府", "vid": "5320286290", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关-市政府", "site": "张掖路保利大厦站点"},{"rank": 6, "status": "🆕新", "tag": "兰州-二区-七里河区-小西湖", "vid": "5320266903", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-小西湖", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "兰州市-二区-城关区-金城盆景园", "vid": "5320566252", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-金城盆景园", "site": "南滨河东路119号省委大教梁住宅小区站点B"},{"rank": 8, "status": "🆕新", "tag": "兰州-二区-七里河区-兰工坪网格", "vid": "5320264882", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-兰工坪网格", "site": "兰州市-七里河区-西站街道西站街道小西坪社区党群服务中心建西花园-居民区门口"}];
+var TAGS=["兰州-二区-七里河区-兰工坪网格", "兰州-二区-七里河区-小西湖", "兰州-二区-七里河区-西站十字", "兰州市-二区-城关-市政府", "兰州市-二区-城关区-金城盆景园", "兰州市-二区-雁滩-省医", "兰州市-二区-雁滩-红星迈凯伦"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
