@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 沈阳市 — 高频缺电 TOP 1</h1>
+  <h1>📍 沈阳市 — 高频缺电 TOP 9</h1>
   <div class="stats">
-    <div class="s"><b>3</b>累计丢单</div>
-    <div class="s"><b>1</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>41</b>累计丢单</div>
+    <div class="s"><b>7</b>分组数</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>8</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>胡志鑫</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "三战A-铁西区-维康医院", "vid": "5320319334", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-维康医院", "site": "铁西区北四中路四季嘉园二期站点A"}];
-var TAGS=["三战A-铁西区-维康医院"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "一战C-大东区-德增街", "vid": "5320321685", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "一战C-大东区-德增街", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "三战A-铁西区-铁百", "vid": "5320435271", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-铁百", "site": "三战铁西-商圈-新玛特-早晚高峰"},{"rank": 3, "status": "🔴2轮", "tag": "三战A-铁西区-维康医院", "vid": "5320319334", "lost": 5, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "三战A-铁西区-维康医院", "site": "铁西区北四中路四季嘉园二期站点A"},{"rank": 4, "status": "🆕新", "tag": "三战B-铁西区-铁西区政府", "vid": "5320321909", "lost": 5, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-铁西区政府", "site": "北四中路恒润·御林湾站点I"},{"rank": 5, "status": "🆕新", "tag": "三战A-铁西区-维康医院", "vid": "5320380232", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "三战A-铁西区-维康医院", "site": "铁西区齐贤北街沈阳新泰仓储物流有限公司站点A"},{"rank": 6, "status": "🆕新", "tag": "三战B-铁西区-启工街", "vid": "5320388696", "lost": 4, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-启工街", "site": "铁西区卫工北街第一城站点Z4"},{"rank": 7, "status": "🆕新", "tag": "二战A-和平区-盛京医院", "vid": "5320320329", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战A-和平区-盛京医院", "site": "和平区米旗西饼店(三好店)诚大数码国际广场站点C"},{"rank": 8, "status": "🆕新", "tag": "四战B-皇姑区-乐天百货", "vid": "5320364507", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "四战B-皇姑区-乐天百货", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "三战B-铁西区-启工街", "vid": "5320402968", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "三战B-铁西区-启工街", "site": "铁西区重工北街239号坤谦家园站点B"}];
+var TAGS=["一战C-大东区-德增街", "三战A-铁西区-维康医院", "三战A-铁西区-铁百", "三战B-铁西区-启工街", "三战B-铁西区-铁西区政府", "二战A-和平区-盛京医院", "四战B-皇姑区-乐天百货"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
