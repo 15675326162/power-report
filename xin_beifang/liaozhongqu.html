@@ -37,11 +37,11 @@ tr.rep{background:#fff8f8}
 <div class="hd">
   <h1>📍 辽中区 — 高频缺电 TOP 5</h1>
   <div class="stats">
-    <div class="s"><b>25</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>1</b>🔴未处理</div>
-    <div class="s"><b>4</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>20</b>累计丢单</div>
+    <div class="s"><b>3</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>11点</b>时段</div>
     <div class="s"><b>苏圣毅</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "蒲东近海新区", "vid": "5310483472", "lost": 12, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "蒲东近海新区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "辽中区-茨榆坨西区", "vid": "5310046406", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "辽中区-茨榆坨西区", "site": "茨榆街金唱鸿音乐串吧站点"},{"rank": 3, "status": "🆕新", "tag": "辽中区-茨榆坨西区", "vid": "7960274632", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "辽中区-茨榆坨西区", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "辽中区-茨榆坨西区", "vid": "5310188522", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "辽中区-茨榆坨西区", "site": "算法推荐87"},{"rank": 5, "status": "🆕新", "tag": "辽中区-茨榆坨西区", "vid": "7960082793", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "辽中区-茨榆坨西区", "site": "-"}];
-var TAGS=["蒲东近海新区", "辽中区-茨榆坨西区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "辽中区-茨榆坨东区", "vid": "5310226968", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "辽中区-茨榆坨东区", "site": "茨榆街茨榆坨初中站点"},{"rank": 2, "status": "🔴2轮", "tag": "辽中区-茨榆坨西区", "vid": "5310188522", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "辽中区-茨榆坨西区", "site": "算法推荐87"},{"rank": 3, "status": "🔴2轮", "tag": "辽中区-茨榆坨西区", "vid": "7960082793", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "辽中区-茨榆坨西区", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "文化酒店", "vid": "7960250328", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "文化酒店", "site": "【早】东环街（城中花园西北门）"},{"rank": 5, "status": "🆕新", "tag": "辽中区-茨榆坨东区", "vid": "5310024896", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "辽中区-茨榆坨东区", "site": "-"}];
+var TAGS=["文化酒店", "辽中区-茨榆坨东区", "辽中区-茨榆坨西区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
