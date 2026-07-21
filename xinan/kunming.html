@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 昆明市 — 高频缺电 TOP 2</h1>
+  <h1>📍 昆明市 — 高频缺电 TOP 6</h1>
   <div class="stats">
-    <div class="s"><b>10</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>06点</b>时段</div>
+    <div class="s"><b>39</b>累计丢单</div>
+    <div class="s"><b>5</b>分组数</div>
+    <div class="s"><b>2</b>🔴未处理</div>
+    <div class="s"><b>4</b>🆕新增</div>
+    <div class="s"><b>07点</b>时段</div>
     <div class="s"><b>胡超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "昆明电力2-西山-五一路", "vid": "5320189672", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-西山-五一路", "site": "麦当劳(东来大厦店)东来大厦站点"},{"rank": 2, "status": "🆕新", "tag": "昆明电力1-官渡2-世纪城", "vid": "5320240930", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-世纪城", "site": "金刚青松诊所海伦堡·海伦国际站点A"}];
-var TAGS=["昆明电力1-官渡2-世纪城", "昆明电力2-西山-五一路"];
+var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "昆明电力1-官渡2-世纪城", "vid": "5320240930", "lost": 13, "h1": 9, "delta": "<span class='up'>↑9</span>", "grid": "昆明电力1-官渡2-世纪城", "site": "金刚青松诊所海伦堡·海伦国际站点A"},{"rank": 2, "status": "🔴2轮", "tag": "昆明电力2-西山-五一路", "vid": "5320189672", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "昆明电力2-西山-五一路", "site": "环城南路昆明法医院站点"},{"rank": 3, "status": "🆕新", "tag": "昆明电力2-五华-翠湖区", "vid": "5320161969", "lost": 7, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-翠湖区", "site": "报国街明昌大厦停车点"},{"rank": 4, "status": "🆕新", "tag": "-", "vid": "5320369612", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "迎宾大道天瑞国际站点M"},{"rank": 5, "status": "🆕新", "tag": "昆明电力1-官渡2-云大西路", "vid": "5320155662", "lost": 4, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "昆明电力1-官渡2-云大西路", "site": "商英街俊发·彩云城·澜湾俊园站点"},{"rank": 6, "status": "🆕新", "tag": "昆明电力2-五华-翠湖区", "vid": "5320012314", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "昆明电力2-五华-翠湖区", "site": "昆明系统推荐点位1194"}];
+var TAGS=["-", "昆明电力1-官渡2-世纪城", "昆明电力1-官渡2-云大西路", "昆明电力2-五华-翠湖区", "昆明电力2-西山-五一路"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
