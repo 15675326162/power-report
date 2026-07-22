@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 14:00 data window</div>
+      <div class="eyebrow">HFB · 17:00 data window</div>
       <h1>济南市-历城区-祝甸街道-环联夜市 高频缺电 TOP 1</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>3</b><span>累计丢单</span></div>
+        <div class="metric"><b>5</b><span>累计丢单</span></div>
         <div class="metric"><b>1</b><span>分组数</span></div>
         <div class="metric"><b>0</b><span>持续未处理</span></div>
         <div class="metric"><b>1</b><span>本轮新增</span></div>
-        <div class="metric"><b>14 点</b><span>统计时段</span></div>
+        <div class="metric"><b>17 点</b><span>统计时段</span></div>
         <div class="metric"><b>-</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "济南市-历城区-祝甸街道-环联夜市", "vid": "5320113465", "lost": 3, "h1": 2, "delta": 0, "grid": "济南市-历城区-祝甸街道-环联夜市", "site": "-"}];const TAGS=["济南市-历城区-祝甸街道-环联夜市"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "济南市-历城区-祝甸街道-环联夜市", "vid": "5320141535", "lost": 5, "h1": 1, "delta": 0, "grid": "济南市-历城区-祝甸街道-环联夜市", "site": "花园路泉印兰亭站点"}];const TAGS=["济南市-历城区-祝甸街道-环联夜市"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
