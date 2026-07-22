@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 17:00 data window</div>
+      <div class="eyebrow">HFB · 18:00 data window</div>
       <h1>呼和浩特市 高频缺电 TOP 5</h1>
       <section class="metrics" aria-label="关键指标">
         <div class="metric"><b>33</b><span>累计丢单</span></div>
         <div class="metric"><b>4</b><span>分组数</span></div>
-        <div class="metric"><b>2</b><span>持续未处理</span></div>
-        <div class="metric"><b>3</b><span>本轮新增</span></div>
-        <div class="metric"><b>17 点</b><span>统计时段</span></div>
+        <div class="metric"><b>3</b><span>持续未处理</span></div>
+        <div class="metric"><b>2</b><span>本轮新增</span></div>
+        <div class="metric"><b>18 点</b><span>统计时段</span></div>
         <div class="metric"><b>罗志强</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🔴4轮", "repeat": true, "tag": "西战区-新城区-鼓楼14区", "vid": "5320409568", "lost": 15, "h1": 4, "delta": 4, "grid": "西战区-新城区-鼓楼14区", "site": "呼铁南门-小区-新【早中】"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "赛罕区-公务员小区-39区", "vid": "5320401622", "lost": 6, "h1": 5, "delta": 0, "grid": "赛罕区-公务员小区-39区", "site": "祥和家园-小区-赛-【早午】-S2"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "电力西区-新城区-工大-05区", "vid": "5320167137", "lost": 5, "h1": 5, "delta": 0, "grid": "电力西区-新城区-工大-05区", "site": "东二环地铁C口-地铁-X"}, {"rank": 4, "status": "🔴2轮", "repeat": true, "tag": "东征区-赛罕区-东万达17区", "vid": "5320408167", "lost": 4, "h1": 1, "delta": 1, "grid": "东征区-赛罕区-东万达17区", "site": "水岸小镇东北门-马路-新【早】"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "电力西区-新城区-工大-05区", "vid": "5320435296", "lost": 3, "h1": 3, "delta": 0, "grid": "电力西区-新城区-工大-05区", "site": "康复路阿尔泰游乐园站点H"}];const TAGS=["东征区-赛罕区-东万达17区", "电力西区-新城区-工大-05区", "西战区-新城区-鼓楼14区", "赛罕区-公务员小区-39区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴3轮", "repeat": true, "tag": "东征区-赛罕区-东万达17区", "vid": "5320408167", "lost": 14, "h1": 10, "delta": 10, "grid": "东征区-赛罕区-东万达17区", "site": "XC-09-613"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "电力西区-新城区-工大-05区", "vid": "5320167137", "lost": 9, "h1": 4, "delta": 4, "grid": "电力西区-新城区-工大-05区", "site": "检察院-办公-X"}, {"rank": 3, "status": "🔴2轮", "repeat": true, "tag": "电力西区-新城区-工大-05区", "vid": "5320435296", "lost": 4, "h1": 1, "delta": 1, "grid": "电力西区-新城区-工大-05区", "site": "康复路阿尔泰游乐园站点H"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "西战区-新城区-火车站13区", "vid": "5320410265", "lost": 3, "h1": 3, "delta": 0, "grid": "西战区-新城区-火车站13区", "site": "-"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "电力西区-新城区-赛马场-04区", "vid": "5320397638", "lost": 3, "h1": 3, "delta": 0, "grid": "电力西区-新城区-赛马场-04区", "site": "成吉思汗广场C口-交通-新【中晚】"}];const TAGS=["东征区-赛罕区-东万达17区", "电力西区-新城区-工大-05区", "电力西区-新城区-赛马场-04区", "西战区-新城区-火车站13区"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
