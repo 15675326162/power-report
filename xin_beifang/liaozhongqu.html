@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 12:00 data window</div>
+      <div class="eyebrow">HFB · 13:00 data window</div>
       <h1>辽中区 高频缺电 TOP 6</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>23</b><span>累计丢单</span></div>
-        <div class="metric"><b>3</b><span>分组数</span></div>
-        <div class="metric"><b>1</b><span>持续未处理</span></div>
-        <div class="metric"><b>5</b><span>本轮新增</span></div>
-        <div class="metric"><b>12 点</b><span>统计时段</span></div>
+        <div class="metric"><b>26</b><span>累计丢单</span></div>
+        <div class="metric"><b>4</b><span>分组数</span></div>
+        <div class="metric"><b>2</b><span>持续未处理</span></div>
+        <div class="metric"><b>4</b><span>本轮新增</span></div>
+        <div class="metric"><b>13 点</b><span>统计时段</span></div>
         <div class="metric"><b>苏圣毅</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "辽中区-茨榆坨西区", "vid": "5310046406", "lost": 5, "h1": 2, "delta": 2, "grid": "辽中区-茨榆坨西区", "site": "茨榆街金唱鸿音乐串吧站点"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "蒲东近海新区", "vid": "5310544303", "lost": 5, "h1": 2, "delta": 0, "grid": "蒲东近海新区", "site": "-"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "辽中区-茨榆坨东区", "vid": "5310226968", "lost": 4, "h1": 2, "delta": 0, "grid": "辽中区-茨榆坨东区", "site": "茨榆街茨榆坨初中站点"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "辽中区-茨榆坨西区", "vid": "7960096878", "lost": 3, "h1": 1, "delta": 0, "grid": "辽中区-茨榆坨西区", "site": "-"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "辽中区-茨榆坨西区", "vid": "5310059648", "lost": 3, "h1": 1, "delta": 0, "grid": "辽中区-茨榆坨西区", "site": "-"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "辽中区-茨榆坨东区", "vid": "5310448158", "lost": 3, "h1": 1, "delta": 0, "grid": "辽中区-茨榆坨东区", "site": "-"}];const TAGS=["蒲东近海新区", "辽中区-茨榆坨东区", "辽中区-茨榆坨西区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "蒲东近海新区", "vid": "5310544303", "lost": 7, "h1": 2, "delta": 2, "grid": "蒲东近海新区", "site": "-"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "辽中区-茨榆坨东区", "vid": "5310226968", "lost": 5, "h1": 1, "delta": 1, "grid": "辽中区-茨榆坨东区", "site": "茨榆街茨榆坨初中站点"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "辽中区-茨榆坨东区", "vid": "7960255609", "lost": 5, "h1": 2, "delta": 0, "grid": "辽中区-茨榆坨东区", "site": "茨榆街茨榆坨市场站点K"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "辽中区-茨榆坨西区", "vid": "7960077112", "lost": 3, "h1": 1, "delta": 0, "grid": "辽中区-茨榆坨西区", "site": "华阳路124号金唱鸿音乐串吧站点"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "文化酒店", "vid": "7960253435", "lost": 3, "h1": 1, "delta": 0, "grid": "文化酒店", "site": "青柠厨房(丽都铭城店)丽都铭城站点"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "蒲东近海新区", "vid": "7010420871", "lost": 3, "h1": 1, "delta": 0, "grid": "蒲东近海新区", "site": "-"}];const TAGS=["文化酒店", "蒲东近海新区", "辽中区-茨榆坨东区", "辽中区-茨榆坨西区"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
