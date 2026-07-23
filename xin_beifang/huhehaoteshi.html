@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 呼和浩特市 — 高频缺电 TOP 2</h1>
+  <h1>📍 呼和浩特市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>18</b>累计丢单</div>
-    <div class="s"><b>2</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>0</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
+    <div class="s"><b>0</b>🔴未处理</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>13点</b>时段</div>
     <div class="s"><b>罗志强</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "电力西区-回民区-工农兵路-03区", "vid": "5320164222", "lost": 10, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "电力西区-回民区-工农兵路-03区", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "赛罕区-金桥2路-40区", "vid": "5320200384", "lost": 8, "h1": 5, "delta": "<span class='up'>↑5</span>", "grid": "赛罕区-金桥2路-40区", "site": "包头大街7号永泰城·汇景_148-办公-赛-【早午晚】-S2"}];
-var TAGS=["电力西区-回民区-工农兵路-03区", "赛罕区-金桥2路-40区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "电力西区-玉泉区-烟厂-26区", "vid": "5320397320", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "电力西区-玉泉区-烟厂-26区", "site": "兰厅会所地质局小区-小区-赛-【全天】-S2"}];
+var TAGS=["电力西区-玉泉区-烟厂-26区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
