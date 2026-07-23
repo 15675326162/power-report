@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 16:00 data window</div>
-      <h1>沈阳市 高频缺电 TOP 3</h1>
+      <div class="eyebrow">HFB · 17:00 data window</div>
+      <h1>沈阳市 高频缺电 TOP 8</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>19</b><span>累计丢单</span></div>
-        <div class="metric"><b>3</b><span>分组数</span></div>
-        <div class="metric"><b>1</b><span>持续未处理</span></div>
-        <div class="metric"><b>2</b><span>本轮新增</span></div>
-        <div class="metric"><b>16 点</b><span>统计时段</span></div>
+        <div class="metric"><b>48</b><span>累计丢单</span></div>
+        <div class="metric"><b>8</b><span>分组数</span></div>
+        <div class="metric"><b>2</b><span>持续未处理</span></div>
+        <div class="metric"><b>6</b><span>本轮新增</span></div>
+        <div class="metric"><b>17 点</b><span>统计时段</span></div>
         <div class="metric"><b>胡志鑫</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "三战A-铁西区-滑翔", "vid": "5320390272", "lost": 11, "h1": 2, "delta": 0, "grid": "三战A-铁西区-滑翔", "site": "凌空一街滑翔五小区站点Y"}, {"rank": 2, "status": "🔴3轮", "repeat": true, "tag": "二战A-和平区-砂山", "vid": "5320191024", "lost": 5, "h1": 1, "delta": 1, "grid": "二战A-和平区-砂山", "site": "和平区新华路新华广场站点E"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "三战A-铁西区-艳粉", "vid": "5320331303", "lost": 3, "h1": 1, "delta": 0, "grid": "三战A-铁西区-艳粉", "site": "-"}];const TAGS=["三战A-铁西区-滑翔", "三战A-铁西区-艳粉", "二战A-和平区-砂山"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "三战A-铁西区-滑翔", "vid": "5320390272", "lost": 13, "h1": 2, "delta": 2, "grid": "三战A-铁西区-滑翔", "site": "凌空一街滑翔五小区站点Y"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "一战C-沈河区-中街", "vid": "5320396958", "lost": 9, "h1": 7, "delta": 0, "grid": "一战C-沈河区-中街", "site": "-"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "二战B-和平区-长白西", "vid": "5320299444", "lost": 7, "h1": 1, "delta": 0, "grid": "二战B-和平区-长白西", "site": "和平区马总兵北街中冶·马总花园站点T"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "一战B-大东区-沈阳大学", "vid": "5320382499", "lost": 5, "h1": 5, "delta": 0, "grid": "一战B-大东区-沈阳大学", "site": "大东区望花南街23甲8门沈大小区站点C"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "二战A-和平区-新世界", "vid": "5320370988", "lost": 4, "h1": 1, "delta": 0, "grid": "二战A-和平区-新世界", "site": "-"}, {"rank": 6, "status": "🔴2轮", "repeat": true, "tag": "三战A-铁西区-艳粉", "vid": "5320331303", "lost": 4, "h1": 1, "delta": 1, "grid": "三战A-铁西区-艳粉", "site": "-"}, {"rank": 7, "status": "🆕新", "repeat": false, "tag": "三战A-铁西区-北一路万达", "vid": "5320376571", "lost": 3, "h1": 1, "delta": 0, "grid": "三战A-铁西区-北一路万达", "site": "-"}, {"rank": 8, "status": "🆕新", "repeat": false, "tag": "二战B-超区-浑南区-银卡东路", "vid": "5320321752", "lost": 3, "h1": 2, "delta": 0, "grid": "二战B-超区-浑南区-银卡东路", "site": "远航中路嘉华新城站点"}];const TAGS=["一战B-大东区-沈阳大学", "一战C-沈河区-中街", "三战A-铁西区-北一路万达", "三战A-铁西区-滑翔", "三战A-铁西区-艳粉", "二战A-和平区-新世界", "二战B-和平区-长白西", "二战B-超区-浑南区-银卡东路"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
