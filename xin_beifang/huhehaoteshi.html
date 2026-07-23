@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 09:00 data window</div>
-      <h1>呼和浩特市 高频缺电 TOP 7</h1>
+      <div class="eyebrow">HFB · 10:00 data window</div>
+      <h1>呼和浩特市 高频缺电 TOP 2</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>37</b><span>累计丢单</span></div>
-        <div class="metric"><b>6</b><span>分组数</span></div>
+        <div class="metric"><b>18</b><span>累计丢单</span></div>
+        <div class="metric"><b>2</b><span>分组数</span></div>
         <div class="metric"><b>2</b><span>持续未处理</span></div>
-        <div class="metric"><b>5</b><span>本轮新增</span></div>
-        <div class="metric"><b>09 点</b><span>统计时段</span></div>
+        <div class="metric"><b>0</b><span>本轮新增</span></div>
+        <div class="metric"><b>10 点</b><span>统计时段</span></div>
         <div class="metric"><b>罗志强</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "电力东区-新城区-恒大城-06区", "vid": "5320441959", "lost": 13, "h1": 9, "delta": 9, "grid": "电力东区-新城区-恒大城-06区", "site": "一家村地铁站C口-交通-新"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "电力西区-回民区-工农兵路-03区", "vid": "5320164222", "lost": 9, "h1": 3, "delta": 3, "grid": "电力西区-回民区-工农兵路-03区", "site": "-"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "赛罕区-金桥2路-40区", "vid": "5320200384", "lost": 3, "h1": 2, "delta": 0, "grid": "赛罕区-金桥2路-40区", "site": "包头大街7号永泰城·汇景_148-办公-赛-【早午晚】-S2"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "西战区-回民区-维多利广场19区", "vid": "5320377312", "lost": 3, "h1": 1, "delta": 0, "grid": "西战区-回民区-维多利广场19区", "site": "文化宫路新华书店文化宫街29号家属院站点"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "电力-赛罕区-鄂尔多斯东街南37区", "vid": "5320441991", "lost": 3, "h1": 3, "delta": 0, "grid": "电力-赛罕区-鄂尔多斯东街南37区", "site": "-"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "西战区-回民区-维多利广场19区", "vid": "5320409679", "lost": 3, "h1": 1, "delta": 0, "grid": "西战区-回民区-维多利广场19区", "site": "-"}, {"rank": 7, "status": "🆕新", "repeat": false, "tag": "电力-赛罕区-平泰小区-35区", "vid": "5320156193", "lost": 3, "h1": 1, "delta": 0, "grid": "电力-赛罕区-平泰小区-35区", "site": "气象佳园巧报工程公司家属院站点-小区-赛-【早午晚】-S2"}];const TAGS=["电力-赛罕区-平泰小区-35区", "电力-赛罕区-鄂尔多斯东街南37区", "电力东区-新城区-恒大城-06区", "电力西区-回民区-工农兵路-03区", "西战区-回民区-维多利广场19区", "赛罕区-金桥2路-40区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴3轮", "repeat": true, "tag": "电力西区-回民区-工农兵路-03区", "vid": "5320164222", "lost": 10, "h1": 1, "delta": 1, "grid": "电力西区-回民区-工农兵路-03区", "site": "-"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "赛罕区-金桥2路-40区", "vid": "5320200384", "lost": 8, "h1": 5, "delta": 5, "grid": "赛罕区-金桥2路-40区", "site": "包头大街7号永泰城·汇景_148-办公-赛-【早午晚】-S2"}];const TAGS=["电力西区-回民区-工农兵路-03区", "赛罕区-金桥2路-40区"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
