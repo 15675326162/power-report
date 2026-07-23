@@ -35,13 +35,13 @@ tr.rep{background:#fff8f8}
 </style>
 </head><body>
 <div class="hd">
-  <h1>📍 兰州市 — 高频缺电 TOP 10</h1>
+  <h1>📍 兰州市 — 高频缺电 TOP 1</h1>
   <div class="stats">
-    <div class="s"><b>59</b>累计丢单</div>
-    <div class="s"><b>9</b>分组数</div>
+    <div class="s"><b>3</b>累计丢单</div>
+    <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
-    <div class="s"><b>10</b>🆕新增</div>
-    <div class="s"><b>18点</b>时段</div>
+    <div class="s"><b>1</b>🆕新增</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b>韩李宝</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州-二区-西固区-四区", "vid": "5320265102", "lost": 15, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-四区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "兰州市-二区-雁滩-省医", "vid": "5320317047", "lost": 10, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "读者大道冬园人口文化公园站点A"},{"rank": 3, "status": "🆕新", "tag": "兰州市-二区-城关区-金城盆景园", "vid": "5320269839", "lost": 9, "h1": 9, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关区-金城盆景园", "site": "平凉路兰州万象城站点"},{"rank": 4, "status": "🆕新", "tag": "兰州-二区-七里河区-彭家坪理工大", "vid": "5320293252", "lost": 7, "h1": 6, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-彭家坪理工大", "site": "建西西路宜和馨园站点"},{"rank": 5, "status": "🆕新", "tag": "兰州市-二区-雁滩-文理学院", "vid": "5320244913", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-文理学院", "site": "中国建设银行(雁兴路支行)兰博大酒店礼宴中心站点A"},{"rank": 6, "status": "🆕新", "tag": "兰州-二区-城关-盐场路", "vid": "5320449549", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-城关-盐场路", "site": "北滨河东路全圣山水苑站点A"},{"rank": 7, "status": "🆕新", "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320356048", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "南滨河中路兰州金港糖酒市场站点H"},{"rank": 8, "status": "🆕新", "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320449927", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "铭钰管乐兰石·豪布斯卡站点"},{"rank": 9, "status": "🆕新", "tag": "兰州市-二区-雁滩-兰州大学", "vid": "5320352654", "lost": 3, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-兰州大学", "site": "平凉路七建大厦站点"},{"rank": 10, "status": "🆕新", "tag": "兰州市-二区-城关-甘肃二院", "vid": "5320256049", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-城关-甘肃二院", "site": "铁路新村东街兰铁客运培训基地站点"}];
-var TAGS=["兰州-二区-七里河区-彭家坪理工大", "兰州-二区-七里河区-豪布斯卡西客站", "兰州-二区-城关-盐场路", "兰州-二区-西固区-四区", "兰州市-二区-城关-甘肃二院", "兰州市-二区-城关区-金城盆景园", "兰州市-二区-雁滩-兰州大学", "兰州市-二区-雁滩-文理学院", "兰州市-二区-雁滩-省医"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "兰州市-二区-雁滩区-东部市场", "vid": "5320266023", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩区-东部市场", "site": "嘉峪关西路802号大西洋电器城站点"}];
+var TAGS=["兰州市-二区-雁滩区-东部市场"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
