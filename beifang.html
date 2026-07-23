@@ -1,56 +1,83 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>北方大区 · 高频缺电详情</title>
-  <style>
-    :root{--accent:#2563eb;--danger:#dc2626;--success:#16a34a;--surface:#ffffff;--bg:#f4f7fb;--ink:#172033;--muted:#667085;--line:#e6eaf0;--warning:#d97706;--shadow:0 14px 40px rgba(25,36,60,.08)}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
-    button,input{font:inherit}.shell{width:min(1180px,100%);margin:auto;padding:24px 18px 48px}.hero{position:relative;overflow:hidden;border-radius:22px;padding:24px;color:#fff;background:linear-gradient(135deg,#111827,var(--accent));box-shadow:var(--shadow)}
-    .hero:after{content:"";position:absolute;right:-80px;top:-120px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.1)}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.72}.hero h1{position:relative;margin:6px 0 18px;font-size:clamp(22px,5vw,34px);line-height:1.2}.metrics{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.metric{min-height:76px;border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:11px 12px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px)}.metric b{display:block;font-size:20px;line-height:1.25}.metric span{font-size:12px;opacity:.72}
-    .panel{margin-top:16px;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.toolbar{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;padding:16px;border-bottom:1px solid var(--line)}.filter-block{min-width:0;flex:1}.label{display:block;margin-bottom:6px;color:var(--muted);font-size:12px;font-weight:650}.tags{display:flex;gap:7px;overflow:auto;padding-bottom:2px}.tag-button{flex:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:var(--muted);cursor:pointer}.tag-button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}.threshold{width:180px}.threshold input{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;outline:none}.threshold input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 15%,transparent)}
-    .summary{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;color:var(--muted);font-size:12px}.reset{border:0;background:transparent;color:var(--accent);cursor:pointer}.table-wrap{overflow:auto;border-radius:0 0 18px 18px}table{width:100%;border-collapse:collapse;min-width:860px}th{position:sticky;top:0;z-index:1;padding:11px 10px;background:#f8fafc;color:var(--muted);font-size:11px;letter-spacing:.04em;text-align:left;text-transform:uppercase}td{padding:12px 10px;border-top:1px solid var(--line)}tr.repeat{background:color-mix(in srgb,var(--danger) 4%,var(--surface))}.rank{color:#98a2b3}.vehicle{font:600 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}.number{font-weight:750;text-align:right}.lost{color:var(--danger)}.recent{color:var(--warning)}.delta.up{color:var(--danger)}.delta.down{color:var(--success)}.status{font-size:12px;font-weight:700;white-space:nowrap}.status.repeat{color:var(--danger)}.status.new{color:var(--success)}.clip{max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}.empty{padding:38px;text-align:center;color:var(--muted)}
-    @media(max-width:760px){.shell{padding:12px 10px 32px}.hero{padding:19px 16px;border-radius:18px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{min-height:66px}.toolbar{align-items:stretch;flex-direction:column}.threshold{width:100%}.panel{border-radius:16px}.summary{position:sticky;left:0}}
-  </style>
-</head>
-<body>
-  <main class="shell">
-    <header class="hero">
-      <div class="eyebrow">HFB · 14:00 data window</div>
-      <h1>北方大区 高频缺电 TOP 30</h1>
-      <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>229</b><span>累计丢单</span></div>
-        <div class="metric"><b>13</b><span>分组数</span></div>
-        <div class="metric"><b>13</b><span>持续未处理</span></div>
-        <div class="metric"><b>17</b><span>本轮新增</span></div>
-        <div class="metric"><b>14 点</b><span>统计时段</span></div>
-        <div class="metric"><b>侯凯晨</b><span>负责人</span></div>
-      </section>
-    </header>
-
-    <section class="panel">
-      <div class="toolbar">
-        <div class="filter-block"><span class="label">分组筛选</span><div class="tags" id="tags"></div></div>
-        <label class="threshold"><span class="label">最低累计丢单</span><input id="minimum" type="number" min="0" inputmode="numeric" placeholder="输入阈值"></label>
-      </div>
-      <div class="summary"><span id="summary"></span><button class="reset" id="reset" type="button">重置筛选</button></div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>#</th><th>状态</th><th>分组</th><th>车编</th><th style="text-align:right">累计</th><th style="text-align:right">近 1h</th><th>变化</th><th>网格</th><th>站点</th></tr></thead>
-          <tbody id="rows"></tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-  <script>
-    const DATA=[{"rank": 1, "status": "🔴6轮", "repeat": true, "tag": "辽中区", "vid": "5310058440", "lost": 23, "h1": 1, "delta": 1, "grid": "蒲东近海新区", "site": "-"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "锦州市", "vid": "5310606782", "lost": 15, "h1": 3, "delta": 0, "grid": "-", "site": "-"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "新市区", "vid": "5310559520", "lost": 15, "h1": 1, "delta": 0, "grid": "新市区-核心-科学院", "site": "北京中路中国石化集团西北石油局北京路小区站点"}, {"rank": 4, "status": "🔴2轮", "repeat": true, "tag": "兰州市", "vid": "5320266987", "lost": 15, "h1": 3, "delta": 3, "grid": "-", "site": "-"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "沈阳市", "vid": "5320145234", "lost": 9, "h1": 1, "delta": 0, "grid": "一战A-沈河区-市府广场", "site": "沈河区惠工街一家春酒楼站点E"}, {"rank": 6, "status": "🔴2轮", "repeat": true, "tag": "霍城县", "vid": "7780224830", "lost": 9, "h1": 1, "delta": 1, "grid": "主城区-清水河1", "site": "霍城润胜机动车检测有限公司站点"}, {"rank": 7, "status": "🔴2轮", "repeat": true, "tag": "新市区", "vid": "3720147972", "lost": 9, "h1": 2, "delta": 2, "grid": "新市区-核心-轴承厂", "site": "-"}, {"rank": 8, "status": "🔴4轮", "repeat": true, "tag": "呼兰区", "vid": "2000027600", "lost": 9, "h1": 2, "delta": 2, "grid": "呼兰区电力网格", "site": "-"}, {"rank": 9, "status": "🆕新", "repeat": false, "tag": "兰州市", "vid": "5320265102", "lost": 9, "h1": 1, "delta": 0, "grid": "兰州-二区-西固区-四区", "site": "西固东路陈官营社区卫生服务中心站点"}, {"rank": 10, "status": "🔴2轮", "repeat": true, "tag": "包头市", "vid": "5320419842", "lost": 9, "h1": 4, "delta": 4, "grid": "西区-昆区南-包头乐园", "site": "包头市-昆都仑区-阿尔丁小区小北门(彩框)"}, {"rank": 11, "status": "🆕新", "repeat": false, "tag": "兰州市", "vid": "5320566392", "lost": 7, "h1": 5, "delta": 0, "grid": "兰州市-二区-雁滩-新港城", "site": "天水北路博大住宅小区站点B"}, {"rank": 12, "status": "🔴2轮", "repeat": true, "tag": "新市区", "vid": "7010465155", "lost": 7, "h1": 1, "delta": 1, "grid": "新市区-缓冲-高新万达", "site": "长春北路站点Z79"}, {"rank": 13, "status": "🆕新", "repeat": false, "tag": "霍尔果斯市", "vid": "5310740865", "lost": 6, "h1": 1, "delta": 0, "grid": "霍尔果斯电力网格", "site": "霍城西街站点A"}, {"rank": 14, "status": "🆕新", "repeat": false, "tag": "霍尔果斯市", "vid": "5310775728", "lost": 6, "h1": 4, "delta": 0, "grid": "霍尔果斯电力网格", "site": "北京路霍尔果斯口岸站点H"}, {"rank": 15, "status": "🔴2轮", "repeat": true, "tag": "乌兰浩特市", "vid": "5320257208", "lost": 6, "h1": 2, "delta": 2, "grid": "乌兰浩特运营区F区", "site": "梅园路兴安盟碧桂园站点C"}, {"rank": 16, "status": "🔴2轮", "repeat": true, "tag": "新市区", "vid": "3720175637", "lost": 6, "h1": 1, "delta": 1, "grid": "新市区-隔离-机场片区", "site": "-"}, {"rank": 17, "status": "🆕新", "repeat": false, "tag": "阳城县", "vid": "7960112112", "lost": 6, "h1": 3, "delta": 0, "grid": "市政府核心-1", "site": "南环西街开元四季站点B"}, {"rank": 18, "status": "🔴3轮", "repeat": true, "tag": "新市区", "vid": "5310572616", "lost": 6, "h1": 1, "delta": 1, "grid": "新市区-核心-植物园", "site": "河北东路309号中国电信新疆公司第二枢纽站点"}, {"rank": 19, "status": "🆕新", "repeat": false, "tag": "兰州市", "vid": "5320352406", "lost": 5, "h1": 3, "delta": 0, "grid": "兰州市-二区-雁滩-省医", "site": "南河路282号东湖副食品批发市场"}, {"rank": 20, "status": "🔴2轮", "repeat": true, "tag": "沈阳市", "vid": "5320331694", "lost": 5, "h1": 1, "delta": 1, "grid": "四战B-皇姑区-塔湾", "site": "皇姑区明廉路明廉小区站点T"}, {"rank": 21, "status": "🆕新", "repeat": false, "tag": "银川市", "vid": "5320315242", "lost": 5, "h1": 2, "delta": 0, "grid": "兴庆区-兴庆12区", "site": "兴庆区玉皇阁北街街道永康北巷永康家园4"}, {"rank": 22, "status": "🆕新", "repeat": false, "tag": "新市区", "vid": "3720136488", "lost": 5, "h1": 2, "delta": 0, "grid": "新市区-缓冲-美仑环球港", "site": "-"}, {"rank": 23, "status": "🆕新", "repeat": false, "tag": "新兴区", "vid": "5320016532", "lost": 5, "h1": 1, "delta": 0, "grid": "-", "site": "景丰路37号景丰家园站点"}, {"rank": 24, "status": "🆕新", "repeat": false, "tag": "包头市", "vid": "5320167032", "lost": 5, "h1": 1, "delta": 0, "grid": "西区-昆区北-海威小区", "site": "包头市—昆都仑区—方兴·凤凰台(南门)站点右侧（彩框）"}, {"rank": 25, "status": "🔴2轮", "repeat": true, "tag": "霍尔果斯市", "vid": "5310776388", "lost": 5, "h1": 2, "delta": 2, "grid": "霍尔果斯电力网格", "site": "-"}, {"rank": 26, "status": "🆕新", "repeat": false, "tag": "辽中区", "vid": "7960119922", "lost": 5, "h1": 2, "delta": 0, "grid": "辽中区-茨榆坨西区", "site": "-"}, {"rank": 27, "status": "🔴2轮", "repeat": true, "tag": "霍尔果斯市", "vid": "5310534402", "lost": 5, "h1": 1, "delta": 1, "grid": "霍尔果斯电力网格", "site": "北京路霍尔果斯口岸站点H"}, {"rank": 28, "status": "🆕新", "repeat": false, "tag": "银川市", "vid": "5320628822", "lost": 4, "h1": 1, "delta": 0, "grid": "兴庆区-兴庆6区", "site": "北塔广场海宝公园站点B"}, {"rank": 29, "status": "🆕新", "repeat": false, "tag": "霍尔果斯市", "vid": "7010343882", "lost": 4, "h1": 2, "delta": 0, "grid": "霍尔果斯电力网格", "site": "-"}, {"rank": 30, "status": "🆕新", "repeat": false, "tag": "兰州市", "vid": "5320573687", "lost": 4, "h1": 2, "delta": 0, "grid": "兰州-二区-七里河区-省博物馆", "site": "兰州市-七里河区-西津东路-文博家园-写字楼"}];const TAGS=["乌兰浩特市", "兰州市", "包头市", "呼兰区", "新兴区", "新市区", "沈阳市", "辽中区", "银川市", "锦州市", "阳城县", "霍城县", "霍尔果斯市"];const selected=new Set();
-    const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
-    function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
-    function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
-    for(const tag of TAGS){const button=document.createElement('button');button.type='button';button.className='tag-button';button.textContent=tag;button.setAttribute('aria-pressed','false');button.onclick=()=>{selected.has(tag)?selected.delete(tag):selected.add(tag);button.setAttribute('aria-pressed',String(selected.has(tag)));render()};tags.appendChild(button)}
-    minimum.addEventListener('input',render);document.getElementById('reset').onclick=()=>{selected.clear();minimum.value='';for(const button of tags.children)button.setAttribute('aria-pressed','false');render()};render();
-  </script>
-</body>
-</html>
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>北方大区 缺电详情</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f5f6fa;color:#222;font-size:14px}
+.hd{background:linear-gradient(135deg,#1565c0,#1e88e5);color:#fff;padding:14px 16px}
+.hd h1{font-size:16px;font-weight:700;margin-bottom:10px}
+.stats{display:flex;flex-wrap:wrap;gap:8px}
+.s{background:rgba(255,255,255,.18);border-radius:8px;padding:5px 10px;font-size:12px;line-height:1.6}
+.s b{font-size:18px;display:block;font-weight:700}
+.filter{background:#fff;padding:10px 12px;border-bottom:1px solid #eee}
+.filter-row{display:flex;gap:8px;align-items:center}
+.filter input{border:1px solid #ddd;border-radius:6px;padding:6px 8px;font-size:13px;background:#fafafa;flex:1}
+.filter button{background:#1e88e5;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:13px;cursor:pointer;white-space:nowrap}
+.city-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.city-tag{display:inline-block;padding:4px 10px;border-radius:14px;font-size:12px;border:1px solid #ccc;background:#f5f5f5;color:#555;cursor:pointer;user-select:none;transition:all .2s}
+.city-tag.active{background:#1e88e5;color:#fff;border-color:#1e88e5}
+.cnt{font-size:12px;color:#888;padding:6px 12px;background:#f9f9f9;border-bottom:1px solid #eee}
+table{width:100%;border-collapse:collapse}
+th{background:#f0f2f8;color:#555;padding:8px 6px;font-size:12px;font-weight:600;text-align:left}
+td{padding:8px 6px;border-bottom:1px solid #f0f0f0;font-size:13px;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr.rep{background:#fff8f8}
+.vid{font-family:monospace;font-size:11px;color:#666}
+.num{font-weight:700;color:#d32f2f;text-align:right}
+.h1n{font-weight:700;color:#e65100;text-align:right}
+.up{color:#d32f2f;font-weight:600}.dn{color:#388e3c;font-weight:600}.flat{color:#aaa}
+.tag{font-size:11px;font-weight:600;white-space:nowrap}
+.tag.r{color:#d32f2f}.tag.n{color:#388e3c}
+.grid{color:#999;font-size:11px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empty{text-align:center;padding:30px;color:#aaa}
+</style>
+</head><body>
+<div class="hd">
+  <h1>📍 北方大区 — 高频缺电 TOP 30</h1>
+  <div class="stats">
+    <div class="s"><b>229</b>累计丢单</div>
+    <div class="s"><b>13</b>分组数</div>
+    <div class="s"><b>13</b>🔴未处理</div>
+    <div class="s"><b>17</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
+    <div class="s"><b>侯凯晨</b>负责人</div>
+  </div>
+</div>
+<div class="filter">
+  <div class="city-tags" id="cityTags"></div>
+  <div class="filter-row">
+    <input id="fLost" type="number" placeholder="累计丢单≥" min="0">
+    <button onclick="apply()">应用</button>
+    <button onclick="reset()" style="background:#888">重置</button>
+  </div>
+</div>
+<div class="cnt" id="cnt"></div>
+<div style="overflow-x:auto">
+<table>
+<thead><tr>
+  <th style="width:24px">#</th>
+  <th>状态</th>
+  <th>分组</th>
+  <th>车编</th>
+  <th style="text-align:right">累计</th>
+  <th style="text-align:right">近1h</th>
+  <th style="text-align:right">变化</th>
+  <th>网格</th>
+  <th>站点</th>
+</tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+<script>
+var DATA=[{"rank": 1, "status": "🔴5轮", "tag": "辽中区", "vid": "5310058440", "lost": 23, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "蒲东近海新区", "site": "-"},{"rank": 2, "status": "🆕新", "tag": "新市区", "vid": "5310559520", "lost": 15, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "新市区-核心-科学院", "site": "北京中路中国石化集团西北石油局北京路小区站点"},{"rank": 3, "status": "🔴2轮", "tag": "兰州市", "vid": "5320266987", "lost": 15, "h1": 3, "delta": "<span class='up'>↑3</span>", "grid": "-", "site": "-"},{"rank": 4, "status": "🆕新", "tag": "锦州市", "vid": "5310606782", "lost": 15, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "-"},{"rank": 5, "status": "🔴2轮", "tag": "霍城县", "vid": "7780224830", "lost": 9, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "主城区-清水河1", "site": "霍城润胜机动车检测有限公司站点"},{"rank": 6, "status": "🔴2轮", "tag": "新市区", "vid": "3720147972", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "新市区-核心-轴承厂", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "沈阳市", "vid": "5320145234", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "一战A-沈河区-市府广场", "site": "沈河区惠工街一家春酒楼站点E"},{"rank": 8, "status": "🆕新", "tag": "兰州市", "vid": "5320265102", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "兰州-二区-西固区-四区", "site": "西固东路陈官营社区卫生服务中心站点"},{"rank": 9, "status": "🔴2轮", "tag": "包头市", "vid": "5320419842", "lost": 9, "h1": 4, "delta": "<span class='up'>↑4</span>", "grid": "西区-昆区南-包头乐园", "site": "包头市-昆都仑区-阿尔丁小区小北门(彩框)"},{"rank": 10, "status": "🔴3轮", "tag": "呼兰区", "vid": "2000027600", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "呼兰区电力网格", "site": "-"},{"rank": 11, "status": "🆕新", "tag": "兰州市", "vid": "5320566392", "lost": 7, "h1": 5, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-新港城", "site": "天水北路博大住宅小区站点B"},{"rank": 12, "status": "🔴2轮", "tag": "新市区", "vid": "7010465155", "lost": 7, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-缓冲-高新万达", "site": "长春北路站点Z79"},{"rank": 13, "status": "🔴2轮", "tag": "乌兰浩特市", "vid": "5320257208", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "乌兰浩特运营区F区", "site": "梅园路兴安盟碧桂园站点C"},{"rank": 14, "status": "🆕新", "tag": "霍尔果斯市", "vid": "5310740865", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "霍尔果斯电力网格", "site": "霍城西街站点A"},{"rank": 15, "status": "🆕新", "tag": "霍尔果斯市", "vid": "5310775728", "lost": 6, "h1": 4, "delta": "<span class='flat'>-</span>", "grid": "霍尔果斯电力网格", "site": "北京路霍尔果斯口岸站点H"},{"rank": 16, "status": "🆕新", "tag": "阳城县", "vid": "7960112112", "lost": 6, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "市政府核心-1", "site": "南环西街开元四季站点B"},{"rank": 17, "status": "🔴3轮", "tag": "新市区", "vid": "5310572616", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-核心-植物园", "site": "河北东路309号中国电信新疆公司第二枢纽站点"},{"rank": 18, "status": "🔴2轮", "tag": "新市区", "vid": "3720175637", "lost": 6, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "新市区-隔离-机场片区", "site": "-"},{"rank": 19, "status": "🆕新", "tag": "辽中区", "vid": "7960119922", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "辽中区-茨榆坨西区", "site": "-"},{"rank": 20, "status": "🆕新", "tag": "银川市", "vid": "5320315242", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "兴庆区-兴庆12区", "site": "兴庆区玉皇阁北街街道永康北巷永康家园4"},{"rank": 21, "status": "🔴2轮", "tag": "沈阳市", "vid": "5320331694", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "四战B-皇姑区-塔湾", "site": "皇姑区明廉路明廉小区站点T"},{"rank": 22, "status": "🆕新", "tag": "新市区", "vid": "3720136488", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "新市区-缓冲-美仑环球港", "site": "-"},{"rank": 23, "status": "🆕新", "tag": "新兴区", "vid": "5320016532", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "-", "site": "景丰路37号景丰家园站点"},{"rank": 24, "status": "🆕新", "tag": "包头市", "vid": "5320167032", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "西区-昆区北-海威小区", "site": "包头市—昆都仑区—方兴·凤凰台(南门)站点右侧（彩框）"},{"rank": 25, "status": "🔴2轮", "tag": "霍尔果斯市", "vid": "5310534402", "lost": 5, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "霍尔果斯电力网格", "site": "北京路霍尔果斯口岸站点H"},{"rank": 26, "status": "🆕新", "tag": "霍尔果斯市", "vid": "5310776388", "lost": 5, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "霍尔果斯电力网格", "site": "-"},{"rank": 27, "status": "🆕新", "tag": "兰州市", "vid": "5320352406", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "兰州市-二区-雁滩-省医", "site": "南河路282号东湖副食品批发市场"},{"rank": 28, "status": "🆕新", "tag": "乌兰浩特市", "vid": "5320288538", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "电力-乌兰浩特运营区C区", "site": "兴安南大路盛世大厦站点"},{"rank": 29, "status": "🔴2轮", "tag": "包头市", "vid": "5320460128", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东区-九原-九原广场", "site": "包头市-九原区-建新街花园路万达花园-泛色造型（蓝框）"},{"rank": 30, "status": "🆕新", "tag": "霍尔果斯市", "vid": "5310776301", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "霍尔果斯电力网格", "site": "-"}];
+var TAGS=["乌兰浩特市", "兰州市", "包头市", "呼兰区", "新兴区", "新市区", "沈阳市", "辽中区", "银川市", "锦州市", "阳城县", "霍城县", "霍尔果斯市"];
+var selected=new Set();
+function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
+function apply(){render();}
+function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='<td class="grid" title="'+r.site+'">'+r.site+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="9" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
+function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
+initTags();render();
+</script>
+</body></html>
