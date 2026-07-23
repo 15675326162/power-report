@@ -41,7 +41,7 @@ tr.rep{background:#fff8f8}
     <div class="s"><b>1</b>分组数</div>
     <div class="s"><b>0</b>🔴未处理</div>
     <div class="s"><b>1</b>🆕新增</div>
-    <div class="s"><b>10点</b>时段</div>
+    <div class="s"><b>06点</b>时段</div>
     <div class="s"><b>高智勇</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🆕新", "tag": "伊宁市电力3区", "vid": "5310726629", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "伊宁市电力3区", "site": "哈菲快餐厅停车点"}];
-var TAGS=["伊宁市电力3区"];
+var DATA=[{"rank": 1, "status": "🆕新", "tag": "伊宁市电力1区", "vid": "5310586408", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "伊宁市电力1区", "site": "墩买里大街金茂·天洁黄金海岸站点"}];
+var TAGS=["伊宁市电力1区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
