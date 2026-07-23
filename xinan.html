@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 06:00 data window</div>
-      <h1>西南大区 高频缺电 TOP 5</h1>
+      <div class="eyebrow">HFB · 07:00 data window</div>
+      <h1>西南大区 高频缺电 TOP 15</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>19</b><span>累计丢单</span></div>
+        <div class="metric"><b>80</b><span>累计丢单</span></div>
         <div class="metric"><b>5</b><span>分组数</span></div>
-        <div class="metric"><b>0</b><span>持续未处理</span></div>
-        <div class="metric"><b>5</b><span>本轮新增</span></div>
-        <div class="metric"><b>06 点</b><span>统计时段</span></div>
+        <div class="metric"><b>2</b><span>持续未处理</span></div>
+        <div class="metric"><b>13</b><span>本轮新增</span></div>
+        <div class="metric"><b>07 点</b><span>统计时段</span></div>
         <div class="metric"><b>李凤翎</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "昆明市", "vid": "5320158640", "lost": 5, "h1": 1, "delta": 0, "grid": "昆明电力1-官渡2--螺蛳湾", "site": "新源汽车用品站点"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "沙坪坝区", "vid": "7010361788", "lost": 5, "h1": 1, "delta": 0, "grid": "微电园", "site": "永祥路站点U"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "安顺市", "vid": "5320186677", "lost": 3, "h1": 1, "delta": 0, "grid": "电力2区-安顺学院", "site": "-"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "南宁市", "vid": "5320229123", "lost": 3, "h1": 1, "delta": 0, "grid": "青秀-新竹街道-民族广场", "site": "共和路57号G2745"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "丽江市", "vid": "5310471810", "lost": 3, "h1": 1, "delta": 0, "grid": "丽江市-束河-束河下半", "site": "藏帝密码演艺餐吧(丽江·美食天街店)全季酒店(丽江古城店站点"}];const TAGS=["丽江市", "南宁市", "安顺市", "昆明市", "沙坪坝区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "昆明市", "vid": "5320158640", "lost": 15, "h1": 10, "delta": 10, "grid": "昆明电力1-官渡2--螺蛳湾", "site": "新源汽车用品站点"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "沙坪坝区", "vid": "7010362660", "lost": 11, "h1": 3, "delta": 0, "grid": "重庆大学", "site": "大学城西路四川美术学院虎溪校区站点E"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "沙坪坝区", "vid": "7010360289", "lost": 8, "h1": 1, "delta": 0, "grid": "微电园", "site": "西荣路金科·天宸站点G"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "遂宁市", "vid": "5320304789", "lost": 6, "h1": 1, "delta": 0, "grid": "河东新区-2区", "site": "-"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "昆明市", "vid": "5320184021", "lost": 6, "h1": 3, "delta": 0, "grid": "昆明电力2-五华-丰宁2区", "site": "五华区滇缅大道云安阳光城3停车点"}, {"rank": 6, "status": "🔴2轮", "repeat": true, "tag": "南宁市", "vid": "5320229123", "lost": 5, "h1": 2, "delta": 2, "grid": "青秀-新竹街道-民族广场", "site": "共和路57号G2745"}, {"rank": 7, "status": "🆕新", "repeat": false, "tag": "昆明市", "vid": "5320183068", "lost": 4, "h1": 3, "delta": 0, "grid": "昆明电力2-西山-五一路", "site": "环城南路529号好悦天地站点"}, {"rank": 8, "status": "🆕新", "repeat": false, "tag": "昆明市", "vid": "5320154487", "lost": 4, "h1": 3, "delta": 0, "grid": "昆明电力1-盘呈-同德区", "site": "万宏路龙泉花园站点F"}, {"rank": 9, "status": "🆕新", "repeat": false, "tag": "沙坪坝区", "vid": "7010360638", "lost": 3, "h1": 1, "delta": 0, "grid": "重庆大学", "site": "沙坪坝区虎溪街道大学城西路四川美术学院虎溪校区2"}, {"rank": 10, "status": "🆕新", "repeat": false, "tag": "昆明市", "vid": "5320191539", "lost": 3, "h1": 3, "delta": 0, "grid": "昆明电力1-官渡2-新广丰", "site": "昆船大道昆船花园站点B"}, {"rank": 11, "status": "🆕新", "repeat": false, "tag": "普洱市", "vid": "5320453524", "lost": 3, "h1": 1, "delta": 0, "grid": "普洱市换电2区", "site": "-"}, {"rank": 12, "status": "🆕新", "repeat": false, "tag": "昆明市", "vid": "5320195000", "lost": 3, "h1": 1, "delta": 0, "grid": "昆明电力2-五华-高新3区", "site": "滇缅大道2549号西城时代停车点"}, {"rank": 13, "status": "🆕新", "repeat": false, "tag": "沙坪坝区", "vid": "7010410674", "lost": 3, "h1": 2, "delta": 0, "grid": "重庆大学", "site": "龙湖U城观蓝(北门)龙湖`U城观蓝站点"}, {"rank": 14, "status": "🆕新", "repeat": false, "tag": "昆明市", "vid": "5320196900", "lost": 3, "h1": 3, "delta": 0, "grid": "昆明电力2-西山-南亚", "site": "海埂路果壳中的宇宙站点C"}, {"rank": 15, "status": "🆕新", "repeat": false, "tag": "南宁市", "vid": "5320221695", "lost": 3, "h1": 3, "delta": 0, "grid": "江南-沙井街道-华南城", "site": "南乡路凤凰江湾商业广场站点"}];const TAGS=["南宁市", "昆明市", "普洱市", "沙坪坝区", "遂宁市"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
