@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 16:00 data window</div>
-      <h1>兰州市 高频缺电 TOP 4</h1>
+      <div class="eyebrow">HFB · 17:00 data window</div>
+      <h1>兰州市 高频缺电 TOP 6</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>32</b><span>累计丢单</span></div>
-        <div class="metric"><b>4</b><span>分组数</span></div>
-        <div class="metric"><b>1</b><span>持续未处理</span></div>
-        <div class="metric"><b>3</b><span>本轮新增</span></div>
-        <div class="metric"><b>16 点</b><span>统计时段</span></div>
+        <div class="metric"><b>22</b><span>累计丢单</span></div>
+        <div class="metric"><b>5</b><span>分组数</span></div>
+        <div class="metric"><b>0</b><span>持续未处理</span></div>
+        <div class="metric"><b>6</b><span>本轮新增</span></div>
+        <div class="metric"><b>17 点</b><span>统计时段</span></div>
         <div class="metric"><b>韩李宝</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "兰州-二区-西固区-四区", "vid": "5320265102", "lost": 12, "h1": 3, "delta": 0, "grid": "兰州-二区-西固区-四区", "site": "-"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320444590", "lost": 7, "h1": 3, "delta": 0, "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "西津西路-西站广场"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-彭家坪理工大", "vid": "5320266045", "lost": 7, "h1": 6, "delta": 0, "grid": "兰州-二区-七里河区-彭家坪理工大", "site": "兰州市-七里河区-建西西路-中国石油建西西路加油站-街区"}, {"rank": 4, "status": "🔴2轮", "repeat": true, "tag": "兰州-二区-安宁区-都市春天", "vid": "5320352652", "lost": 6, "h1": 3, "delta": 3, "grid": "兰州-二区-安宁区-都市春天", "site": "兰州市-安宁区-北滨河西路29佳园二十九佳园站点"}];const TAGS=["兰州-二区-七里河区-彭家坪理工大", "兰州-二区-七里河区-豪布斯卡西客站", "兰州-二区-安宁区-都市春天", "兰州-二区-西固区-四区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-小西湖", "vid": "5320570344", "lost": 5, "h1": 3, "delta": 0, "grid": "兰州-二区-七里河区-小西湖", "site": "西津东路兰州中心站点G"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320351196", "lost": 4, "h1": 3, "delta": 0, "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "兰州市-七里河-南滨河中路-金港城天桥下-街区"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-彭家坪理工大", "vid": "5320285398", "lost": 4, "h1": 2, "delta": 0, "grid": "兰州-二区-七里河区-彭家坪理工大", "site": "兰州市-七里河区-龚家坪西路-152号兰港怡园A区-街区"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-兰州中心", "vid": "5320292433", "lost": 3, "h1": 3, "delta": 0, "grid": "兰州-二区-七里河区-兰州中心", "site": "兰州市-七里河区-西津东路-电研所-地铁站"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-豪布斯卡西客站", "vid": "5320244610", "lost": 3, "h1": 1, "delta": 0, "grid": "兰州-二区-七里河区-豪布斯卡西客站", "site": "火星街明珠家园站点C"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "兰州-二区-七里河区-奥体中心网格", "vid": "5320573029", "lost": 3, "h1": 1, "delta": 0, "grid": "兰州-二区-七里河区-奥体中心网格", "site": "-"}];const TAGS=["兰州-二区-七里河区-兰州中心", "兰州-二区-七里河区-奥体中心网格", "兰州-二区-七里河区-小西湖", "兰州-二区-七里河区-彭家坪理工大", "兰州-二区-七里河区-豪布斯卡西客站"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
