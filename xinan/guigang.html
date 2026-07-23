@@ -39,9 +39,9 @@ tr.rep{background:#fff8f8}
   <div class="stats">
     <div class="s"><b>15</b>累计丢单</div>
     <div class="s"><b>4</b>分组数</div>
-    <div class="s"><b>2</b>🔴未处理</div>
-    <div class="s"><b>2</b>🆕新增</div>
-    <div class="s"><b>13点</b>时段</div>
+    <div class="s"><b>1</b>🔴未处理</div>
+    <div class="s"><b>3</b>🆕新增</div>
+    <div class="s"><b>14点</b>时段</div>
     <div class="s"><b>卢超</b>负责人</div>
   </div>
 </div>
@@ -71,8 +71,8 @@ tr.rep{background:#fff8f8}
 </table>
 </div>
 <script>
-var DATA=[{"rank": 1, "status": "🔴2轮", "tag": "-", "vid": "7720169529", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "-", "site": "-"},{"rank": 2, "status": "🔴2轮", "tag": "东湖", "vid": "7720163195", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "东湖", "site": "同济大道停车点b"},{"rank": 3, "status": "🆕新", "tag": "德宝花城", "vid": "5320046857", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "德宝花城", "site": "贵城街道荷城路262号停车点"},{"rank": 4, "status": "🆕新", "tag": "万达广场", "vid": "7720160978", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "万达广场", "site": "碧桂园站"}];
-var TAGS=["-", "万达广场", "东湖", "德宝花城"];
+var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "东湖", "vid": "7720163195", "lost": 6, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "东湖", "site": "同济大道停车点b"},{"rank": 2, "status": "🆕新", "tag": "德宝花城", "vid": "7720171397", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "德宝花城", "site": "贵城街道荷城路254号停车点"},{"rank": 3, "status": "🆕新", "tag": "港南区", "vid": "7720170473", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "港南区", "site": "港南区中山路江南桥头站"},{"rank": 4, "status": "🆕新", "tag": "万达广场", "vid": "5320046922", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "万达广场", "site": "ebike_wkjgmrcp"}];
+var TAGS=["万达广场", "东湖", "德宝花城", "港南区"];
 var selected=new Set();
 function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
 function apply(){render();}
