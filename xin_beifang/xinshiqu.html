@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 14:00 data window</div>
+      <div class="eyebrow">HFB · 15:00 data window</div>
       <h1>新市区 高频缺电 TOP 4</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>22</b><span>累计丢单</span></div>
+        <div class="metric"><b>26</b><span>累计丢单</span></div>
         <div class="metric"><b>4</b><span>分组数</span></div>
-        <div class="metric"><b>2</b><span>持续未处理</span></div>
-        <div class="metric"><b>2</b><span>本轮新增</span></div>
-        <div class="metric"><b>14 点</b><span>统计时段</span></div>
+        <div class="metric"><b>1</b><span>持续未处理</span></div>
+        <div class="metric"><b>3</b><span>本轮新增</span></div>
+        <div class="metric"><b>15 点</b><span>统计时段</span></div>
         <div class="metric"><b>白海龙</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "新市区-核心-植物园", "vid": "7960067548", "lost": 8, "h1": 1, "delta": 1, "grid": "新市区-核心-植物园", "site": "河北东路新疆体育中心站点E"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "新市区-核心-科学院", "vid": "5310572677", "lost": 6, "h1": 1, "delta": 0, "grid": "新市区-核心-科学院", "site": "乌鲁木齐便民警务站京华杰座站点"}, {"rank": 3, "status": "🔴2轮", "repeat": true, "tag": "新市区-隔离-机场片区", "vid": "7960103200", "lost": 4, "h1": 1, "delta": 1, "grid": "新市区-隔离-机场片区", "site": "迎宾北一路盛世尊典站点A"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "新市区-隔离-三工六队", "vid": "7960128780", "lost": 4, "h1": 2, "delta": 0, "grid": "新市区-隔离-三工六队", "site": "东站路站点H"}];const TAGS=["新市区-核心-植物园", "新市区-核心-科学院", "新市区-隔离-三工六队", "新市区-隔离-机场片区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴3轮", "repeat": true, "tag": "新市区-核心-植物园", "vid": "7960067548", "lost": 12, "h1": 4, "delta": 4, "grid": "新市区-核心-植物园", "site": "河北东路新疆体育中心站点J"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "新市区-核心-科学院", "vid": "6680030298", "lost": 7, "h1": 4, "delta": 0, "grid": "新市区-核心-科学院", "site": "苏宁电器(铁路局店)金实业精品广场(河南西路)站点A"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "新市区-缓冲-美仑环球港", "vid": "3720173219", "lost": 4, "h1": 1, "delta": 0, "grid": "新市区-缓冲-美仑环球港", "site": "河南东路辅路美特花园站点"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "新市区-缓冲-新天润", "vid": "6680054553", "lost": 3, "h1": 1, "delta": 0, "grid": "新市区-缓冲-新天润", "site": "-"}];const TAGS=["新市区-核心-植物园", "新市区-核心-科学院", "新市区-缓冲-新天润", "新市区-缓冲-美仑环球港"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
