@@ -1,83 +1,56 @@
-<!DOCTYPE html>
-<html><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>华南大区 缺电详情</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f5f6fa;color:#222;font-size:14px}
-.hd{background:linear-gradient(135deg,#1565c0,#1e88e5);color:#fff;padding:14px 16px}
-.hd h1{font-size:16px;font-weight:700;margin-bottom:10px}
-.stats{display:flex;flex-wrap:wrap;gap:8px}
-.s{background:rgba(255,255,255,.18);border-radius:8px;padding:5px 10px;font-size:12px;line-height:1.6}
-.s b{font-size:18px;display:block;font-weight:700}
-.filter{background:#fff;padding:10px 12px;border-bottom:1px solid #eee}
-.filter-row{display:flex;gap:8px;align-items:center}
-.filter input{border:1px solid #ddd;border-radius:6px;padding:6px 8px;font-size:13px;background:#fafafa;flex:1}
-.filter button{background:#1e88e5;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:13px;cursor:pointer;white-space:nowrap}
-.city-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
-.city-tag{display:inline-block;padding:4px 10px;border-radius:14px;font-size:12px;border:1px solid #ccc;background:#f5f5f5;color:#555;cursor:pointer;user-select:none;transition:all .2s}
-.city-tag.active{background:#1e88e5;color:#fff;border-color:#1e88e5}
-.cnt{font-size:12px;color:#888;padding:6px 12px;background:#f9f9f9;border-bottom:1px solid #eee}
-table{width:100%;border-collapse:collapse}
-th{background:#f0f2f8;color:#555;padding:8px 6px;font-size:12px;font-weight:600;text-align:left}
-td{padding:8px 6px;border-bottom:1px solid #f0f0f0;font-size:13px;vertical-align:middle}
-tr:last-child td{border-bottom:none}
-tr.rep{background:#fff8f8}
-.vid{font-family:monospace;font-size:11px;color:#666}
-.num{font-weight:700;color:#d32f2f;text-align:right}
-.h1n{font-weight:700;color:#e65100;text-align:right}
-.up{color:#d32f2f;font-weight:600}.dn{color:#388e3c;font-weight:600}.flat{color:#aaa}
-.tag{font-size:11px;font-weight:600;white-space:nowrap}
-.tag.r{color:#d32f2f}.tag.n{color:#388e3c}
-.grid{color:#999;font-size:11px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.empty{text-align:center;padding:30px;color:#aaa}
-</style>
-</head><body>
-<div class="hd">
-  <h1>📍 华南大区 — 高频缺电 TOP 30</h1>
-  <div class="stats">
-    <div class="s"><b>136</b>累计丢单</div>
-    <div class="s"><b>19</b>分组数</div>
-    <div class="s"><b>3</b>🔴未处理</div>
-    <div class="s"><b>27</b>🆕新增</div>
-    <div class="s"><b>14点</b>时段</div>
-    <div class="s"><b>李怡</b>负责人</div>
-  </div>
-</div>
-<div class="filter">
-  <div class="city-tags" id="cityTags"></div>
-  <div class="filter-row">
-    <input id="fLost" type="number" placeholder="累计丢单≥" min="0">
-    <button onclick="apply()">应用</button>
-    <button onclick="reset()" style="background:#888">重置</button>
-  </div>
-</div>
-<div class="cnt" id="cnt"></div>
-<div style="overflow-x:auto">
-<table>
-<thead><tr>
-  <th style="width:24px">#</th>
-  <th>状态</th>
-  <th>分组</th>
-  <th>车编</th>
-  <th style="text-align:right">累计</th>
-  <th style="text-align:right">近1h</th>
-  <th style="text-align:right">变化</th>
-  <th>网格</th>
-  <th>站点</th>
-</tr></thead>
-<tbody id="tbody"></tbody>
-</table>
-</div>
-<script>
-var DATA=[{"rank": 1, "status": "🔴3轮", "tag": "南海区", "vid": "5320318209", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "R.桂城10区", "site": "多益西饼(万科·金域中央C区店)万科·金域中央C区站点"},{"rank": 2, "status": "🔴3轮", "tag": "赣州市", "vid": "5320651278", "lost": 9, "h1": 2, "delta": "<span class='up'>↑2</span>", "grid": "R.沙河区", "site": "沙河镇沙河社区退役军人服务站新市民公寓站点"},{"rank": 3, "status": "🆕新", "tag": "南海区", "vid": "5320424112", "lost": 9, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲3区", "site": "平西街利君公寓站点C"},{"rank": 4, "status": "🆕新", "tag": "长沙市", "vid": "5320456583", "lost": 8, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "Y砂子塘11", "site": "劳动中路鑫天鑫城站点E"},{"rank": 5, "status": "🆕新", "tag": "长沙市", "vid": "5310269416", "lost": 6, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "D湘龙上", "site": "南塘路盛地尊域站点"},{"rank": 6, "status": "🆕新", "tag": "江城区", "vid": "5320250505", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "江城区-城北-鸳鸯湖", "site": "-"},{"rank": 7, "status": "🆕新", "tag": "潮阳区", "vid": "2000016632", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "东山大道区", "site": "-"},{"rank": 8, "status": "🆕新", "tag": "南海区", "vid": "5320425788", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城10区", "site": "-"},{"rank": 9, "status": "🆕新", "tag": "信宜市", "vid": "5910795633", "lost": 5, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "缓冲-东恒新城", "site": "茂名市信宜市东镇街道粤桂路尚文钢材店"},{"rank": 10, "status": "🆕新", "tag": "阳春市", "vid": "7010446946", "lost": 5, "h1": 3, "delta": "<span class='flat'>-</span>", "grid": "阳春市-阳春碧桂园", "site": "城东大道67号春城镇第二小学站点"},{"rank": 11, "status": "🆕新", "tag": "仁化县", "vid": "5930042923", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "工业区", "site": "工业园区管委会"},{"rank": 12, "status": "🆕新", "tag": "南昌市", "vid": "5320175480", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "高校-经开-西南片区", "site": "青岚大道东华理工大学(广兰校区)站点Z3"},{"rank": 13, "status": "🆕新", "tag": "顺德区", "vid": "2000028948", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "大润发1", "site": "大容错点位（临时用）"},{"rank": 14, "status": "🆕新", "tag": "九江市", "vid": "5320135130", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "浔阳三区", "site": "-"},{"rank": 15, "status": "🆕新", "tag": "佛山市", "vid": "5310478190", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "禅城3区", "site": "汾江南路辅路万通国际站点E"},{"rank": 16, "status": "🔴2轮", "tag": "常德市", "vid": "7780025930", "lost": 4, "h1": 1, "delta": "<span class='up'>↑1</span>", "grid": "缓冲二区-卷烟厂", "site": "常德碧桂园C区南门"},{"rank": 17, "status": "🆕新", "tag": "长沙市", "vid": "5320370306", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "F芙蓉广场", "site": "人民中路中国光大银行写字楼"},{"rank": 18, "status": "🆕新", "tag": "珠海市", "vid": "3720158727", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "二战区-高校-高新区-北师", "site": "-"},{"rank": 19, "status": "🆕新", "tag": "三乡镇", "vid": "7960263469", "lost": 4, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三级超区-三乡-北", "site": "新城路德国马牌轮胎(卓辉汽车美容服务部)站点"},{"rank": 20, "status": "🆕新", "tag": "南海区", "vid": "5320424743", "lost": 4, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "R.桂城平洲2区", "site": "公园路富丰·铂丽锦麟站点L"},{"rank": 21, "status": "🆕新", "tag": "南海区", "vid": "5320426040", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城11区", "site": "南海壹品广场晴海酒店站点"},{"rank": 22, "status": "🆕新", "tag": "三乡镇", "vid": "7960170841", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "三级超区-三乡-北", "site": "世纪信佳(三乡店)华盛宾馆站点"},{"rank": 23, "status": "🆕新", "tag": "南海区", "vid": "5320540218", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "R.桂城7区", "site": "南一路66号时代名轩站点A"},{"rank": 24, "status": "🆕新", "tag": "长沙市", "vid": "5310297708", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "D星沙上", "site": "东三路望仙公园站点C"},{"rank": 25, "status": "🆕新", "tag": "衡阳县", "vid": "2000021725", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "衡阳县电力网格2", "site": "英南大道衡阳县中医医院(新院区)站点"},{"rank": 26, "status": "🆕新", "tag": "赣州市", "vid": "5320673443", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "核心-万象城", "site": "新赣州大道辅路赣州城市中央公园健康主题公园站点M"},{"rank": 27, "status": "🆕新", "tag": "赣州市", "vid": "5320593894", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "主城-赣州中学", "site": "-"},{"rank": 28, "status": "🆕新", "tag": "怀化市", "vid": "5320685068", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "C区-怀化火车站", "site": "迎丰中路裕和商务酒店(怀化城东市场店)站点"},{"rank": 29, "status": "🆕新", "tag": "忠信镇", "vid": "5910772309", "lost": 3, "h1": 1, "delta": "<span class='flat'>-</span>", "grid": "忠信镇网格", "site": "恒大滨江左岸销售中心河源恒大滨江左岸站点A"},{"rank": 30, "status": "🆕新", "tag": "汕头市", "vid": "5320108253", "lost": 3, "h1": 2, "delta": "<span class='flat'>-</span>", "grid": "4C-小公园区", "site": "镇邦路小公园西堤停车场站点"}];
-var TAGS=["三乡镇", "九江市", "仁化县", "佛山市", "信宜市", "南昌市", "南海区", "常德市", "忠信镇", "怀化市", "汕头市", "江城区", "潮阳区", "珠海市", "衡阳县", "赣州市", "长沙市", "阳春市", "顺德区"];
-var selected=new Set();
-function initTags(){var box=document.getElementById('cityTags');TAGS.forEach(function(c){var t=document.createElement('span');t.className='city-tag';t.textContent=c;t.onclick=function(){if(selected.has(c)){selected.delete(c);t.className='city-tag';}else{selected.add(c);t.className='city-tag active';}render();};box.appendChild(t);});}
-function apply(){render();}
-function render(){var lost=parseInt(document.getElementById('fLost').value)||0;var rows=DATA.filter(function(r){return(selected.size===0||selected.has(r.tag))&&r.lost>=lost;});var html='';rows.forEach(function(r,i){var isRep=r.status.indexOf('🔴')>=0;html+='<tr class="'+(isRep?'rep':'')+'">';html+='<td style="color:#aaa;font-size:11px">'+(i+1)+'</td>';html+='<td><span class="tag '+(isRep?'r':'n')+'">'+r.status+'</span></td>';html+='<td>'+r.tag+'</td>';html+='<td class="vid">'+r.vid+'</td>';html+='<td class="num">'+r.lost+'</td>';html+='<td class="h1n">'+r.h1+'</td>';html+='<td>'+r.delta+'</td>';html+='<td class="grid" title="'+r.grid+'">'+r.grid+'</td>';html+='<td class="grid" title="'+r.site+'">'+r.site+'</td>';html+='</tr>';});document.getElementById('tbody').innerHTML=html||'<tr><td colspan="9" class="empty">无匹配数据</td></tr>';document.getElementById('cnt').textContent='显示 '+rows.length+' / '+DATA.length+' 条';}
-function reset(){selected.clear();var tags=document.querySelectorAll('.city-tag');for(var i=0;i<tags.length;i++)tags[i].className='city-tag';document.getElementById('fLost').value='';render();}
-initTags();render();
-</script>
-</body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>华南大区 · 高频缺电详情</title>
+  <style>
+    :root{--accent:#2563eb;--danger:#dc2626;--success:#16a34a;--surface:#ffffff;--bg:#f4f7fb;--ink:#172033;--muted:#667085;--line:#e6eaf0;--warning:#d97706;--shadow:0 14px 40px rgba(25,36,60,.08)}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
+    button,input{font:inherit}.shell{width:min(1180px,100%);margin:auto;padding:24px 18px 48px}.hero{position:relative;overflow:hidden;border-radius:22px;padding:24px;color:#fff;background:linear-gradient(135deg,#111827,var(--accent));box-shadow:var(--shadow)}
+    .hero:after{content:"";position:absolute;right:-80px;top:-120px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.1)}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.72}.hero h1{position:relative;margin:6px 0 18px;font-size:clamp(22px,5vw,34px);line-height:1.2}.metrics{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.metric{min-height:76px;border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:11px 12px;background:rgba(255,255,255,.1);backdrop-filter:blur(8px)}.metric b{display:block;font-size:20px;line-height:1.25}.metric span{font-size:12px;opacity:.72}
+    .panel{margin-top:16px;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.toolbar{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;padding:16px;border-bottom:1px solid var(--line)}.filter-block{min-width:0;flex:1}.label{display:block;margin-bottom:6px;color:var(--muted);font-size:12px;font-weight:650}.tags{display:flex;gap:7px;overflow:auto;padding-bottom:2px}.tag-button{flex:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:#fff;color:var(--muted);cursor:pointer}.tag-button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:#fff}.threshold{width:180px}.threshold input{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;outline:none}.threshold input:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 15%,transparent)}
+    .summary{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;color:var(--muted);font-size:12px}.reset{border:0;background:transparent;color:var(--accent);cursor:pointer}.table-wrap{overflow:auto;border-radius:0 0 18px 18px}table{width:100%;border-collapse:collapse;min-width:860px}th{position:sticky;top:0;z-index:1;padding:11px 10px;background:#f8fafc;color:var(--muted);font-size:11px;letter-spacing:.04em;text-align:left;text-transform:uppercase}td{padding:12px 10px;border-top:1px solid var(--line)}tr.repeat{background:color-mix(in srgb,var(--danger) 4%,var(--surface))}.rank{color:#98a2b3}.vehicle{font:600 12px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace}.number{font-weight:750;text-align:right}.lost{color:var(--danger)}.recent{color:var(--warning)}.delta.up{color:var(--danger)}.delta.down{color:var(--success)}.status{font-size:12px;font-weight:700;white-space:nowrap}.status.repeat{color:var(--danger)}.status.new{color:var(--success)}.clip{max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}.empty{padding:38px;text-align:center;color:var(--muted)}
+    @media(max-width:760px){.shell{padding:12px 10px 32px}.hero{padding:19px 16px;border-radius:18px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{min-height:66px}.toolbar{align-items:stretch;flex-direction:column}.threshold{width:100%}.panel{border-radius:16px}.summary{position:sticky;left:0}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">HFB · 14:00 data window</div>
+      <h1>华南大区 高频缺电 TOP 30</h1>
+      <section class="metrics" aria-label="关键指标">
+        <div class="metric"><b>136</b><span>累计丢单</span></div>
+        <div class="metric"><b>19</b><span>分组数</span></div>
+        <div class="metric"><b>3</b><span>持续未处理</span></div>
+        <div class="metric"><b>27</b><span>本轮新增</span></div>
+        <div class="metric"><b>14 点</b><span>统计时段</span></div>
+        <div class="metric"><b>李怡</b><span>负责人</span></div>
+      </section>
+    </header>
+
+    <section class="panel">
+      <div class="toolbar">
+        <div class="filter-block"><span class="label">分组筛选</span><div class="tags" id="tags"></div></div>
+        <label class="threshold"><span class="label">最低累计丢单</span><input id="minimum" type="number" min="0" inputmode="numeric" placeholder="输入阈值"></label>
+      </div>
+      <div class="summary"><span id="summary"></span><button class="reset" id="reset" type="button">重置筛选</button></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>状态</th><th>分组</th><th>车编</th><th style="text-align:right">累计</th><th style="text-align:right">近 1h</th><th>变化</th><th>网格</th><th>站点</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    const DATA=[{"rank": 1, "status": "🔴4轮", "repeat": true, "tag": "南海区", "vid": "5320318209", "lost": 9, "h1": 2, "delta": 2, "grid": "R.桂城10区", "site": "多益西饼(万科·金域中央C区店)万科·金域中央C区站点"}, {"rank": 2, "status": "🔴4轮", "repeat": true, "tag": "赣州市", "vid": "5320651278", "lost": 9, "h1": 2, "delta": 2, "grid": "R.沙河区", "site": "沙河镇沙河社区退役军人服务站新市民公寓站点"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "南海区", "vid": "5320424112", "lost": 9, "h1": 1, "delta": 0, "grid": "R.桂城平洲3区", "site": "平西街利君公寓站点C"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "长沙市", "vid": "5320456583", "lost": 8, "h1": 1, "delta": 0, "grid": "Y砂子塘11", "site": "劳动中路鑫天鑫城站点E"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "长沙市", "vid": "5310269416", "lost": 6, "h1": 1, "delta": 0, "grid": "D湘龙上", "site": "南塘路盛地尊域站点"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "信宜市", "vid": "5910795633", "lost": 5, "h1": 1, "delta": 0, "grid": "缓冲-东恒新城", "site": "茂名市信宜市东镇街道粤桂路尚文钢材店"}, {"rank": 7, "status": "🆕新", "repeat": false, "tag": "阳春市", "vid": "7010446946", "lost": 5, "h1": 3, "delta": 0, "grid": "阳春市-阳春碧桂园", "site": "城东大道67号春城镇第二小学站点"}, {"rank": 8, "status": "🆕新", "repeat": false, "tag": "江城区", "vid": "5320250505", "lost": 5, "h1": 1, "delta": 0, "grid": "江城区-城北-鸳鸯湖", "site": "-"}, {"rank": 9, "status": "🆕新", "repeat": false, "tag": "潮阳区", "vid": "2000016632", "lost": 5, "h1": 1, "delta": 0, "grid": "东山大道区", "site": "-"}, {"rank": 10, "status": "🆕新", "repeat": false, "tag": "南海区", "vid": "5320425788", "lost": 5, "h1": 1, "delta": 0, "grid": "R.桂城10区", "site": "-"}, {"rank": 11, "status": "🆕新", "repeat": false, "tag": "长沙市", "vid": "5320370306", "lost": 4, "h1": 1, "delta": 0, "grid": "F芙蓉广场", "site": "人民中路中国光大银行写字楼"}, {"rank": 12, "status": "🆕新", "repeat": false, "tag": "三乡镇", "vid": "7960263469", "lost": 4, "h1": 1, "delta": 0, "grid": "三级超区-三乡-北", "site": "新城路德国马牌轮胎(卓辉汽车美容服务部)站点"}, {"rank": 13, "status": "🆕新", "repeat": false, "tag": "九江市", "vid": "5320135130", "lost": 4, "h1": 2, "delta": 0, "grid": "浔阳三区", "site": "-"}, {"rank": 14, "status": "🆕新", "repeat": false, "tag": "南昌市", "vid": "5320175480", "lost": 4, "h1": 1, "delta": 0, "grid": "高校-经开-西南片区", "site": "青岚大道东华理工大学(广兰校区)站点Z3"}, {"rank": 15, "status": "🆕新", "repeat": false, "tag": "顺德区", "vid": "2000028948", "lost": 4, "h1": 2, "delta": 0, "grid": "大润发1", "site": "大容错点位（临时用）"}, {"rank": 16, "status": "🔴2轮", "repeat": true, "tag": "常德市", "vid": "7780025930", "lost": 4, "h1": 1, "delta": 1, "grid": "缓冲二区-卷烟厂", "site": "常德碧桂园C区南门"}, {"rank": 17, "status": "🆕新", "repeat": false, "tag": "珠海市", "vid": "3720158727", "lost": 4, "h1": 1, "delta": 0, "grid": "二战区-高校-高新区-北师", "site": "-"}, {"rank": 18, "status": "🆕新", "repeat": false, "tag": "南海区", "vid": "5320424743", "lost": 4, "h1": 2, "delta": 0, "grid": "R.桂城平洲2区", "site": "公园路富丰·铂丽锦麟站点L"}, {"rank": 19, "status": "🆕新", "repeat": false, "tag": "佛山市", "vid": "5310478190", "lost": 4, "h1": 1, "delta": 0, "grid": "禅城3区", "site": "汾江南路辅路万通国际站点E"}, {"rank": 20, "status": "🆕新", "repeat": false, "tag": "仁化县", "vid": "5930042923", "lost": 4, "h1": 1, "delta": 0, "grid": "工业区", "site": "工业园区管委会"}, {"rank": 21, "status": "🆕新", "repeat": false, "tag": "南海区", "vid": "5320426040", "lost": 3, "h1": 1, "delta": 0, "grid": "R.桂城11区", "site": "南海壹品广场晴海酒店站点"}, {"rank": 22, "status": "🆕新", "repeat": false, "tag": "南海区", "vid": "5320530332", "lost": 3, "h1": 1, "delta": 0, "grid": "R.桂城10区", "site": "-"}, {"rank": 23, "status": "🆕新", "repeat": false, "tag": "南海区", "vid": "5320540218", "lost": 3, "h1": 1, "delta": 0, "grid": "R.桂城7区", "site": "南一路66号时代名轩站点A"}, {"rank": 24, "status": "🆕新", "repeat": false, "tag": "汕头市", "vid": "5320108253", "lost": 3, "h1": 2, "delta": 0, "grid": "4C-小公园区", "site": "镇邦路小公园西堤停车场站点"}, {"rank": 25, "status": "🆕新", "repeat": false, "tag": "怀化市", "vid": "5320685068", "lost": 3, "h1": 1, "delta": 0, "grid": "C区-怀化火车站", "site": "迎丰中路裕和商务酒店(怀化城东市场店)站点"}, {"rank": 26, "status": "🆕新", "repeat": false, "tag": "江门市", "vid": "1602200976", "lost": 3, "h1": 1, "delta": 0, "grid": "新会万达商圈", "site": "启超大道新汇大融城站点H"}, {"rank": 27, "status": "🆕新", "repeat": false, "tag": "三乡镇", "vid": "7960170841", "lost": 3, "h1": 1, "delta": 0, "grid": "三级超区-三乡-北", "site": "世纪信佳(三乡店)华盛宾馆站点"}, {"rank": 28, "status": "🆕新", "repeat": false, "tag": "衡阳县", "vid": "2000021725", "lost": 3, "h1": 2, "delta": 0, "grid": "衡阳县电力网格2", "site": "英南大道衡阳县中医医院(新院区)站点"}, {"rank": 29, "status": "🆕新", "repeat": false, "tag": "赣州市", "vid": "5320593894", "lost": 3, "h1": 2, "delta": 0, "grid": "主城-赣州中学", "site": "-"}, {"rank": 30, "status": "🆕新", "repeat": false, "tag": "赣州市", "vid": "5320673443", "lost": 3, "h1": 1, "delta": 0, "grid": "核心-万象城", "site": "新赣州大道辅路赣州城市中央公园健康主题公园站点M"}];const TAGS=["三乡镇", "九江市", "仁化县", "佛山市", "信宜市", "南昌市", "南海区", "常德市", "怀化市", "汕头市", "江城区", "江门市", "潮阳区", "珠海市", "衡阳县", "赣州市", "长沙市", "阳春市", "顺德区"];const selected=new Set();
+    const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
+    function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
+    function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
+    for(const tag of TAGS){const button=document.createElement('button');button.type='button';button.className='tag-button';button.textContent=tag;button.setAttribute('aria-pressed','false');button.onclick=()=>{selected.has(tag)?selected.delete(tag):selected.add(tag);button.setAttribute('aria-pressed',String(selected.has(tag)));render()};tags.appendChild(button)}
+    minimum.addEventListener('input',render);document.getElementById('reset').onclick=()=>{selected.clear();minimum.value='';for(const button of tags.children)button.setAttribute('aria-pressed','false');render()};render();
+  </script>
+</body>
+</html>
