@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 07:00 data window</div>
-      <h1>华东大区 高频缺电 TOP 9</h1>
+      <div class="eyebrow">HFB · 08:00 data window</div>
+      <h1>华东大区 高频缺电 TOP 13</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>35</b><span>累计丢单</span></div>
-        <div class="metric"><b>7</b><span>分组数</span></div>
-        <div class="metric"><b>1</b><span>持续未处理</span></div>
-        <div class="metric"><b>8</b><span>本轮新增</span></div>
-        <div class="metric"><b>07 点</b><span>统计时段</span></div>
+        <div class="metric"><b>63</b><span>累计丢单</span></div>
+        <div class="metric"><b>8</b><span>分组数</span></div>
+        <div class="metric"><b>3</b><span>持续未处理</span></div>
+        <div class="metric"><b>10</b><span>本轮新增</span></div>
+        <div class="metric"><b>08 点</b><span>统计时段</span></div>
         <div class="metric"><b>鲁宏伟</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "义乌市", "vid": "5310112529", "lost": 6, "h1": 2, "delta": 0, "grid": "电力-杨村居民区-稠江网格组", "site": "-"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "南通市", "vid": "7010499029", "lost": 5, "h1": 5, "delta": 0, "grid": "职业技术学院网格", "site": "新兴东路奥托立夫(中国)汽车安全系统有限公司站点A"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "江宁区", "vid": "7010459770", "lost": 5, "h1": 2, "delta": 0, "grid": "电力网格-江宁区-高新园区北2", "site": "-"}, {"rank": 4, "status": "🔴2轮", "repeat": true, "tag": "厦门市", "vid": "5320394152", "lost": 4, "h1": 1, "delta": 1, "grid": "融合-新阳一区", "site": "庚西二路海投第一湾西区站点A"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "安吉县", "vid": "7900119546", "lost": 3, "h1": 1, "delta": 0, "grid": "安吉县-昌硕街道-核心-转移市场", "site": "市民中心"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "南通市", "vid": "5320096270", "lost": 3, "h1": 3, "delta": 0, "grid": "职业技术学院网格", "site": "-"}, {"rank": 7, "status": "🆕新", "repeat": false, "tag": "徐州市", "vid": "5320444631", "lost": 3, "h1": 1, "delta": 0, "grid": "泉山三区-2换电", "site": "二环西路-西湖美景东门-泉-5001（哈啰）"}, {"rank": 8, "status": "🆕新", "repeat": false, "tag": "宁波市", "vid": "5320362594", "lost": 3, "h1": 1, "delta": 0, "grid": "-", "site": "-"}, {"rank": 9, "status": "🆕新", "repeat": false, "tag": "南通市", "vid": "5320007203", "lost": 3, "h1": 3, "delta": 0, "grid": "职业技术学院网格", "site": "新兴东路奥托立夫(中国)汽车安全系统有限公司站点B"}];const TAGS=["义乌市", "南通市", "厦门市", "宁波市", "安吉县", "徐州市", "江宁区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "通州区", "vid": "5320030819", "lost": 15, "h1": 15, "delta": 0, "grid": "通州电力2", "site": "金鼎路金缘农贸市场站点"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "江宁区", "vid": "7010459770", "lost": 6, "h1": 1, "delta": 1, "grid": "电力网格-江宁区-高新园区北2", "site": "-"}, {"rank": 3, "status": "🔴3轮", "repeat": true, "tag": "厦门市", "vid": "5320394152", "lost": 5, "h1": 1, "delta": 1, "grid": "融合-新阳一区", "site": "庚西二路海投第一湾西区站点A"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "宁波市", "vid": "5320688754", "lost": 5, "h1": 4, "delta": 0, "grid": "西战-翠柏", "site": "-"}, {"rank": 5, "status": "🔴2轮", "repeat": true, "tag": "安吉县", "vid": "7900119546", "lost": 5, "h1": 2, "delta": 2, "grid": "安吉县-昌硕街道-核心-转移市场", "site": "市民中心"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "厦门市", "vid": "5320403943", "lost": 4, "h1": 1, "delta": 0, "grid": "集美-灌口", "site": "-"}, {"rank": 7, "status": "🆕新", "repeat": false, "tag": "邳州市", "vid": "5320381742", "lost": 4, "h1": 1, "delta": 0, "grid": "邳州五区", "site": "世纪大道百易家国际家居广场南门029站点"}, {"rank": 8, "status": "🆕新", "repeat": false, "tag": "常熟市", "vid": "5320108098", "lost": 4, "h1": 2, "delta": 0, "grid": "常熟电力网格-国际服装城", "site": "招商南路98号站点A"}, {"rank": 9, "status": "🆕新", "repeat": false, "tag": "金华市", "vid": "5310695089", "lost": 3, "h1": 3, "delta": 0, "grid": "金华市-婺城区-秋滨街道-主城-唐宅村-郑跃强", "site": "双林南街汽车文化公园站点"}, {"rank": 10, "status": "🆕新", "repeat": false, "tag": "邳州市", "vid": "5320388332", "lost": 3, "h1": 3, "delta": 0, "grid": "邳州四区", "site": "城山路阳光尚城站点"}, {"rank": 11, "status": "🆕新", "repeat": false, "tag": "宁波市", "vid": "5320652717", "lost": 3, "h1": 1, "delta": 0, "grid": "西战-天一", "site": "月湖街道镇明路梅园社区(镇明路)停车点"}, {"rank": 12, "status": "🆕新", "repeat": false, "tag": "宁波市", "vid": "5320652725", "lost": 3, "h1": 1, "delta": 0, "grid": "海曙区超区", "site": "-"}, {"rank": 13, "status": "🆕新", "repeat": false, "tag": "宁波市", "vid": "5320628981", "lost": 3, "h1": 2, "delta": 0, "grid": "西战-欧尚", "site": "早高峰小区bl-海曙大厦停车点"}];const TAGS=["厦门市", "宁波市", "安吉县", "常熟市", "江宁区", "通州区", "邳州市", "金华市"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
