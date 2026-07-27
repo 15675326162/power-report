@@ -18,14 +18,14 @@
 <body>
   <main class="shell">
     <header class="hero">
-      <div class="eyebrow">HFB · 09:00 data window</div>
-      <h1>银川市 高频缺电 TOP 5</h1>
+      <div class="eyebrow">HFB · 10:00 data window</div>
+      <h1>银川市 高频缺电 TOP 6</h1>
       <section class="metrics" aria-label="关键指标">
-        <div class="metric"><b>20</b><span>累计丢单</span></div>
-        <div class="metric"><b>4</b><span>分组数</span></div>
+        <div class="metric"><b>26</b><span>累计丢单</span></div>
+        <div class="metric"><b>5</b><span>分组数</span></div>
         <div class="metric"><b>1</b><span>持续未处理</span></div>
-        <div class="metric"><b>4</b><span>本轮新增</span></div>
-        <div class="metric"><b>09 点</b><span>统计时段</span></div>
+        <div class="metric"><b>5</b><span>本轮新增</span></div>
+        <div class="metric"><b>10 点</b><span>统计时段</span></div>
         <div class="metric"><b>李卫明</b><span>负责人</span></div>
       </section>
     </header>
@@ -45,7 +45,7 @@
     </section>
   </main>
   <script>
-    const DATA=[{"rank": 1, "status": "🆕新", "repeat": false, "tag": "兴庆区-超区1", "vid": "5320559449", "lost": 6, "h1": 2, "delta": 0, "grid": "兴庆区-超区1", "site": "恒安北街吉通酒店站点B"}, {"rank": 2, "status": "🔴2轮", "repeat": true, "tag": "兴庆区-兴庆7区", "vid": "5320546554", "lost": 4, "h1": 1, "delta": 1, "grid": "兴庆区-兴庆7区", "site": "北京东路106号北安小区站点A"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "德胜区-德胜2区", "vid": "5320589638", "lost": 4, "h1": 2, "delta": 0, "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇锦林街海辰·锦林水岸"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "金凤区-北5区", "vid": "5320587894", "lost": 3, "h1": 2, "delta": 0, "grid": "金凤区-北5区", "site": "金凤区上海西路街道上海西路清水湾社区卫生服务站亲水苑C区"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "兴庆区-超区1", "vid": "5320477375", "lost": 3, "h1": 2, "delta": 0, "grid": "兴庆区-超区1", "site": "居安西路塞上雅居站点C"}];const TAGS=["兴庆区-兴庆7区", "兴庆区-超区1", "德胜区-德胜2区", "金凤区-北5区"];const selected=new Set();
+    const DATA=[{"rank": 1, "status": "🔴2轮", "repeat": true, "tag": "德胜区-德胜2区", "vid": "5320589638", "lost": 7, "h1": 3, "delta": 3, "grid": "德胜区-德胜2区", "site": "贺兰县习岗镇锦林街海辰·锦林水岸"}, {"rank": 2, "status": "🆕新", "repeat": false, "tag": "金凤区-南2区", "vid": "5320472387", "lost": 5, "h1": 4, "delta": 0, "grid": "金凤区-南2区", "site": "黄河东路湖畔嘉苑祥和苑站点"}, {"rank": 3, "status": "🆕新", "repeat": false, "tag": "金凤区-北9区", "vid": "5320441250", "lost": 4, "h1": 2, "delta": 0, "grid": "金凤区-北9区", "site": "西夏区北京西路银川市场监督管理局西夏区分局"}, {"rank": 4, "status": "🆕新", "repeat": false, "tag": "金凤区-南2区", "vid": "5320562253", "lost": 4, "h1": 3, "delta": 0, "grid": "金凤区-南2区", "site": "金凤区黄河东路街道长城中路726号昌昊汽车工贸公司"}, {"rank": 5, "status": "🆕新", "repeat": false, "tag": "兴庆区-兴庆8区", "vid": "5320476072", "lost": 3, "h1": 1, "delta": 0, "grid": "兴庆区-兴庆8区", "site": "北桥巷20号秀水苑站点"}, {"rank": 6, "status": "🆕新", "repeat": false, "tag": "兴庆区-超区1", "vid": "7010506472", "lost": 3, "h1": 1, "delta": 0, "grid": "兴庆区-超区1", "site": "朔方北街120号科丰广场站点"}];const TAGS=["兴庆区-兴庆8区", "兴庆区-超区1", "德胜区-德胜2区", "金凤区-北9区", "金凤区-南2区"];const selected=new Set();
     const tags=document.getElementById('tags'),body=document.getElementById('rows'),minimum=document.getElementById('minimum'),summary=document.getElementById('summary');
     function cell(row,value,className='',title=''){const node=document.createElement('td');node.textContent=value??'-';if(className)node.className=className;if(title)node.title=title;row.appendChild(node);return node}
     function render(){const min=Number(minimum.value||0);const rows=DATA.filter(item=>(selected.size===0||selected.has(item.tag))&&item.lost>=min);body.replaceChildren();for(const item of rows){const row=document.createElement('tr');if(item.repeat)row.className='repeat';cell(row,item.rank,'rank');cell(row,item.status,'status '+(item.repeat?'repeat':'new'));cell(row,item.tag);cell(row,item.vid,'vehicle');cell(row,item.lost,'number lost');cell(row,item.h1,'number recent');const delta=item.delta>0?'↑'+item.delta:item.delta<0?'↓'+Math.abs(item.delta):'—';cell(row,delta,'delta '+(item.delta>0?'up':item.delta<0?'down':''));cell(row,item.grid,'clip',item.grid);cell(row,item.site,'clip',item.site);body.appendChild(row)}if(!rows.length){const row=document.createElement('tr');const node=cell(row,'暂无匹配数据','empty');node.colSpan=9;body.appendChild(row)}summary.textContent=`显示 ${rows.length} / ${DATA.length} 条`}
